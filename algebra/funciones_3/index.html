@@ -1,0 +1,811 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="José David Torres Riffo">
+      
+      
+      
+        <link rel="prev" href="../funciones_2/">
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Evaluación de funciones - MateRiffo</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#evaluacion-de-funciones-reales" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../.." title="MateRiffo" class="md-header__button md-logo" aria-label="MateRiffo" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            MateRiffo
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Evaluación de funciones
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="MateRiffo" class="md-nav__button md-logo" aria-label="MateRiffo" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    MateRiffo
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Módulo de PreCálculo
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Módulo de PreCálculo
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../inecuaciones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inecuaciones
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../desigualdades/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Desigualdades
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../aplicaciones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aplicaciones
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../absoluto/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Valor absoluto
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../raices/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Raices
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../funciones_1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gráfico de funciones
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../funciones_2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dominio de funciones
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Evaluación de funciones
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="evaluacion-de-funciones-reales">Evaluación de Funciones Reales</h1>
+<p>Colección de problemas.</p>
+<hr />
+<h1 id="calculo-de-imagenes-y-operaciones-con-funciones">Cálculo de Imágenes y Operaciones con Funciones</h1>
+<hr />
+<p><strong>Problema 1:</strong>
+Considere la función polinomial <span class="arithmatex">\(f:\mathbb{R}\to \mathbb{R}\)</span> dada por:</p>
+<div class="arithmatex">\[f(x) = 2x^2 - 5x + 3\]</div>
+<p>Calcule:
+a) <span class="arithmatex">\(f(1) + f(0) - 2f(-1)\)</span></p>
+<p>b) <span class="arithmatex">\(-f(2) + (f(3))^2\)</span></p>
+<p>c) <span class="arithmatex">\(\dfrac{f(4) - f(-2)}{3}\)</span></p>
+<p>d) <span class="arithmatex">\((f(2) - f(0) + f(1))^2\)</span></p>
+<details class="note">
+<summary>Ver Desarrollo</summary>
+<p>Primero, evaluamos la función en los valores necesarios:
+* <span class="arithmatex">\(f(0) = 2(0)^2 - 5(0) + 3 = 3\)</span>
+* <span class="arithmatex">\(f(1) = 2(1)^2 - 5(1) + 3 = 2 - 5 + 3 = 0\)</span>
+* <span class="arithmatex">\(f(-1) = 2(-1)^2 - 5(-1) + 3 = 2 + 5 + 3 = 10\)</span>
+* <span class="arithmatex">\(f(2) = 2(2)^2 - 5(2) + 3 = 8 - 10 + 3 = 1\)</span>
+* <span class="arithmatex">\(f(3) = 2(3)^2 - 5(3) + 3 = 18 - 15 + 3 = 6\)</span>
+* <span class="arithmatex">\(f(4) = 2(4)^2 - 5(4) + 3 = 32 - 20 + 3 = 15\)</span>
+* <span class="arithmatex">\(f(-2) = 2(-2)^2 - 5(-2) + 3 = 8 + 10 + 3 = 21\)</span></p>
+<p>Ahora, resolvemos cada expresión:
+<strong>a)</strong> <span class="arithmatex">\(f(1) + f(0) - 2f(-1) = 0 + 3 - 2(10) = 3 - 20 = -17\)</span>
+<strong>b)</strong> <span class="arithmatex">\(-f(2) + (f(3))^2 = -1 + (6)^2 = -1 + 36 = 35\)</span>
+<strong>c)</strong> <span class="arithmatex">\(\dfrac{f(4) - f(-2)}{3} = \dfrac{15 - 21}{3} = \dfrac{-6}{3} = -2\)</span>
+<strong>d)</strong> <span class="arithmatex">\((f(2) - f(0) + f(1))^2 = (1 - 3 + 0)^2 = (-2)^2 = 4\)</span></p>
+</details>
+<hr />
+<p><strong>Problema 2:</strong>
+Considere la función racional <span class="arithmatex">\(g:\mathbb{R}-\{-2\}\to \mathbb{R}\)</span> dada por:</p>
+<div class="arithmatex">\[g(x) = \frac{3x - 1}{x + 2}\]</div>
+<p>Calcule:
+a) <span class="arithmatex">\(g(1) + 2g(0) - g(-1)\)</span></p>
+<p>b) <span class="arithmatex">\(-g(2) + (g(-3))^2\)</span></p>
+<p>c) <span class="arithmatex">\(\dfrac{g(3) - g(0)}{g(-1)}\)</span></p>
+<p>d) <span class="arithmatex">\((g(1) - g(-3) + g(0))^2\)</span></p>
+<details class="note">
+<summary>Ver Desarrollo</summary>
+<p>Evaluamos la función en los puntos requeridos:
+* <span class="arithmatex">\(g(0) = \frac{0 - 1}{0 + 2} = -\frac{1}{2}\)</span>
+* <span class="arithmatex">\(g(1) = \frac{3(1) - 1}{1 + 2} = \frac{2}{3}\)</span>
+* <span class="arithmatex">\(g(-1) = \frac{3(-1) - 1}{-1 + 2} = \frac{-4}{1} = -4\)</span>
+* <span class="arithmatex">\(g(2) = \frac{3(2) - 1}{2 + 2} = \frac{5}{4}\)</span>
+* <span class="arithmatex">\(g(-3) = \frac{3(-3) - 1}{-3 + 2} = \frac{-10}{-1} = 10\)</span>
+* <span class="arithmatex">\(g(3) = \frac{3(3) - 1}{3 + 2} = \frac{8}{5}\)</span></p>
+<p>Resolvemos:
+<strong>a)</strong> <span class="arithmatex">\(g(1) + 2g(0) - g(-1) = \frac{2}{3} + 2\left(-\frac{1}{2}\right) - (-4) = \frac{2}{3} - 1 + 4 = 3 + \frac{2}{3} = \frac{11}{3}\)</span>
+<strong>b)</strong> <span class="arithmatex">\(-g(2) + (g(-3))^2 = -\frac{5}{4} + (10)^2 = -\frac{5}{4} + 100 = \frac{395}{4}\)</span>
+<strong>c)</strong> <span class="arithmatex">\(\dfrac{g(3) - g(0)}{g(-1)} = \dfrac{\frac{8}{5} - \left(-\frac{1}{2}\right)}{-4} = \dfrac{\frac{16 + 5}{10}}{-4} = \dfrac{21/10}{-4} = -\frac{21}{40}\)</span>
+<strong>d)</strong> <span class="arithmatex">\((g(1) - g(-3) + g(0))^2 = \left(\frac{2}{3} - 10 - \frac{1}{2}\right)^2 = \left(\frac{4 - 60 - 3}{6}\right)^2 = \left(-\frac{59}{6}\right)^2 = \frac{3481}{36}\)</span></p>
+</details>
+<hr />
+<p><strong>Problema 3:</strong>
+Considere la función definida por tramos <span class="arithmatex">\(h:\mathbb{R}\to \mathbb{R}\)</span> dada por:</p>
+<div class="arithmatex">\[h(x) = \begin{cases} 3x + 1 &amp; \text{si } x &lt; 1 \\ x^2 - 2 &amp; \text{si } x \ge 1 \end{cases}\]</div>
+<p>Calcule:
+a) <span class="arithmatex">\(h(0) + h(2) - 2h(1)\)</span></p>
+<p>b) <span class="arithmatex">\(-h(-2) + (h(3))^2\)</span></p>
+<p>c) <span class="arithmatex">\(\dfrac{h(4) - h(-1)}{2}\)</span></p>
+<p>d) <span class="arithmatex">\((h(2) - h(0) + h(-3))^2\)</span></p>
+<details class="note">
+<summary>Ver Desarrollo</summary>
+<p>Evaluamos prestando atención al tramo correspondiente:
+* <span class="arithmatex">\(x=0 &lt; 1 \implies h(0) = 3(0) + 1 = 1\)</span>
+* <span class="arithmatex">\(x=1 \ge 1 \implies h(1) = 1^2 - 2 = -1\)</span>
+* <span class="arithmatex">\(x=2 \ge 1 \implies h(2) = 2^2 - 2 = 2\)</span>
+* <span class="arithmatex">\(x=-1 &lt; 1 \implies h(-1) = 3(-1) + 1 = -2\)</span>
+* <span class="arithmatex">\(x=-2 &lt; 1 \implies h(-2) = 3(-2) + 1 = -5\)</span>
+* <span class="arithmatex">\(x=-3 &lt; 1 \implies h(-3) = 3(-3) + 1 = -8\)</span>
+* <span class="arithmatex">\(x=3 \ge 1 \implies h(3) = 3^2 - 2 = 7\)</span>
+* <span class="arithmatex">\(x=4 \ge 1 \implies h(4) = 4^2 - 2 = 14\)</span></p>
+<p>Resolvemos:
+<strong>a)</strong> <span class="arithmatex">\(h(0) + h(2) - 2h(1) = 1 + 2 - 2(-1) = 3 + 2 = 5\)</span>
+<strong>b)</strong> <span class="arithmatex">\(-h(-2) + (h(3))^2 = -(-5) + (7)^2 = 5 + 49 = 54\)</span>
+<strong>c)</strong> <span class="arithmatex">\(\dfrac{h(4) - h(-1)}{2} = \dfrac{14 - (-2)}{2} = \dfrac{16}{2} = 8\)</span>
+<strong>d)</strong> <span class="arithmatex">\((h(2) - h(0) + h(-3))^2 = (2 - 1 - 8)^2 = (-7)^2 = 49\)</span></p>
+</details>
+<hr />
+<p><strong>Problema 4:</strong>
+Considere la función con valor absoluto <span class="arithmatex">\(p:\mathbb{R}\to \mathbb{R}\)</span> dada por:</p>
+<div class="arithmatex">\[p(x) = |2x - 5| - 3x\]</div>
+<p>Calcule:
+a) <span class="arithmatex">\(p(1) + 3p(3) - p(0)\)</span></p>
+<p>b) <span class="arithmatex">\(-p(4) + (p(2))^2\)</span></p>
+<p>c) <span class="arithmatex">\(\dfrac{p(-1) - p(2)}{p(3)}\)</span></p>
+<p>d) <span class="arithmatex">\((p(0) - p(1) + p(4))^2\)</span></p>
+<details class="note">
+<summary>Ver Desarrollo</summary>
+<p>Evaluamos recordando que el valor absoluto vuelve positiva cualquier cantidad en su interior:
+* <span class="arithmatex">\(p(0) = |0 - 5| - 0 = |-5| = 5\)</span>
+* <span class="arithmatex">\(p(1) = |2 - 5| - 3 = |-3| - 3 = 3 - 3 = 0\)</span>
+* <span class="arithmatex">\(p(2) = |4 - 5| - 6 = |-1| - 6 = 1 - 6 = -5\)</span>
+* <span class="arithmatex">\(p(3) = |6 - 5| - 9 = |1| - 9 = 1 - 9 = -8\)</span>
+* <span class="arithmatex">\(p(4) = |8 - 5| - 12 = |3| - 12 = 3 - 12 = -9\)</span>
+* <span class="arithmatex">\(p(-1) = |-2 - 5| - 3(-1) = |-7| + 3 = 7 + 3 = 10\)</span></p>
+<p>Resolvemos:
+<strong>a)</strong> <span class="arithmatex">\(p(1) + 3p(3) - p(0) = 0 + 3(-8) - 5 = -24 - 5 = -29\)</span>
+<strong>b)</strong> <span class="arithmatex">\(-p(4) + (p(2))^2 = -(-9) + (-5)^2 = 9 + 25 = 34\)</span>
+<strong>c)</strong> <span class="arithmatex">\(\dfrac{p(-1) - p(2)}{p(3)} = \dfrac{10 - (-5)}{-8} = -\dfrac{15}{8}\)</span>
+<strong>d)</strong> <span class="arithmatex">\((p(0) - p(1) + p(4))^2 = (5 - 0 - 9)^2 = (-4)^2 = 16\)</span></p>
+</details>
+<hr />
+<p><strong>Problema 5:</strong>
+Considere la función racional <span class="arithmatex">\(r:\mathbb{R}\to \mathbb{R}\)</span> dada por:</p>
+<div class="arithmatex">\[r(x) = \frac{x^3 - 8}{x^2 + 4}\]</div>
+<p>Calcule:
+a) <span class="arithmatex">\(r(2) + r(0) - 2r(-2)\)</span></p>
+<p>b) <span class="arithmatex">\(-r(1) + (r(-1))^2\)</span></p>
+<p>c) <span class="arithmatex">\(\dfrac{r(2) - r(-2)}{4}\)</span></p>
+<p>d) <span class="arithmatex">\((r(0) - r(1) + r(2))^2\)</span></p>
+<details class="note">
+<summary>Ver Desarrollo</summary>
+<p>Evaluamos los puntos requeridos:
+* <span class="arithmatex">\(r(0) = \frac{0 - 8}{0 + 4} = -2\)</span>
+* <span class="arithmatex">\(r(1) = \frac{1 - 8}{1 + 4} = -\frac{7}{5}\)</span>
+* <span class="arithmatex">\(r(-1) = \frac{-1 - 8}{1 + 4} = -\frac{9}{5}\)</span>
+* <span class="arithmatex">\(r(2) = \frac{8 - 8}{4 + 4} = 0\)</span>
+* <span class="arithmatex">\(r(-2) = \frac{-8 - 8}{4 + 4} = \frac{-16}{8} = -2\)</span></p>
+<p>Resolvemos:
+<strong>a)</strong> <span class="arithmatex">\(r(2) + r(0) - 2r(-2) = 0 - 2 - 2(-2) = -2 + 4 = 2\)</span>
+<strong>b)</strong> <span class="arithmatex">\(-r(1) + (r(-1))^2 = -\left(-\frac{7}{5}\right) + \left(-\frac{9}{5}\right)^2 = \frac{7}{5} + \frac{81}{25} = \frac{35 + 81}{25} = \frac{116}{25}\)</span>
+<strong>c)</strong> <span class="arithmatex">\(\dfrac{r(2) - r(-2)}{4} = \dfrac{0 - (-2)}{4} = \dfrac{2}{4} = \frac{1}{2}\)</span>
+<strong>d)</strong> <span class="arithmatex">\((r(0) - r(1) + r(2))^2 = \left(-2 - \left(-\frac{7}{5}\right) + 0\right)^2 = \left(-2 + \frac{7}{5}\right)^2 = \left(-\frac{3}{5}\right)^2 = \frac{9}{25}\)</span></p>
+</details>
+<hr />
+<p><strong>Problema 6:</strong>
+Considere la función <span class="arithmatex">\(t:\mathbb{R}-\{-2, 2\}\to \mathbb{R}\)</span> dada por:</p>
+<div class="arithmatex">\[t(x) = \frac{x^2 - x - 2}{x^2 - 4}\]</div>
+<p>Calcule:
+a) <span class="arithmatex">\(t(3) + 4t(0) - t(1)\)</span></p>
+<p>b) <span class="arithmatex">\(-t(-1) + (t(-3))^2\)</span></p>
+<p>c) <span class="arithmatex">\(\dfrac{t(4) - t(0)}{t(1)}\)</span></p>
+<p>d) <span class="arithmatex">\((t(3) - t(-1) + t(0))^2\)</span></p>
+<details class="note">
+<summary>Ver Desarrollo</summary>
+<p>Notemos que podemos simplificar la función factorizando:
+$<span class="arithmatex">\(t(x) = \frac{(x - 2)(x + 1)}{(x - 2)(x + 2)} = \frac{x + 1}{x + 2} \quad \text{(para } x \neq 2, x \neq -2 \text{)}\)</span>$</p>
+<p>Evaluamos usando la forma simplificada:
+* <span class="arithmatex">\(t(0) = \frac{0 + 1}{0 + 2} = \frac{1}{2}\)</span>
+* <span class="arithmatex">\(t(1) = \frac{1 + 1}{1 + 2} = \frac{2}{3}\)</span>
+* <span class="arithmatex">\(t(-1) = \frac{-1 + 1}{-1 + 2} = 0\)</span>
+* <span class="arithmatex">\(t(3) = \frac{3 + 1}{3 + 2} = \frac{4}{5}\)</span>
+* <span class="arithmatex">\(t(-3) = \frac{-3 + 1}{-3 + 2} = \frac{-2}{-1} = 2\)</span>
+* <span class="arithmatex">\(t(4) = \frac{4 + 1}{4 + 2} = \frac{5}{6}\)</span></p>
+<p>Resolvemos:
+<strong>a)</strong> <span class="arithmatex">\(t(3) + 4t(0) - t(1) = \frac{4}{5} + 4\left(\frac{1}{2}\right) - \frac{2}{3} = \frac{4}{5} + 2 - \frac{2}{3} = \frac{12 + 30 - 10}{15} = \frac{32}{15}\)</span>
+<strong>b)</strong> <span class="arithmatex">\(-t(-1) + (t(-3))^2 = -0 + (2)^2 = 4\)</span>
+<strong>c)</strong> <span class="arithmatex">\(\dfrac{t(4) - t(0)}{t(1)} = \dfrac{\frac{5}{6} - \frac{1}{2}}{\frac{2}{3}} = \dfrac{\frac{2}{6}}{\frac{2}{3}} = \dfrac{1/3}{2/3} = \frac{1}{2}\)</span>
+<strong>d)</strong> <span class="arithmatex">\((t(3) - t(-1) + t(0))^2 = \left(\frac{4}{5} - 0 + \frac{1}{2}\right)^2 = \left(\frac{8 + 5}{10}\right)^2 = \left(\frac{13}{10}\right)^2 = \frac{169}{100}\)</span></p>
+</details>
+<hr />
+<p><strong>Problema 7:</strong>
+Considere la función <span class="arithmatex">\(q:[-3, \infty)-\{1\}\to \mathbb{R}\)</span> dada por:</p>
+<div class="arithmatex">\[q(x) = \frac{\sqrt{x + 3}}{x - 1}\]</div>
+<p>Calcule:
+a) <span class="arithmatex">\(q(6) + 2q(13) - q(-2)\)</span></p>
+<p>b) <span class="arithmatex">\(-q(22) + (q(-3))^2\)</span></p>
+<p>c) <span class="arithmatex">\(\dfrac{q(6) - q(-2)}{q(13)}\)</span></p>
+<p>d) <span class="arithmatex">\((q(6) - q(22) + q(-2))^2\)</span></p>
+<details class="note">
+<summary>Ver Desarrollo</summary>
+<p>Evaluamos:
+* <span class="arithmatex">\(q(6) = \frac{\sqrt{6 + 3}}{6 - 1} = \frac{\sqrt{9}}{5} = \frac{3}{5}\)</span>
+* <span class="arithmatex">\(q(13) = \frac{\sqrt{13 + 3}}{13 - 1} = \frac{\sqrt{16}}{12} = \frac{4}{12} = \frac{1}{3}\)</span>
+* <span class="arithmatex">\(q(-2) = \frac{\sqrt{-2 + 3}}{-2 - 1} = \frac{\sqrt{1}}{-3} = -\frac{1}{3}\)</span>
+* <span class="arithmatex">\(q(22) = \frac{\sqrt{22 + 3}}{22 - 1} = \frac{\sqrt{25}}{21} = \frac{5}{21}\)</span>
+* <span class="arithmatex">\(q(-3) = \frac{\sqrt{-3 + 3}}{-3 - 1} = \frac{0}{-4} = 0\)</span></p>
+<p>Resolvemos:
+<strong>a)</strong> <span class="arithmatex">\(q(6) + 2q(13) - q(-2) = \frac{3}{5} + 2\left(\frac{1}{3}\right) - \left(-\frac{1}{3}\right) = \frac{3}{5} + \frac{2}{3} + \frac{1}{3} = \frac{3}{5} + 1 = \frac{8}{5}\)</span>
+<strong>b)</strong> <span class="arithmatex">\(-q(22) + (q(-3))^2 = -\frac{5}{21} + (0)^2 = -\frac{5}{21}\)</span>
+<strong>c)</strong> <span class="arithmatex">\(\dfrac{q(6) - q(-2)}{q(13)} = \dfrac{\frac{3}{5} - \left(-\frac{1}{3}\right)}{\frac{1}{3}} = \dfrac{\frac{9+5}{15}}{1/3} = \dfrac{14/15}{1/3} = \frac{14}{5}\)</span>
+<strong>d)</strong> <span class="arithmatex">\((q(6) - q(22) + q(-2))^2 = \left(\frac{3}{5} - \frac{5}{21} - \frac{1}{3}\right)^2 = \left(\frac{63 - 25 - 35}{105}\right)^2 = \left(\frac{3}{105}\right)^2 = \left(\frac{1}{35}\right)^2 = \frac{1}{1225}\)</span></p>
+</details>
+<hr />
+<p><strong>Problema 8:</strong>
+Considere la función exponencial <span class="arithmatex">\(s:\mathbb{R}\to \mathbb{R}\)</span> dada por:</p>
+<div class="arithmatex">\[s(x) = 2^{x+1} - 3x\]</div>
+<p>Calcule:
+a) <span class="arithmatex">\(s(0) + 2s(1) - s(2)\)</span></p>
+<p>b) <span class="arithmatex">\(-s(3) + (s(-1))^2\)</span></p>
+<p>c) <span class="arithmatex">\(\dfrac{s(2) - s(0)}{s(1)}\)</span></p>
+<p>d) <span class="arithmatex">\((s(1) - s(0) + s(-2))^2\)</span></p>
+<details class="note">
+<summary>Ver Desarrollo</summary>
+<p>Evaluamos:
+* <span class="arithmatex">\(s(0) = 2^{0+1} - 3(0) = 2^1 = 2\)</span>
+* <span class="arithmatex">\(s(1) = 2^{1+1} - 3(1) = 4 - 3 = 1\)</span>
+* <span class="arithmatex">\(s(2) = 2^{2+1} - 3(2) = 8 - 6 = 2\)</span>
+* <span class="arithmatex">\(s(3) = 2^{3+1} - 3(3) = 16 - 9 = 7\)</span>
+* <span class="arithmatex">\(s(-1) = 2^{-1+1} - 3(-1) = 2^0 + 3 = 1 + 3 = 4\)</span>
+* <span class="arithmatex">\(s(-2) = 2^{-2+1} - 3(-2) = 2^{-1} + 6 = \frac{1}{2} + 6 = \frac{13}{2}\)</span></p>
+<p>Resolvemos:
+<strong>a)</strong> <span class="arithmatex">\(s(0) + 2s(1) - s(2) = 2 + 2(1) - 2 = 2\)</span>
+<strong>b)</strong> <span class="arithmatex">\(-s(3) + (s(-1))^2 = -7 + (4)^2 = -7 + 16 = 9\)</span>
+<strong>c)</strong> <span class="arithmatex">\(\dfrac{s(2) - s(0)}{s(1)} = \dfrac{2 - 2}{1} = 0\)</span>
+<strong>d)</strong> <span class="arithmatex">\((s(1) - s(0) + s(-2))^2 = \left(1 - 2 + \frac{13}{2}\right)^2 = \left(-1 + \frac{13}{2}\right)^2 = \left(\frac{11}{2}\right)^2 = \frac{121}{4}\)</span></p>
+</details>
+<hr />
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
