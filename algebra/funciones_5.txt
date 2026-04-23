@@ -1,0 +1,193 @@
+# Ecuación de recta
+Rectas paralelas, perpendiculares, ecuación de recta.
+
+---
+
+# Ecuaciones de recta, pendiente y relación con curvas.
+
+---
+
+**Problema 1:**
+Determine la ecuación de la recta que pasa por el punto $(-1,4)$ y es perpendicular a la recta:
+$$y=2x-5$$
+
+??? note "Ver Desarrollo"
+    La recta dada es $y = 2x - 5$, cuya pendiente es $m_1 = 2$. 
+    Para que nuestra recta sea perpendicular, su pendiente $m_2$ debe cumplir $m_1 \cdot m_2 = -1$, por lo tanto, $m_2 = -\frac{1}{2}$. 
+    Utilizando la ecuación punto-pendiente con el punto $(-1, 4)$:
+    $$y - 4 = -\frac{1}{2}(x - (-1))$$
+    $$y - 4 = -\frac{1}{2}x - \frac{1}{2}$$
+    $$y = -\frac{1}{2}x + \frac{7}{2}$$
+
+---
+
+**Problema 2:**
+Determine la ecuación de la recta que pasa por el punto $(3,-2)$ y es perpendicular a la recta:
+$$y=\frac{4}{3}x-1$$
+
+??? note "Ver Desarrollo"
+    La recta dada es $y = \frac{4}{3}x - 1$, por lo que $m_1 = \frac{4}{3}$.
+    La pendiente perpendicular es $m_2 = -\frac{3}{4}$.
+    Utilizando la ecuación punto-pendiente con el punto $(3, -2)$:
+    $$y - (-2) = -\frac{3}{4}(x - 3)$$
+    $$y + 2 = -\frac{3}{4}x + \frac{9}{4}$$
+    $$y = -\frac{3}{4}x + \frac{1}{4}$$
+
+---
+
+**Problema 3:**
+Determine la ecuación de la recta que pasa por el punto $(-5,-5)$ y es perpendicular a la recta:
+$$y=-4x+7$$
+
+??? note "Ver Desarrollo"
+    La recta dada es $y = -4x + 7$, luego $m_1 = -4$.
+    La pendiente perpendicular es $m_2 = \frac{1}{4}$.
+    Con el punto $(-5, -5)$:
+    $$y - (-5) = \frac{1}{4}(x - (-5))$$
+    $$y + 5 = \frac{1}{4}x + \frac{5}{4}$$
+    $$y = \frac{1}{4}x - \frac{15}{4}$$
+
+---
+
+**Problema 4:**
+Determine la ecuación de la recta que pasa por el punto de intersección de las rectas $x-y=0$ y $x+y=4$, y es perpendicular a la recta dada por la ecuación general:
+$$3x - 4y + 12 = 0$$
+
+??? note "Ver Desarrollo"
+    Primero hallamos el punto de intersección resolviendo el sistema:
+    $x - y = 0 \Rightarrow x = y$
+    
+    Sustituyendo en la segunda ecuación: $x + x = 4 \Rightarrow 2x = 4 \Rightarrow x = 2$.
+    Por lo tanto, el punto es $(2, 2)$.
+    
+    La recta dada es $3x - 4y + 12 = 0 \Rightarrow 4y = 3x + 12 \Rightarrow y = \frac{3}{4}x + 3$. Su pendiente es $m_1 = \frac{3}{4}$.
+    La pendiente perpendicular es $m_2 = -\frac{4}{3}$.
+    
+    Con el punto $(2, 2)$:
+    $$y - 2 = -\frac{4}{3}(x - 2)$$
+    $$y - 2 = -\frac{4}{3}x + \frac{8}{3}$$
+    $$y = -\frac{4}{3}x + \frac{14}{3}$$
+
+---
+
+**Problema 5:**
+Hallar la ecuación de la recta que pasa por el punto $(3,0)$ y es paralela a la recta que une los puntos $(-3,2)$ y $(5,-2).$
+
+??? note "Ver Desarrollo"
+    Calculamos la pendiente entre $(-3,2)$ y $(5,-2)$:
+    $$m = \frac{-2 - 2}{5 - (-3)} = \frac{-4}{8} = -\frac{1}{2}$$
+    
+    Con el punto $(3, 0)$:
+    $$y - 0 = -\frac{1}{2}(x - 3) \Rightarrow y = -\frac{1}{2}x + \frac{3}{2}$$
+
+---
+
+**Problema 6:**
+Hallar la ecuación de la recta que pasa por el punto $(0,-4)$ y es paralela a la recta que une los puntos $(2,7)$ y $(-1,-5).$
+
+??? note "Ver Desarrollo"
+    Calculamos la pendiente entre $(2,7)$ y $(-1,-5)$:
+    $$m = \frac{-5 - 7}{-1 - 2} = \frac{-12}{-3} = 4$$
+    
+    Con el punto $(0, -4)$, que corresponde al intercepto en el eje $y$:
+    $$y = 4x - 4$$
+
+---
+
+**Problema 7:**
+Hallar la ecuación de la recta que pasa por el punto $(4,1)$ y es paralela a la recta que une las intersecciones con los ejes coordenados de la ecuación lineal $2x + 5y = 10.$
+
+??? note "Ver Desarrollo"
+    Hallamos las intersecciones de $2x + 5y = 10$:
+    
+    * Si $x = 0 \Rightarrow 5y = 10 \Rightarrow y = 2$. Punto $(0, 2)$.
+    * Si $y = 0 \Rightarrow 2x = 10 \Rightarrow x = 5$. Punto $(5, 0)$.
+    
+    Calculamos la pendiente entre $(0,2)$ y $(5,0)$:
+    $$m = \frac{0 - 2}{5 - 0} = -\frac{2}{5}$$
+    
+    Con el punto $(4, 1)$:
+    $$y - 1 = -\frac{2}{5}(x - 4)$$
+    $$y - 1 = -\frac{2}{5}x + \frac{8}{5} \Rightarrow y = -\frac{2}{5}x + \frac{13}{5}$$
+
+---
+
+**Problema 8:**
+Sea $f(x)=x^2+2.$ Determine todos los valores de $k\in \mathbb{R}$ tales que la recta que pasa por los puntos $(2,f(2))$ y $(k,f(k))$ tenga pendiente igual a cero.
+
+??? note "Ver Desarrollo"
+    Calculamos $f(2) = (2)^2 + 2 = 6$. El punto es $(2, 6)$.
+    
+    La fórmula de la pendiente es:
+    $$m = \frac{f(k) - f(2)}{k - 2} = 0$$
+    $$\frac{(k^2 + 2) - 6}{k - 2} = 0 \Rightarrow \frac{k^2 - 4}{k - 2} = 0$$
+    
+    Factorizando el numerador: $\frac{(k - 2)(k + 2)}{k - 2} = 0$.
+    
+    Como $k \neq 2$, simplificamos y obtenemos $k + 2 = 0$, por lo tanto, $k = -2$.
+
+---
+
+**Problema 9:**
+Sea $f(x)=2x^2-3.$ Determine todos los valores de $k\in \mathbb{R}$ tales que la recta que pasa por los puntos $(-1,f(-1))$ y $(k,f(k))$ tenga pendiente igual a cero.
+
+??? note "Ver Desarrollo"
+    Calculamos $f(-1) = 2(-1)^2 - 3 = -1$. El punto es $(-1, -1)$.
+    
+    $$m = \frac{f(k) - f(-1)}{k - (-1)} = 0$$
+    $$\frac{(2k^2 - 3) - (-1)}{k + 1} = 0 \Rightarrow \frac{2k^2 - 2}{k + 1} = 0$$
+    
+    Factorizando: $\frac{2(k^2 - 1)}{k + 1} = 0 \Rightarrow \frac{2(k - 1)(k + 1)}{k + 1} = 0$.
+    
+    Como $k \neq -1$, simplificamos obteniendo $2(k - 1) = 0$, por lo que $k = 1$.
+
+---
+
+**Problema 10:**
+Sea $f(x)=-x^2+4x.$ Determine todos los valores de $k\in \mathbb{R}$ tales que la recta que pasa por los puntos $(1,f(1))$ y $(k,f(k))$ tenga pendiente igual a cero.
+
+??? note "Ver Desarrollo"
+    Calculamos $f(1) = -(1)^2 + 4(1) = 3$. El punto es $(1, 3)$.
+    
+    $$m = \frac{f(k) - f(1)}{k - 1} = 0$$
+    $$\frac{-k^2 + 4k - 3}{k - 1} = 0 \Rightarrow \frac{-(k^2 - 4k + 3)}{k - 1} = 0$$
+    
+    Factorizando: $\frac{-(k - 3)(k - 1)}{k - 1} = 0$.
+    
+    Como $k \neq 1$, simplificamos y queda $-(k - 3) = 0$, por ende $k = 3$.
+
+---
+
+**Problema 11:**
+Sea $f(x)=\frac{1}{2}x^2.$ Determine todos los valores de $k\in \mathbb{R}$ tales que la recta que pasa por los puntos $(3,f(3))$ y $(k,f(k))$ tenga pendiente igual a cero.
+
+??? note "Ver Desarrollo"
+    Calculamos $f(3) = \frac{1}{2}(3)^2 = \frac{9}{2}$. El punto es $\left(3, \frac{9}{2}\right)$.
+    
+    $$m = \frac{f(k) - f(3)}{k - 3} = 0$$
+    $$\frac{\frac{1}{2}k^2 - \frac{9}{2}}{k - 3} = 0 \Rightarrow \frac{\frac{1}{2}(k^2 - 9)}{k - 3} = 0$$
+    
+    Factorizando: $\frac{\frac{1}{2}(k - 3)(k + 3)}{k - 3} = 0$.
+    
+    Dado que $k \neq 3$, concluimos que $\frac{1}{2}(k + 3) = 0 \Rightarrow k = -3$.
+
+---
+
+**Problema 12:**
+Sea $f(x)=x^3-4x.$ Determine todos los valores de $k\in \mathbb{R}$ ($k \neq 2$) tales que la recta secante que pasa por los puntos $(2,f(2))$ y $(k,f(k))$ tenga pendiente igual a $8.$
+
+??? note "Ver Desarrollo"
+    Calculamos $f(2) = (2)^3 - 4(2) = 0$. El punto es $(2, 0)$.
+    
+    La pendiente requerida es $8$:
+    $$m = \frac{f(k) - f(2)}{k - 2} = 8$$
+    $$\frac{k^3 - 4k}{k - 2} = 8 \Rightarrow \frac{k(k^2 - 4)}{k - 2} = 8$$
+    
+    Factorizando: $\frac{k(k - 2)(k + 2)}{k - 2} = 8$.
+    
+    Sabiendo que $k \neq 2$, la ecuación se reduce a:
+    $$k(k + 2) = 8 \Rightarrow k^2 + 2k - 8 = 0$$
+    
+    Factorizando esta ecuación cuadrática: $(k + 4)(k - 2) = 0$.
+    
+    Como la condición indica que $k \neq 2$, la única solución válida es $k = -4$.
