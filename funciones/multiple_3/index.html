@@ -1,0 +1,1613 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Material de apoyo, guías y problemas de precálculo.">
+      
+      
+        <meta name="author" content="José David Torres Riffo">
+      
+      
+      
+        <link rel="prev" href="../funciones_7/">
+      
+      
+        <link rel="next" href="../funciones_8/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Práctica - MateRiffo</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#ejercicios-de-seleccion-multiple-funciones-cuadraticas-y-modelado" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../.." title="MateRiffo" class="md-header__button md-logo" aria-label="MateRiffo" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            MateRiffo
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Práctica
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="MateRiffo" class="md-nav__button md-logo" aria-label="MateRiffo" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    MateRiffo
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Módulo de Inecuaciones
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Módulo de Inecuaciones
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algebra/inecuaciones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Racionales
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algebra/desigualdades/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Desigualdades
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algebra/aplicaciones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aplicaciones
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algebra/absoluto/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Valor absoluto
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algebra/raices/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Raices
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Módulo de Funciones Reales
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Módulo de Funciones Reales
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algebra/funciones_1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gráfico de funciones
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algebra/funciones_2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dominio de funciones
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algebra/funciones_3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Evaluación de funciones
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algebra/multiple_1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Práctica
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Módulo de Función lineal
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Módulo de Función lineal
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algebra/funciones_5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Rectas y funciones
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algebra/funciones_4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aplicaciones de funciones lineales
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algebra/multiple_2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Práctica
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Módulo de función cuadrática
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Módulo de función cuadrática
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../funciones_6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Funciones cuadráticas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../funciones_7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Parábola y funciones
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Práctica
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Módulo de exponencial y logaritmo
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Módulo de exponencial y logaritmo
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../funciones_8/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Función exponencial
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="ejercicios-de-seleccion-multiple-funciones-cuadraticas-y-modelado">Ejercicios de Selección Múltiple: Funciones Cuadráticas y Modelado</h1>
+<p>Resuelve los siguientes ejercicios y luego verifica tu respuesta. Si tienes dudas, puedes desplegar el desarrollo paso a paso.</p>
+<hr />
+<fieldset style="border: 1px solid #e0e0e0; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+  <legend style="font-weight: bold; color: #3f51b5;">Pregunta 1</legend>
+
+  <p>Encuentre el valor mínimo de la función e indique el vértice de $f(x)=2x^2-12x+7$.</p>
+
+  <input type="radio" name="p1" id="p1a" value="incorrecta"> <label for="p1a">A) Valor mínimo: $11$, Vértice: $(-3, 11)$</label><br>
+  <input type="radio" name="p1" id="p1b" value="correcta"> <label for="p1b">B) Valor mínimo: $-11$, Vértice: $(3, -11)$</label><br>
+  <input type="radio" name="p1" id="p1c" value="incorrecta"> <label for="p1c">C) Valor mínimo: $-5$, Vértice: $(3, -5)$</label><br>
+  <input type="radio" name="p1" id="p1d" value="incorrecta"> <label for="p1d">D) Valor mínimo: $-11$, Vértice: $(-3, -11)$</label><br>
+  <input type="radio" name="p1" id="p1e" value="incorrecta"> <label for="p1e">E) Valor mínimo: $7$, Vértice: $(0, 7)$</label><br><br>
+
+  <button onclick="verificarRespuesta('p1', 'feedback_p1')" style="background-color: #3f51b5; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer;">Verificar</button>
+  <div id="feedback_p1" style="margin-top: 15px; font-weight: bold;"></div>
+</fieldset>
+
+<details class="info">
+<summary>Ver desarrollo paso a paso</summary>
+<p>Como <span class="arithmatex">\(a=2&gt;0\)</span>, la parábola abre hacia arriba y posee un mínimo.</p>
+<p>Calculamos la coordenada <span class="arithmatex">\(x\)</span> del vértice:
+$$ x_v=\frac{-b}{2a}=\frac{-(-12)}{2(2)}=\frac{12}{4}=3$$</p>
+<p>Evaluamos:
+$<span class="arithmatex">\(f(3)=2(3)^2-12(3)+7\)</span>$
+$$ f(3)=18-36+7=-11$$</p>
+<p>El vértice es <span class="arithmatex">\((3,-11)\)</span> y el valor mínimo de la función es <span class="arithmatex">\(-11\)</span>.</p>
+</details>
+<hr />
+<fieldset style="border: 1px solid #e0e0e0; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+  <legend style="font-weight: bold; color: #3f51b5;">Pregunta 2</legend>
+
+  <p>Determine el valor máximo de la función: $g(t)=-3t^2+18t-5$</p>
+
+  <input type="radio" name="p2" id="p2a" value="incorrecta"> <label for="p2a">A) $-32$</label><br>
+  <input type="radio" name="p2" id="p2b" value="incorrecta"> <label for="p2b">B) $3$</label><br>
+  <input type="radio" name="p2" id="p2c" value="incorrecta"> <label for="p2c">C) $32$</label><br>
+  <input type="radio" name="p2" id="p2d" value="incorrecta"> <label for="p2d">D) $-22$</label><br>
+  <input type="radio" name="p2" id="p2e" value="correcta"> <label for="p2e">E) $22$</label><br><br>
+
+  <button onclick="verificarRespuesta('p2', 'feedback_p2')" style="background-color: #3f51b5; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer;">Verificar</button>
+  <div id="feedback_p2" style="margin-top: 15px; font-weight: bold;"></div>
+</fieldset>
+
+<details class="info">
+<summary>Ver desarrollo paso a paso</summary>
+<p>Como <span class="arithmatex">\(a=-3&lt;0\)</span>, la parábola abre hacia abajo y tiene un máximo.</p>
+<div class="arithmatex">\[t_v=\frac{-18}{2(-3)}=3\]</div>
+<p>Evaluamos:
+$<span class="arithmatex">\(g(3)=-3(9)+18(3)-5\)</span>$
+$<span class="arithmatex">\(g(3)=-27+54-5=22\)</span>$</p>
+<p>El valor máximo es <span class="arithmatex">\(22\)</span>.</p>
+</details>
+<hr />
+<fieldset style="border: 1px solid #e0e0e0; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+  <legend style="font-weight: bold; color: #3f51b5;">Pregunta 3</legend>
+
+  <p>Encuentre el mínimo absoluto de la función: $h(x)=\frac{1}{4}x^2-6x+20$</p>
+
+  <input type="radio" name="p3" id="p3a" value="incorrecta"> <label for="p3a">A) $12$</label><br>
+  <input type="radio" name="p3" id="p3b" value="incorrecta"> <label for="p3b">B) $-36$</label><br>
+  <input type="radio" name="p3" id="p3c" value="correcta"> <label for="p3c">C) $-16$</label><br>
+  <input type="radio" name="p3" id="p3d" value="incorrecta"> <label for="p3d">D) $16$</label><br>
+  <input type="radio" name="p3" id="p3e" value="incorrecta"> <label for="p3e">E) $-24$</label><br><br>
+
+  <button onclick="verificarRespuesta('p3', 'feedback_p3')" style="background-color: #3f51b5; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer;">Verificar</button>
+  <div id="feedback_p3" style="margin-top: 15px; font-weight: bold;"></div>
+</fieldset>
+
+<details class="info">
+<summary>Ver desarrollo paso a paso</summary>
+<p>Como <span class="arithmatex">\(a=\frac{1}{4}&gt;0\)</span>, la función posee un mínimo.</p>
+<div class="arithmatex">\[x_v=\frac{-(-6)}{2\left(\frac{1}{4}\right)} =\frac{6}{\frac{1}{2}}=12\]</div>
+<p>Evaluamos:
+$<span class="arithmatex">\(h(12)=\frac{1}{4}(144)-6(12)+20\)</span>$
+$<span class="arithmatex">\(h(12)=36-72+20=-16\)</span>$</p>
+<p>El mínimo absoluto es <span class="arithmatex">\(-16\)</span>.</p>
+</details>
+<hr />
+<fieldset style="border: 1px solid #e0e0e0; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+  <legend style="font-weight: bold; color: #3f51b5;">Pregunta 4</legend>
+
+  <p>Halle el vértice de $f(s)=-5s^2+40s-12$ y determine si representa un máximo o un mínimo.</p>
+
+  <input type="radio" name="p4" id="p4a" value="incorrecta"> <label for="p4a">A) Vértice $(-4, -68)$, representa un máximo.</label><br>
+  <input type="radio" name="p4" id="p4b" value="incorrecta"> <label for="p4b">B) Vértice $(4, 68)$, representa un mínimo.</label><br>
+  <input type="radio" name="p4" id="p4c" value="incorrecta"> <label for="p4c">C) Vértice $(8, 12)$, representa un máximo.</label><br>
+  <input type="radio" name="p4" id="p4d" value="incorrecta"> <label for="p4d">D) Vértice $(4, -12)$, representa un mínimo.</label><br>
+  <input type="radio" name="p4" id="p4e" value="correcta"> <label for="p4e">E) Vértice $(4, 68)$, representa un máximo.</label><br><br>
+
+  <button onclick="verificarRespuesta('p4', 'feedback_p4')" style="background-color: #3f51b5; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer;">Verificar</button>
+  <div id="feedback_p4" style="margin-top: 15px; font-weight: bold;"></div>
+</fieldset>
+
+<details class="info">
+<summary>Ver desarrollo paso a paso</summary>
+<div class="arithmatex">\[s_v=\frac{-40}{2(-5)}=4\]</div>
+<p>Evaluamos:
+$<span class="arithmatex">\(f(4)=-5(16)+40(4)-12\)</span>$
+$<span class="arithmatex">\(f(4)=-80+160-12=68\)</span>$</p>
+<p>El vértice es <span class="arithmatex">\((4,68)\)</span>.
+Como <span class="arithmatex">\(a &lt; 0\)</span>, representa un máximo.</p>
+</details>
+<hr />
+<fieldset style="border: 1px solid #e0e0e0; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+  <legend style="font-weight: bold; color: #3f51b5;">Pregunta 5</legend>
+
+  <p>Determine el rango (o recorrido) de la función: $y=3x^2-9x+11$</p>
+
+  <input type="radio" name="p5" id="p5a" value="incorrecta"> <label for="p5a">A) $(-\infty, \frac{17}{4}]$</label><br>
+  <input type="radio" name="p5" id="p5b" value="incorrecta"> <label for="p5b">B) $[\frac{3}{2}, \infty)$</label><br>
+  <input type="radio" name="p5" id="p5c" value="correcta"> <label for="p5c">C) $[\frac{17}{4}, \infty)$</label><br>
+  <input type="radio" name="p5" id="p5d" value="incorrecta"> <label for="p5d">D) $[-\frac{17}{4}, \infty)$</label><br>
+  <input type="radio" name="p5" id="p5e" value="incorrecta"> <label for="p5e">E) $(-\infty, \frac{3}{2}]$</label><br><br>
+
+  <button onclick="verificarRespuesta('p5', 'feedback_p5')" style="background-color: #3f51b5; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer;">Verificar</button>
+  <div id="feedback_p5" style="margin-top: 15px; font-weight: bold;"></div>
+</fieldset>
+
+<details class="info">
+<summary>Ver desarrollo paso a paso</summary>
+<p>Como <span class="arithmatex">\(a=3&gt;0\)</span>, la parábola abre hacia arriba.</p>
+<p>Calculamos el vértice:
+$<span class="arithmatex">\(x_v=\frac{-(-9)}{2(3)}=\frac{9}{6}=\frac{3}{2}\)</span>$</p>
+<p>Evaluamos:
+$$ y\left(\frac{3}{2}\right)=3\left(\frac{3}{2}\right)^2-9\left(\frac{3}{2}\right)+11$$
+$<span class="arithmatex">\(=\frac{27}{4}-\frac{27}{2}+11=\frac{17}{4}\)</span>$</p>
+<p>El mínimo valor es <span class="arithmatex">\(\frac{17}{4}\)</span>.
+Por lo tanto, el rango es <span class="arithmatex">\(\left[\frac{17}{4}, \infty\right)\)</span>.</p>
+</details>
+<hr />
+<fieldset style="border: 1px solid #e0e0e0; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+  <legend style="font-weight: bold; color: #3f51b5;">Pregunta 6</legend>
+
+  <p>Determine las coordenadas del vértice de la parábola asociada a: $f(x)=x^2-8x+5$</p>
+
+  <input type="radio" name="p6" id="p6a" value="incorrecta"> <label for="p6a">A) $(-4, 53)$</label><br>
+  <input type="radio" name="p6" id="p6b" value="incorrecta"> <label for="p6b">B) $(-4, -11)$</label><br>
+  <input type="radio" name="p6" id="p6c" value="correcta"> <label for="p6c">C) $(4, -11)$</label><br>
+  <input type="radio" name="p6" id="p6d" value="incorrecta"> <label for="p6d">D) $(4, 11)$</label><br>
+  <input type="radio" name="p6" id="p6e" value="incorrecta"> <label for="p6e">E) $(8, 5)$</label><br><br>
+
+  <button onclick="verificarRespuesta('p6', 'feedback_p6')" style="background-color: #3f51b5; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer;">Verificar</button>
+  <div id="feedback_p6" style="margin-top: 15px; font-weight: bold;"></div>
+</fieldset>
+
+<details class="info">
+<summary>Ver desarrollo paso a paso</summary>
+<div class="arithmatex">\[x_v=\frac{-(-8)}{2(1)}=4 \]</div>
+<p>Evaluamos:
+$$ f(4)=16-32+5=-11$$</p>
+<p>El vértice es <span class="arithmatex">\((4,-11)\)</span>.</p>
+</details>
+<hr />
+<fieldset style="border: 1px solid #e0e0e0; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+  <legend style="font-weight: bold; color: #3f51b5;">Pregunta 7</legend>
+
+  <p>Encuentre una función cuadrática cuya gráfica tenga vértice en $(2,-3)$ y pase por el punto $(5,24)$.</p>
+
+  <input type="radio" name="p7" id="p7a" value="incorrecta"> <label for="p7a">A) $f(x)=3(x+2)^2-3$</label><br>
+  <input type="radio" name="p7" id="p7b" value="incorrecta"> <label for="p7b">B) $f(x)=-3(x-2)^2+3$</label><br>
+  <input type="radio" name="p7" id="p7c" value="incorrecta"> <label for="p7c">C) $f(x)=9(x-2)^2-3$</label><br>
+  <input type="radio" name="p7" id="p7d" value="incorrecta"> <label for="p7d">D) $f(x)=\frac{1}{3}(x-2)^2-3$</label><br>
+  <input type="radio" name="p7" id="p7e" value="correcta"> <label for="p7e">E) $f(x)=3(x-2)^2-3$</label><br><br>
+
+  <button onclick="verificarRespuesta('p7', 'feedback_p7')" style="background-color: #3f51b5; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer;">Verificar</button>
+  <div id="feedback_p7" style="margin-top: 15px; font-weight: bold;"></div>
+</fieldset>
+
+<details class="info">
+<summary>Ver desarrollo paso a paso</summary>
+<p>Usamos la forma vértice:
+$<span class="arithmatex">\(f(x)=a(x-2)^2-3\)</span>$</p>
+<p>Sustituimos el punto <span class="arithmatex">\((5,24)\)</span>:
+$<span class="arithmatex">\(24=a(5-2)^2-3\)</span>$
+$$ 24=9a-3$$
+$<span class="arithmatex">\(27=9a \implies a=3\)</span>$</p>
+<p>La función es <span class="arithmatex">\(f(x)=3(x-2)^2-3\)</span>.</p>
+</details>
+<hr />
+<fieldset style="border: 1px solid #e0e0e0; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+  <legend style="font-weight: bold; color: #3f51b5;">Pregunta 8</legend>
+
+  <p>Encuentre una función cuadrática que tenga intersecciones con el eje $x$ en $(1,0)$ y $(6,0)$ y que pase por el punto $(0,-12)$.</p>
+
+  <input type="radio" name="p8" id="p8a" value="incorrecta"> <label for="p8a">A) $f(x)=2(x-1)(x-6)$</label><br>
+  <input type="radio" name="p8" id="p8b" value="incorrecta"> <label for="p8b">B) $f(x)=-2(x+1)(x+6)$</label><br>
+  <input type="radio" name="p8" id="p8c" value="correcta"> <label for="p8c">C) $f(x)=-2(x-1)(x-6)$</label><br>
+  <input type="radio" name="p8" id="p8d" value="incorrecta"> <label for="p8d">D) $f(x)=-(x-1)(x-6)$</label><br>
+  <input type="radio" name="p8" id="p8e" value="incorrecta"> <label for="p8e">E) $f(x)=2(x+1)(x+6)$</label><br><br>
+
+  <button onclick="verificarRespuesta('p8', 'feedback_p8')" style="background-color: #3f51b5; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer;">Verificar</button>
+  <div id="feedback_p8" style="margin-top: 15px; font-weight: bold;"></div>
+</fieldset>
+
+<details class="info">
+<summary>Ver desarrollo paso a paso</summary>
+<p>Las raíces son <span class="arithmatex">\(1\)</span> y <span class="arithmatex">\(6\)</span>:
+$$ f(x)=a(x-1)(x-6)$$</p>
+<p>Usamos la intersección con <span class="arithmatex">\(y\)</span>, <span class="arithmatex">\((0,-12)\)</span>:
+$<span class="arithmatex">\(-12=a(-1)(-6)\)</span>$
+$<span class="arithmatex">\(-12=6a \implies a=-2\)</span>$</p>
+<p>La función es <span class="arithmatex">\(f(x)=-2(x-1)(x-6)\)</span>.</p>
+</details>
+<hr />
+<fieldset style="border: 1px solid #e0e0e0; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+  <legend style="font-weight: bold; color: #3f51b5;">Pregunta 9</legend>
+
+  <p>Encuentre un valor de $k$ tal que la ecuación $x^2-6x+k=0$ tenga exactamente una solución real.</p>
+
+  <input type="radio" name="p9" id="p9a" value="incorrecta"> <label for="p9a">A) $k = -9$</label><br>
+  <input type="radio" name="p9" id="p9b" value="incorrecta"> <label for="p9b">B) $k = 36$</label><br>
+  <input type="radio" name="p9" id="p9c" value="incorrecta"> <label for="p9c">C) $k = 6$</label><br>
+  <input type="radio" name="p9" id="p9d" value="correcta"> <label for="p9d">D) $k = 9$</label><br>
+  <input type="radio" name="p9" id="p9e" value="incorrecta"> <label for="p9e">E) $k = 0$</label><br><br>
+
+  <button onclick="verificarRespuesta('p9', 'feedback_p9')" style="background-color: #3f51b5; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer;">Verificar</button>
+  <div id="feedback_p9" style="margin-top: 15px; font-weight: bold;"></div>
+</fieldset>
+
+<details class="info">
+<summary>Ver desarrollo paso a paso</summary>
+<p>Para que una ecuación cuadrática tenga exactamente una solución real, el discriminante debe ser cero:
+$<span class="arithmatex">\(b^2-4ac=0\)</span>$</p>
+<p>En este caso: <span class="arithmatex">\(a=1, b=-6, c=k\)</span>.
+$<span class="arithmatex">\((-6)^2-4(1)(k)=0\)</span>$
+$<span class="arithmatex">\(36-4k=0\)</span>$
+$<span class="arithmatex">\(4k=36 \implies k=9\)</span>$</p>
+</details>
+<hr />
+<fieldset style="border: 1px solid #e0e0e0; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+  <legend style="font-weight: bold; color: #3f51b5;">Pregunta 10</legend>
+
+  <p>Determine todos los valores de $a$ para los cuales la ecuación $2x^2+ax+8=0$ no tenga soluciones reales.</p>
+
+  <input type="radio" name="p10" id="p10a" value="incorrecta"> <label for="p10a">A) $a < -8 \text{ o } a > 8$</label><br>
+  <input type="radio" name="p10" id="p10b" value="incorrecta"> <label for="p10b">B) $-64 < a < 64$</label><br>
+  <input type="radio" name="p10" id="p10c" value="correcta"> <label for="p10c">C) $-8 < a < 8$</label><br>
+  <input type="radio" name="p10" id="p10d" value="incorrecta"> <label for="p10d">D) $a = \pm 8$</label><br>
+  <input type="radio" name="p10" id="p10e" value="incorrecta"> <label for="p10e">E) $-4 < a < 4$</label><br><br>
+
+  <button onclick="verificarRespuesta('p10', 'feedback_p10')" style="background-color: #3f51b5; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer;">Verificar</button>
+  <div id="feedback_p10" style="margin-top: 15px; font-weight: bold;"></div>
+</fieldset>
+
+<details class="info">
+<summary>Ver desarrollo paso a paso</summary>
+<p>Para que no existan soluciones reales:
+$<span class="arithmatex">\(b^2-4ac&lt;0\)</span>$</p>
+<p>Entonces:
+$$ a^2-4(2)(8)&lt;0$$
+$<span class="arithmatex">\(a^2-64&lt;0\)</span>$
+$<span class="arithmatex">\(a^2&lt;64\)</span>$
+$<span class="arithmatex">\(-8&lt;a&lt;8\)</span>$</p>
+</details>
+<hr />
+<p><fieldset style="border: 1px solid #e0e0e0; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+<br />
+<legend style="font-weight: bold; color: #3f51b5;">Pregunta 11</legend>
+</p>
+<p>Encuentre el valor de $c$ para que la parábola $y=x^2+4x+c$ sea tangente al eje $X$.</p>
+
+<p><input type="radio" name="p11" id="p11a" value="incorrecta"> <label for="p11a">A) <span class="arithmatex">\(c = -4\)</span></label><br>
+  <input type="radio" name="p11" id="p11b" value="incorrecta"> <label for="p11b">B) <span class="arithmatex">\(c = 16\)</span></label><br>
+  <input type="radio" name="p11" id="p11c" value="incorrecta"> <label for="p11c">C) <span class="arithmatex">\(c = 2\)</span></label><br>
+  <input type="radio" name="p11" id="p11d" value="incorrecta"> <label for="p11d">D) <span class="arithmatex">\(c = 0\)</span></label><br>
+  <input type="radio" name="p11" id="p11e" value="correcta"> <label for="p11e">E) <span class="arithmatex">\(c = 4\)</span></label><br><br></p>
+<p><button onclick="verificarRespuesta('p11', 'feedback_p11')" style="background-color: #3f51b5; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer;">Verificar</button>
+<br />
+<div id="feedback_p11" style="margin-top: 15px; font-weight: bold;"></div></p>
+</fieldset>
+<details class="info">
+<summary>Ver desarrollo paso a paso</summary>
+<p>La parábola es tangente al eje <span class="arithmatex">\(x\)</span> cuando el discriminante es cero (una sola raíz):
+$<span class="arithmatex">\(b^2-4ac=0\)</span>$</p>
+<p>Sustituimos:
+$$ 4^2-4(1)(c)=0$$
+$$16-4c=0 \implies c=4 $$</p>
+</details>
+<hr />
+<fieldset style="border: 1px solid #e0e0e0; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+  <legend style="font-weight: bold; color: #3f51b5;">Pregunta 12</legend>
+
+  <p>La utilidad de una empresa está dada por $U(x)=-2x^2+240x-5000$, donde $x$ representa el número de artículos vendidos diariamente. ¿Cuál es la utilidad máxima y cuántos artículos deben venderse?</p>
+
+  <input type="radio" name="p12" id="p12a" value="incorrecta"> <label for="p12a">A) $\$5000$, vendiendo $120$ artículos.</label><br>
+  <input type="radio" name="p12" id="p12b" value="incorrecta"> <label for="p12b">B) $\$2200$, vendiendo $120$ artículos.</label><br>
+  <input type="radio" name="p12" id="p12c" value="correcta"> <label for="p12c">C) $\$2200$, vendiendo $60$ artículos.</label><br>
+  <input type="radio" name="p12" id="p12d" value="incorrecta"> <label for="p12d">D) $\$14400$, vendiendo $60$ artículos.</label><br>
+  <input type="radio" name="p12" id="p12e" value="incorrecta"> <label for="p12e">E) $\$240$, vendiendo $60$ artículos.</label><br><br>
+
+  <button onclick="verificarRespuesta('p12', 'feedback_p12')" style="background-color: #3f51b5; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer;">Verificar</button>
+  <div id="feedback_p12" style="margin-top: 15px; font-weight: bold;"></div>
+</fieldset>
+
+<details class="info">
+<summary>Ver desarrollo paso a paso</summary>
+<p>Como <span class="arithmatex">\(a=-2&lt;0\)</span>, la función tiene un máximo en el vértice.</p>
+<p>Calculamos el vértice:
+$<span class="arithmatex">\(x_v=\frac{-240}{2(-2)}=60\)</span>$</p>
+<p>Evaluamos:
+$<span class="arithmatex">\(U(60)=-2(60)^2+240(60)-5000\)</span>$
+$$ U(60)=-7200+14400-5000 = 2200$$</p>
+<p>La utilidad máxima es <span class="arithmatex">\(\$2200\)</span> y se obtiene vendiendo <span class="arithmatex">\(60\)</span> artículos.</p>
+</details>
+<hr />
+<fieldset style="border: 1px solid #e0e0e0; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+  <legend style="font-weight: bold; color: #3f51b5;">Pregunta 13</legend>
+
+  <p>La altura de un proyectil está modelada por $h(t)=-5t^2+40t+3$, donde $h$ se mide en metros y $t$ en segundos. Determine la altura máxima alcanzada y el tiempo en que ocurre.</p>
+
+  <input type="radio" name="p13" id="p13a" value="incorrecta"> <label for="p13a">A) $163$ metros a los $8$ segundos.</label><br>
+  <input type="radio" name="p13" id="p13b" value="incorrecta"> <label for="p13b">B) $80$ metros a los $4$ segundos.</label><br>
+  <input type="radio" name="p13" id="p13c" value="incorrecta"> <label for="p13c">C) $83$ metros a los $8$ segundos.</label><br>
+  <input type="radio" name="p13" id="p13d" value="correcta"> <label for="p13d">D) $83$ metros a los $4$ segundos.</label><br>
+  <input type="radio" name="p13" id="p13e" value="incorrecta"> <label for="p13e">E) $160$ metros a los $4$ segundos.</label><br><br>
+
+  <button onclick="verificarRespuesta('p13', 'feedback_p13')" style="background-color: #3f51b5; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer;">Verificar</button>
+  <div id="feedback_p13" style="margin-top: 15px; font-weight: bold;"></div>
+</fieldset>
+
+<details class="info">
+<summary>Ver desarrollo paso a paso</summary>
+<p>La altura máxima se obtiene en el vértice.</p>
+<div class="arithmatex">\[t_v=\frac{-40}{2(-5)}=4\]</div>
+<p>Evaluamos:
+$<span class="arithmatex">\(h(4)=-5(16)+40(4)+3\)</span>$
+$<span class="arithmatex">\(h(4)=-80+160+3=83\)</span>$</p>
+<p>La altura máxima es <span class="arithmatex">\(83\)</span> metros y ocurre a los <span class="arithmatex">\(4\)</span> segundos.</p>
+</details>
+<hr />
+<fieldset style="border: 1px solid #e0e0e0; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+  <legend style="font-weight: bold; color: #3f51b5;">Pregunta 14</legend>
+
+  <p>El ingreso mensual de una compañía está dado por $R(x)=-0.5x^2+120x$, donde $x$ representa cientos de productos vendidos. Determine el ingreso máximo.</p>
+
+  <input type="radio" name="p14" id="p14a" value="incorrecta"> <label for="p14a">A) $\$14400$ vendiendo 120 cientos de productos.</label><br>
+  <input type="radio" name="p14" id="p14b" value="correcta"> <label for="p14b">B) $\$7200$ vendiendo 120 cientos de productos.</label><br>
+  <input type="radio" name="p14" id="p14c" value="incorrecta"> <label for="p14c">C) $\$7200$ vendiendo 240 cientos de productos.</label><br>
+  <input type="radio" name="p14" id="p14d" value="incorrecta"> <label for="p14d">D) $\$3600$ vendiendo 120 cientos de productos.</label><br>
+  <input type="radio" name="p14" id="p14e" value="incorrecta"> <label for="p14e">E) $\$7200$ vendiendo 60 cientos de productos.</label><br><br>
+
+  <button onclick="verificarRespuesta('p14', 'feedback_p14')" style="background-color: #3f51b5; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer;">Verificar</button>
+  <div id="feedback_p14" style="margin-top: 15px; font-weight: bold;"></div>
+</fieldset>
+
+<details class="info">
+<summary>Ver desarrollo paso a paso</summary>
+<p>La función tiene un máximo porque <span class="arithmatex">\(a&lt;0\)</span>.</p>
+<div class="arithmatex">\[x_v=\frac{-120}{2(-0.5)}=120\]</div>
+<p>Evaluamos:
+$<span class="arithmatex">\(R(120)=-0.5(120)^2+120(120)\)</span>$
+$<span class="arithmatex">\(R(120)=-7200+14400=7200\)</span>$</p>
+<p>El ingreso máximo es <span class="arithmatex">\(\$7200\)</span> y se obtiene vendiendo <span class="arithmatex">\(120\)</span> cientos de productos (es decir, <span class="arithmatex">\(12000\)</span> productos).</p>
+</details>
+<hr />
+<fieldset style="border: 1px solid #e0e0e0; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+  <legend style="font-weight: bold; color: #3f51b5;">Pregunta 15</legend>
+
+  <p>Determine las intersecciones con los ejes coordenados y el vértice de $f(x)=x^2-7x+10$.</p>
+
+  <input type="radio" name="p15" id="p15a" value="incorrecta"> <label for="p15a">A) Eje $x$: $(-5,0), (-2,0)$; Eje $y$: $(0,-10)$; Vértice: $\left(-\frac{7}{2}, \frac{9}{4}\right)$</label><br>
+  <input type="radio" name="p15" id="p15b" value="incorrecta"> <label for="p15b">B) Eje $x$: $(5,0), (2,0)$; Eje $y$: $(0,10)$; Vértice: $\left(\frac{7}{2}, \frac{9}{4}\right)$</label><br>
+  <input type="radio" name="p15" id="p15c" value="correcta"> <label for="p15c">C) Eje $x$: $(5,0), (2,0)$; Eje $y$: $(0,10)$; Vértice: $\left(\frac{7}{2}, -\frac{9}{4}\right)$</label><br>
+  <input type="radio" name="p15" id="p15d" value="incorrecta"> <label for="p15d">D) Eje $x$: $(10,0), (1,0)$; Eje $y$: $(0,10)$; Vértice: $\left(\frac{7}{2}, -\frac{9}{4}\right)$</label><br>
+  <input type="radio" name="p15" id="p15e" value="incorrecta"> <label for="p15e">E) Eje $x$: $(5,0), (2,0)$; Eje $y$: $(0,-10)$; Vértice: $\left(-\frac{7}{2}, -\frac{9}{4}\right)$</label><br><br>
+
+  <button onclick="verificarRespuesta('p15', 'feedback_p15')" style="background-color: #3f51b5; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer;">Verificar</button>
+  <div id="feedback_p15" style="margin-top: 15px; font-weight: bold;"></div>
+</fieldset>
+
+<details class="info">
+<summary>Ver desarrollo paso a paso</summary>
+<p>Para encontrar las intersecciones con el eje <span class="arithmatex">\(x\)</span>:
+$<span class="arithmatex">\(x^2-7x+10=0 \implies (x-5)(x-2)=0\)</span>$
+Entonces las intersecciones son: <span class="arithmatex">\((5,0)\)</span> y <span class="arithmatex">\((2,0)\)</span>.</p>
+<p>Intersección con el eje <span class="arithmatex">\(y\)</span>:
+$<span class="arithmatex">\(f(0)=10 \implies (0,10)\)</span>$</p>
+<p>Vértice:
+$<span class="arithmatex">\(x_v=\frac{-(-7)}{2(1)}=\frac{7}{2}\)</span>$
+Evaluamos:
+$<span class="arithmatex">\(f\left(\frac{7}{2}\right)=\frac{49}{4}-\frac{49}{2}+10=-\frac{9}{4}\)</span>$
+El vértice es <span class="arithmatex">\(\left(\frac{7}{2},-\frac{9}{4}\right)\)</span>.</p>
+</details>
+<hr />
+<fieldset style="border: 1px solid #e0e0e0; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+  <legend style="font-weight: bold; color: #3f51b5;">Pregunta 16</legend>
+
+  <p>Encuentre una función cuadrática cuya gráfica tenga eje de simetría $x=3$, pase por los puntos $(1,5)$ y $(5,5)$, y tenga un valor mínimo igual a $1$.</p>
+
+  <input type="radio" name="p16" id="p16a" value="incorrecta"> <label for="p16a">A) $f(x)=2(x-3)^2+1$</label><br>
+  <input type="radio" name="p16" id="p16b" value="incorrecta"> <label for="p16b">B) $f(x)=(x+3)^2+1$</label><br>
+  <input type="radio" name="p16" id="p16c" value="correcta"> <label for="p16c">C) $f(x)=(x-3)^2+1$</label><br>
+  <input type="radio" name="p16" id="p16d" value="incorrecta"> <label for="p16d">D) $f(x)=-(x-3)^2+1$</label><br>
+  <input type="radio" name="p16" id="p16e" value="incorrecta"> <label for="p16e">E) $f(x)=(x-1)^2+3$</label><br><br>
+
+  <button onclick="verificarRespuesta('p16', 'feedback_p16')" style="background-color: #3f51b5; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer;">Verificar</button>
+  <div id="feedback_p16" style="margin-top: 15px; font-weight: bold;"></div>
+</fieldset>
+
+<details class="info">
+<summary>Ver desarrollo paso a paso</summary>
+<p>Como el eje de simetría es <span class="arithmatex">\(x=3\)</span> y el valor mínimo es <span class="arithmatex">\(1\)</span>, el vértice es <span class="arithmatex">\((3,1)\)</span>.</p>
+<p>Entonces la forma canónica es:</p>
+<div class="arithmatex">\[f(x)=a(x-3)^2+1\]</div>
+<p>Usamos el punto <span class="arithmatex">\((1,5)\)</span> para encontrar <span class="arithmatex">\(a\)</span>:</p>
+<div class="arithmatex">\[5=a(1-3)^2+1\]</div>
+<div class="arithmatex">\[5=4a+1\]</div>
+<div class="arithmatex">\[4=4a \implies a=1\]</div>
+<p>La función es <span class="arithmatex">\(f(x)=(x-3)^2+1\)</span>.</p>
+</details>
+<hr />
+<fieldset style="border: 1px solid #e0e0e0; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+  <legend style="font-weight: bold; color: #3f51b5;">Pregunta 17</legend>
+
+  <p>Determine el rango de valores para el parámetro $m$ de modo que la gráfica de la parábola $y = (m-1)x^2 - 2mx + (m+2)$ se encuentre estrictamente por encima del eje $x$ para todo número real $x$.</p>
+
+  <input type="radio" name="p17" id="p17a" value="incorrecta"> <label for="p17a">A) $m > 1$</label><br>
+  <input type="radio" name="p17" id="p17b" value="incorrecta"> <label for="p17b">B) $m < 2$</label><br>
+  <input type="radio" name="p17" id="p17c" value="correcta"> <label for="p17c">C) $m > 2$</label><br>
+  <input type="radio" name="p17" id="p17d" value="incorrecta"> <label for="p17d">D) $1 < m < 2$</label><br>
+  <input type="radio" name="p17" id="p17e" value="incorrecta"> <label for="p17e">E) $m \neq 1$</label><br><br>
+
+  <button onclick="verificarRespuesta('p17', 'feedback_p17')" style="background-color: #3f51b5; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer;">Verificar</button>
+  <div id="feedback_p17" style="margin-top: 15px; font-weight: bold;"></div>
+</fieldset>
+
+<details class="info">
+<summary>Ver desarrollo paso a paso</summary>
+<p>Para que la parábola esté estrictamente por encima del eje <span class="arithmatex">\(x\)</span>, se deben cumplir dos condiciones simultáneas:
+1. Debe abrir hacia arriba: <span class="arithmatex">\(a &gt; 0 \implies m - 1 &gt; 0 \implies m &gt; 1\)</span>.
+2. No debe intersecar el eje <span class="arithmatex">\(x\)</span> (discriminante negativo): <span class="arithmatex">\(\Delta &lt; 0\)</span>.</p>
+<p>Calculamos el discriminante:
+$<span class="arithmatex">\(\Delta = b^2 - 4ac = (-2m)^2 - 4(m-1)(m+2) &lt; 0\)</span>$
+$<span class="arithmatex">\(4m^2 - 4(m^2 + m - 2) &lt; 0\)</span>$
+$<span class="arithmatex">\(4m^2 - 4m^2 - 4m + 8 &lt; 0\)</span>$
+$<span class="arithmatex">\(-4m + 8 &lt; 0 \implies -4m &lt; -8 \implies m &gt; 2\)</span>$</p>
+<p>Interceptando ambas condiciones (<span class="arithmatex">\(m &gt; 1\)</span> y <span class="arithmatex">\(m &gt; 2\)</span>), la solución final es <span class="arithmatex">\(m &gt; 2\)</span>.</p>
+</details>
+<hr />
+<fieldset style="border: 1px solid #e0e0e0; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+  <legend style="font-weight: bold; color: #3f51b5;">Pregunta 18</legend>
+
+  <p>Un agricultor dispone de $1200$ metros de malla para cercar un terreno rectangular que colinda con un río recto. No se necesita cerca a lo largo del río. ¿Cuáles deben ser las dimensiones del terreno para que el área encerrada sea máxima?</p>
+
+  <input type="radio" name="p18" id="p18a" value="incorrecta"> <label for="p18a">A) $400\text{ m} \times 400\text{ m}$</label><br>
+  <input type="radio" name="p18" id="p18b" value="correcta"> <label for="p18b">B) $300\text{ m} \times 600\text{ m}$</label><br>
+  <input type="radio" name="p18" id="p18c" value="incorrecta"> <label for="p18c">C) $200\text{ m} \times 800\text{ m}$</label><br>
+  <input type="radio" name="p18" id="p18d" value="incorrecta"> <label for="p18d">D) $600\text{ m} \times 600\text{ m}$</label><br>
+  <input type="radio" name="p18" id="p18e" value="incorrecta"> <label for="p18e">E) $300\text{ m} \times 300\text{ m}$</label><br><br>
+
+  <button onclick="verificarRespuesta('p18', 'feedback_p18')" style="background-color: #3f51b5; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer;">Verificar</button>
+  <div id="feedback_p18" style="margin-top: 15px; font-weight: bold;"></div>
+</fieldset>
+
+<details class="info">
+<summary>Ver desarrollo paso a paso</summary>
+<p>Sean <span class="arithmatex">\(x\)</span> el ancho (lados perpendiculares al río) y <span class="arithmatex">\(y\)</span> el largo (lado paralelo al río).
+La longitud total de la cerca es:</p>
+<div class="arithmatex">\[2x + y = 1200 \implies y = 1200 - 2x\]</div>
+<p>La función de área es:</p>
+<div class="arithmatex">\[A(x) = x \cdot y = x(1200 - 2x) = -2x^2 + 1200x\]</div>
+<p>Como es una parábola que abre hacia abajo (<span class="arithmatex">\(a = -2\)</span>), el área máxima ocurre en el vértice:</p>
+<div class="arithmatex">\[x_v = \frac{-b}{2a} = \frac{-1200}{2(-2)} = 300\]</div>
+<p>Sustituyendo <span class="arithmatex">\(x = 300\)</span> para encontrar <span class="arithmatex">\(y\)</span>:</p>
+<div class="arithmatex">\[y = 1200 - 2(300) = 600\]</div>
+<p>Las dimensiones deben ser <span class="arithmatex">\(300\text{ m}\)</span> perpendicular al río por <span class="arithmatex">\(600\text{ m}\)</span> paralelos al río.</p>
+</details>
+<hr />
+<fieldset style="border: 1px solid #e0e0e0; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+  <legend style="font-weight: bold; color: #3f51b5;">Pregunta 19</legend>
+
+  <p>¿Para qué valor del parámetro $k$ la recta $y = 2x + k$ es tangente a la parábola $y = x^2 - 4x + 5$? (Es decir, se intersecan en exactamente un punto).</p>
+
+  <input type="radio" name="p19" id="p19a" value="incorrecta"> <label for="p19a">A) $k = 4$</label><br>
+  <input type="radio" name="p19" id="p19b" value="incorrecta"> <label for="p19b">B) $k = 5$</label><br>
+  <input type="radio" name="p19" id="p19c" value="incorrecta"> <label for="p19c">C) $k = 0$</label><br>
+  <input type="radio" name="p19" id="p19d" value="correcta"> <label for="p19d">D) $k = -4$</label><br>
+  <input type="radio" name="p19" id="p19e" value="incorrecta"> <label for="p19e">E) $k = -5$</label><br><br>
+
+  <button onclick="verificarRespuesta('p19', 'feedback_p19')" style="background-color: #3f51b5; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer;">Verificar</button>
+  <div id="feedback_p19" style="margin-top: 15px; font-weight: bold;"></div>
+</fieldset>
+
+<details class="info">
+<summary>Ver desarrollo paso a paso</summary>
+<p>Para encontrar las intersecciones, igualamos ambas ecuaciones:</p>
+<div class="arithmatex">\[x^2 - 4x + 5 = 2x + k\]</div>
+<div class="arithmatex">\[x^2 - 6x + (5 - k) = 0\]</div>
+<p>Para que haya exactamente un punto de intersección (tangencia), el discriminante de esta nueva ecuación cuadrática debe ser cero:</p>
+<div class="arithmatex">\[\Delta = b^2 - 4ac = 0\]</div>
+<div class="arithmatex">\[(-6)^2 - 4(1)(5 - k) = 0\]</div>
+<div class="arithmatex">\[36 - 20 + 4k = 0\]</div>
+<div class="arithmatex">\[16 + 4k = 0 \implies 4k = -16 \implies k = -4\]</div>
+</details>
+<hr />
+<fieldset style="border: 1px solid #e0e0e0; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+  <legend style="font-weight: bold; color: #3f51b5;">Pregunta 20</legend>
+
+  <p>Un teatro vende actualmente $200$ entradas a $\$50$ cada una. Un estudio de mercado indica que por cada $\$5$ de aumento en el precio de la entrada, se venderán $10$ entradas menos. ¿Qué precio de entrada maximiza el ingreso total del teatro?</p>
+
+  <input type="radio" name="p20" id="p20a" value="incorrecta"> <label for="p20a">A) $\$50$</label><br>
+  <input type="radio" name="p20" id="p20b" value="incorrecta"> <label for="p20b">B) $\$60$</label><br>
+  <input type="radio" name="p20" id="p20c" value="correcta"> <label for="p20c">C) $\$75$</label><br>
+  <input type="radio" name="p20" id="p20d" value="incorrecta"> <label for="p20d">D) $\$100$</label><br>
+  <input type="radio" name="p20" id="p20e" value="incorrecta"> <label for="p20e">E) $\$150$</label><br><br>
+
+  <button onclick="verificarRespuesta('p20', 'feedback_p20')" style="background-color: #3f51b5; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer;">Verificar</button>
+  <div id="feedback_p20" style="margin-top: 15px; font-weight: bold;"></div>
+</fieldset>
+
+<details class="info">
+<summary>Ver desarrollo paso a paso</summary>
+<p>Sea <span class="arithmatex">\(x\)</span> el número de aumentos de <span class="arithmatex">\(\$5\)</span>.
+El precio de la entrada será: <span class="arithmatex">\(P(x) = 50 + 5x\)</span>.
+La cantidad de entradas vendidas será: <span class="arithmatex">\(Q(x) = 200 - 10x\)</span>.</p>
+<p>El ingreso <span class="arithmatex">\(R(x)\)</span> se modela multiplicando precio por cantidad:</p>
+<div class="arithmatex">\[R(x) = (50 + 5x)(200 - 10x)\]</div>
+<div class="arithmatex">\[R(x) = 10000 - 500x + 1000x - 50x^2\]</div>
+<div class="arithmatex">\[R(x) = -50x^2 + 500x + 10000\]</div>
+<p>Para encontrar el ingreso máximo, calculamos el vértice <span class="arithmatex">\(x_v\)</span>:</p>
+<div class="arithmatex">\[x_v = \frac{-b}{2a} = \frac{-500}{2(-50)} = \frac{-500}{-100} = 5\]</div>
+<p>Esto significa que se deben realizar <span class="arithmatex">\(5\)</span> aumentos. El precio óptimo es:</p>
+<div class="arithmatex">\[\text{Precio} = 50 + 5(5) = 50 + 25 = \$75\]</div>
+</details>
+<hr />
+<fieldset style="border: 1px solid #e0e0e0; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+  <legend style="font-weight: bold; color: #3f51b5;">Pregunta 21</legend>
+
+  <p>Si $\alpha$ y $\beta$ son las primeras coordenadas de las intersecciones con el eje $X$ de la función  $f(x)=2x^2 - 5x + 1 $, determine el valor de la expresión $\alpha^2 + \beta^2$.</p>
+
+  <input type="radio" name="p21" id="p21a" value="incorrecta"> <label for="p21a">A) $\frac{25}{4}$</label><br>
+  <input type="radio" name="p21" id="p21b" value="correcta"> <label for="p21b">B) $\frac{21}{4}$</label><br>
+  <input type="radio" name="p21" id="p21c" value="incorrecta"> <label for="p21c">C) $\frac{29}{4}$</label><br>
+  <input type="radio" name="p21" id="p21d" value="incorrecta"> <label for="p21d">D) $\frac{5}{2}$</label><br>
+  <input type="radio" name="p21" id="p21e" value="incorrecta"> <label for="p21e">E) $\frac{21}{2}$</label><br><br>
+
+  <button onclick="verificarRespuesta('p21', 'feedback_p21')" style="background-color: #3f51b5; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer;">Verificar</button>
+  <div id="feedback_p21" style="margin-top: 15px; font-weight: bold;"></div>
+</fieldset>
+
+<details class="info">
+<summary>Ver desarrollo paso a paso</summary>
+<p>Según las propiedades de las raíces (Teorema de Vieta) para <span class="arithmatex">\(ax^2 + bx + c = 0\)</span>:
+- Suma de las raíces: <span class="arithmatex">\(\alpha + \beta = -\frac{b}{a} = \frac{5}{2}\)</span>
+- Producto de las raíces: <span class="arithmatex">\(\alpha \cdot \beta = \frac{c}{a} = \frac{1}{2}\)</span></p>
+<p>Nos piden calcular <span class="arithmatex">\(\alpha^2 + \beta^2\)</span>. Usamos el desarrollo del cuadrado de un binomio:
+$<span class="arithmatex">\((\alpha + \beta)^2 = \alpha^2 + 2\alpha\beta + \beta^2\)</span>$
+Despejando la suma de los cuadrados:
+$<span class="arithmatex">\(\alpha^2 + \beta^2 = (\alpha + \beta)^2 - 2\alpha\beta\)</span>$</p>
+<p>Reemplazamos los valores obtenidos:
+$<span class="arithmatex">\(\alpha^2 + \beta^2 = \left(\frac{5}{2}\right)^2 - 2\left(\frac{1}{2}\right)\)</span>$
+$<span class="arithmatex">\(\alpha^2 + \beta^2 = \frac{25}{4} - 1 = \frac{25 - 4}{4} = \frac{21}{4}\)</span>$</p>
+</details>
+<hr />
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.top"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="../../javascripts/quiz.js"></script>
+      
+    
+  </body>
+</html>

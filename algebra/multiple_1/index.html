@@ -1,0 +1,1561 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Material de apoyo, guías y problemas de precálculo.">
+      
+      
+        <meta name="author" content="José David Torres Riffo">
+      
+      
+      
+        <link rel="prev" href="../funciones_3/">
+      
+      
+        <link rel="next" href="../funciones_5/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Práctica - MateRiffo</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#ejercicios-de-seleccion-multiple-funciones-y-graficos" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../.." title="MateRiffo" class="md-header__button md-logo" aria-label="MateRiffo" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            MateRiffo
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Práctica
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="MateRiffo" class="md-nav__button md-logo" aria-label="MateRiffo" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    MateRiffo
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Módulo de Inecuaciones
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Módulo de Inecuaciones
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../inecuaciones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Racionales
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../desigualdades/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Desigualdades
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../aplicaciones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aplicaciones
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../absoluto/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Valor absoluto
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../raices/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Raices
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Módulo de Funciones Reales
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Módulo de Funciones Reales
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../funciones_1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gráfico de funciones
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../funciones_2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dominio de funciones
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../funciones_3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Evaluación de funciones
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Práctica
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Práctica
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#problemas-graficos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problemas Gráficos
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Módulo de Función lineal
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Módulo de Función lineal
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../funciones_5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Rectas y funciones
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../funciones_4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aplicaciones de funciones lineales
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../multiple_2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Práctica
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Módulo de función cuadrática
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Módulo de función cuadrática
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../funciones/funciones_6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Funciones cuadráticas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../funciones/funciones_7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Parábola y funciones
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../funciones/multiple_3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Práctica
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Módulo de exponencial y logaritmo
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Módulo de exponencial y logaritmo
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../funciones/funciones_8/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Función exponencial
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#problemas-graficos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problemas Gráficos
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="ejercicios-de-seleccion-multiple-funciones-y-graficos">Ejercicios de Selección Múltiple: Funciones y Gráficos</h1>
+<p>Resuelve los siguientes ejercicios y luego verifica tu respuesta. Si tienes dudas, puedes desplegar el desarrollo paso a paso.</p>
+<hr />
+<fieldset style="border: 1px solid #e0e0e0; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+  <legend style="font-weight: bold; color: #3f51b5;">Pregunta 2</legend>
+
+  <p>Sea $g(x) = |x^2 - 5x + 6| - |x - 3|$. Si $E(a) = g(a+1) - g(2-a)$, determine una expresión simplificada para $E(a)$.</p>
+
+  <input type="radio" name="p2" id="p2a" value="incorrecta"> <label for="p2a">A) $2a^2 - 6a$</label><br>
+  <input type="radio" name="p2" id="p2b" value="incorrecta"> <label for="p2b">B) $2a^2 - 8a + 4$</label><br>
+  <input type="radio" name="p2" id="p2c" value="incorrecta"> <label for="p2c">C) $2a^2 - 6a + 2$</label><br>
+  <input type="radio" name="p2" id="p2d" value="correcta"> <label for="p2d">D) $a^2 - 3a + 2$</label><br>
+  <input type="radio" name="p2" id="p2e" value="incorrecta"> <label for="p2e">E) $2a^2 - 4a$</label><br><br>
+
+  <button onclick="verificarRespuesta('p2', 'feedback_p2')" style="background-color: #3f51b5; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer;">Verificar</button>
+  <div id="feedback_p2" style="margin-top: 15px; font-weight: bold;"></div>
+</fieldset>
+
+<details class="info">
+<summary>Ver desarrollo paso a paso</summary>
+<p>Como vimos en el paso anterior, la reducción algebraica nos entrega:
+$<span class="arithmatex">\(g(a+1) = |a^2 - 3a + 2| - |a - 2|\)</span>$
+$<span class="arithmatex">\(g(2-a) = |a^2 + a| - |a + 1|\)</span>$</p>
+<p>Al restar ambas expresiones obtenemos <span class="arithmatex">\(E(a)\)</span>. Para llegar a una de las alternativas polinómicas, se deben considerar los intervalos donde el argumento del valor absoluto es positivo. </p>
+</details>
+<hr />
+<fieldset style="border: 1px solid #e0e0e0; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+  <legend style="font-weight: bold; color: #3f51b5;">Pregunta 3</legend>
+
+  <p>Determine el dominio máximo en $\mathbb{R}$ para la función $f(x) = \dfrac{\sqrt{2x + 6}}{x^2 - 4}$.</p>
+
+  <input type="radio" name="p3" id="p3a" value="incorrecta"> <label for="p3a">A) $[-3, \infty)$</label><br>
+  <input type="radio" name="p3" id="p3b" value="correcta"> <label for="p3b">B) $[-3, \infty) \setminus \{-2, 2\}$</label><br>
+  <input type="radio" name="p3" id="p3c" value="incorrecta"> <label for="p3c">C) $(-3, \infty) \setminus \{2\}$</label><br>
+  <input type="radio" name="p3" id="p3d" value="incorrecta"> <label for="p3d">D) $\mathbb{R} \setminus \{-2, 2\}$</label><br>
+  <input type="radio" name="p3" id="p3e" value="incorrecta"> <label for="p3e">E) $[-3, 2) \cup (2, \infty)$</label><br><br>
+
+  <button onclick="verificarRespuesta('p3', 'feedback_p3')" style="background-color: #3f51b5; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer;">Verificar</button>
+  <div id="feedback_p3" style="margin-top: 15px; font-weight: bold;"></div>
+</fieldset>
+
+<details class="info">
+<summary>Ver desarrollo paso a paso</summary>
+<p>Para determinar el dominio, evaluamos dos restricciones:</p>
+<ol>
+<li><strong>Raíz con índice par (numerador):</strong> El subradical debe ser mayor o igual a cero.
+    $<span class="arithmatex">\(2x + 6 \ge 0 \Rightarrow 2x \ge -6 \Rightarrow x \ge -3\)</span>$
+    Esto nos da el intervalo <span class="arithmatex">\([-3, \infty[\)</span>.</li>
+<li>
+<p><strong>Denominador distinto de cero:</strong>
+    $$x^2 - 4 \neq 0 $$
+    Intersectando ambas condiciones, el dominio es el conjunto de los números mayores o iguales a <span class="arithmatex">\(-3\)</span>, excluyendo al <span class="arithmatex">\(-2\)</span> y al <span class="arithmatex">\(2\)</span>:</p>
+<div class="arithmatex">\[Dom(f) = [-3, \infty[ \setminus \{-2, 2\}\]</div>
+</li>
+</ol>
+</details>
+<hr />
+<fieldset style="border: 1px solid #e0e0e0; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+  <legend style="font-weight: bold; color: #3f51b5;">Pregunta 4</legend>
+
+  <p>Determine el dominio máximo en $\mathbb{R}$ de la función $h(x) = \sqrt{x^2 - 2x - 8} + \dfrac{1}{x - 5}$.</p>
+
+  <input type="radio" name="p4" id="p4a" value="incorrecta"> <label for="p4a">A) $(-\infty, -2] \cup [4, \infty)$</label><br>
+  <input type="radio" name="p4" id="p4b" value="correcta"> <label for="p4b">B) $(-\infty, -2] \cup [4, 5) \cup (5, \infty)$</label><br>
+  <input type="radio" name="p4" id="p4c" value="incorrecta"> <label for="p4c">C) $[-2, 4] \setminus \{5\}$</label><br>
+  <input type="radio" name="p4" id="p4d" value="incorrecta"> <label for="p4d">D) $(-\infty, -4] \cup [2, \infty) \setminus \{5\}$</label><br>
+  <input type="radio" name="p4" id="p4e" value="incorrecta"> <label for="p4e">E) $\mathbb{R} \setminus \{5\}$</label><br><br>
+
+  <button onclick="verificarRespuesta('p4', 'feedback_p4')" style="background-color: #3f51b5; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer;">Verificar</button>
+  <div id="feedback_p4" style="margin-top: 15px; font-weight: bold;"></div>
+</fieldset>
+
+<details class="info">
+<summary>Ver desarrollo paso a paso</summary>
+<p>Tenemos dos restricciones:</p>
+<ol>
+<li><strong>Raíz par:</strong> <span class="arithmatex">\(x^2 - 2x - 8 \ge 0\)</span>.
+    Factorizando: <span class="arithmatex">\((x - 4)(x + 2) \ge 0\)</span>.
+    Los puntos críticos son <span class="arithmatex">\(x = 4\)</span> y <span class="arithmatex">\(x = -2\)</span>. Al evaluar los signos en la recta real, la expresión es positiva en:
+    $<span class="arithmatex">\(]-\infty, -2] \cup [4, \infty[\)</span>$</li>
+<li>
+<p><strong>Denominador:</strong> <span class="arithmatex">\(x - 5\neq 5.\)</span> 
+    El valor <span class="arithmatex">\(x = 5\)</span> cae dentro del intervalo <span class="arithmatex">\([4, \infty[\)</span>, por lo que debemos excluirlo:</p>
+<div class="arithmatex">\[  Dom(h) = ]-\infty, -2] \cup [4, 5[ \cup ]5, \infty[\]</div>
+</li>
+</ol>
+</details>
+<hr />
+<fieldset style="border: 1px solid #e0e0e0; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+  <legend style="font-weight: bold; color: #3f51b5;">Pregunta 5</legend>
+
+  <p>El dominio de la función $p(x) = \dfrac{x + 2}{\sqrt{|x - 1| - 3}}$ corresponde al conjunto:</p>
+
+  <input type="radio" name="p5" id="p5a" value="correcta"> <label for="p5a">A) $(-\infty, -2) \cup (4, \infty)$</label><br>
+  <input type="radio" name="p5" id="p5b" value="incorrecta"> <label for="p5b">B) $(-\infty, -2] \cup [4, \infty)$</label><br>
+  <input type="radio" name="p5" id="p5c" value="incorrecta"> <label for="p5c">C) $(-2, 4)$</label><br>
+  <input type="radio" name="p5" id="p5d" value="incorrecta"> <label for="p5d">D) $\mathbb{R} \setminus \{-2, 4\}$</label><br>
+  <input type="radio" name="p5" id="p5e" value="incorrecta"> <label for="p5e">E) $(4, \infty)$</label><br><br>
+
+  <button onclick="verificarRespuesta('p5', 'feedback_p5')" style="background-color: #3f51b5; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer;">Verificar</button>
+  <div id="feedback_p5" style="margin-top: 15px; font-weight: bold;"></div>
+</fieldset>
+
+<details class="info">
+<summary>Ver desarrollo paso a paso</summary>
+<p>Como la raíz está en el denominador, el subradical debe ser <strong>estrictamente mayor que cero</strong>:
+$<span class="arithmatex">\(|x - 1| - 3 &gt; 0 \Rightarrow |x - 1| &gt; 3\)</span>$</p>
+<p>Por la propiedad del valor absoluto (<span class="arithmatex">\(|u| &gt; a \Rightarrow u &gt; a     ext{ o } u &lt; -a\)</span>):
+1.  <span class="arithmatex">\(x - 1 &gt; 3 \Rightarrow x &gt; 4\)</span>
+2.  <span class="arithmatex">\(x - 1 &lt; -3 \Rightarrow x &lt; -2\)</span></p>
+<p>Uniendo ambas soluciones, el dominio es:
+$$  Dom(p) = ]-\infty, -2[ \cup ]4, \infty[$$</p>
+</details>
+<hr />
+<fieldset style="border: 1px solid #e0e0e0; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+  <legend style="font-weight: bold; color: #3f51b5;">Pregunta 6</legend>
+
+  <p>Considere la función por tramos:</p>
+  <p>$$f(x)=\begin{cases} \quad 2x-1, & \text{si}\quad  x<-1, \\ \quad x^2-2, & \text{si}\quad  -1\le x \le 2, \\ \quad \dfrac{10}{x-1}, & \text{si}\quad x>2. \end{cases}$$</p>
+  <p>El valor de $f(-2) + f(0) + f(2) + f(3)$ es:</p>
+
+  <input type="radio" name="p6" id="p6a" value="incorrecta"> <label for="p6a">A) $-5$</label><br>
+  <input type="radio" name="p6" id="p6b" value="incorrecta"> <label for="p6b">B) $5$</label><br>
+  <input type="radio" name="p6" id="p6c" value="incorrecta"> <label for="p6c">C) $2$</label><br>
+  <input type="radio" name="p6" id="p6d" value="incorrecta"> <label for="p6d">D) $-2$</label><br>
+  <input type="radio" name="p6" id="p6e" value="correcta"> <label for="p6e">E) $0$</label><br><br>
+
+  <button onclick="verificarRespuesta('p6', 'feedback_p6')" style="background-color: #3f51b5; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer;">Verificar</button>
+  <div id="feedback_p6" style="margin-top: 15px; font-weight: bold;"></div>
+</fieldset>
+
+<details class="info">
+<summary>Ver desarrollo paso a paso</summary>
+<p>Evaluamos cada valor en el tramo correspondiente:</p>
+<ol>
+<li>Para <span class="arithmatex">\(x = -2\)</span> (tramo <span class="arithmatex">\(x &lt; -1\)</span>):
+    <span class="arithmatex">\(f(-2) = 2(-2) - 1 = -4 - 1 = -5\)</span></li>
+<li>Para <span class="arithmatex">\(x = 0\)</span> (tramo <span class="arithmatex">\(-1 \le x \le 2\)</span>):
+    <span class="arithmatex">\(f(0) = 0^2 - 2 = -2\)</span></li>
+<li>Para <span class="arithmatex">\(x = 2\)</span> (tramo <span class="arithmatex">\(-1 \le x \le 2\)</span>):
+    <span class="arithmatex">\(f(2) = 2^2 - 2 = 4 - 2 = 2\)</span></li>
+<li>Para <span class="arithmatex">\(x = 3\)</span> (tramo <span class="arithmatex">\(x &gt; 2\)</span>):
+    <span class="arithmatex">\(f(3) = frac{10}{3 - 1} = frac{10}{2} = 5\)</span></li>
+</ol>
+<p>Sumamos los valores obtenidos:
+$<span class="arithmatex">\(f(-2) + f(0) + f(2) + f(3) = -5 - 2 + 2 + 5 = 0\)</span>$</p>
+</details>
+<hr />
+<fieldset style="border: 1px solid #e0e0e0; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+  <legend style="font-weight: bold; color: #3f51b5;">Pregunta 7</legend>
+
+  <p>Determine el dominio máximo en $\mathbb{R}$ para la función con raíz y cuociente $f(x) = \sqrt{\dfrac{x - 2}{x + 3}}$.</p>
+
+  <input type="radio" name="p7" id="p7a" value="incorrecta"> <label for="p7a">A) $(-3, 2]$</label><br>
+  <input type="radio" name="p7" id="p7b" value="incorrecta"> <label for="p7b">B) $(-\infty, -3] \cup [2, \infty)$</label><br>
+  <input type="radio" name="p7" id="p7c" value="correcta"> <label for="p7c">C) $(-\infty, -3) \cup [2, \infty)$</label><br>
+  <input type="radio" name="p7" id="p7d" value="incorrecta"> <label for="p7d">D) $[-3, 2]$</label><br>
+  <input type="radio" name="p7" id="p7e" value="incorrecta"> <label for="p7e">E) $\mathbb{R} \setminus \{-3\}$</label><br><br>
+
+  <button onclick="verificarRespuesta('p7', 'feedback_p7')" style="background-color: #3f51b5; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer;">Verificar</button>
+  <div id="feedback_p7" style="margin-top: 15px; font-weight: bold;"></div>
+</fieldset>
+
+<details class="info">
+<summary>Ver desarrollo paso a paso</summary>
+<p>Para que la raíz cuadrada esté definida, la fracción en su interior debe ser no negativa:
+$<span class="arithmatex">\(\dfrac{x - 2}{x + 3} \geq 0.\)</span>$</p>
+<p>Además, el denominador no puede ser cero, por lo tanto <span class="arithmatex">\(x \neq -3\)</span>.
+Analizamos los puntos críticos: <span class="arithmatex">\(x = 2\)</span> (del numerador) y <span class="arithmatex">\(x = -3\)</span> (del denominador). Formamos intervalos y evaluamos los signos:</p>
+<ul>
+<li>En <span class="arithmatex">\(]-\infty, -3[\)</span>: Numerador negativo, Denominador negativo <span class="arithmatex">\(\Rightarrow\)</span> Fracción Positiva (+).</li>
+<li>En <span class="arithmatex">\(]-3, 2]\)</span>: Numerador negativo, Denominador positivo <span class="arithmatex">\(\Rightarrow\)</span> Fracción Negativa (-).</li>
+<li>En <span class="arithmatex">\([2, \infty[\)</span>: Numerador positivo, Denominador positivo <span class="arithmatex">\(\Rightarrow\)</span> Fracción Positiva (+).</li>
+</ul>
+<p>La solución corresponde a los intervalos positivos, recordando dejar el <span class="arithmatex">\(-3\)</span> abierto:
+$$  \text{Dom}(f) = ]-\infty, -3[ \cup [2, \infty[.$$</p>
+</details>
+<hr />
+<fieldset style="border: 1px solid #e0e0e0; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+  <legend style="font-weight: bold; color: #3f51b5;">Pregunta 8</legend>
+
+  <p>Sea $f(x) = |x - |x - 2||$. Calcule el valor de la diferencia $f(-3) - f(3)$.</p>
+
+  <input type="radio" name="p8" id="p8a" value="incorrecta"> <label for="p8a">A) $0$</label><br>
+  <input type="radio" name="p8" id="p8b" value="incorrecta"> <label for="p8b">B) $10$</label><br>
+  <input type="radio" name="p8" id="p8c" value="incorrecta"> <label for="p8c">C) $-6$</label><br>
+  <input type="radio" name="p8" id="p8d" value="correcta"> <label for="p8d">D) $6$</label><br>
+  <input type="radio" name="p8" id="p8e" value="incorrecta"> <label for="p8e">E) $8$</label><br><br>
+
+  <button onclick="verificarRespuesta('p8', 'feedback_p8')" style="background-color: #3f51b5; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer;">Verificar</button>
+  <div id="feedback_p8" style="margin-top: 15px; font-weight: bold;"></div>
+</fieldset>
+
+<details class="info">
+<summary>Ver desarrollo paso a paso</summary>
+<p>Calculamos paso a paso cada valor, resolviendo desde el valor absoluto más interno hacia afuera.</p>
+<p>Para <span class="arithmatex">\(f(-3)\)</span>:
+$<span class="arithmatex">\(f(-3) = |-3 - |-3 - 2|| = |-3 - |-5||\)</span>$
+$<span class="arithmatex">\(f(-3) = |-3 - 5| = |-8| = 8\)</span>$</p>
+<p>Para <span class="arithmatex">\(f(3)\)</span>:
+$<span class="arithmatex">\(f(3) = |3 - |3 - 2|| = |3 - |1||\)</span>$
+$<span class="arithmatex">\(f(3) = |3 - 1| = |2| = 2\)</span>$</p>
+<p>Finalmente, la diferencia solicitada es:
+$<span class="arithmatex">\(f(-3) - f(3) = 8 - 2 = 6\)</span>$</p>
+</details>
+<hr />
+<p><br></p>
+<h3 id="problemas-graficos">Problemas Gráficos</h3>
+<p><strong>Instrucciones para los problemas 9, 10, 11:</strong> Responda basándose en el gráfico de la función <span class="arithmatex">\(g: A    \to \mathbb{R}\)</span> que se presenta a continuación.</p>
+<div style="text-align: center; margin: 20px 0;">
+    <p><em>( Imagen,  preguntas 9, 10 y 11)</em></p>
+    <img src="/algebra/grafico21.png" alt="Gráfico de la función g" style="max-width: 100%; border: 1px solid #ccc; border-radius: 4px;">
+</div>
+
+<fieldset style="border: 1px solid #e0e0e0; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+  <legend style="font-weight: bold; color: #3f51b5;">Pregunta 9</legend>
+
+  <p>A partir del gráfico, determine el Dominio ($A$) y el Recorrido de $g$ respectivamente:</p>
+
+  <input type="radio" name="p9" id="p9a" value="incorrecta"> <label for="p9a">A) $  \text{Dom}(g) = [-4, 4], \quad  \text{Rec}(g) = [-4, 4]$</label><br>
+  <input type="radio" name="p9" id="p9b" value="correcta"> <label for="p9b">B) $    \text{Dom}(g) = ]-4, 4], \quad  \text{Rec}(g) = [-4, 0] \cup (2, 4]$</label><br>
+  <input type="radio" name="p9" id="p9c" value="incorrecta"> <label for="p9c">C) $  \text{Dom}(g) = ]-4, 4], \quad  \text{Rec}(g) = [-4, 4]$</label><br>
+  <input type="radio" name="p9" id="p9d" value="incorrecta"> <label for="p9d">D) $  \text{Dom}(g) = [-4, 0] \cup ]0, 4], \quad  \text{Rec}(g) = [-4, 0] \cup [2, 4]$</label><br>
+  <input type="radio" name="p9" id="p9e" value="incorrecta"> <label for="p9e">E) $  \text{Dom}(g) = ]-4, 0] \cup ]2, 4], \quad  \text{Rec}(g) = [-4, 4]$</label><br><br>
+
+  <button onclick="verificarRespuesta('p9', 'feedback_p9')" style="background-color: #3f51b5; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer;">Verificar</button>
+  <div id="feedback_p9" style="margin-top: 15px; font-weight: bold;"></div>
+</fieldset>
+
+<details class="info">
+<summary>Ver desarrollo paso a paso</summary>
+<ul>
+<li><strong>Dominio (Eje X):</strong> La gráfica presenta una curva desde <span class="arithmatex">\(x = -4\)</span> (círculo abierto) hasta <span class="arithmatex">\(x = 0\)</span> (círculo cerrado), y luego una recta desde <span class="arithmatex">\(x = 0\)</span> (abierto) hasta <span class="arithmatex">\(x = 4\)</span> (cerrado). Al unir ambos tramos en el eje <span class="arithmatex">\(x\)</span>, se obtiene el intervalo continuo <span class="arithmatex">\((-4, 4]\)</span>.</li>
+<li><strong>Recorrido (Eje Y):</strong> La parte parabólica alcanza su mínimo en <span class="arithmatex">\(y = -4\)</span> y sube hasta <span class="arithmatex">\(y = 0\)</span>, aportando el conjunto <span class="arithmatex">\([-4, 0]\)</span>. La recta sube desde <span class="arithmatex">\(y = 2\)</span> (abierto) hasta <span class="arithmatex">\(y = 4\)</span> (cerrado), aportando el conjunto <span class="arithmatex">\((2, 4]\)</span>. </li>
+</ul>
+<p>Por lo tanto:
+$$  ext{Dom}(g) = (-4, 4]$$
+$$  ext{Rec}(g) = [-4, 0] \cup (2, 4]$$</p>
+</details>
+<hr />
+<fieldset style="border: 1px solid #e0e0e0; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+  <legend style="font-weight: bold; color: #3f51b5;">Pregunta 10</legend>
+
+  <p>Evaluando en la función graficada, determine el valor de $g(-2) + g(0) - g(2)$.</p>
+
+  <input type="radio" name="p10" id="p10a" value="correcta"> <label for="p10a">A) $-7$</label><br>
+  <input type="radio" name="p10" id="p10b" value="incorrecta"> <label for="p10b">B) $0$</label><br>
+  <input type="radio" name="p10" id="p10c" value="incorrecta"> <label for="p10c">C) $-1$</label><br>
+  <input type="radio" name="p10" id="p10d" value="incorrecta"> <label for="p10d">D) $3$</label><br>
+  <input type="radio" name="p10" id="p10e" value="incorrecta"> <label for="p10e">E) $-4$</label><br><br>
+
+  <button onclick="verificarRespuesta('p10', 'feedback_p10')" style="background-color: #3f51b5; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer;">Verificar</button>
+  <div id="feedback_p10" style="margin-top: 15px; font-weight: bold;"></div>
+</fieldset>
+
+<details class="info">
+<summary>Ver desarrollo paso a paso</summary>
+<p>Ubicamos cada valor de <span class="arithmatex">\(x\)</span> en el gráfico para encontrar su respectivo valor <span class="arithmatex">\(y\)</span>:</p>
+<ul>
+<li><span class="arithmatex">\(g(-2)\)</span>: Corresponde al vértice de la parábola, donde <span class="arithmatex">\(y = -4\)</span>.</li>
+<li><span class="arithmatex">\(g(0)\)</span>: Hay un círculo abierto en <span class="arithmatex">\((0, 2)\)</span> y uno cerrado en <span class="arithmatex">\((0, 0)\)</span>. El valor de la función lo dicta el círculo cerrado, así que <span class="arithmatex">\(g(0) = 0\)</span>.</li>
+<li><span class="arithmatex">\(g(2)\)</span>: Evaluamos en la recta que pasa por <span class="arithmatex">\((0,2)\)</span> y <span class="arithmatex">\((4,4)\)</span>. La pendiente es <span class="arithmatex">\(frac{4-2}{4-0} = 0.5\)</span>. La ecuación es <span class="arithmatex">\(y = 0.5x + 2\)</span>. Para <span class="arithmatex">\(x=2\)</span>, obtenemos <span class="arithmatex">\(y = 0.5(2)+2 = 3\)</span>. En el gráfico visualizamos que justo a la mitad del recorrido <span class="arithmatex">\(x=2\)</span>, la altura es <span class="arithmatex">\(y=3\)</span>.</li>
+</ul>
+<p>Calculamos:</p>
+<div class="arithmatex">\[-4 + 0 - 3 = -7\]</div>
+</details>
+<hr />
+<fieldset style="border: 1px solid #e0e0e0; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+  <legend style="font-weight: bold; color: #3f51b5;">Pregunta 11</legend>
+
+  <p>Determine la suma de las preimágenes de $y = 0$ y $y = 3$.</p>
+
+  <input type="radio" name="p11" id="p11a" value="incorrecta"> <label for="p11a">A) $-4$</label><br>
+  <input type="radio" name="p11" id="p11b" value="incorrecta"> <label for="p11b">B) $4$</label><br>
+  <input type="radio" name="p11" id="p11c" value="incorrecta"> <label for="p11c">C) $0$</label><br>
+  <input type="radio" name="p11" id="p11d" value="correcta"> <label for="p11d">D) $2$</label><br>
+  <input type="radio" name="p11" id="p11e" value="incorrecta"> <label for="p11e">E) $-2$</label><br><br>
+
+  <button onclick="verificarRespuesta('p11', 'feedback_p11')" style="background-color: #3f51b5; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer;">Verificar</button>
+  <div id="feedback_p11" style="margin-top: 15px; font-weight: bold;"></div>
+</fieldset>
+
+<details class="info">
+<summary>Ver desarrollo paso a paso</summary>
+<p>Para encontrar las preimágenes, buscamos en el gráfico qué valores de <span class="arithmatex">\(x\)</span> nos entregan la altura <span class="arithmatex">\(y\)</span> solicitada:</p>
+<ol>
+<li><strong>Preimágenes de <span class="arithmatex">\(y = 0\)</span>:</strong> Observando el eje X, la curva pasa por <span class="arithmatex">\(y = 0\)</span> en <span class="arithmatex">\(x = -4\)</span> y en <span class="arithmatex">\(x = 0\)</span>. Sin embargo, en <span class="arithmatex">\(x = -4\)</span> el círculo es abierto (no pertenece al dominio). Por lo tanto, la única preimagen válida es <span class="arithmatex">\(x = 0\)</span>.</li>
+<li><strong>Preimágenes de <span class="arithmatex">\(y = 3\)</span>:</strong> Al trazar una línea horizontal en <span class="arithmatex">\(y = 3\)</span>, intersectamos a la recta en un único punto, el cual corresponde a la coordenada <span class="arithmatex">\(x = 2\)</span>.</li>
+</ol>
+<p>La suma de todas las preimágenes válidas es:</p>
+<div class="arithmatex">\[0 + 2 = 2\]</div>
+</details>
+<hr />
+<p><br></p>
+<div style="text-align: center; margin: 20px 0;">
+    <p><em>(Imagen Pregunta 12)</em></p>
+    <img src="/algebra/grafico22.png" alt="Gráfico de la función f" style="max-width: 100%; border: 1px solid #ccc; border-radius: 4px;">
+</div>
+
+<fieldset style="border: 1px solid #e0e0e0; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+  <legend style="font-weight: bold; color: #3f51b5;">Pregunta 12</legend>
+
+  <p>Sea $f: A  \to \mathbb{R}$ la función definida por su gráfico.</p>
+  <p>Con respecto a la función $f$, considere las siguientes afirmaciones:</p>
+  <ol type="I">
+      <li>$ \text{Dom}(f) = [-3, 5]$ y $    \text{Rec}(f) = [0, 4]$.</li>
+      <li>El valor numérico de la expresión $f(2)f(0) - \dfrac{1}{f(-3)}$ es $9$.</li>
+      <li>La suma de todas las preimágenes de $y = 4$ es igual a $3$.</li>
+  </ol>
+  <p>Es (son) verdadera(s):</p>
+
+  <input type="radio" name="p12" id="p12a" value="incorrecta"> <label for="p12a">A) Solo I</label><br>
+  <input type="radio" name="p12" id="p12b" value="incorrecta"> <label for="p12b">B) Solo II</label><br>
+  <input type="radio" name="p12" id="p12c" value="incorrecta"> <label for="p12c">C) Solo I y II</label><br>
+  <input type="radio" name="p12" id="p12d" value="correcta"> <label for="p12d">D) Solo II y III</label><br>
+  <input type="radio" name="p12" id="p12e" value="incorrecta"> <label for="p12e">E) I, II y III</label><br><br>
+
+  <button onclick="verificarRespuesta('p12', 'feedback_p12')" style="background-color: #3f51b5; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer;">Verificar</button>
+  <div id="feedback_p12" style="margin-top: 15px; font-weight: bold;"></div>
+</fieldset>
+
+<details class="info">
+<summary>Ver desarrollo paso a paso</summary>
+<p>Analizamos cada afirmación de acuerdo a la descripción gráfica:</p>
+<ul>
+<li><strong>Afirmación I (Falsa):</strong> El dominio abarca desde <span class="arithmatex">\(-3\)</span> hasta <span class="arithmatex">\(5\)</span> sin interrupciones, $    ext{Dom}(f) = [-3, 5]$. Sin embargo, el valor mínimo en <span class="arithmatex">\(y\)</span> es <span class="arithmatex">\(1\)</span> y el máximo es <span class="arithmatex">\(5\)</span> (el vértice de la parábola). El recorrido real es <span class="arithmatex">\([1, 5]\)</span>, no <span class="arithmatex">\([0,4]\)</span>.</li>
+<li>
+<ul>
+<li><span class="arithmatex">\(f(2) = 2.5\)</span> (o <span class="arithmatex">\(frac{5}{2}\)</span>, en la recta que va de <span class="arithmatex">\((1,2)\)</span> a <span class="arithmatex">\((5,4)\)</span>).</li>
+<li><span class="arithmatex">\(f(0) = 4\)</span> (en la parábola <span class="arithmatex">\(-(x+1)^2 + 5\)</span>).</li>
+<li><span class="arithmatex">\(f(-3) = 1\)</span> (punto inicial de la parábola).</li>
+</ul>
+<p><strong>Afirmación II (Verdadera):</strong> Se requiere calcular:</p>
+<div class="arithmatex">\[\left(frac{5}{2}\right)(4) - frac{1}{1} = 10 - 1 = 9\]</div>
+</li>
+<li>
+<p><strong>Afirmación III (Verdadera):</strong> Preimágenes de <span class="arithmatex">\(y = 4\)</span>.</p>
+<ul>
+<li>En la parábola: <span class="arithmatex">\(-(x+1)^2 + 5 = 4 \Rightarrow (x+1)^2 = 1 \Rightarrow x = 0\)</span> y <span class="arithmatex">\(x = -2\)</span>.</li>
+<li>En la recta: Para <span class="arithmatex">\(y = 4\)</span>, vemos directamente el punto cerrado en <span class="arithmatex">\(x = 5\)</span>.
+Suma: <span class="arithmatex">\(0 + (-2) + 5 = 3\)</span>.</li>
+</ul>
+</li>
+</ul>
+</details>
+<hr />
+<p><br></p>
+<div style="text-align: center; margin: 20px 0;">
+    <p><em>(Imagen Pregunta 13)</em></p>
+    <img src="/algebra/grafico24.png" alt="Gráfico de la función g" style="max-width: 100%; border: 1px solid #ccc; border-radius: 4px;">
+</div>
+
+<fieldset style="border: 1px solid #e0e0e0; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+  <legend style="font-weight: bold; color: #3f51b5;">Pregunta 13</legend>
+
+  <p>Sea $g: B  \to \mathbb{R}$ la función definida por su gráfico.</p>
+  <p>Con respecto a la función $g$, considere las siguientes afirmaciones:</p>
+  <ol type="I">
+      <li>$ \text{Dom}(g) = [-4, 4]$ y $    \text{Rec}(g) = [-2, 5]$.</li>
+      <li>El valor numérico de la expresión $g(2)g(0) - \dfrac{1}{g(-3)}$ es $2$.</li>
+      <li>La suma de todas las preimágenes de $y = 3$ es igual a $3$.</li>
+  </ol>
+  <p>Es (son) verdadera(s):</p>
+
+  <input type="radio" name="p13" id="p13a" value="incorrecta"> <label for="p13a">A) Solo I</label><br>
+  <input type="radio" name="p13" id="p13b" value="incorrecta"> <label for="p13b">B) Solo II</label><br>
+  <input type="radio" name="p13" id="p13c" value="incorrecta"> <label for="p13c">C) Solo I y II</label><br>
+  <input type="radio" name="p13" id="p13d" value="correcta"> <label for="p13d">D) Solo II y III</label><br>
+  <input type="radio" name="p13" id="p13e" value="incorrecta"> <label for="p13e">E) I, II y III</label><br><br>
+
+  <button onclick="verificarRespuesta('p13', 'feedback_p13')" style="background-color: #3f51b5; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer;">Verificar</button>
+  <div id="feedback_p13" style="margin-top: 15px; font-weight: bold;"></div>
+</fieldset>
+
+<details class="info">
+<summary>Ver desarrollo paso a paso</summary>
+<ul>
+<li><strong>Afirmación I (Falsa):</strong> Aunque el dominio es <span class="arithmatex">\([-4, 4]\)</span>, el recorrido presenta un "hueco". La recta inferior llega hasta un círculo abierto en <span class="arithmatex">\(y = 1\)</span>, y la recta superior parte de un círculo abierto en <span class="arithmatex">\(y = 1\)</span>. El valor <span class="arithmatex">\(y = 1\)</span> no tiene preimagen (nunca se alcanza). Por tanto, el Recorrido no es un intervalo continuo <span class="arithmatex">\([-2, 5]\)</span>.</li>
+<li><strong>Afirmación II (Verdadera):</strong><ul>
+<li><span class="arithmatex">\(g(2) = -1\)</span> (punto cerrado del tramo constante).</li>
+<li><span class="arithmatex">\(g(0) = -1\)</span> (tramo constante).</li>
+<li><span class="arithmatex">\(g(-3) = -1\)</span> (evaluado en la recta <span class="arithmatex">\(y = x + 2\)</span> que pasa por <span class="arithmatex">\((-4,-2)\)</span> y <span class="arithmatex">\((-1,1)\)</span>).
+$<span class="arithmatex">\((-1)(-1) - frac{1}{-1} = 1 - (-1) = 2\)</span>$</li>
+</ul>
+</li>
+<li><strong>Afirmación III (Verdadera):</strong> Buscamos intersecciones con la altura <span class="arithmatex">\(y=3\)</span>. El único segmento que alcanza esta altura es la recta que va de <span class="arithmatex">\((2,1)\)</span> a <span class="arithmatex">\((4,5)\)</span>. Su ecuación es <span class="arithmatex">\(y = 2x - 3\)</span>. Igualamos: <span class="arithmatex">\(2x - 3 = 3 \Rightarrow 2x = 6 \Rightarrow x = 3\)</span>. Es la única preimagen y su suma consigo misma es 3.</li>
+</ul>
+</details>
+<hr />
+<p><br></p>
+<div style="text-align: center; margin: 20px 0;">
+    <p><em>(Imagen  Pregunta 14)</em></p>
+    <img src="/algebra/grafico23.png" alt="Gráfico de la función h" style="max-width: 100%; border: 1px solid #ccc; border-radius: 4px;">
+</div>
+
+<fieldset style="border: 1px solid #e0e0e0; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+  <legend style="font-weight: bold; color: #3f51b5;">Pregunta 14</legend>
+
+  <p>Sea $h: C  \to \mathbb{R}$ la función definida por su gráfico.</p>
+  <p>Con respecto a la función $h$, considere las siguientes afirmaciones:</p>
+  <ol type="I">
+      <li>$ \text{Dom}(h) = [-5, 4]$ y $    \text{Rec}(h) = [-4, -2[ \cup [-1, 3]$.</li>
+      <li>El valor numérico de la expresión $h(2)h(0) - \dfrac{1}{h(-3)}$ es $-\dfrac{7}{2}$.</li>
+      <li>La suma de todas las preimágenes de $y = 0$ es igual a $5$.</li>
+  </ol>
+  <p>Es (son) verdadera(s):</p>
+
+  <input type="radio" name="p14" id="p14a" value="incorrecta"> <label for="p14a">A) Solo I</label><br>
+  <input type="radio" name="p14" id="p14b" value="incorrecta"> <label for="p14b">B) Solo II</label><br>
+  <input type="radio" name="p14" id="p14c" value="correcta"> <label for="p14c">C) Solo I y II</label><br>
+  <input type="radio" name="p14" id="p14d" value="incorrecta"> <label for="p14d">D) Solo II y III</label><br>
+  <input type="radio" name="p14" id="p14e" value="incorrecta"> <label for="p14e">E) I, II y III</label><br><br>
+
+  <button onclick="verificarRespuesta('p14', 'feedback_p14')" style="background-color: #3f51b5; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer;">Verificar</button>
+  <div id="feedback_p14" style="margin-top: 15px; font-weight: bold;"></div>
+</fieldset>
+
+<details class="info">
+<summary>Ver desarrollo paso a paso</summary>
+<ul>
+<li><strong>Afirmación I (Verdadera):</strong> Proyectando sobre el eje X, tenemos una función continua en tramos desde <span class="arithmatex">\(x = -5\)</span> hasta <span class="arithmatex">\(x = 4\)</span>, por lo que el Dominio es <span class="arithmatex">\([-5, 4]\)</span>. Proyectando sobre el eje Y, el tramo derecho aporta el recorrido <span class="arithmatex">\([-4, -2)\)</span>. La parábola y la recta izquierda juntas cubren ininterrumpidamente desde <span class="arithmatex">\(y = -1\)</span> hasta <span class="arithmatex">\(y = 3\)</span>. $    ext{Rec}(h) = [-4, -2) \cup [-1, 3]$.</li>
+<li><strong>Afirmación II (Verdadera):</strong><ul>
+<li><span class="arithmatex">\(h(2) = 3\)</span> (punto cerrado de la parábola).</li>
+<li><span class="arithmatex">\(h(0) = -1\)</span> (vértice de la parábola).</li>
+<li><span class="arithmatex">\(h(-3) = 2\)</span> (en la recta que pasa por <span class="arithmatex">\((-5,0)\)</span> y <span class="arithmatex">\((-2,3)\)</span>, cuya ecuación es <span class="arithmatex">\(y = x+5\)</span>).
+$<span class="arithmatex">\((3)(-1) - frac{1}{2} = -3 - 0.5 = -3.5 = frac{7}{2}\)</span>$</li>
+</ul>
+</li>
+<li><strong>Afirmación III (Falsa):</strong> Buscamos <span class="arithmatex">\(x\)</span> tales que <span class="arithmatex">\(h(x) = 0\)</span>.<ul>
+<li>En el primer tramo: <span class="arithmatex">\((-5,0)\)</span> <span class="arithmatex">\(\Rightarrow x = -5\)</span>.</li>
+<li>En la parábola <span class="arithmatex">\(x^2 - 1 = 0 \Rightarrow x = 1\)</span> y <span class="arithmatex">\(x = -1\)</span>.
+Las preimágenes son <span class="arithmatex">\(\{-5, -1, 1\}\)</span>. Su suma es <span class="arithmatex">\(-5 - 1 + 1 = -5\)</span>, no <span class="arithmatex">\(5\)</span>.</li>
+</ul>
+</li>
+</ul>
+</details>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.top"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="../../javascripts/quiz.js"></script>
+      
+    
+  </body>
+</html>

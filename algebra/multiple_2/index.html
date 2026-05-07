@@ -1,0 +1,1534 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Material de apoyo, guías y problemas de precálculo.">
+      
+      
+        <meta name="author" content="José David Torres Riffo">
+      
+      
+      
+        <link rel="prev" href="../funciones_4/">
+      
+      
+        <link rel="next" href="../../funciones/funciones_6/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Práctica - MateRiffo</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#ejercicios-de-seleccion-multiple-rectas-y-modelado-matematico" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../.." title="MateRiffo" class="md-header__button md-logo" aria-label="MateRiffo" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            MateRiffo
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Práctica
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="MateRiffo" class="md-nav__button md-logo" aria-label="MateRiffo" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    MateRiffo
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Módulo de Inecuaciones
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Módulo de Inecuaciones
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../inecuaciones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Racionales
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../desigualdades/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Desigualdades
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../aplicaciones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aplicaciones
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../absoluto/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Valor absoluto
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../raices/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Raices
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Módulo de Funciones Reales
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Módulo de Funciones Reales
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../funciones_1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gráfico de funciones
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../funciones_2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dominio de funciones
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../funciones_3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Evaluación de funciones
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../multiple_1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Práctica
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Módulo de Función lineal
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Módulo de Función lineal
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../funciones_5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Rectas y funciones
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../funciones_4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aplicaciones de funciones lineales
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Práctica
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Práctica
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#parte-i-ecuaciones-de-rectas-paralelismo-y-perpendicularidad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parte I: Ecuaciones de Rectas, Paralelismo y Perpendicularidad
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parte-ii-modelado-matematico" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parte II: Modelado Matemático
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Módulo de función cuadrática
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Módulo de función cuadrática
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../funciones/funciones_6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Funciones cuadráticas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../funciones/funciones_7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Parábola y funciones
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../funciones/multiple_3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Práctica
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Módulo de exponencial y logaritmo
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Módulo de exponencial y logaritmo
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../funciones/funciones_8/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Función exponencial
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#parte-i-ecuaciones-de-rectas-paralelismo-y-perpendicularidad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parte I: Ecuaciones de Rectas, Paralelismo y Perpendicularidad
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parte-ii-modelado-matematico" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parte II: Modelado Matemático
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="ejercicios-de-seleccion-multiple-rectas-y-modelado-matematico">Ejercicios de Selección Múltiple: Rectas y Modelado Matemático</h1>
+<p>Resuelve los siguientes ejercicios y luego verifica tu respuesta. Si tienes dudas, puedes desplegar el desarrollo paso a paso.</p>
+<hr />
+<h3 id="parte-i-ecuaciones-de-rectas-paralelismo-y-perpendicularidad">Parte I: Ecuaciones de Rectas, Paralelismo y Perpendicularidad</h3>
+<fieldset style="border: 1px solid #e0e0e0; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+  <legend style="font-weight: bold; color: #3f51b5;">Pregunta 1</legend>
+
+  <p>Encuentre el valor de $k$ tal que la recta que pasa por los puntos $(4, -1)$ y $(k, 2)$ sea paralela a la recta $3y + 2x = 6$.</p>
+
+  <input type="radio" name="p1" id="p1a" value="incorrecta"> <label for="p1a">A) $k = \dfrac{1}{2}$</label><br>
+  <input type="radio" name="p1" id="p1b" value="correcta"> <label for="p1b">B) $k = -\dfrac{1}{2}$</label><br>
+  <input type="radio" name="p1" id="p1c" value="incorrecta"> <label for="p1c">C) $k = \dfrac{2}{3}$</label><br>
+  <input type="radio" name="p1" id="p1d" value="incorrecta"> <label for="p1d">D) $k = -\dfrac{3}{2}$</label><br>
+  <input type="radio" name="p1" id="p1e" value="incorrecta"> <label for="p1e">E) $k = \dfrac{5}{2}$</label><br><br>
+
+  <button onclick="verificarRespuesta('p1', 'feedback_p1')" style="background-color: #3f51b5; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer;">Verificar</button>
+  <div id="feedback_p1" style="margin-top: 15px; font-weight: bold;"></div>
+</fieldset>
+
+<details class="info">
+<summary>Ver desarrollo paso a paso</summary>
+<p>Calculamos la pendiente <span class="arithmatex">\(m\)</span> de la recta que pasa por <span class="arithmatex">\((4, -1)\)</span> y <span class="arithmatex">\((k, 2)\)</span>:
+$<span class="arithmatex">\(m = \frac{2 - (-1)}{k - 4} = \frac{3}{k - 4}\)</span>$
+Por otro lado, encontramos la pendiente de la recta dada <span class="arithmatex">\(3y + 2x = 6\)</span>:
+$<span class="arithmatex">\(3y = -2x + 6 \implies y = -\frac{2}{3}x + 2\)</span>$
+Su pendiente es <span class="arithmatex">\(m_1 = -\frac{2}{3}\)</span>. Para que sean paralelas, las pendientes deben ser iguales:
+$<span class="arithmatex">\(\frac{3}{k - 4} = -\frac{2}{3}\)</span>$</p>
+<p>Multiplicando cruzado:</p>
+<div class="arithmatex">\[9 = -2(k - 4) \implies 9 = -2k + 8$$
+$$2k = -1 \implies k = -\frac{1}{2}\]</div>
+</details>
+<hr />
+<fieldset style="border: 1px solid #e0e0e0; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+  <legend style="font-weight: bold; color: #3f51b5;">Pregunta 2</legend>
+
+  <p>Encuentre el valor de $k$ tal que la recta que pasa por los puntos $(4, -1)$ y $(k, 2)$ sea perpendicular a la recta $2y - 5x = 1$.</p>
+
+  <input type="radio" name="p2" id="p2a" value="incorrecta"> <label for="p2a">A) $k = \dfrac{7}{2}$</label><br>
+  <input type="radio" name="p2" id="p2b" value="correcta"> <label for="p2b">B) $k = -\dfrac{7}{2}$</label><br>
+  <input type="radio" name="p2" id="p2c" value="incorrecta"> <label for="p2c">C) $k = -\dfrac{2}{5}$</label><br>
+  <input type="radio" name="p2" id="p2d" value="incorrecta"> <label for="p2d">D) $k = \dfrac{5}{2}$</label><br>
+  <input type="radio" name="p2" id="p2e" value="incorrecta"> <label for="p2e">E) $k = -\dfrac{15}{2}$</label><br><br>
+
+  <button onclick="verificarRespuesta('p2', 'feedback_p2')" style="background-color: #3f51b5; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer;">Verificar</button>
+  <div id="feedback_p2" style="margin-top: 15px; font-weight: bold;"></div>
+</fieldset>
+
+<details class="info">
+<summary>Ver desarrollo paso a paso</summary>
+<p>Al igual que antes, la pendiente entre los puntos es <span class="arithmatex">\(m = \frac{3}{k - 4}\)</span>.
+Encontramos la pendiente de <span class="arithmatex">\(2y - 5x = 1\)</span>:</p>
+<div class="arithmatex">\[2y = 5x + 1 \implies y = \frac{5}{2}x + \frac{1}{2}\]</div>
+<p>La pendiente es <span class="arithmatex">\(m_1 = \frac{5}{2}\)</span>. Para que sean perpendiculares, sus pendientes deben cumplir <span class="arithmatex">\(m \cdot m_1 = -1\)</span>, es decir, deben ser recíprocas y opuestas:</p>
+<div class="arithmatex">\[m = -\frac{2}{5}\]</div>
+<p>Igualamos:</p>
+<div class="arithmatex">\[\frac{3}{k - 4} = -\frac{2}{5}\]</div>
+<p>Multiplicando cruzado:</p>
+<div class="arithmatex">\[15 = -2(k - 4) \implies 15 = -2k + 8$$
+$$2k = -7 \implies k = -\frac{7}{2}\]</div>
+</details>
+<hr />
+<fieldset style="border: 1px solid #e0e0e0; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+  <legend style="font-weight: bold; color: #3f51b5;">Pregunta 3</legend>
+
+  <p>Encuentre $r$ tal que la recta que pasa por $(2, 6)$ y $(-4, r)$ sea paralela a $2x - 3y = 4$.</p>
+
+  <input type="radio" name="p3" id="p3a" value="correcta"> <label for="p3a">A) $r = 2$</label><br>
+  <input type="radio" name="p3" id="p3b" value="incorrecta"> <label for="p3b">B) $r = -2$</label><br>
+  <input type="radio" name="p3" id="p3c" value="incorrecta"> <label for="p3c">C) $r = 4$</label><br>
+  <input type="radio" name="p3" id="p3d" value="incorrecta"> <label for="p3d">D) $r = -4$</label><br>
+  <input type="radio" name="p3" id="p3e" value="incorrecta"> <label for="p3e">E) $r = 0$</label><br><br>
+
+  <button onclick="verificarRespuesta('p3', 'feedback_p3')" style="background-color: #3f51b5; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer;">Verificar</button>
+  <div id="feedback_p3" style="margin-top: 15px; font-weight: bold;"></div>
+</fieldset>
+
+<details class="info">
+<summary>Ver desarrollo paso a paso</summary>
+<p>Pendiente entre los puntos:</p>
+<div class="arithmatex">\[m = \frac{r - 6}{-4 - 2} = \frac{r - 6}{-6}\]</div>
+<p>Pendiente de la recta <span class="arithmatex">\(2x - 3y = 4\)</span>:</p>
+<div class="arithmatex">\[3y = 2x - 4 \implies y = \frac{2}{3}x - \frac{4}{3} \implies m_1 = \frac{2}{3}\]</div>
+<p>Igualamos por ser paralelas:</p>
+<div class="arithmatex">\[\frac{r - 6}{-6} = \frac{2}{3}\]</div>
+<div class="arithmatex">\[3(r - 6) = -12 \implies 3r - 18 = -12\]</div>
+<div class="arithmatex">\[3r = 6 \implies r = 2\]</div>
+</details>
+<hr />
+<fieldset style="border: 1px solid #e0e0e0; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+  <legend style="font-weight: bold; color: #3f51b5;">Pregunta 4</legend>
+
+  <p>Encuentre $r$ tal que la recta que pasa por $(2, 6)$ y $(-4, r)$ sea perpendicular a $x + 2y = 1$.</p>
+
+  <input type="radio" name="p4" id="p4a" value="incorrecta"> <label for="p4a">A) $r = 6$</label><br>
+  <input type="radio" name="p4" id="p4b" value="correcta"> <label for="p4b">B) $r = -6$</label><br>
+  <input type="radio" name="p4" id="p4c" value="incorrecta"> <label for="p4c">C) $r = 12$</label><br>
+  <input type="radio" name="p4" id="p4d" value="incorrecta"> <label for="p4d">D) $r = -12$</label><br>
+  <input type="radio" name="p4" id="p4e" value="incorrecta"> <label for="p4e">E) $r = 0$</label><br><br>
+
+  <button onclick="verificarRespuesta('p4', 'feedback_p4')" style="background-color: #3f51b5; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer;">Verificar</button>
+  <div id="feedback_p4" style="margin-top: 15px; font-weight: bold;"></div>
+</fieldset>
+
+<details class="info">
+<summary>Ver desarrollo paso a paso</summary>
+<p>Pendiente entre los puntos es <span class="arithmatex">\(m = \frac{r - 6}{-6}\)</span>.
+Pendiente de <span class="arithmatex">\(x + 2y = 1\)</span>:
+$<span class="arithmatex">\(2y = -x + 1 \implies y = -\frac{1}{2}x + \frac{1}{2} \implies m_1 = -\frac{1}{2}\)</span>$
+La pendiente perpendicular debe ser el opuesto recíproco: <span class="arithmatex">\(m_{\perp} = 2\)</span>.
+Igualamos:
+$<span class="arithmatex">\(\frac{r - 6}{-6} = 2\)</span>$
+$<span class="arithmatex">\(r - 6 = -12 \implies r = -6\)</span>$</p>
+</details>
+<hr />
+<fieldset style="border: 1px solid #e0e0e0; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+  <legend style="font-weight: bold; color: #3f51b5;">Pregunta 5</legend>
+
+  <p>Escriba la ecuación en forma general de la recta que pasa por $(-1, 4)$ y es paralela a $x + 3y = 5$.</p>
+
+  <input type="radio" name="p5" id="p5a" value="correcta"> <label for="p5a">A) $x + 3y = 11$</label><br>
+  <input type="radio" name="p5" id="p5b" value="incorrecta"> <label for="p5b">B) $x - 3y = -13$</label><br>
+  <input type="radio" name="p5" id="p5c" value="incorrecta"> <label for="p5c">C) $3x + y = 1$</label><br>
+  <input type="radio" name="p5" id="p5d" value="incorrecta"> <label for="p5d">D) $3x - y = -7$</label><br>
+  <input type="radio" name="p5" id="p5e" value="incorrecta"> <label for="p5e">E) $x + 3y = 5$</label><br><br>
+
+  <button onclick="verificarRespuesta('p5', 'feedback_p5')" style="background-color: #3f51b5; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer;">Verificar</button>
+  <div id="feedback_p5" style="margin-top: 15px; font-weight: bold;"></div>
+</fieldset>
+
+<details class="info">
+<summary>Ver desarrollo paso a paso</summary>
+<p>La recta dada <span class="arithmatex">\(x + 3y = 5\)</span> se puede escribir como <span class="arithmatex">\(y = -\frac{1}{3}x + \frac{5}{3}\)</span>. Su pendiente es <span class="arithmatex">\(m = -\frac{1}{3}\)</span>.</p>
+<p>Usamos la forma punto-pendiente con el punto <span class="arithmatex">\((-1, 4)\)</span>:</p>
+<div class="arithmatex">\[y - 4 = -\frac{1}{3}(x - (-1))\]</div>
+<div class="arithmatex">\[y - 4 = -\frac{1}{3}(x + 1)\]</div>
+<p>Multiplicando por 3 para eliminar denominadores:</p>
+<div class="arithmatex">\[3y - 12 = -(x + 1) \implies 3y - 12 = -x - 1\]</div>
+<p>Reordenando a la forma general <span class="arithmatex">\(Ax + By = C\)</span>:</p>
+<div class="arithmatex">\[x + 3y = 11.\]</div>
+</details>
+<hr />
+<fieldset style="border: 1px solid #e0e0e0; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+  <legend style="font-weight: bold; color: #3f51b5;">Pregunta 6</legend>
+
+  <p>Escriba la ecuación en forma general de la recta que pasa por $(1, 6)$ y es perpendicular a $3x + 5y = 1$.</p>
+
+  <input type="radio" name="p6" id="p6a" value="correcta"> <label for="p6a">A) $5x - 3y = -13$</label><br>
+  <input type="radio" name="p6" id="p6b" value="incorrecta"> <label for="p6b">B) $3x + 5y = 33$</label><br>
+  <input type="radio" name="p6" id="p6c" value="incorrecta"> <label for="p6c">C) $5x + 3y = 23$</label><br>
+  <input type="radio" name="p6" id="p6d" value="incorrecta"> <label for="p6d">D) $3x - 5y = -27$</label><br>
+  <input type="radio" name="p6" id="p6e" value="incorrecta"> <label for="p6e">E) $5x - 3y = 13$</label><br><br>
+
+  <button onclick="verificarRespuesta('p6', 'feedback_p6')" style="background-color: #3f51b5; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer;">Verificar</button>
+  <div id="feedback_p6" style="margin-top: 15px; font-weight: bold;"></div>
+</fieldset>
+
+<details class="info">
+<summary>Ver desarrollo paso a paso</summary>
+<p>La recta dada <span class="arithmatex">\(3x + 5y = 1\)</span> tiene pendiente <span class="arithmatex">\(m = -\frac{3}{5}\)</span>.</p>
+<p>La pendiente de la recta perpendicular será <span class="arithmatex">\(m_{\perp} = \frac{5}{3}\)</span>.</p>
+<p>Con el punto <span class="arithmatex">\((1, 6)\)</span> planteamos:</p>
+<div class="arithmatex">\[y - 6 = \frac{5}{3}(x - 1)\]</div>
+<p>Multiplicando por 3:</p>
+<div class="arithmatex">\[3y - 18 = 5(x - 1) \implies 3y - 18 = 5x - 5\]</div>
+<p>Reordenando:</p>
+<div class="arithmatex">\[5x - 3y = -13\]</div>
+</details>
+<hr />
+<fieldset style="border: 1px solid #e0e0e0; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+  <legend style="font-weight: bold; color: #3f51b5;">Pregunta 7</legend>
+
+  <p>Escriba en forma general la ecuación de la recta que pasa por $(1, 3)$ y tiene pendiente $m = -2$.</p>
+
+  <input type="radio" name="p7" id="p7a" value="incorrecta"> <label for="p7a">A) $2x - y = -1$</label><br>
+  <input type="radio" name="p7" id="p7b" value="correcta"> <label for="p7b">B) $2x + y = 5$</label><br>
+  <input type="radio" name="p7" id="p7c" value="incorrecta"> <label for="p7c">C) $x + 2y = 7$</label><br>
+  <input type="radio" name="p7" id="p7d" value="incorrecta"> <label for="p7d">D) $x - 2y = -5$</label><br>
+  <input type="radio" name="p7" id="p7e" value="incorrecta"> <label for="p7e">E) $-2x + y = 5$</label><br><br>
+
+  <button onclick="verificarRespuesta('p7', 'feedback_p7')" style="background-color: #3f51b5; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer;">Verificar</button>
+  <div id="feedback_p7" style="margin-top: 15px; font-weight: bold;"></div>
+</fieldset>
+
+<details class="info">
+<summary>Ver desarrollo paso a paso</summary>
+<p>Usamos la forma punto-pendiente:</p>
+<div class="arithmatex">\[y - y_1 = m(x - x_1)\]</div>
+<div class="arithmatex">\[y - 3 = -2(x - 1)\]</div>
+<div class="arithmatex">\[y - 3 = -2x + 2\]</div>
+<p>Reordenando a la forma estándar <span class="arithmatex">\(Ax + By = C\)</span>:</p>
+<div class="arithmatex">\[2x + y = 5\]</div>
+</details>
+<hr />
+<fieldset style="border: 1px solid #e0e0e0; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+  <legend style="font-weight: bold; color: #3f51b5;">Pregunta 8</legend>
+
+  <p>Determine la ecuación de la recta que pasa por $(-8, 4)$ y tiene pendiente indefinida.</p>
+
+  <input type="radio" name="p8" id="p8a" value="incorrecta"> <label for="p8a">A) $y = 4$</label><br>
+  <input type="radio" name="p8" id="p8b" value="incorrecta"> <label for="p8b">B) $x = 4$</label><br>
+  <input type="radio" name="p8" id="p8c" value="incorrecta"> <label for="p8c">C) $y = -8$</label><br>
+  <input type="radio" name="p8" id="p8d" value="correcta"> <label for="p8d">D) $x = -8$</label><br>
+  <input type="radio" name="p8" id="p8e" value="incorrecta"> <label for="p8e">E) $x - y = -12$</label><br><br>
+
+  <button onclick="verificarRespuesta('p8', 'feedback_p8')" style="background-color: #3f51b5; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer;">Verificar</button>
+  <div id="feedback_p8" style="margin-top: 15px; font-weight: bold;"></div>
+</fieldset>
+
+<details class="info">
+<summary>Ver desarrollo paso a paso</summary>
+<p>Una recta con pendiente indefinida es una recta vertical. La ecuación de todas las rectas verticales tiene la forma <span class="arithmatex">\(x = c\)</span>, donde <span class="arithmatex">\(c\)</span> es la coordenada <span class="arithmatex">\(x\)</span> del punto por donde pasa.</p>
+<p>Como pasa por <span class="arithmatex">\((-8, 4)\)</span>, la ecuación es:</p>
+<div class="arithmatex">\[x = -8\]</div>
+</details>
+<hr />
+<h3 id="parte-ii-modelado-matematico">Parte II: Modelado Matemático</h3>
+<fieldset style="border: 1px solid #e0e0e0; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+  <legend style="font-weight: bold; color: #3f51b5;">Pregunta 9</legend>
+
+  <p>Una empresa que fabrica bicicletas tiene un costo fijo de $\$100,000$. Producir cada bicicleta cuesta $\$100$. Si $C(x)$ es la función del costo total según el número de bicicletas producidas $x$, ¿cuál es el valor de $C(90)$?</p>
+
+  <input type="radio" name="p9" id="p9a" value="correcta"> <label for="p9a">A) \$109,000</label><br>
+  <input type="radio" name="p9" id="p9b" value="incorrecta"> <label for="p9b">B) \$190,000</label><br>
+  <input type="radio" name="p9" id="p9c" value="incorrecta"> <label for="p9c">C) \$9,000</label><br>
+  <input type="radio" name="p9" id="p9d" value="incorrecta"> <label for="p9d">D) \$100,000</label><br>
+  <input type="radio" name="p9" id="p9e" value="incorrecta"> <label for="p9e">E) \$100,900</label><br><br>
+
+  <button onclick="verificarRespuesta('p9', 'feedback_p9')" style="background-color: #3f51b5; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer;">Verificar</button>
+  <div id="feedback_p9" style="margin-top: 15px; font-weight: bold;"></div>
+</fieldset>
+
+<details class="info">
+<summary>Ver desarrollo paso a paso</summary>
+<p>El costo fijo es <span class="arithmatex">\(\$100,000\)</span> y el costo variable es <span class="arithmatex">\(\$100\)</span> por cada bicicleta (<span class="arithmatex">\(x\)</span>). Por lo tanto, la función es:
+$<span class="arithmatex">\(C(x) = 100x + 100000\)</span>$</p>
+<p>Cálculo de <span class="arithmatex">\(C(90)\)</span>:</p>
+<div class="arithmatex">\[C(90) = 100(90) + 100000\]</div>
+<div class="arithmatex">\[C(90) = 9000 + 100000 = 109000\]</div>
+<p>El costo total de fabricar 90 bicicletas es de <span class="arithmatex">\(\$109,000.\)</span></p>
+</details>
+<hr />
+<fieldset style="border: 1px solid #e0e0e0; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+  <legend style="font-weight: bold; color: #3f51b5;">Pregunta 10</legend>
+
+  <p>Un automóvil fue comprado por 22,500. El valor del automóvil disminuyó en $\$3200$ por año durante los primeros seis años. Si $V(x)$ es la función que describe el valor después de $x$ años, ¿cuánto es el valor de $V(3)$?</p>
+
+  <input type="radio" name="p10" id="p10a" value="correcta"> <label for="p10a">A) \$12,900</label><br>
+  <input type="radio" name="p10" id="p10b" value="incorrecta"> <label for="p10b">B) \$9,600</label><br>
+  <input type="radio" name="p10" id="p10c" value="incorrecta"> <label for="p10c">C) \$19,300</label><br>
+  <input type="radio" name="p10" id="p10d" value="incorrecta"> <label for="p10d">D) \$22,500</label><br>
+  <input type="radio" name="p10" id="p10e" value="incorrecta"> <label for="p10e">E) \$13,200</label><br><br>
+
+  <button onclick="verificarRespuesta('p10', 'feedback_p10')" style="background-color: #3f51b5; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer;">Verificar</button>
+  <div id="feedback_p10" style="margin-top: 15px; font-weight: bold;"></div>
+</fieldset>
+
+<details class="info">
+<summary>Ver desarrollo paso a paso</summary>
+<p>El valor inicial es <span class="arithmatex">\(\$22,500\)</span> y la tasa de depreciación es constante a <span class="arithmatex">\(\$3200\)</span> por año (<span class="arithmatex">\(x\)</span>). La función es:
+$<span class="arithmatex">\(V(x) = 22500 - 3200x\)</span>$</p>
+<p>Cálculo de <span class="arithmatex">\(V(3)\)</span>:</p>
+<div class="arithmatex">\[V(3) = 22500 - 3200(3)\]</div>
+<div class="arithmatex">\[V(3) = 22500 - 9600 = 12900\]</div>
+<p>Después de 3 años, el valor del automóvil es de <span class="arithmatex">\(\$12,900\)</span>.</p>
+</details>
+<hr />
+<fieldset style="border: 1px solid #e0e0e0; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+  <legend style="font-weight: bold; color: #3f51b5;">Pregunta 11</legend>
+
+  <p>Usted viaja a su trabajo recorriendo una distancia de 40 millas y regresa por la misma ruta. Su velocidad promedio en el viaje de regreso es 30 millas por hora más rápida que su velocidad en el viaje de ida ($x$). ¿Cuál será el tiempo total invertido $T(30)$ si la velocidad de ida es de 30 millas por hora?</p>
+
+  <input type="radio" name="p11" id="p11a" value="incorrecta"> <label for="p11a">A) 1.5 horas</label><br>
+  <input type="radio" name="p11" id="p11b" value="correcta"> <label for="p11b">B) 2 horas</label><br>
+  <input type="radio" name="p11" id="p11c" value="incorrecta"> <label for="p11c">C) 2.5 horas</label><br>
+  <input type="radio" name="p11" id="p11d" value="incorrecta"> <label for="p11d">D) 3 horas</label><br>
+  <input type="radio" name="p11" id="p11e" value="incorrecta"> <label for="p11e">E) 1.33 horas</label><br><br>
+
+  <button onclick="verificarRespuesta('p11', 'feedback_p11')" style="background-color: #3f51b5; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer;">Verificar</button>
+  <div id="feedback_p11" style="margin-top: 15px; font-weight: bold;"></div>
+</fieldset>
+
+<details class="info">
+<summary>Ver desarrollo paso a paso</summary>
+<p>Sabemos que <span class="arithmatex">\(\text{Tiempo} = \frac{\text{Distancia}}{\text{Velocidad}}\)</span>.
+* Tiempo de ida: <span class="arithmatex">\(\frac{40}{x}\)</span></p>
+<ul>
+<li>
+<p>Tiempo de regreso: <span class="arithmatex">\(\frac{40}{x + 30}\)</span></p>
+</li>
+<li>
+<p>Tiempo total: <span class="arithmatex">\(T(x) = \frac{40}{x} + \frac{40}{x + 30}\)</span></p>
+</li>
+</ul>
+<p>Cálculo de <span class="arithmatex">\(T(30)\)</span>:</p>
+<div class="arithmatex">\[T(30) = \frac{40}{30} + \frac{40}{30 + 30}\]</div>
+<div class="arithmatex">\[T(30) = \frac{4}{3} + \frac{40}{60}\]</div>
+<div class="arithmatex">\[T(30) = \frac{4}{3} + \frac{2}{3} = \frac{6}{3} = 2\]</div>
+<p>El tiempo total será exactamente 2 horas.</p>
+</details>
+<hr />
+<fieldset style="border: 1px solid #e0e0e0; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+  <legend style="font-weight: bold; color: #3f51b5;">Pregunta 12</legend>
+
+  <p>Un químico mezcla una solución al 10% con una solución al 60% para obtener una mezcla de 50 ml. Si $S(x)$ es la cantidad de yodo-sodio en función de los mililitros $x$ utilizados de la solución al 10%, ¿cuál será la cantidad de yodo-sodio $S(30)$ obtenida?</p>
+
+  <input type="radio" name="p12" id="p12a" value="incorrecta"> <label for="p12a">A) 10 ml</label><br>
+  <input type="radio" name="p12" id="p12b" value="correcta"> <label for="p12b">B) 15 ml</label><br>
+  <input type="radio" name="p12" id="p12c" value="incorrecta"> <label for="p12c">C) 20 ml</label><br>
+  <input type="radio" name="p12" id="p12d" value="incorrecta"> <label for="p12d">D) 25 ml</label><br>
+  <input type="radio" name="p12" id="p12e" value="incorrecta"> <label for="p12e">E) 30 ml</label><br><br>
+
+  <button onclick="verificarRespuesta('p12', 'feedback_p12')" style="background-color: #3f51b5; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer;">Verificar</button>
+  <div id="feedback_p12" style="margin-top: 15px; font-weight: bold;"></div>
+</fieldset>
+
+<details class="info">
+<summary>Ver desarrollo paso a paso</summary>
+<ul>
+<li>
+<p>Volumen de la solución al 10%: <span class="arithmatex">\(x\)</span></p>
+</li>
+<li>
+<p>Volumen de la solución al 60%: <span class="arithmatex">\(50 - x\)</span></p>
+</li>
+</ul>
+<p>La cantidad total de yodo-sodio es la suma de las concentraciones:
+$<span class="arithmatex">\(S(x) = 0.10x + 0.60(50 - x)\)</span>$</p>
+<div class="arithmatex">\[S(x) = 0.10x + 30 - 0.60x = 30 - 0.50x\]</div>
+<p>Cálculo de <span class="arithmatex">\(S(30)\)</span>:</p>
+<div class="arithmatex">\[S(30) = 30 - 0.50(30)\]</div>
+<div class="arithmatex">\[S(30) = 30 - 15 = 15\]</div>
+<p>Se obtendrán 15 mililitros de yodo-sodio puro en la mezcla.</p>
+</details>
+<hr />
+<fieldset style="border: 1px solid #e0e0e0; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+  <legend style="font-weight: bold; color: #3f51b5;">Pregunta 13</legend>
+
+  <p>Una póliza de mascotas cobra 20 dólares si el animal tiene hasta 4 años. Luego, el costo aumenta 2 dólares por cada año adicional (hasta los 10 años). Según este modelo, ¿cuál será el costo mensual para una mascota de 6 años?</p>
+
+  <input type="radio" name="p13" id="p13a" value="incorrecta"> <label for="p13a">A) \$20</label><br>
+  <input type="radio" name="p13" id="p13b" value="incorrecta"> <label for="p13b">B) \$22</label><br>
+  <input type="radio" name="p13" id="p13c" value="correcta"> <label for="p13c">C) \$24</label><br>
+  <input type="radio" name="p13" id="p13d" value="incorrecta"> <label for="p13d">D) \$26</label><br>
+  <input type="radio" name="p13" id="p13e" value="incorrecta"> <label for="p13e">E) \$40</label><br><br>
+
+  <button onclick="verificarRespuesta('p13', 'feedback_p13')" style="background-color: #3f51b5; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer;">Verificar</button>
+  <div id="feedback_p13" style="margin-top: 15px; font-weight: bold;"></div>
+</fieldset>
+
+<details class="info">
+<summary>Ver desarrollo paso a paso</summary>
+<p>Para el tramo entre 4 y 10 años, el costo parte de 20 y sube 2 por cada año extra por encima de 4.
+La función por tramos para <span class="arithmatex">\(4 &lt; x \le 10\)</span> es:</p>
+<div class="arithmatex">\[f(x) = 20 + 2(x - 4) = 20 + 2x - 8 = 2x + 12\]</div>
+<p>Evaluando para <span class="arithmatex">\(x = 6\)</span>:</p>
+<div class="arithmatex">\[f(6) = 2(6) + 12 = 12 + 12 = 24\]</div>
+<p>El costo será de 24.</p>
+</details>
+<hr />
+<fieldset style="border: 1px solid #e0e0e0; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+  <legend style="font-weight: bold; color: #3f51b5;">Pregunta 14</legend>
+
+  <p>Una pastelería tiene costos fijos de 500 por semana y producir cada pastel tiene un costo variable de 15. Si cada pastel se vende a 40, encuentre la utilidad $P(30)$ que corresponde a vender 30 pasteles.</p>
+
+  <input type="radio" name="p14" id="p14a" value="correcta"> <label for="p14a">A) \$250</label><br>
+  <input type="radio" name="p14" id="p14b" value="incorrecta"> <label for="p14b">B) \$750</label><br>
+  <input type="radio" name="p14" id="p14c" value="incorrecta"> <label for="p14c">C) \$1200</label><br>
+  <input type="radio" name="p14" id="p14d" value="incorrecta"> <label for="p14d">D) \$450</label><br>
+  <input type="radio" name="p14" id="p14e" value="incorrecta"> <label for="p14e">E) \$500</label><br><br>
+
+  <button onclick="verificarRespuesta('p14', 'feedback_p14')" style="background-color: #3f51b5; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer;">Verificar</button>
+  <div id="feedback_p14" style="margin-top: 15px; font-weight: bold;"></div>
+</fieldset>
+
+<details class="info">
+<summary>Ver desarrollo paso a paso</summary>
+<p>La Utilidad (<span class="arithmatex">\(P\)</span>) se define como Ingreso (<span class="arithmatex">\(R\)</span>) menos Costos (<span class="arithmatex">\(C\)</span>).
+* Ingresos: <span class="arithmatex">\(R(x) = 40x\)</span>
+* Costos: <span class="arithmatex">\(C(x) = 15x + 500\)</span></p>
+<p>Construimos la función de Utilidad:</p>
+<div class="arithmatex">\[P(x) = 40x - (15x + 500)\]</div>
+<div class="arithmatex">\[P(x) = 25x - 500\]</div>
+<p>Cálculo de <span class="arithmatex">\(P(30)\)</span>:</p>
+<div class="arithmatex">\[P(30) = 25(30) - 500\]</div>
+<div class="arithmatex">\[P(30) = 750 - 500 = 250\]</div>
+<p>La ganancia al vender 30 pasteles es de 250.</p>
+</details>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.top"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="../../javascripts/quiz.js"></script>
+      
+    
+  </body>
+</html>
