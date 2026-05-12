@@ -1,0 +1,1743 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Material de apoyo, guías y problemas de precálculo.">
+      
+      
+        <meta name="author" content="José David Torres Riffo">
+      
+      
+      
+        <link rel="prev" href="../../funciones/funciones_8/">
+      
+      
+        <link rel="next" href="../progresiones/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Sumatorias - MateRiffo</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#ejercicios-de-seleccion-multiple-sumatorias-y-progresiones-nivel-avanzado" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../.." title="MateRiffo" class="md-header__button md-logo" aria-label="MateRiffo" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            MateRiffo
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Sumatorias
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="MateRiffo" class="md-nav__button md-logo" aria-label="MateRiffo" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    MateRiffo
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Módulo de Inecuaciones
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Módulo de Inecuaciones
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algebra/inecuaciones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Racionales
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algebra/desigualdades/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Desigualdades
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algebra/aplicaciones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aplicaciones
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algebra/absoluto/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Valor absoluto
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algebra/raices/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Raices
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Módulo de Funciones Reales
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Módulo de Funciones Reales
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algebra/funciones_1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gráfico de funciones
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algebra/funciones_2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dominio de funciones
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algebra/funciones_3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Evaluación de funciones
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algebra/multiple_1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Práctica
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Módulo de Función lineal
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Módulo de Función lineal
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algebra/funciones_5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Rectas y funciones
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algebra/funciones_4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aplicaciones de funciones lineales
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algebra/multiple_2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Práctica
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Módulo de función cuadrática
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Módulo de función cuadrática
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../funciones/funciones_6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Funciones cuadráticas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../funciones/funciones_7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Parábola y funciones
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../funciones/multiple_3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Práctica
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Módulo de exponencial y logaritmo
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Módulo de exponencial y logaritmo
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../funciones/funciones_8/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Función exponencial
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modulo de Matemáticas avanzadas
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Modulo de Matemáticas avanzadas
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sumatorias
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../progresiones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Progresiones
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../inecuaciones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inecuaciones
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="ejercicios-de-seleccion-multiple-sumatorias-y-progresiones-nivel-avanzado">Ejercicios de Selección Múltiple: Sumatorias y Progresiones (Nivel Avanzado)</h1>
+<p>Resuelve los siguientes ejercicios y luego verifica tu respuesta. Si tienes dudas, puedes desplegar el desarrollo paso a paso.</p>
+<hr />
+<fieldset style="border: 1px solid #e0e0e0; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+  <legend style="font-weight: bold; color: #3f51b5;">Pregunta 1</legend>
+
+  <p>Calcule la siguiente suma telescópica racionalizando su denominador:</p>
+  <p>$$\sum_{k=1}^{99} \dfrac{1}{\sqrt{k} + \sqrt{k+1}}$$</p>
+
+  <input type="radio" name="p1" id="p1a" value="incorrecta"> <label for="p1a">A) $10$</label><br>
+  <input type="radio" name="p1" id="p1b" value="correcta"> <label for="p1b">B) $9$</label><br>
+  <input type="radio" name="p1" id="p1c" value="incorrecta"> <label for="p1c">C) $99$</label><br>
+  <input type="radio" name="p1" id="p1d" value="incorrecta"> <label for="p1d">D) $\sqrt{99} - 1$</label><br><br>
+
+  <button onclick="verificarRespuesta('p1', 'feedback_p1')" style="background-color: #3f51b5; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer;">Verificar</button>
+  <div id="feedback_p1" style="margin-top: 15px; font-weight: bold;"></div>
+</fieldset>
+
+<details class="info">
+<summary>Ver desarrollo paso a paso</summary>
+<p>Primero, racionalizamos el término general multiplicando por el conjugado:
+$<span class="arithmatex">\(\dfrac{1}{\sqrt{k+1} + \sqrt{k}} \cdot \dfrac{\sqrt{k+1} - \sqrt{k}}{\sqrt{k+1} - \sqrt{k}} = \dfrac{\sqrt{k+1} - \sqrt{k}}{(k+1) - k} = \sqrt{k+1} - \sqrt{k}\)</span>$
+La sumatoria queda entonces como una suma telescópica directa:
+$<span class="arithmatex">\(\sum_{k=1}^{99} (\sqrt{k+1} - \sqrt{k})\)</span>$
+Al desarrollar, se cancelan todos los términos intermedios:
+$<span class="arithmatex">\(S = \sqrt{100} - \sqrt{1} = 10 - 1 = 9\)</span>$</p>
+</details>
+<hr />
+<fieldset style="border: 1px solid #e0e0e0; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+  <legend style="font-weight: bold; color: #3f51b5;">Pregunta 2</legend>
+
+  <p>Utilizando fracciones parciales, determine el valor en función de $n$ de la sumatoria:</p>
+  <p>$$\sum_{k=1}^{n} \dfrac{2}{k(k+2)}$$</p>
+
+  <input type="radio" name="p2" id="p2a" value="incorrecta"> <label for="p2a">A) $1 - \dfrac{1}{n+2}$</label><br>
+  <input type="radio" name="p2" id="p2b" value="correcta"> <label for="p2b">B) $\dfrac{3}{2} - \dfrac{1}{n+1} - \dfrac{1}{n+2}$</label><br>
+  <input type="radio" name="p2" id="p2c" value="incorrecta"> <label for="p2c">C) $\dfrac{1}{2} - \dfrac{1}{n(n+2)}$</label><br>
+  <input type="radio" name="p2" id="p2d" value="incorrecta"> <label for="p2d">D) $2 - \dfrac{2}{(n+1)(n+2)}$</label><br><br>
+
+  <button onclick="verificarRespuesta('p2', 'feedback_p2')" style="background-color: #3f51b5; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer;">Verificar</button>
+  <div id="feedback_p2" style="margin-top: 15px; font-weight: bold;"></div>
+</fieldset>
+
+<details class="info">
+<summary>Ver desarrollo paso a paso</summary>
+<p>Descomponemos la fracción usando la propiedad telescópica:
+$<span class="arithmatex">\(\dfrac{2}{k(k+2)} = \dfrac{1}{k} - \dfrac{1}{k+2}\)</span>$
+Desarrollamos los primeros y últimos términos para observar el patrón (salto de dos pasos):
+<span class="arithmatex">\(k=1: 1/1 - 1/3\)</span>
+<span class="arithmatex">\(k=2: 1/2 - 1/4\)</span>
+<span class="arithmatex">\(k=3: 1/3 - 1/5\)</span>
+...
+<span class="arithmatex">\(k=n-1: 1/(n-1) - 1/(n+1)\)</span>
+<span class="arithmatex">\(k=n: 1/n - 1/(n+2)\)</span>
+Los términos negativos comienzan a cancelarse con los positivos a partir de <span class="arithmatex">\(k=3\)</span>. Sobreviven los dos primeros términos positivos y los dos últimos negativos:
+$<span class="arithmatex">\(S = 1 + \dfrac{1}{2} - \dfrac{1}{n+1} - \dfrac{1}{n+2} = \dfrac{3}{2} - \dfrac{1}{n+1} - \dfrac{1}{n+2}\)</span>$</p>
+</details>
+<hr />
+<fieldset style="border: 1px solid #e0e0e0; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+  <legend style="font-weight: bold; color: #3f51b5;">Pregunta 5</legend>
+
+  <p>Dada la sucesión definida por tramos:</p>
+  <p>$$a_{k}=\left\{\begin{array}{ccc} 3k & \mbox{si} & 1\leq k\leq 10\\ \\ 2^k & \mbox{si} & 11\leq k\leq 20 \end{array}\right.$$</p>
+  <p>Calcule $\displaystyle\sum_{k=1}^{20} a_k$</p>
+
+  <input type="radio" name="p5" id="p5a" value="incorrecta"> <label for="p5a">A) $165 + 2^{21} - 2^{11}$</label><br>
+  <input type="radio" name="p5" id="p5b" value="correcta"> <label for="p5b">B) $165 + 2^{11}(2^{10} - 1)$</label><br>
+  <input type="radio" name="p5" id="p5c" value="incorrecta"> <label for="p5c">C) $330 + 2^{20} - 2^{10}$</label><br>
+  <input type="radio" name="p5" id="p5d" value="incorrecta"> <label for="p5d">D) $165 + 2^{20} - 1$</label><br><br>
+
+  <button onclick="verificarRespuesta('p5', 'feedback_p5')" style="background-color: #3f51b5; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer;">Verificar</button>
+  <div id="feedback_p5" style="margin-top: 15px; font-weight: bold;"></div>
+</fieldset>
+
+<details class="info">
+<summary>Ver desarrollo paso a paso</summary>
+<p>Separamos la sumatoria en dos partes:
+<strong>Tramo 1:</strong> <span class="arithmatex">\(\sum_{k=1}^{10} 3k = 3 \dfrac{10 \cdot 11}{2} = 3 \cdot 55 = 165\)</span>.
+<strong>Tramo 2:</strong> <span class="arithmatex">\(\sum_{k=11}^{20} 2^k\)</span>. Esta es una progresión geométrica con primer término <span class="arithmatex">\(a = 2^{11}\)</span>, razón <span class="arithmatex">\(r = 2\)</span> y cantidad de términos <span class="arithmatex">\(n = 10\)</span>.
+$<span class="arithmatex">\(S_2 = \dfrac{2^{11}(2^{10} - 1)}{2 - 1} = 2^{11}(2^{10} - 1)\)</span>$
+Sumando ambas partes:
+$<span class="arithmatex">\(S = 165 + 2^{11}(2^{10} - 1)\)</span>$
+<em>Nota: <span class="arithmatex">\(2^{11}(2^{10}-1)\)</span> también puede escribirse como <span class="arithmatex">\(2^{21} - 2^{11}\)</span>, por lo que la opción A también es correcta algebraicamente, pero típicamente buscamos la forma factorizada de la P.G.</em></p>
+</details>
+<hr />
+<fieldset style="border: 1px solid #e0e0e0; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+  <legend style="font-weight: bold; color: #3f51b5;">Pregunta 6</legend>
+
+  <p>Determine el valor de la siguiente sumatoria apoyándose en las propiedades de los logaritmos:</p>
+  <p>$$\sum_{k=2}^{100} \log_{10}\left(\dfrac{k-1}{k}\right)$$</p>
+
+  <input type="radio" name="p6" id="p6a" value="incorrecta"> <label for="p6a">A) $2$</label><br>
+  <input type="radio" name="p6" id="p6b" value="incorrecta"> <label for="p6b">B) $1$</label><br>
+  <input type="radio" name="p6" id="p6c" value="incorrecta"> <label for="p6c">C) $-\log_{10}(99)$</label><br>
+  <input type="radio" name="p6" id="p6d" value="correcta"> <label for="p6d">D) $-2$</label><br><br>
+
+  <button onclick="verificarRespuesta('p6', 'feedback_p6')" style="background-color: #3f51b5; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer;">Verificar</button>
+  <div id="feedback_p6" style="margin-top: 15px; font-weight: bold;"></div>
+</fieldset>
+
+<details class="info">
+<summary>Ver desarrollo paso a paso</summary>
+<p>Por propiedad de logaritmos, la suma de logaritmos es igual al logaritmo del producto:
+$<span class="arithmatex">\(S = \log_{10} \left( \prod_{k=2}^{100} \dfrac{k-1}{k} \right)\)</span>$
+Desarrollamos la productoria para ver el comportamiento:
+$<span class="arithmatex">\(\log_{10} \left( \dfrac{1}{2} \cdot \dfrac{2}{3} \cdot \dfrac{3}{4} \cdots \dfrac{98}{99} \cdot \dfrac{99}{100} \right)\)</span>$
+Se cancelan cruzadamente todos los numeradores con los denominadores anteriores, quedando solo el numerador del primer término y el denominador del último:
+$<span class="arithmatex">\(S = \log_{10} \left( \dfrac{1}{100} \right) = \log_{10}(10^{-2}) = -2\)</span>$</p>
+</details>
+<hr />
+<fieldset style="border: 1px solid #e0e0e0; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+  <legend style="font-weight: bold; color: #3f51b5;">Pregunta 7</legend>
+
+  <p>Resuelva la suma reestructurando los índices para evaluar una progresión geométrica estándar:</p>
+  <p>$$\sum_{j=5}^{n+4} \dfrac{2^{j-5}}{3^{j-4}}$$</p>
+
+  <input type="radio" name="p7" id="p7a" value="correcta"> <label for="p7a">A) $1 - \left(\dfrac{2}{3}\right)^n$</label><br>
+  <input type="radio" name="p7" id="p7b" value="incorrecta"> <label for="p7b">B) $\dfrac{1}{3} \left[ 1 - \left(\dfrac{2}{3}\right)^{n+1} \right]$</label><br>
+  <input type="radio" name="p7" id="p7c" value="incorrecta"> <label for="p7c">C) $3 \left[ 1 - \left(\dfrac{2}{3}\right)^{n-1} \right]$</label><br>
+  <input type="radio" name="p7" id="p7d" value="incorrecta"> <label for="p7d">D) $1 - \left(\dfrac{2}{3}\right)^{n-4}$</label><br><br>
+
+  <button onclick="verificarRespuesta('p7', 'feedback_p7')" style="background-color: #3f51b5; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer;">Verificar</button>
+  <div id="feedback_p7" style="margin-top: 15px; font-weight: bold;"></div>
+</fieldset>
+
+<details class="info">
+<summary>Ver desarrollo paso a paso</summary>
+<p>Realizamos el cambio de variable <span class="arithmatex">\(k = j - 5\)</span>. 
+El límite inferior será <span class="arithmatex">\(k = 5 - 5 = 0\)</span>. 
+El límite superior será <span class="arithmatex">\(k = (n+4) - 5 = n-1\)</span>.
+El argumento se reescribe como:
+$<span class="arithmatex">\(\dfrac{2^k}{3^{(k+5)-4}} = \dfrac{2^k}{3^{k+1}} = \dfrac{1}{3} \left(\dfrac{2}{3}\right)^k\)</span>$
+Sustituyendo en la sumatoria:
+$<span class="arithmatex">\(\sum_{k=0}^{n-1} \dfrac{1}{3} \left(\dfrac{2}{3}\right)^k = \dfrac{1}{3} \sum_{k=0}^{n-1} \left(\dfrac{2}{3}\right)^k\)</span>$
+Es una progresión geométrica de <span class="arithmatex">\(n\)</span> términos, razón <span class="arithmatex">\(r = 2/3\)</span>:
+$<span class="arithmatex">\(S = \dfrac{1}{3} \left[ \dfrac{1 - (2/3)^n}{1 - 2/3} \right] = \dfrac{1}{3} \left[ \dfrac{1 - (2/3)^n}{1/3} \right] = 1 - \left(\dfrac{2}{3}\right)^n\)</span>$</p>
+</details>
+<hr />
+<fieldset style="border: 1px solid #e0e0e0; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+  <legend style="font-weight: bold; color: #3f51b5;">Pregunta 8</legend>
+
+  <p>Dada la suma de los $n$ primeros términos de una progresión $S_n = 5n^2 - 3n$, determine la expresión del término general $a_n$.</p>
+
+  <input type="radio" name="p8" id="p8a" value="incorrecta"> <label for="p8a">A) $10n - 3$</label><br>
+  <input type="radio" name="p8" id="p8b" value="incorrecta"> <label for="p8b">B) $5n - 8$</label><br>
+  <input type="radio" name="p8" id="p8c" value="correcta"> <label for="p8c">C) $10n - 8$</label><br>
+  <input type="radio" name="p8" id="p8d" value="incorrecta"> <label for="p8d">D) $10n + 2$</label><br><br>
+
+  <button onclick="verificarRespuesta('p8', 'feedback_p8')" style="background-color: #3f51b5; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer;">Verificar</button>
+  <div id="feedback_p8" style="margin-top: 15px; font-weight: bold;"></div>
+</fieldset>
+
+<details class="info">
+<summary>Ver desarrollo paso a paso</summary>
+<p>Sabemos que <span class="arithmatex">\(a_n = S_n - S_{n-1}\)</span> para todo <span class="arithmatex">\(n \geq 2\)</span>.
+Evaluamos <span class="arithmatex">\(S_{n-1}\)</span>:
+$<span class="arithmatex">\(S_{n-1} = 5(n-1)^2 - 3(n-1) = 5(n^2 - 2n + 1) - 3n + 3 = 5n^2 - 10n + 5 - 3n + 3 = 5n^2 - 13n + 8\)</span>$
+Restamos:
+$<span class="arithmatex">\(a_n = (5n^2 - 3n) - (5n^2 - 13n + 8)\)</span>$
+$<span class="arithmatex">\(a_n = 5n^2 - 3n - 5n^2 + 13n - 8\)</span>$
+$<span class="arithmatex">\(a_n = 10n - 8\)</span>$</p>
+</details>
+<hr />
+<fieldset style="border: 1px solid #e0e0e0; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+  <legend style="font-weight: bold; color: #3f51b5;">Pregunta 9</legend>
+
+  <p>Calcule la suma de la serie geométrica que solo considera potencias pares:</p>
+  <p>$$S = r^2 + r^4 + r^6 + \dots + r^{2n}$$</p>
+
+  <input type="radio" name="p9" id="p9a" value="incorrecta"> <label for="p9a">A) $r^2 \dfrac{1 - r^n}{1 - r^2}$</label><br>
+  <input type="radio" name="p9" id="p9b" value="correcta"> <label for="p9b">B) $r^2 \dfrac{1 - r^{2n}}{1 - r^2}$</label><br>
+  <input type="radio" name="p9" id="p9c" value="incorrecta"> <label for="p9c">C) $\dfrac{1 - r^{2n}}{1 - r^2}$</label><br>
+  <input type="radio" name="p9" id="p9d" value="incorrecta"> <label for="p9d">D) $r^2 \dfrac{1 - r^{2n}}{1 - r}$</label><br><br>
+
+  <button onclick="verificarRespuesta('p9', 'feedback_p9')" style="background-color: #3f51b5; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer;">Verificar</button>
+  <div id="feedback_p9" style="margin-top: 15px; font-weight: bold;"></div>
+</fieldset>
+
+<details class="info">
+<summary>Ver desarrollo paso a paso</summary>
+<p>Esta suma se puede reescribir haciendo un cambio de base. Sea <span class="arithmatex">\(q = r^2\)</span>.
+La sumatoria queda: <span class="arithmatex">\(q^1 + q^2 + q^3 + \dots + q^n\)</span>.
+(Notemos que hay exactamente <span class="arithmatex">\(n\)</span> términos).
+La suma de una P.G. es: <span class="arithmatex">\(\text{Primer\_termino} \cdot \dfrac{1 - \text{razón}^{\text{cantidad\_términos}}}{1 - \text{razón}}\)</span>.
+Aplicando a nuestro caso:
+$<span class="arithmatex">\(S = q \cdot \dfrac{1 - q^n}{1 - q}\)</span>$
+Devolviendo el valor <span class="arithmatex">\(q = r^2\)</span>:
+$<span class="arithmatex">\(S = r^2 \dfrac{1 - (r^2)^n}{1 - r^2} = r^2 \dfrac{1 - r^{2n}}{1 - r^2}\)</span>$</p>
+</details>
+<hr />
+<fieldset style="border: 1px solid #e0e0e0; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+  <legend style="font-weight: bold; color: #3f51b5;">Pregunta 10</legend>
+
+  <p>Evalúe la siguiente sumatoria de factoriales mediante propiedades telescópicas:</p>
+  <p>$$\sum_{k=1}^{n} \dfrac{k}{(k+1)!}$$</p>
+
+  <input type="radio" name="p10" id="p10a" value="incorrecta"> <label for="p10a">A) $\dfrac{n}{(n+1)!}$</label><br>
+  <input type="radio" name="p10" id="p10b" value="incorrecta"> <label for="p10b">B) $\dfrac{1}{n!} - 1$</label><br>
+  <input type="radio" name="p10" id="p10c" value="correcta"> <label for="p10c">C) $1 - \dfrac{1}{(n+1)!}$</label><br>
+  <input type="radio" name="p10" id="p10d" value="incorrecta"> <label for="p10d">D) $\dfrac{1}{2} - \dfrac{1}{n!}$</label><br><br>
+
+  <button onclick="verificarRespuesta('p10', 'feedback_p10')" style="background-color: #3f51b5; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer;">Verificar</button>
+  <div id="feedback_p10" style="margin-top: 15px; font-weight: bold;"></div>
+</fieldset>
+
+<details class="info">
+<summary>Ver desarrollo paso a paso</summary>
+<p>Modificamos el numerador sumando y restando 1:
+$<span class="arithmatex">\(\dfrac{k+1-1}{(k+1)!} = \dfrac{k+1}{(k+1)!} - \dfrac{1}{(k+1)!}\)</span>$
+Como <span class="arithmatex">\((k+1)! = (k+1)k!\)</span>, simplificamos el primer término:
+$<span class="arithmatex">\(\dfrac{1}{k!} - \dfrac{1}{(k+1)!}\)</span>$
+La suma adquiere estructura telescópica:
+<span class="arithmatex">\(\sum_{k=1}^n \left( \dfrac{1}{k!} - \dfrac{1}{(k+1)!} \right)\)</span>
+Se cancelan todos los términos intermedios dejando:
+$<span class="arithmatex">\(S = \dfrac{1}{1!} - \dfrac{1}{(n+1)!} = 1 - \dfrac{1}{(n+1)!}\)</span>$</p>
+</details>
+<hr />
+<fieldset style="border: 1px solid #e0e0e0; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+  <legend style="font-weight: bold; color: #3f51b5;">Pregunta 11</legend>
+
+  <p>¿Qué valor debe tener $n$ para que la suma de los $n$ primeros términos de la progresión aritmética $2, 5, 8, 11, \dots$ sea igual a $155$?</p>
+
+  <input type="radio" name="p11" id="p11a" value="incorrecta"> <label for="p11a">A) $11$</label><br>
+  <input type="radio" name="p11" id="p11b" value="correcta"> <label for="p11b">B) $10$</label><br>
+  <input type="radio" name="p11" id="p11c" value="incorrecta"> <label for="p11c">C) $12$</label><br>
+  <input type="radio" name="p11" id="p11d" value="incorrecta"> <label for="p11d">D) $15$</label><br><br>
+
+  <button onclick="verificarRespuesta('p11', 'feedback_p11')" style="background-color: #3f51b5; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer;">Verificar</button>
+  <div id="feedback_p11" style="margin-top: 15px; font-weight: bold;"></div>
+</fieldset>
+
+<details class="info">
+<summary>Ver desarrollo paso a paso</summary>
+<p>Identificamos el primer término <span class="arithmatex">\(a_1 = 2\)</span> y la diferencia <span class="arithmatex">\(d = 3\)</span>.
+La fórmula para la suma es <span class="arithmatex">\(S_n = \dfrac{n}{2} [2a_1 + (n-1)d]\)</span>.
+Sustituyendo los valores conocidos:
+$<span class="arithmatex">\(155 = \dfrac{n}{2} [2(2) + (n-1)3]\)</span>$
+$<span class="arithmatex">\(310 = n [4 + 3n - 3]\)</span>$
+$<span class="arithmatex">\(310 = n(3n + 1)\)</span>$
+$<span class="arithmatex">\(3n^2 + n - 310 = 0\)</span>$
+Resolvemos la ecuación cuadrática factorizando o por fórmula:
+<span class="arithmatex">\((n - 10)(3n + 31) = 0\)</span>
+Como <span class="arithmatex">\(n\)</span> debe ser un número natural (cantidad de términos), la única solución es <span class="arithmatex">\(n = 10\)</span>.</p>
+</details>
+<hr />
+<fieldset style="border: 1px solid #e0e0e0; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+  <legend style="font-weight: bold; color: #3f51b5;">Pregunta 13</legend>
+
+  <p>Determine el valor de la siguiente sumatoria de términos alternados que involucra factoriales:</p>
+  <p>$$\sum_{k=1}^{n} (-1)^k \left( \dfrac{1}{k!} + \dfrac{1}{(k-1)!} \right)$$</p>
+
+  <input type="radio" name="p13" id="p13a" value="incorrecta"> <label for="p13a">A) $\dfrac{(-1)^n}{n!}$</label><br>
+  <input type="radio" name="p13" id="p13b" value="incorrecta"> <label for="p13b">B) $(-1)^n \dfrac{n}{(n+1)!} - 1$</label><br>
+  <input type="radio" name="p13" id="p13c" value="correcta"> <label for="p13c">C) $\dfrac{(-1)^n}{n!} - 1$</label><br>
+  <input type="radio" name="p13" id="p13d" value="incorrecta"> <label for="p13d">D) $1 - \dfrac{(-1)^n}{n!}$</label><br><br>
+
+  <button onclick="verificarRespuesta('p13', 'feedback_p13')" style="background-color: #3f51b5; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer;">Verificar</button>
+  <div id="feedback_p13" style="margin-top: 15px; font-weight: bold;"></div>
+</fieldset>
+
+<details class="info">
+<summary>Ver desarrollo paso a paso</summary>
+<p>Para poder utilizar una telescópica, distribuimos el signo alternado a cada fracción:
+$<span class="arithmatex">\(\sum_{k=1}^{n} \left[ \dfrac{(-1)^k}{k!} + \dfrac{(-1)^k}{(k-1)!} \right]\)</span>$
+Podemos reescribir el segundo término para que comparta la base lógica. Notemos que <span class="arithmatex">\((-1)^k = -(-1)^{k-1}\)</span>. Reemplazamos:
+$<span class="arithmatex">\(\sum_{k=1}^{n} \left[ \dfrac{(-1)^k}{k!} - \dfrac{(-1)^{k-1}}{(k-1)!} \right]\)</span>$
+Sea <span class="arithmatex">\(A_k = \dfrac{(-1)^k}{k!}\)</span>. La suma es <span class="arithmatex">\(\sum (A_k - A_{k-1})\)</span>.
+Esto es una suma telescópica. Evaluamos:
+<span class="arithmatex">\(S = A_n - A_0 = \dfrac{(-1)^n}{n!} - \dfrac{(-1)^0}{0!}\)</span>
+Recordando que <span class="arithmatex">\(0! = 1\)</span> y <span class="arithmatex">\((-1)^0 = 1\)</span>:
+$<span class="arithmatex">\(S = \dfrac{(-1)^n}{n!} - 1\)</span>$</p>
+</details>
+<hr />
+<fieldset style="border: 1px solid #e0e0e0; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+  <legend style="font-weight: bold; color: #3f51b5;">Pregunta 16</legend>
+
+  <p>Calcule el valor de la siguiente sumatoria que combina una progresión geométrica y una telescópica:</p>
+  <p>$$\sum_{k=1}^{50} \left( \dfrac{2^{k+2}}{5^{k}} + \dfrac{1}{2k} - \dfrac{1}{2k+2} \right)$$</p>
+
+  <input type="radio" name="p16" id="p16a" value="correcta"> <label for="p16a">A) $\dfrac{8}{3} \left[ 1 - \left(\dfrac{2}{5}\right)^{50} \right] + \dfrac{25}{51}$</label><br>
+  <input type="radio" name="p16" id="p16b" value="incorrecta"> <label for="p16b">B) $\dfrac{4}{3} \left[ 1 - \left(\dfrac{2}{5}\right)^{50} \right] + \dfrac{50}{51}$</label><br>
+  <input type="radio" name="p16" id="p16c" value="incorrecta"> <label for="p16c">C) $\dfrac{8}{5} \left[ 1 - \left(\dfrac{2}{5}\right)^{50} \right] + \dfrac{25}{102}$</label><br>
+  <input type="radio" name="p16" id="p16d" value="incorrecta"> <label for="p16d">D) $\dfrac{4}{5} \left[ 1 - \left(\dfrac{2}{5}\right)^{50} \right] + 1$</label><br><br>
+
+  <button onclick="verificarRespuesta('p16', 'feedback_p16')" style="background-color: #3f51b5; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer;">Verificar</button>
+  <div id="feedback_p16" style="margin-top: 15px; font-weight: bold;"></div>
+</fieldset>
+
+<details class="info">
+<summary>Ver desarrollo paso a paso</summary>
+<p>Separamos la sumatoria en dos partes por linealidad.
+<strong>Parte 1 (Geométrica):</strong> <span class="arithmatex">\(\sum_{k=1}^{50} \dfrac{2^{k+2}}{5^{k}} = \sum_{k=1}^{50} \dfrac{4 \cdot 2^k}{5^k} = 4 \sum_{k=1}^{50} \left(\dfrac{2}{5}\right)^k\)</span>
+Aplicamos la fórmula de la suma de una progresión geométrica (<span class="arithmatex">\(r = 2/5\)</span>, <span class="arithmatex">\(a_1 = 2/5\)</span>, <span class="arithmatex">\(n=50\)</span>):
+$<span class="arithmatex">\(4 \left[ \dfrac{\frac{2}{5} \left( 1 - (2/5)^{50} \right)}{1 - 2/5} \right] = 4 \left[ \dfrac{\frac{2}{5}}{\frac{3}{5}} \left( 1 - \left(\dfrac{2}{5}\right)^{50} \right) \right] = \dfrac{8}{3} \left[ 1 - \left(\dfrac{2}{5}\right)^{50} \right]\)</span>$
+<strong>Parte 2 (Telescópica):</strong> <span class="arithmatex">\(\sum_{k=1}^{50} \left( \dfrac{1}{2k} - \dfrac{1}{2k+2} \right)\)</span>
+Se cancelan los términos intermedios, sobreviviendo el primero (<span class="arithmatex">\(k=1\)</span>) y el último negativo (<span class="arithmatex">\(k=50\)</span>):
+$<span class="arithmatex">\(\dfrac{1}{2(1)} - \dfrac{1}{2(50)+2} = \dfrac{1}{2} - \dfrac{1}{102} = \dfrac{51 - 1}{102} = \dfrac{50}{102} = \dfrac{25}{51}\)</span>$
+Sumando ambas partes se obtiene la alternativa A.</p>
+</details>
+<hr />
+<fieldset style="border: 1px solid #e0e0e0; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+  <legend style="font-weight: bold; color: #3f51b5;">Pregunta 17</legend>
+
+  <p>Sea $(a_k)_{k \in \mathbb{N}}$ una sucesión de números reales tal que: $\displaystyle\sum_{k=1}^{20} a_k = 40$, $\displaystyle\sum_{k=1}^{20} a_k^2 = 150$, y además $a_{21} = 5$. Calcule el valor de la siguiente expresión:</p>
+  <p>$$\sum_{k=1}^{21} (3a_k - 2)^2$$</p>
+
+  <input type="radio" name="p17" id="p17a" value="incorrecta"> <label for="p17a">A) $950$</label><br>
+  <input type="radio" name="p17" id="p17b" value="correcta"> <label for="p17b">B) $1119$</label><br>
+  <input type="radio" name="p17" id="p17c" value="incorrecta"> <label for="p17c">C) $1030$</label><br>
+  <input type="radio" name="p17" id="p17d" value="incorrecta"> <label for="p17d">D) $1250$</label><br><br>
+
+  <button onclick="verificarRespuesta('p17', 'feedback_p17')" style="background-color: #3f51b5; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer;">Verificar</button>
+  <div id="feedback_p17" style="margin-top: 15px; font-weight: bold;"></div>
+</fieldset>
+
+<details class="info">
+<summary>Ver desarrollo paso a paso</summary>
+<p>Separamos el término <span class="arithmatex">\(21\)</span> de la sumatoria para poder usar los datos que llegan hasta <span class="arithmatex">\(20\)</span>:
+$<span class="arithmatex">\(\sum_{k=1}^{21} (3a_k - 2)^2 = \sum_{k=1}^{20} (3a_k - 2)^2 + (3a_{21} - 2)^2\)</span>$
+Calculamos primero la sumatoria hasta <span class="arithmatex">\(20\)</span> desarrollando el cuadrado del binomio:
+$<span class="arithmatex">\(\sum_{k=1}^{20} (9a_k^2 - 12a_k + 4) = 9 \sum_{k=1}^{20} a_k^2 - 12 \sum_{k=1}^{20} a_k + \sum_{k=1}^{20} 4\)</span>$
+Sustituimos los valores dados:
+$<span class="arithmatex">\(9(150) - 12(40) + 4(20) = 1350 - 480 + 80 = 950\)</span>$
+Ahora evaluamos el término <span class="arithmatex">\(21\)</span>, sabiendo que <span class="arithmatex">\(a_{21} = 5\)</span>:
+$<span class="arithmatex">\((3(5) - 2)^2 = (15 - 2)^2 = 13^2 = 169\)</span>$
+Finalmente, sumamos ambas partes:
+$<span class="arithmatex">\(950 + 169 = 1119\)</span>$</p>
+</details>
+<hr />
+<fieldset style="border: 1px solid #e0e0e0; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+  <legend style="font-weight: bold; color: #3f51b5;">Pregunta 18</legend>
+
+  <p>Considere una sucesión $(x_k)_{k \in \mathbb{N}}$. Utilizando las propiedades de sumatoria, determine el valor numérico de $\displaystyle\sum_{k=1}^{10} x_k$ si se sabe que:</p>
+  <p>$$\sum_{k=1}^{10} (x_k + 3)^2 = 300 \quad \text{y} \quad \sum_{k=1}^{10} (x_k - 3)^2 = 180$$</p>
+
+  <input type="radio" name="p18" id="p18a" value="correcta"> <label for="p18a">A) $10$</label><br>
+  <input type="radio" name="p18" id="p18b" value="incorrecta"> <label for="p18b">B) $20$</label><br>
+  <input type="radio" name="p18" id="p18c" value="incorrecta"> <label for="p18c">C) $30$</label><br>
+  <input type="radio" name="p18" id="p18d" value="incorrecta"> <label for="p18d">D) $120$</label><br><br>
+
+  <button onclick="verificarRespuesta('p18', 'feedback_p18')" style="background-color: #3f51b5; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer;">Verificar</button>
+  <div id="feedback_p18" style="margin-top: 15px; font-weight: bold;"></div>
+</fieldset>
+
+<details class="info">
+<summary>Ver desarrollo paso a paso</summary>
+<p>Desarrollamos los cuadrados de binomio en ambas sumatorias por separado:
+Ecuación 1: <span class="arithmatex">\(\sum_{k=1}^{10} (x_k^2 + 6x_k + 9) = 300 \implies \sum x_k^2 + 6\sum x_k + 90 = 300 \implies \sum x_k^2 + 6\sum x_k = 210\)</span>
+Ecuación 2: <span class="arithmatex">\(\sum_{k=1}^{10} (x_k^2 - 6x_k + 9) = 180 \implies \sum x_k^2 - 6\sum x_k + 90 = 180 \implies \sum x_k^2 - 6\sum x_k = 90\)</span>
+Tenemos un sistema lineal de dos ecuaciones. Para despejar <span class="arithmatex">\(\sum x_k\)</span>, restamos la Ecuación 2 de la Ecuación 1:
+$<span class="arithmatex">\((\sum x_k^2 + 6\sum x_k) - (\sum x_k^2 - 6\sum x_k) = 210 - 90\)</span>$
+$<span class="arithmatex">\(12 \sum_{k=1}^{10} x_k = 120\)</span>$
+$<span class="arithmatex">\(\sum_{k=1}^{10} x_k = \dfrac{120}{12} = 10\)</span>$</p>
+</details>
+<hr />
+<fieldset style="border: 1px solid #e0e0e0; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+  <legend style="font-weight: bold; color: #3f51b5;">Pregunta 19</legend>
+
+  <p>Identifique la notación de sumatoria correcta para la siguiente serie finita:</p>
+  <p>$$\dfrac{3}{2} - \dfrac{5}{4} + \dfrac{7}{8} - \dfrac{9}{16} + \dots + \dfrac{21}{1024}$$</p>
+
+  <input type="radio" name="p19" id="p19a" value="correcta"> <label for="p19a">A) $\displaystyle\sum_{k=1}^{10} (-1)^{k+1} \dfrac{2k+1}{2^k}$</label><br>
+  <input type="radio" name="p19" id="p19b" value="incorrecta"> <label for="p19b">B) $\displaystyle\sum_{k=1}^{10} (-1)^{k} \dfrac{2k+1}{2^k}$</label><br>
+  <input type="radio" name="p19" id="p19c" value="incorrecta"> <label for="p19c">C) $\displaystyle\sum_{k=1}^{10} (-1)^{k+1} \dfrac{2k-1}{2^k}$</label><br>
+  <input type="radio" name="p19" id="p19d" value="incorrecta"> <label for="p19d">D) $\displaystyle\sum_{k=1}^{10} (-1)^{k-1} \dfrac{2k+1}{2^{k-1}}$</label><br><br>
+
+  <button onclick="verificarRespuesta('p19', 'feedback_p19')" style="background-color: #3f51b5; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer;">Verificar</button>
+  <div id="feedback_p19" style="margin-top: 15px; font-weight: bold;"></div>
+</fieldset>
+
+<details class="info">
+<summary>Ver desarrollo paso a paso</summary>
+<p>Analizamos la serie término a término para encontrar el patrón del término general <span class="arithmatex">\(a_k\)</span>:
+1. <strong>Signos alternados:</strong> Comienza en positivo (<span class="arithmatex">\(+\)</span>), luego negativo (<span class="arithmatex">\(-\)</span>). Esto se modela con <span class="arithmatex">\((-1)^{k+1}\)</span> o <span class="arithmatex">\((-1)^{k-1}\)</span>.
+2. <strong>Numeradores:</strong> La secuencia es <span class="arithmatex">\(3, 5, 7, 9 \dots\)</span> Esto es una progresión aritmética de diferencia <span class="arithmatex">\(2\)</span>, que se expresa como <span class="arithmatex">\(2k + 1\)</span> (si <span class="arithmatex">\(k\)</span> empieza en <span class="arithmatex">\(1\)</span>).
+3. <strong>Denominadores:</strong> La secuencia es <span class="arithmatex">\(2^1, 2^2, 2^3, 2^4 \dots\)</span> Esto es <span class="arithmatex">\(2^k\)</span>.
+Uniendo estas partes: <span class="arithmatex">\(a_k = (-1)^{k+1} \dfrac{2k+1}{2^k}\)</span>.
+Para hallar el límite superior <span class="arithmatex">\(n\)</span>, igualamos el denominador del último término a nuestro modelo: <span class="arithmatex">\(2^n = 1024 \implies n = 10\)</span>.
+Verificamos con el numerador: <span class="arithmatex">\(2(10) + 1 = 21\)</span>. ¡Coincide perfectamente!</p>
+</details>
+<hr />
+<fieldset style="border: 1px solid #e0e0e0; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+  <legend style="font-weight: bold; color: #3f51b5;">Pregunta 20</legend>
+
+  <p>Calcule el valor numérico de la sumatoria aplicando reestructuración de índices o sumas de Gauss:</p>
+  <p>$$\sum_{k=20}^{40} (2k - 1)$$</p>
+
+  <input type="radio" name="p20" id="p20a" value="incorrecta"> <label for="p20a">A) $1180$</label><br>
+  <input type="radio" name="p20" id="p20b" value="correcta"> <label for="p20b">B) $1239$</label><br>
+  <input type="radio" name="p20" id="p20c" value="incorrecta"> <label for="p20c">C) $1300$</label><br>
+  <input type="radio" name="p20" id="p20d" value="incorrecta"> <label for="p20d">D) $1161$</label><br><br>
+
+  <button onclick="verificarRespuesta('p20', 'feedback_p20')" style="background-color: #3f51b5; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer;">Verificar</button>
+  <div id="feedback_p20" style="margin-top: 15px; font-weight: bold;"></div>
+</fieldset>
+
+<details class="info">
+<summary>Ver desarrollo paso a paso</summary>
+<p><strong>Método 1 (Progresión Airmética):</strong>
+El término general es una función lineal, por lo que la suma representa una P.A.
+Cantidad de términos: <span class="arithmatex">\(n = 40 - 20 + 1 = 21\)</span> términos.
+Primer término (<span class="arithmatex">\(k=20\)</span>): <span class="arithmatex">\(a_{20} = 2(20) - 1 = 39\)</span>.
+Último término (<span class="arithmatex">\(k=40\)</span>): <span class="arithmatex">\(a_{40} = 2(40) - 1 = 79\)</span>.
+Fórmula de la suma de P.A.: <span class="arithmatex">\(S = \dfrac{n}{2} (a_{primero} + a_{ultimo})\)</span>
+$<span class="arithmatex">\(S = \dfrac{21}{2} (39 + 79) = \dfrac{21}{2} (118) = 21 \times 59 = 1239\)</span>$
+<strong>Método 2 (Restas de Sumatorias desde 1):</strong>
+<span class="arithmatex">\(\sum_{k=1}^{40} (2k - 1) - \sum_{k=1}^{19} (2k - 1)\)</span>
+Dado que <span class="arithmatex">\(\sum_{k=1}^{n} (2k - 1) = n^2\)</span> (suma de los primeros <span class="arithmatex">\(n\)</span> números impares):
+$<span class="arithmatex">\(S = 40^2 - 19^2 = 1600 - 361 = 1239\)</span>$</p>
+</details>
+<hr />
+<fieldset style="border: 1px solid #e0e0e0; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+  <legend style="font-weight: bold; color: #3f51b5;">Pregunta 21</legend>
+
+  <p>Evaluando las fórmulas de sumas notables (Gauss), determine el valor de:</p>
+  <p>$$\sum_{k=1}^{10} k(k - 4)$$</p>
+
+  <input type="radio" name="p21" id="p21a" value="correcta"> <label for="p21a">A) $165$</label><br>
+  <input type="radio" name="p21" id="p21b" value="incorrecta"> <label for="p21b">B) $220$</label><br>
+  <input type="radio" name="p21" id="p21c" value="incorrecta"> <label for="p21c">C) $385$</label><br>
+  <input type="radio" name="p21" id="p21d" value="incorrecta"> <label for="p21d">D) $550$</label><br><br>
+
+  <button onclick="verificarRespuesta('p21', 'feedback_p21')" style="background-color: #3f51b5; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer;">Verificar</button>
+  <div id="feedback_p21" style="margin-top: 15px; font-weight: bold;"></div>
+</fieldset>
+
+<details class="info">
+<summary>Ver desarrollo paso a paso</summary>
+<p>Multiplicamos el término general para separar en sumas elementales:
+$<span class="arithmatex">\(\sum_{k=1}^{10} (k^2 - 4k) = \sum_{k=1}^{10} k^2 - 4 \sum_{k=1}^{10} k\)</span>$
+Aplicamos las fórmulas de sumas notables:
+<span class="arithmatex">\(\sum k^2 = \dfrac{n(n+1)(2n+1)}{6} \implies \dfrac{10 \times 11 \times 21}{6} = 385\)</span>
+<span class="arithmatex">\(\sum k = \dfrac{n(n+1)}{2} \implies \dfrac{10 \times 11}{2} = 55\)</span>
+Reemplazamos en la expresión separada:
+$<span class="arithmatex">\(S = 385 - 4(55) = 385 - 220 = 165\)</span>$</p>
+</details>
+<hr />
+<fieldset style="border: 1px solid #e0e0e0; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+  <legend style="font-weight: bold; color: #3f51b5;">Pregunta 22</legend>
+
+  <p>Determine la expresión algebraica en términos de $n$ para la siguiente sumatoria (asumiendo $n \geq 5$):</p>
+  <p>$$\sum_{k=5}^{n} (3k - 2)$$</p>
+
+  <input type="radio" name="p22" id="p22a" value="correcta"> <label for="p22a">A) $\dfrac{3n^2 - n - 44}{2}$</label><br>
+  <input type="radio" name="p22" id="p22b" value="incorrecta"> <label for="p22b">B) $\dfrac{3n^2 + n - 44}{2}$</label><br>
+  <input type="radio" name="p22" id="p22c" value="incorrecta"> <label for="p22c">C) $\dfrac{3n^2 - 12n + 11}{2}$</label><br>
+  <input type="radio" name="p22" id="p22d" value="incorrecta"> <label for="p22d">D) $\dfrac{3n^2 - n}{2}$</label><br><br>
+
+  <button onclick="verificarRespuesta('p22', 'feedback_p22')" style="background-color: #3f51b5; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer;">Verificar</button>
+  <div id="feedback_p22" style="margin-top: 15px; font-weight: bold;"></div>
+</fieldset>
+
+<details class="info">
+<summary>Ver desarrollo paso a paso</summary>
+<p>Esta es la suma de una progresión aritmética que no comienza en <span class="arithmatex">\(1\)</span>.
+Número de términos: <span class="arithmatex">\(N = n - 5 + 1 = n - 4\)</span>.
+Primer término (<span class="arithmatex">\(k=5\)</span>): <span class="arithmatex">\(a_5 = 3(5) - 2 = 13\)</span>.
+Último término (<span class="arithmatex">\(k=n\)</span>): <span class="arithmatex">\(a_n = 3n - 2\)</span>.
+Sustituimos en la fórmula general de la P.A. (<span class="arithmatex">\(S = \dfrac{N}{2}[a_{primero} + a_{ultimo}]\)</span>):
+$<span class="arithmatex">\(S = \dfrac{n - 4}{2} [13 + (3n - 2)] = \dfrac{n - 4}{2} (3n + 11)\)</span>$
+Desarrollamos el producto de binomios:
+$<span class="arithmatex">\(S = \dfrac{3n^2 + 11n - 12n - 44}{2} = \dfrac{3n^2 - n - 44}{2}\)</span>$</p>
+</details>
+<hr />
+<fieldset style="border: 1px solid #e0e0e0; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+  <legend style="font-weight: bold; color: #3f51b5;">Pregunta 23</legend>
+
+  <p>Considere la sucesión definida por tramos: 
+  $$c_k = \left\{ \begin{array}{lcc} 2^k & \mbox{si} & 1 \leq k \leq 10 \\ \dfrac{1}{k(k+1)} & \mbox{si} & 11 \leq k \leq 20 \end{array} \right.$$
+  Calcule el valor exacto de $\displaystyle\sum_{k=1}^{20} c_k$.</p>
+
+  <input type="radio" name="p23" id="p23a" value="correcta"> <label for="p23a">A) $2046 + \dfrac{10}{231}$</label><br>
+  <input type="radio" name="p23" id="p23b" value="incorrecta"> <label for="p23b">B) $1024 + \dfrac{1}{21}$</label><br>
+  <input type="radio" name="p23" id="p23c" value="incorrecta"> <label for="p23c">C) $2048 + \dfrac{10}{231}$</label><br>
+  <input type="radio" name="p23" id="p23d" value="incorrecta"> <label for="p23d">D) $1022 + \dfrac{20}{231}$</label><br><br>
+
+  <button onclick="verificarRespuesta('p23', 'feedback_p23')" style="background-color: #3f51b5; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer;">Verificar</button>
+  <div id="feedback_p23" style="margin-top: 15px; font-weight: bold;"></div>
+</fieldset>
+
+<details class="info">
+<summary>Ver desarrollo paso a paso</summary>
+<p>Separamos la sumatoria según los tramos de la función.
+<strong>Tramo 1 (Geométrica):</strong> <span class="arithmatex">\(\sum_{k=1}^{10} 2^k = 2 \left( \dfrac{2^{10} - 1}{2 - 1} \right) = 2(1024 - 1) = 2046\)</span>.
+<strong>Tramo 2 (Telescópica):</strong> <span class="arithmatex">\(\sum_{k=11}^{20} \dfrac{1}{k(k+1)} = \sum_{k=11}^{20} \left( \dfrac{1}{k} - \dfrac{1}{k+1} \right)\)</span>.
+Al evaluar esta suma telescópica, sobreviven solo el primer término positivo (evaluado en <span class="arithmatex">\(k=11\)</span>) y el último negativo (evaluado en <span class="arithmatex">\(k=20\)</span>):
+$<span class="arithmatex">\(S_2 = \dfrac{1}{11} - \dfrac{1}{21}\)</span>$
+Buscamos denominador común (<span class="arithmatex">\(11 \times 21 = 231\)</span>):
+$<span class="arithmatex">\(S_2 = \dfrac{21 - 11}{231} = \dfrac{10}{231}\)</span>$
+Sumando ambas partes obtenemos <span class="arithmatex">\(2046 + \dfrac{10}{231}\)</span>.</p>
+</details>
+<hr />
+<fieldset style="border: 1px solid #e0e0e0; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+  <legend style="font-weight: bold; color: #3f51b5;">Pregunta 24</legend>
+
+  <p>Calcule la siguiente suma telescópica de fracciones cuadráticas:</p>
+  <p>$$\sum_{k=4}^{100} \left( \dfrac{1}{(k-1)^2} - \dfrac{1}{k^2} \right)$$</p>
+
+  <input type="radio" name="p24" id="p24a" value="correcta"> <label for="p24a">A) $\dfrac{9991}{90000}$</label><br>
+  <input type="radio" name="p24" id="p24b" value="incorrecta"> <label for="p24b">B) $\dfrac{1}{9}$</label><br>
+  <input type="radio" name="p24" id="p24c" value="incorrecta"> <label for="p24c">C) $\dfrac{9999}{10000}$</label><br>
+  <input type="radio" name="p24" id="p24d" value="incorrecta"> <label for="p24d">D) $\dfrac{8991}{90000}$</label><br><br>
+
+  <button onclick="verificarRespuesta('p24', 'feedback_p24')" style="background-color: #3f51b5; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer;">Verificar</button>
+  <div id="feedback_p24" style="margin-top: 15px; font-weight: bold;"></div>
+</fieldset>
+
+<details class="info">
+<summary>Ver desarrollo paso a paso</summary>
+<p>Esta estructura es una suma telescópica perfecta del tipo <span class="arithmatex">\(\sum (f(k) - f(k+1))\)</span>, donde <span class="arithmatex">\(f(k) = \dfrac{1}{(k-1)^2}\)</span>.
+Evaluamos los extremos para ver qué términos sobreviven a la cancelación:
+<span class="arithmatex">\(k=4 \implies \dfrac{1}{3^2} - \dfrac{1}{4^2}\)</span>
+<span class="arithmatex">\(k=5 \implies \dfrac{1}{4^2} - \dfrac{1}{5^2}\)</span>
+<span class="arithmatex">\(...\)</span>
+<span class="arithmatex">\(k=100 \implies \dfrac{1}{99^2} - \dfrac{1}{100^2}\)</span>
+Al sumar, solo quedan el extremo inferior del primer término y el extremo superior del último:
+$<span class="arithmatex">\(S = \dfrac{1}{3^2} - \dfrac{1}{100^2} = \dfrac{1}{9} - \dfrac{1}{10000}\)</span>$
+Realizamos la resta algebraica:
+$<span class="arithmatex">\(S = \dfrac{10000 - 9}{90000} = \dfrac{9991}{90000}\)</span>$</p>
+</details>
+<hr />
+<fieldset style="border: 1px solid #e0e0e0; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+  <legend style="font-weight: bold; color: #3f51b5;">Pregunta 25</legend>
+
+  <p>Sabiendo que para todo número natural $n$, la suma de la sucesión $a_k$ está dada por $\displaystyle\sum_{k=1}^{n} a_k = n^2 + 3n$. Utilizando las propiedades de linealidad de las sumatorias, calcule el valor exacto de:</p>
+  <p>$$\sum_{k=1}^{20} (a_k + 2k)$$</p>
+
+  <input type="radio" name="p25" id="p25a" value="correcta"> <label for="p25a">A) $880$</label><br>
+  <input type="radio" name="p25" id="p25b" value="incorrecta"> <label for="p25b">B) $460$</label><br>
+  <input type="radio" name="p25" id="p25c" value="incorrecta"> <label for="p25c">C) $420$</label><br>
+  <input type="radio" name="p25" id="p25d" value="incorrecta"> <label for="p25d">D) $920$</label><br><br>
+
+  <button onclick="verificarRespuesta('p25', 'feedback_p25')" style="background-color: #3f51b5; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer;">Verificar</button>
+  <div id="feedback_p25" style="margin-top: 15px; font-weight: bold;"></div>
+</fieldset>
+
+<details class="info">
+<summary>Ver desarrollo paso a paso</summary>
+<p>Separamos la sumatoria en dos usando la propiedad de linealidad:
+$<span class="arithmatex">\(\sum_{k=1}^{20} (a_k + 2k) = \sum_{k=1}^{20} a_k + \sum_{k=1}^{20} 2k\)</span>$
+<strong>Primera sumatoria:</strong> Usamos la fórmula general dada para <span class="arithmatex">\(a_k\)</span>, evaluando en <span class="arithmatex">\(n=20\)</span>:
+$<span class="arithmatex">\(\sum_{k=1}^{20} a_k = 20^2 + 3(20) = 400 + 60 = 460\)</span>$
+<strong>Segunda sumatoria:</strong> Sacamos el escalar y aplicamos suma de Gauss:
+$<span class="arithmatex">\(\sum_{k=1}^{20} 2k = 2 \sum_{k=1}^{20} k = 2 \left( \dfrac{20 \times 21}{2} \right) = 20 \times 21 = 420\)</span>$
+Sumando ambos resultados:
+$<span class="arithmatex">\(S = 460 + 420 = 880\)</span>$</p>
+</details>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.top"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="../../javascripts/quiz.js"></script>
+      
+    
+  </body>
+</html>

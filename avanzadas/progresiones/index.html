@@ -1,0 +1,1814 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Material de apoyo, guías y problemas de precálculo.">
+      
+      
+        <meta name="author" content="José David Torres Riffo">
+      
+      
+      
+        <link rel="prev" href="../sumatorias/">
+      
+      
+        <link rel="next" href="../inecuaciones/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Progresiones - MateRiffo</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#ejercicios-de-seleccion-multiple-progresiones-y-sumatorias-nivel-avanzado" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../.." title="MateRiffo" class="md-header__button md-logo" aria-label="MateRiffo" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            MateRiffo
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Progresiones
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="MateRiffo" class="md-nav__button md-logo" aria-label="MateRiffo" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    MateRiffo
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Módulo de Inecuaciones
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Módulo de Inecuaciones
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algebra/inecuaciones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Racionales
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algebra/desigualdades/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Desigualdades
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algebra/aplicaciones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aplicaciones
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algebra/absoluto/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Valor absoluto
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algebra/raices/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Raices
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Módulo de Funciones Reales
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Módulo de Funciones Reales
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algebra/funciones_1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gráfico de funciones
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algebra/funciones_2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dominio de funciones
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algebra/funciones_3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Evaluación de funciones
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algebra/multiple_1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Práctica
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Módulo de Función lineal
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Módulo de Función lineal
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algebra/funciones_5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Rectas y funciones
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algebra/funciones_4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aplicaciones de funciones lineales
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algebra/multiple_2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Práctica
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Módulo de función cuadrática
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Módulo de función cuadrática
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../funciones/funciones_6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Funciones cuadráticas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../funciones/funciones_7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Parábola y funciones
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../funciones/multiple_3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Práctica
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Módulo de exponencial y logaritmo
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Módulo de exponencial y logaritmo
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../funciones/funciones_8/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Función exponencial
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modulo de Matemáticas avanzadas
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Modulo de Matemáticas avanzadas
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sumatorias/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sumatorias
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Progresiones
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../inecuaciones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inecuaciones
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="ejercicios-de-seleccion-multiple-progresiones-y-sumatorias-nivel-avanzado">Ejercicios de Selección Múltiple: Progresiones y Sumatorias (Nivel Avanzado)</h1>
+<p>Resuelve los siguientes ejercicios y luego verifica tu respuesta. Si tienes dudas, puedes desplegar el desarrollo paso a paso.</p>
+<hr />
+<fieldset style="border: 1px solid #e0e0e0; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+  <legend style="font-weight: bold; color: #3f51b5;">Pregunta 1</legend>
+
+  <p>En una progresión aritmética, se sabe que el tercer término es $14$ y el noveno término es $44$. ¿Cuál es el valor exacto del vigésimo término ($a_{20}$)?</p>
+
+  <input type="radio" name="p1" id="p1a" value="correcta"> <label for="p1a">A) $99$</label><br>
+  <input type="radio" name="p1" id="p1b" value="incorrecta"> <label for="p1b">B) $95$</label><br>
+  <input type="radio" name="p1" id="p1c" value="incorrecta"> <label for="p1c">C) $104$</label><br>
+  <input type="radio" name="p1" id="p1d" value="incorrecta"> <label for="p1d">D) $94$</label><br><br>
+
+  <button onclick="verificarRespuesta('p1', 'feedback_p1')" style="background-color: #3f51b5; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer;">Verificar</button>
+  <div id="feedback_p1" style="margin-top: 15px; font-weight: bold;"></div>
+</fieldset>
+
+<details class="info">
+<summary>Ver desarrollo paso a paso</summary>
+<p>Planteamos un sistema de ecuaciones utilizando la fórmula del término general <span class="arithmatex">\(a_n = a_1 + (n-1)d\)</span>:
+1) <span class="arithmatex">\(a_3 = a_1 + 2d = 14\)</span>
+2) <span class="arithmatex">\(a_9 = a_1 + 8d = 44\)</span>
+Restando la primera ecuación de la segunda, obtenemos:
+$<span class="arithmatex">\(6d = 30 \implies d = 5\)</span>$
+Sustituimos <span class="arithmatex">\(d\)</span> en la primera ecuación:
+$<span class="arithmatex">\(a_1 + 2(5) = 14 \implies a_1 = 4\)</span>$
+El vigésimo término se calcula como:
+$<span class="arithmatex">\(a_{20} = a_1 + 19d = 4 + 19(5) = 4 + 95 = 99\)</span>$</p>
+</details>
+<hr />
+<fieldset style="border: 1px solid #e0e0e0; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+  <legend style="font-weight: bold; color: #3f51b5;">Pregunta 2</legend>
+
+  <p>Se tiene una progresión aritmética donde el primer término es $8$ y la diferencia común es $3$. Si la suma de los primeros $n$ términos es $435$, ¿cuál es el valor de $n$?</p>
+
+  <input type="radio" name="p2" id="p2a" value="correcta"> <label for="p2a">A) $15$</label><br>
+  <input type="radio" name="p2" id="p2b" value="incorrecta"> <label for="p2b">B) $16$</label><br>
+  <input type="radio" name="p2" id="p2c" value="incorrecta"> <label for="p2c">C) $14$</label><br>
+  <input type="radio" name="p2" id="p2d" value="incorrecta"> <label for="p2d">D) $17$</label><br><br>
+
+  <button onclick="verificarRespuesta('p2', 'feedback_p2')" style="background-color: #3f51b5; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer;">Verificar</button>
+  <div id="feedback_p2" style="margin-top: 15px; font-weight: bold;"></div>
+</fieldset>
+
+<details class="info">
+<summary>Ver desarrollo paso a paso</summary>
+<p>La suma está dada por la fórmula <span class="arithmatex">\(S_n = \dfrac{n}{2}(2a_1 + (n-1)d)\)</span>.
+Sustituyendo los valores conocidos (<span class="arithmatex">\(S_n = 435\)</span>, <span class="arithmatex">\(a_1 = 8\)</span>, <span class="arithmatex">\(d = 3\)</span>):
+$<span class="arithmatex">\(435 = \dfrac{n}{2}(2(8) + (n-1)3)\)</span>$
+$<span class="arithmatex">\(870 = n(16 + 3n - 3)\)</span>$
+$<span class="arithmatex">\(870 = n(3n + 13)\)</span>$
+Formamos la ecuación cuadrática:
+$<span class="arithmatex">\(3n^2 + 13n - 870 = 0\)</span>$
+Aplicando la fórmula general, las raíces son <span class="arithmatex">\(n=15\)</span> y <span class="arithmatex">\(n=-58/3\)</span>. 
+Como <span class="arithmatex">\(n\)</span> debe ser un número natural, la respuesta es <span class="arithmatex">\(n=15\)</span>.</p>
+</details>
+<hr />
+<fieldset style="border: 1px solid #e0e0e0; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+  <legend style="font-weight: bold; color: #3f51b5;">Pregunta 3</legend>
+
+  <p>Determine el valor de $x$ (sabiendo que $x > 0$) para que los términos $x-1$, $x+2$ y $3x$ formen una progresión geométrica en ese orden.</p>
+
+  <input type="radio" name="p3" id="p3a" value="correcta"> <label for="p3a">A) $4$</label><br>
+  <input type="radio" name="p3" id="p3b" value="incorrecta"> <label for="p3b">B) $2$</label><br>
+  <input type="radio" name="p3" id="p3c" value="incorrecta"> <label for="p3c">C) $5$</label><br>
+  <input type="radio" name="p3" id="p3d" value="incorrecta"> <label for="p3d">D) $3$</label><br><br>
+
+  <button onclick="verificarRespuesta('p3', 'feedback_p3')" style="background-color: #3f51b5; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer;">Verificar</button>
+  <div id="feedback_p3" style="margin-top: 15px; font-weight: bold;"></div>
+</fieldset>
+
+<details class="info">
+<summary>Ver desarrollo paso a paso</summary>
+<p>En una progresión geométrica, la razón es constante, por lo que el cuadrado del término central iguala al producto de sus adyacentes:
+$<span class="arithmatex">\((x+2)^2 = (x-1)(3x)\)</span>$
+Desarrollamos ambos lados:
+$<span class="arithmatex">\(x^2 + 4x + 4 = 3x^2 - 3x\)</span>$
+Agrupamos todo a un lado de la ecuación:
+$<span class="arithmatex">\(2x^2 - 7x - 4 = 0\)</span>$
+Factorizando, obtenemos <span class="arithmatex">\((2x+1)(x-4) = 0\)</span>.
+Las raíces son <span class="arithmatex">\(x = -1/2\)</span> y <span class="arithmatex">\(x = 4\)</span>. Como el problema especifica que <span class="arithmatex">\(x &gt; 0\)</span>, la solución válida es <span class="arithmatex">\(x = 4\)</span>.
+<em>Comprobación: si <span class="arithmatex">\(x=4\)</span>, los términos son <span class="arithmatex">\(3, 6, 12\)</span>, que es una P.G. de razón <span class="arithmatex">\(2\)</span>.</em></p>
+</details>
+<hr />
+<fieldset style="border: 1px solid #e0e0e0; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+  <legend style="font-weight: bold; color: #3f51b5;">Pregunta 4</legend>
+
+  <p>En una progresión geométrica, el tercer término es $-12$ y el sexto término es $96$. Determine el valor del noveno término ($a_9$).</p>
+
+  <input type="radio" name="p4" id="p4a" value="correcta"> <label for="p4a">A) $-768$</label><br>
+  <input type="radio" name="p4" id="p4b" value="incorrecta"> <label for="p4b">B) $768$</label><br>
+  <input type="radio" name="p4" id="p4c" value="incorrecta"> <label for="p4c">C) $-1536$</label><br>
+  <input type="radio" name="p4" id="p4d" value="incorrecta"> <label for="p4d">D) $384$</label><br><br>
+
+  <button onclick="verificarRespuesta('p4', 'feedback_p4')" style="background-color: #3f51b5; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer;">Verificar</button>
+  <div id="feedback_p4" style="margin-top: 15px; font-weight: bold;"></div>
+</fieldset>
+
+<details class="info">
+<summary>Ver desarrollo paso a paso</summary>
+<p>Sabemos que <span class="arithmatex">\(a_n = a_k \cdot r^{n-k}\)</span>. 
+Para relacionar el sexto y el tercer término:
+$<span class="arithmatex">\(a_6 = a_3 \cdot r^3 \implies 96 = -12 \cdot r^3\)</span>$
+Despejando <span class="arithmatex">\(r^3\)</span>:
+$<span class="arithmatex">\(r^3 = \dfrac{96}{-12} = -8 \implies r = -2\)</span>$
+Ahora, para encontrar el noveno término usamos la misma lógica desde el sexto término:
+$<span class="arithmatex">\(a_9 = a_6 \cdot r^3\)</span>$
+Sustituimos <span class="arithmatex">\(a_6 = 96\)</span> y <span class="arithmatex">\(r^3 = -8\)</span>:
+$<span class="arithmatex">\(a_9 = 96 \cdot (-8) = -768\)</span>$</p>
+</details>
+<hr />
+<fieldset style="border: 1px solid #e0e0e0; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+  <legend style="font-weight: bold; color: #3f51b5;">Pregunta 5</legend>
+
+  <p>Calcule la suma de los primeros $5$ términos de la progresión geométrica que empieza con: $81, 54, 36, \dots$</p>
+
+  <input type="radio" name="p5" id="p5a" value="correcta"> <label for="p5a">A) $211$</label><br>
+  <input type="radio" name="p5" id="p5b" value="incorrecta"> <label for="p5b">B) $243$</label><br>
+  <input type="radio" name="p5" id="p5c" value="incorrecta"> <label for="p5c">C) $195$</label><br>
+  <input type="radio" name="p5" id="p5d" value="incorrecta"> <label for="p5d">D) $233$</label><br><br>
+
+  <button onclick="verificarRespuesta('p5', 'feedback_p5')" style="background-color: #3f51b5; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer;">Verificar</button>
+  <div id="feedback_p5" style="margin-top: 15px; font-weight: bold;"></div>
+</fieldset>
+
+<details class="info">
+<summary>Ver desarrollo paso a paso</summary>
+<p>El primer término es <span class="arithmatex">\(a_1=81\)</span>. 
+La razón geométrica es <span class="arithmatex">\(r = \dfrac{54}{81} = \dfrac{2}{3}\)</span>.
+Utilizamos la fórmula de la suma <span class="arithmatex">\(S_n = a_1 \dfrac{1 - r^n}{1 - r}\)</span>:
+$<span class="arithmatex">\(S_5 = 81 \dfrac{1 - (2/3)^5}{1 - 2/3} = 81 \dfrac{1 - 32/243}{1/3}\)</span>$
+Efectuamos las operaciones:
+$<span class="arithmatex">\(S_5 = 81 \cdot 3 \cdot \left(\dfrac{243 - 32}{243}\right) = 243 \left(\dfrac{211}{243}\right)\)</span>$
+Simplificando, obtenemos:
+$<span class="arithmatex">\(S_5 = 211\)</span>$</p>
+</details>
+<hr />
+<fieldset style="border: 1px solid #e0e0e0; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+  <legend style="font-weight: bold; color: #3f51b5;">Pregunta 6</legend>
+
+  <p>Una empresa tiene una multa por retraso en una obra. El primer día la multa es de $\$10.000$, el segundo día $\$15.000$, el tercer día $\$20.000$, y así sucesivamente. ¿Cuál será el monto total acumulado de la multa si se retrasan $20$ días?</p>
+
+  <input type="radio" name="p6" id="p6a" value="correcta"> <label for="p6a">A) $\$1.150.000$</label><br>
+  <input type="radio" name="p6" id="p6b" value="incorrecta"> <label for="p6b">B) $\$1.200.000$</label><br>
+  <input type="radio" name="p6" id="p6c" value="incorrecta"> <label for="p6c">C) $\$1.050.000$</label><br>
+  <input type="radio" name="p6" id="p6d" value="incorrecta"> <label for="p6d">D) $\$1.250.000$</label><br><br>
+
+  <button onclick="verificarRespuesta('p6', 'feedback_p6')" style="background-color: #3f51b5; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer;">Verificar</button>
+  <div id="feedback_p6" style="margin-top: 15px; font-weight: bold;"></div>
+</fieldset>
+
+<details class="info">
+<summary>Ver desarrollo paso a paso</summary>
+<p>Esto corresponde a la suma de una progresión aritmética (P.A.) con <span class="arithmatex">\(a_1=10.000\)</span>, <span class="arithmatex">\(d=5.000\)</span> y <span class="arithmatex">\(n=20\)</span>.
+Calculamos primero la multa del día 20 (el último término <span class="arithmatex">\(a_{20}\)</span>):
+$<span class="arithmatex">\(a_{20} = 10000 + 19(5000) = 10000 + 95000 = 105.000\)</span>$
+Ahora, utilizamos la fórmula de suma total <span class="arithmatex">\(S_{20} = \dfrac{n}{2}(a_1 + a_{20})\)</span>:
+$<span class="arithmatex">\(S_{20} = \dfrac{20}{2}(10000 + 105000) = 10 \cdot 115000\)</span>$
+$<span class="arithmatex">\(S_{20} = 1.150.000\)</span>$</p>
+</details>
+<hr />
+<fieldset style="border: 1px solid #e0e0e0; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+  <legend style="font-weight: bold; color: #3f51b5;">Pregunta 7</legend>
+
+  <p>Un inversionista deposita $\$500$ al inicio de cada mes en un fondo que genera un interés compuesto mensual del $2\%$. ¿Cuál es la expresión que representa el capital total acumulado al finalizar el mes $12$?</p>
+
+  <input type="radio" name="p7" id="p7a" value="correcta"> <label for="p7a">A) $25500(1.02^{12} - 1)$</label><br>
+  <input type="radio" name="p7" id="p7b" value="incorrecta"> <label for="p7b">B) $500(1.02^{12} - 1)$</label><br>
+  <input type="radio" name="p7" id="p7c" value="incorrecta"> <label for="p7c">C) $25000(1.02^{12} - 1)$</label><br>
+  <input type="radio" name="p7" id="p7d" value="incorrecta"> <label for="p7d">D) $510(1.02^{12} - 1)$</label><br><br>
+
+  <button onclick="verificarRespuesta('p7', 'feedback_p7')" style="background-color: #3f51b5; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer;">Verificar</button>
+  <div id="feedback_p7" style="margin-top: 15px; font-weight: bold;"></div>
+</fieldset>
+
+<details class="info">
+<summary>Ver desarrollo paso a paso</summary>
+<p>Como los depósitos se hacen al inicio de cada mes, cada pago se capitaliza por distinto tiempo:
+$<span class="arithmatex">\(S_{total} = 500(1.02)^{1} + 500(1.02)^{2} + \dots + 500(1.02)^{12}\)</span>$
+Esto es una suma de una P.G. cuyo primer término es <span class="arithmatex">\(a_1 = 500(1.02) = 510\)</span>, la razón es <span class="arithmatex">\(r = 1.02\)</span> y tiene <span class="arithmatex">\(n = 12\)</span> términos.
+Aplicamos la fórmula <span class="arithmatex">\(S_n = a_1 \dfrac{r^n - 1}{r - 1}\)</span>:
+$<span class="arithmatex">\(S_{12} = 510 \dfrac{1.02^{12} - 1}{1.02 - 1} = \dfrac{510}{0.02}(1.02^{12} - 1)\)</span>$
+$<span class="arithmatex">\(S_{12} = 25500(1.02^{12} - 1)\)</span>$</p>
+</details>
+<hr />
+<fieldset style="border: 1px solid #e0e0e0; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+  <legend style="font-weight: bold; color: #3f51b5;">Pregunta 8</legend>
+
+  <p>Si se modela el número de contagiados por un virus asumiendo que cada persona contagia a otras $4$ diariamente, la cantidad de contagiados sigue una progresión geométrica. ¿Por qué este modelo pierde precisión al analizar el comportamiento a muy largo plazo?</p>
+
+  <input type="radio" name="p8" id="p8a" value="correcta"> <label for="p8a">A) Porque la población total es finita, por lo que el crecimiento eventualmente se estanca o decae.</label><br>
+  <input type="radio" name="p8" id="p8b" value="incorrecta"> <label for="p8b">B) Porque la razón de la progresión se vuelve negativa con el paso del tiempo.</label><br>
+  <input type="radio" name="p8" id="p8c" value="incorrecta"> <label for="p8c">C) Porque en un modelo exponencial los términos tienden a cero de forma natural con los días.</label><br>
+  <input type="radio" name="p8" id="p8d" value="incorrecta"> <label for="p8d">D) Porque una progresión geométrica solo se utiliza matemáticamente para modelar decaimientos, no crecimientos.</label><br><br>
+
+  <button onclick="verificarRespuesta('p8', 'feedback_p8')" style="background-color: #3f51b5; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer;">Verificar</button>
+  <div id="feedback_p8" style="margin-top: 15px; font-weight: bold;"></div>
+</fieldset>
+
+<details class="info">
+<summary>Ver desarrollo paso a paso</summary>
+<p>El modelo geométrico con una razón mayor a 1 (<span class="arithmatex">\(r=4\)</span>) predice valores que crecen hacia el infinito (crecimiento exponencial). 
+En el mundo real, la cantidad de seres humanos es finita. A medida que más personas se contagian, quedan menos personas susceptibles. 
+Por lo tanto, el ritmo de contagio no puede mantenerse constante, perdiendo el modelo su validez a largo plazo y debiendo ser sustituido por modelos logísticos.</p>
+</details>
+<hr />
+<fieldset style="border: 1px solid #e0e0e0; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+  <legend style="font-weight: bold; color: #3f51b5;">Pregunta 9</legend>
+
+  <p>Aplicando las propiedades de la sumatoria y fórmulas notables, calcule el valor exacto de la siguiente expresión:</p>
+  <p>$$\sum_{k=1}^{30} (k^2 - k)$$</p>
+
+  <input type="radio" name="p9" id="p9a" value="correcta"> <label for="p9a">A) $8990$</label><br>
+  <input type="radio" name="p9" id="p9b" value="incorrecta"> <label for="p9b">B) $9455$</label><br>
+  <input type="radio" name="p9" id="p9c" value="incorrecta"> <label for="p9c">C) $8525$</label><br>
+  <input type="radio" name="p9" id="p9d" value="incorrecta"> <label for="p9d">D) $9200$</label><br><br>
+
+  <button onclick="verificarRespuesta('p9', 'feedback_p9')" style="background-color: #3f51b5; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer;">Verificar</button>
+  <div id="feedback_p9" style="margin-top: 15px; font-weight: bold;"></div>
+</fieldset>
+
+<details class="info">
+<summary>Ver desarrollo paso a paso</summary>
+<p>Por linealidad, separamos la suma en dos componentes:
+$<span class="arithmatex">\(\sum_{k=1}^{30} (k^2 - k) = \sum_{k=1}^{30} k^2 - \sum_{k=1}^{30} k\)</span>$
+Aplicando las fórmulas notables para cuadrados y números naturales evaluadas en <span class="arithmatex">\(n=30\)</span>:
+$<span class="arithmatex">\(\sum k^2 = \dfrac{n(n+1)(2n+1)}{6} = \dfrac{30(31)(61)}{6} = 5(31)(61) = 9455\)</span>$
+$<span class="arithmatex">\(\sum k = \dfrac{n(n+1)}{2} = \dfrac{30(31)}{2} = 15(31) = 465\)</span>$
+Finalmente, restamos ambos resultados:
+$<span class="arithmatex">\(9455 - 465 = 8990\)</span>$</p>
+</details>
+<hr />
+<fieldset style="border: 1px solid #e0e0e0; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+  <legend style="font-weight: bold; color: #3f51b5;">Pregunta 10</legend>
+
+  <p>Determine el valor exacto de la siguiente suma telescópica:</p>
+  <p>$$\sum_{k=2}^{50} \left(\dfrac{1}{k-1} - \dfrac{1}{k}\right)$$</p>
+
+  <input type="radio" name="p10" id="p10a" value="correcta"> <label for="p10a">A) $\dfrac{49}{50}$</label><br>
+  <input type="radio" name="p10" id="p10b" value="incorrecta"> <label for="p10b">B) $\dfrac{50}{51}$</label><br>
+  <input type="radio" name="p10" id="p10c" value="incorrecta"> <label for="p10c">C) $\dfrac{48}{49}$</label><br>
+  <input type="radio" name="p10" id="p10d" value="incorrecta"> <label for="p10d">D) $1$</label><br><br>
+
+  <button onclick="verificarRespuesta('p10', 'feedback_p10')" style="background-color: #3f51b5; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer;">Verificar</button>
+  <div id="feedback_p10" style="margin-top: 15px; font-weight: bold;"></div>
+</fieldset>
+
+<details class="info">
+<summary>Ver desarrollo paso a paso</summary>
+<p>Esta es una estructura telescópica directa. Al evaluar los primeros términos:
+<span class="arithmatex">\(k=2: \dfrac{1}{1} - \dfrac{1}{2}\)</span>
+<span class="arithmatex">\(k=3: \dfrac{1}{2} - \dfrac{1}{3}\)</span>
+<span class="arithmatex">\(...\)</span>
+<span class="arithmatex">\(k=50: \dfrac{1}{49} - \dfrac{1}{50}\)</span>
+Al sumar, todos los términos intermedios se cancelan mutuamente (ej. <span class="arithmatex">\(-1/2 + 1/2 = 0\)</span>). 
+Solo queda el extremo inferior positivo (evaluado en <span class="arithmatex">\(k=2\)</span>) y el extremo superior negativo (evaluado en <span class="arithmatex">\(k=50\)</span>):
+$<span class="arithmatex">\(S = 1 - \dfrac{1}{50} = \dfrac{49}{50}\)</span>$</p>
+</details>
+<hr />
+<fieldset style="border: 1px solid #e0e0e0; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+  <legend style="font-weight: bold; color: #3f51b5;">Pregunta 11</legend>
+
+  <p>En una progresión geométrica, el primer término es $5$ y la razón es $2$. Si la suma de los primeros $n$ términos es $5115$, ¿cuál es el valor de $n$?</p>
+
+  <input type="radio" name="p11" id="p11a" value="correcta"> <label for="p11a">A) $10$</label><br>
+  <input type="radio" name="p11" id="p11b" value="incorrecta"> <label for="p11b">B) $9$</label><br>
+  <input type="radio" name="p11" id="p11c" value="incorrecta"> <label for="p11c">C) $11$</label><br>
+  <input type="radio" name="p11" id="p11d" value="incorrecta"> <label for="p11d">D) $12$</label><br><br>
+
+  <button onclick="verificarRespuesta('p11', 'feedback_p11')" style="background-color: #3f51b5; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer;">Verificar</button>
+  <div id="feedback_p11" style="margin-top: 15px; font-weight: bold;"></div>
+</fieldset>
+
+<details class="info">
+<summary>Ver desarrollo paso a paso</summary>
+<p>Utilizamos la fórmula de la suma de una progresión geométrica <span class="arithmatex">\(S_n = a_1 \dfrac{r^n - 1}{r - 1}\)</span>:
+$<span class="arithmatex">\(5115 = 5 \dfrac{2^n - 1}{2 - 1}\)</span>$
+$<span class="arithmatex">\(5115 = 5(2^n - 1)\)</span>$
+Dividimos entre 5:
+$<span class="arithmatex">\(1023 = 2^n - 1\)</span>$
+Despejamos la potencia:
+$<span class="arithmatex">\(2^n = 1024\)</span>$
+Reconociendo las potencias de 2 (o usando logaritmos), sabemos que <span class="arithmatex">\(2^{10} = 1024\)</span>.
+Por lo tanto, <span class="arithmatex">\(n = 10\)</span>.</p>
+</details>
+<hr />
+<fieldset style="border: 1px solid #e0e0e0; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+  <legend style="font-weight: bold; color: #3f51b5;">Pregunta 12</legend>
+
+  <p>Si en una progresión aritmética arbitraria se sabe que $a_1 + a_{10} = 50$, ¿cuál es la suma de los primeros $10$ términos ($S_{10}$)?</p>
+
+  <input type="radio" name="p12" id="p12a" value="correcta"> <label for="p12a">A) $250$</label><br>
+  <input type="radio" name="p12" id="p12b" value="incorrecta"> <label for="p12b">B) $500$</label><br>
+  <input type="radio" name="p12" id="p12c" value="incorrecta"> <label for="p12c">C) $125$</label><br>
+  <input type="radio" name="p12" id="p12d" value="incorrecta"> <label for="p12d">D) No se puede determinar con la información dada.</label><br><br>
+
+  <button onclick="verificarRespuesta('p12', 'feedback_p12')" style="background-color: #3f51b5; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer;">Verificar</button>
+  <div id="feedback_p12" style="margin-top: 15px; font-weight: bold;"></div>
+</fieldset>
+
+<details class="info">
+<summary>Ver desarrollo paso a paso</summary>
+<p>La fórmula para la suma de los primeros <span class="arithmatex">\(n\)</span> términos de una progresión aritmética es:
+$<span class="arithmatex">\(S_n = \dfrac{n}{2}(a_1 + a_n)\)</span>$
+No necesitamos calcular <span class="arithmatex">\(a_1\)</span> ni <span class="arithmatex">\(d\)</span> por separado, ya que nos entregan el valor del paréntesis completo para <span class="arithmatex">\(n=10\)</span>:
+$<span class="arithmatex">\(S_{10} = \dfrac{10}{2} (a_1 + a_{10})\)</span>$
+$<span class="arithmatex">\(S_{10} = 5 \cdot (50) = 250\)</span>$</p>
+</details>
+<hr />
+<fieldset style="border: 1px solid #e0e0e0; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+  <legend style="font-weight: bold; color: #3f51b5;">Pregunta 16</legend>
+
+  <p>Un pequeño empresario tiene un presupuesto de $\$ 10.000.000$ para contratar a un trabajador por una cantidad fija de meses. Su idea es comenzar pagándole $\$ 310.000$ el primer mes e ir aumentando el sueldo en $\$ 20.000$ cada mes. ¿Durante cuántos meses completos podrá tener contratado al trabajador?</p>
+
+  <input type="radio" name="p16" id="p16a" value="incorrecta"> <label for="p16a">A) $18$</label><br>
+  <input type="radio" name="p16" id="p16b" value="incorrecta"> <label for="p16b">B) $24$</label><br>
+  <input type="radio" name="p16" id="p16c" value="correcta"> <label for="p16c">C) $20$</label><br>
+  <input type="radio" name="p16" id="p16d" value="incorrecta"> <label for="p16d">D) $22$</label><br><br>
+
+  <button onclick="verificarRespuesta('p16', 'feedback_p16')" style="background-color: #3f51b5; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer;">Verificar</button>
+  <div id="feedback_p16" style="margin-top: 15px; font-weight: bold;"></div>
+</fieldset>
+
+<details class="info">
+<summary>Ver desarrollo paso a paso</summary>
+<p>Los pagos forman una progresión aritmética con primer término <span class="arithmatex">\(a_1 = 310.000\)</span> y diferencia <span class="arithmatex">\(d = 20.000\)</span>. 
+La suma de los sueldos en <span class="arithmatex">\(n\)</span> meses debe ser igual al presupuesto: <span class="arithmatex">\(S_n = 10.000.000\)</span>.
+Planteamos la ecuación de la suma:
+$<span class="arithmatex">\(S_n = \dfrac{n}{2}(2a_1 + (n-1)d)\)</span>$
+$<span class="arithmatex">\(10.000.000 = \dfrac{n}{2}(620.000 + 20.000(n-1))\)</span>$
+Multiplicamos por 2 y simplificamos:
+$<span class="arithmatex">\(20.000.000 = n(600.000 + 20.000n)\)</span>$
+Dividimos toda la ecuación entre <span class="arithmatex">\(20.000\)</span>:
+$<span class="arithmatex">\(1000 = n(30 + n) \implies n^2 + 30n - 1000 = 0\)</span>$
+Factorizamos la cuadrática buscando dos números que multiplicados den <span class="arithmatex">\(-1000\)</span> y sumados den <span class="arithmatex">\(30\)</span>:
+$<span class="arithmatex">\((n + 50)(n - 20) = 0\)</span>$
+La única solución válida en este contexto (meses positivos) es <span class="arithmatex">\(n = 20\)</span>.</p>
+</details>
+<hr />
+<fieldset style="border: 1px solid #e0e0e0; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+  <legend style="font-weight: bold; color: #3f51b5;">Pregunta 17</legend>
+
+  <p>El doceavo término de una sucesión aritmética es $32$ y el quinto término es $18$. Determine la suma de los primeros $100$ términos de esta sucesión.</p>
+
+  <input type="radio" name="p17" id="p17a" value="incorrecta"> <label for="p17a">A) $10.800$</label><br>
+  <input type="radio" name="p17" id="p17b" value="correcta"> <label for="p17b">B) $10.900$</label><br>
+  <input type="radio" name="p17" id="p17c" value="incorrecta"> <label for="p17c">C) $11.000$</label><br>
+  <input type="radio" name="p17" id="p17d" value="incorrecta"> <label for="p17d">D) $5.450$</label><br><br>
+
+  <button onclick="verificarRespuesta('p17', 'feedback_p17')" style="background-color: #3f51b5; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer;">Verificar</button>
+  <div id="feedback_p17" style="margin-top: 15px; font-weight: bold;"></div>
+</fieldset>
+
+<details class="info">
+<summary>Ver desarrollo paso a paso</summary>
+<p>Escribimos la fórmula del término general para los datos conocidos:
+1) <span class="arithmatex">\(a_{12} = a_1 + 11d = 32\)</span>
+2) <span class="arithmatex">\(a_5 = a_1 + 4d = 18\)</span>
+Restamos la segunda de la primera para eliminar <span class="arithmatex">\(a_1\)</span>:
+$<span class="arithmatex">\(7d = 14 \implies d = 2\)</span>$
+Sustituimos <span class="arithmatex">\(d\)</span> en la segunda ecuación para hallar <span class="arithmatex">\(a_1\)</span>:
+$<span class="arithmatex">\(a_1 + 4(2) = 18 \implies a_1 = 10\)</span>$
+Calculamos la suma de los 100 primeros términos:
+$<span class="arithmatex">\(S_{100} = \dfrac{100}{2} (2a_1 + 99d) = 50(2(10) + 99(2))\)</span>$
+$<span class="arithmatex">\(S_{100} = 50(20 + 198) = 50(218) = 10.900\)</span>$</p>
+</details>
+<hr />
+<fieldset style="border: 1px solid #e0e0e0; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+  <legend style="font-weight: bold; color: #3f51b5;">Pregunta 18</legend>
+
+  <p>Un arquitecto diseña un teatro con $15$ asientos en la primera fila, $18$ asientos en la segunda, $21$ asientos en la tercera y así sucesivamente. Si el teatro ha de tener en total $1860$ asientos exactos, ¿cuántas filas debe considerar en su diseño?</p>
+
+  <input type="radio" name="p18" id="p18a" value="incorrecta"> <label for="p18a">A) $30$</label><br>
+  <input type="radio" name="p18" id="p18b" value="incorrecta"> <label for="p18b">B) $40$</label><br>
+  <input type="radio" name="p18" id="p18c" value="correcta"> <label for="p18c">C) $31$</label><br>
+  <input type="radio" name="p18" id="p18d" value="incorrecta"> <label for="p18d">D) $35$</label><br><br>
+
+  <button onclick="verificarRespuesta('p18', 'feedback_p18')" style="background-color: #3f51b5; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer;">Verificar</button>
+  <div id="feedback_p18" style="margin-top: 15px; font-weight: bold;"></div>
+</fieldset>
+
+<details class="info">
+<summary>Ver desarrollo paso a paso</summary>
+<p>La progresión es aritmética con <span class="arithmatex">\(a_1 = 15\)</span> y <span class="arithmatex">\(d = 3\)</span>. La suma es <span class="arithmatex">\(S_n = 1860\)</span>.
+$<span class="arithmatex">\(1860 = \dfrac{n}{2}(2(15) + (n-1)3)\)</span>$
+$<span class="arithmatex">\(3720 = n(30 + 3n - 3)\)</span>$
+$<span class="arithmatex">\(3720 = 3n^2 + 27n\)</span>$
+Dividimos entre <span class="arithmatex">\(3\)</span>:
+$<span class="arithmatex">\(n^2 + 9n - 1240 = 0\)</span>$
+Para resolverla, buscamos los factores de <span class="arithmatex">\(1240\)</span> que tengan una diferencia de <span class="arithmatex">\(9\)</span>. Observamos que <span class="arithmatex">\(31 \times 40 = 1240\)</span>.
+$<span class="arithmatex">\((n + 40)(n - 31) = 0\)</span>$
+Descartamos el valor negativo, por lo que se deben diseñar <span class="arithmatex">\(31\)</span> filas.</p>
+</details>
+<hr />
+<fieldset style="border: 1px solid #e0e0e0; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+  <legend style="font-weight: bold; color: #3f51b5;">Pregunta 19</legend>
+
+  <p>Determine la cantidad de dinero $R$ que debe invertirse al final de cada mes en una cuenta con un interés del $12\%$ anual (capitalizado mensualmente) para obtener un monto de $\$ 4.000$ al cabo de $18$ meses.</p>
+
+  <input type="radio" name="p19" id="p19a" value="incorrecta"> <label for="p19a">A) $\dfrac{480}{1,12^{18} - 1}$</label><br>
+  <input type="radio" name="p19" id="p19b" value="incorrecta"> <label for="p19b">B) $\dfrac{4000}{1,01^{18} - 1}$</label><br>
+  <input type="radio" name="p19" id="p19c" value="incorrecta"> <label for="p19c">C) $\dfrac{40}{1,12^{18} - 1}$</label><br>
+  <input type="radio" name="p19" id="p19d" value="correcta"> <label for="p19d">D) $\dfrac{40}{1,01^{18} - 1}$</label><br><br>
+
+  <button onclick="verificarRespuesta('p19', 'feedback_p19')" style="background-color: #3f51b5; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer;">Verificar</button>
+  <div id="feedback_p19" style="margin-top: 15px; font-weight: bold;"></div>
+</fieldset>
+
+<details class="info">
+<summary>Ver desarrollo paso a paso</summary>
+<p>La tasa anual es del <span class="arithmatex">\(12\%\)</span>, por lo que la tasa mensual es <span class="arithmatex">\(\dfrac{12\%}{12} = 1\% \implies i = 0,01\)</span>.
+Los depósitos conforman el valor futuro de una anualidad vencida, que corresponde a una progresión geométrica cuya suma es:
+$<span class="arithmatex">\(S_n = R \left( \dfrac{(1+i)^n - 1}{i} \right)\)</span>$
+Reemplazamos los datos conocidos:
+$<span class="arithmatex">\(4000 = R \left( \dfrac{1,01^{18} - 1}{0,01} \right)\)</span>$
+Despejamos el depósito mensual <span class="arithmatex">\(R\)</span>:
+$<span class="arithmatex">\(R = \dfrac{4000 \cdot 0,01}{1,01^{18} - 1} = \dfrac{40}{1,01^{18} - 1}\)</span>$</p>
+</details>
+<hr />
+<fieldset style="border: 1px solid #e0e0e0; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+  <legend style="font-weight: bold; color: #3f51b5;">Pregunta 20</legend>
+
+  <p>Una persona coloca $100$ unidades monetarias en una cuenta de inversión. Al final de cada año recibe un $8\%$ por concepto de intereses, e inmediatamente retira $5$ unidades monetarias que destina a gastos. ¿Cuál es el monto exacto en la cuenta al final del segundo año (después del segundo retiro)?</p>
+
+  <input type="radio" name="p20" id="p20a" value="incorrecta"> <label for="p20a">A) $116,64$</label><br>
+  <input type="radio" name="p20" id="p20b" value="correcta"> <label for="p20b">B) $106,24$</label><br>
+  <input type="radio" name="p20" id="p20c" value="incorrecta"> <label for="p20c">C) $105,00$</label><br>
+  <input type="radio" name="p20" id="p20d" value="incorrecta"> <label for="p20d">D) $111,24$</label><br><br>
+
+  <button onclick="verificarRespuesta('p20', 'feedback_p20')" style="background-color: #3f51b5; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer;">Verificar</button>
+  <div id="feedback_p20" style="margin-top: 15px; font-weight: bold;"></div>
+</fieldset>
+
+<details class="info">
+<summary>Ver desarrollo paso a paso</summary>
+<p>Calculamos el crecimiento y retiro año por año evaluando la función recursiva <span class="arithmatex">\(V_n = V_{n-1}(1,08) - 5\)</span>.
+Al final del primer año (antes de retirar), el dinero gana el 8%:
+<span class="arithmatex">\(100 \cdot 1,08 = 108\)</span>.
+Se retiran 5 unidades: <span class="arithmatex">\(V_1 = 108 - 5 = 103\)</span>.
+Al final del segundo año, los 103 ganan interés del 8%:
+<span class="arithmatex">\(103 \cdot 1,08 = 111,24\)</span>.
+Se retiran 5 unidades nuevamente:
+<span class="arithmatex">\(V_2 = 111,24 - 5 = 106,24\)</span>.</p>
+</details>
+<hr />
+<fieldset style="border: 1px solid #e0e0e0; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+  <legend style="font-weight: bold; color: #3f51b5;">Pregunta 21</legend>
+
+  <p>Considerando la misma situación del problema anterior (inversión de $100$, interés del $8\%$ y retiro de $5$ cada fin de año), ¿cuál de las siguientes expresiones modela el monto en la cuenta al final del $n$-ésimo año?</p>
+
+  <input type="radio" name="p21" id="p21a" value="incorrecta"> <label for="p21a">A) $100(1,08)^n - 5n$</label><br>
+  <input type="radio" name="p21" id="p21b" value="incorrecta"> <label for="p21b">B) $100(1,08)^n - 5 \dfrac{1,08^{n-1} - 1}{0,08}$</label><br>
+  <input type="radio" name="p21" id="p21c" value="correcta"> <label for="p21c">C) $37,5(1,08)^n + 62,5$</label><br>
+  <input type="radio" name="p21" id="p21d" value="incorrecta"> <label for="p21d">D) $62,5(1,08)^n + 37,5$</label><br><br>
+
+  <button onclick="verificarRespuesta('p21', 'feedback_p21')" style="background-color: #3f51b5; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer;">Verificar</button>
+  <div id="feedback_p21" style="margin-top: 15px; font-weight: bold;"></div>
+</fieldset>
+
+<details class="info">
+<summary>Ver desarrollo paso a paso</summary>
+<p>Si expandimos la fórmula recursiva a <span class="arithmatex">\(n\)</span> años, el capital se capitaliza <span class="arithmatex">\(n\)</span> veces, mientras que los retiros conforman una serie geométrica de pagos pasados:
+$<span class="arithmatex">\(V_n = 100(1,08)^n - 5(1,08)^{n-1} - 5(1,08)^{n-2} - \dots - 5\)</span>$
+La suma de los retiros capitalizados es: <span class="arithmatex">\(5 \left[ \dfrac{1,08^n - 1}{1,08 - 1} \right] = 5 \left[ \dfrac{1,08^n - 1}{0,08} \right]\)</span>.
+Realizando la división <span class="arithmatex">\(5 / 0,08 = 62,5\)</span>, nos queda:
+$<span class="arithmatex">\(V_n = 100(1,08)^n - 62,5(1,08^n - 1)\)</span>$
+Agrupamos los términos con la misma base <span class="arithmatex">\((1,08)^n\)</span>:
+$<span class="arithmatex">\(V_n = 100(1,08)^n - 62,5(1,08)^n + 62,5 = 37,5(1,08)^n + 62,5\)</span>$</p>
+</details>
+<hr />
+<fieldset style="border: 1px solid #e0e0e0; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+  <legend style="font-weight: bold; color: #3f51b5;">Pregunta 22</legend>
+
+  <p>Si en un auditorio hay $5$ asientos en la primera fila y se observa que cada fila hacia atrás tiene $3$ asientos más que la anterior, ¿cuántas filas hay en total si se sabe que el auditorio contiene $2924$ asientos?</p>
+
+  <input type="radio" name="p22" id="p22a" value="correcta"> <label for="p22a">A) $43$</label><br>
+  <input type="radio" name="p22" id="p22b" value="incorrecta"> <label for="p22b">B) $44$</label><br>
+  <input type="radio" name="p22" id="p22c" value="incorrecta"> <label for="p22c">C) $42$</label><br>
+  <input type="radio" name="p22" id="p22d" value="incorrecta"> <label for="p22d">D) $45$</label><br><br>
+
+  <button onclick="verificarRespuesta('p22', 'feedback_p22')" style="background-color: #3f51b5; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer;">Verificar</button>
+  <div id="feedback_p22" style="margin-top: 15px; font-weight: bold;"></div>
+</fieldset>
+
+<details class="info">
+<summary>Ver desarrollo paso a paso</summary>
+<p>Usamos la suma de progresión aritmética con <span class="arithmatex">\(a_1 = 5\)</span>, <span class="arithmatex">\(d = 3\)</span> y <span class="arithmatex">\(S_n = 2924\)</span>:
+$<span class="arithmatex">\(2924 = \dfrac{n}{2} (2(5) + (n-1)3) = \dfrac{n}{2} (10 + 3n - 3) = \dfrac{n}{2} (3n + 7)\)</span>$
+$<span class="arithmatex">\(5848 = 3n^2 + 7n \implies 3n^2 + 7n - 5848 = 0\)</span>$
+Aplicamos la fórmula resolvente: <span class="arithmatex">\(n = \dfrac{-7 \pm \sqrt{49 - 4(3)(-5848)}}{6}\)</span>
+Discriminante: <span class="arithmatex">\(49 + 70176 = 70225\)</span>. <span class="arithmatex">\(\sqrt{70225} = 265\)</span>.
+Tomando la solución positiva: <span class="arithmatex">\(n = \dfrac{-7 + 265}{6} = \dfrac{258}{6} = 43\)</span>.</p>
+</details>
+<hr />
+<fieldset style="border: 1px solid #e0e0e0; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+  <legend style="font-weight: bold; color: #3f51b5;">Pregunta 23</legend>
+
+  <p>Considere una máquina que al término de cada año disminuye su valor en $\$ 3.500$ constantes. Si al término del primer año de funcionamiento su valor es $\$ 196.500$, ¿cuál será el valor de la máquina al término de los primeros $n$ años de funcionamiento?</p>
+
+  <input type="radio" name="p23" id="p23a" value="incorrecta"> <label for="p23a">A) $196.500 - 3.500n$</label><br>
+  <input type="radio" name="p23" id="p23b" value="incorrecta"> <label for="p23b">B) $193.000 - 3.500n$</label><br>
+  <input type="radio" name="p23" id="p23c" value="incorrecta"> <label for="p23c">C) $196.500(1 - 0,035)^n$</label><br>
+  <input type="radio" name="p23" id="p23d" value="correcta"> <label for="p23d">D) $200.000 - 3.500n$</label><br><br>
+
+  <button onclick="verificarRespuesta('p23', 'feedback_p23')" style="background-color: #3f51b5; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer;">Verificar</button>
+  <div id="feedback_p23" style="margin-top: 15px; font-weight: bold;"></div>
+</fieldset>
+
+<details class="info">
+<summary>Ver desarrollo paso a paso</summary>
+<p>La progresión es aritmética (disminución constante, no porcentual) con <span class="arithmatex">\(a_1 = 196.500\)</span> y <span class="arithmatex">\(d = -3.500\)</span>.
+Sustituimos en el término general:
+$<span class="arithmatex">\(V_n = a_1 + (n-1)d\)</span>$
+$<span class="arithmatex">\(V_n = 196.500 + (n-1)(-3.500) = 196.500 - 3.500n + 3.500\)</span>$
+Agrupamos los términos fijos:
+$<span class="arithmatex">\(V_n = 200.000 - 3.500n\)</span>$
+<em>(Nota: esto significa que el valor inicial nuevo <span class="arithmatex">\(V_0\)</span> de la máquina fue <span class="arithmatex">\(\$ 200.000\)</span>).</em></p>
+</details>
+<hr />
+<fieldset style="border: 1px solid #e0e0e0; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+  <legend style="font-weight: bold; color: #3f51b5;">Pregunta 24</legend>
+
+  <p>Con los datos del problema anterior, si la empresa quiere vender la máquina a un valor que sea mayor o igual a $\$ 95.000$, ¿cuál es el número máximo de años (completos) que puede mantenerse en funcionamiento antes de su venta?</p>
+
+  <input type="radio" name="p24" id="p24a" value="incorrecta"> <label for="p24a">A) $29$</label><br>
+  <input type="radio" name="p24" id="p24b" value="incorrecta"> <label for="p24b">B) $31$</label><br>
+  <input type="radio" name="p24" id="p24c" value="correcta"> <label for="p24c">C) $30$</label><br>
+  <input type="radio" name="p24" id="p24d" value="incorrecta"> <label for="p24d">D) $28$</label><br><br>
+
+  <button onclick="verificarRespuesta('p24', 'feedback_p24')" style="background-color: #3f51b5; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer;">Verificar</button>
+  <div id="feedback_p24" style="margin-top: 15px; font-weight: bold;"></div>
+</fieldset>
+
+<details class="info">
+<summary>Ver desarrollo paso a paso</summary>
+<p>Planteamos la inecuación exigiendo que el valor sea al menos <span class="arithmatex">\(95.000\)</span>:
+$<span class="arithmatex">\(V_n \geq 95.000\)</span>$
+$<span class="arithmatex">\(200.000 - 3.500n \geq 95.000\)</span>$
+Despejamos <span class="arithmatex">\(n\)</span>:
+$<span class="arithmatex">\(105.000 \geq 3.500n \implies n \leq \dfrac{105.000}{3.500} = \dfrac{1050}{35}\)</span>$
+$<span class="arithmatex">\(n \leq 30\)</span>$
+El valor de venta tocará el umbral exactamente en el año 30, siendo este su límite máximo.</p>
+</details>
+<hr />
+<fieldset style="border: 1px solid #e0e0e0; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+  <legend style="font-weight: bold; color: #3f51b5;">Pregunta 25</legend>
+
+  <p>En una progresión geométrica de $8$ términos, se sabe que el último término ($a_8$) es $-2560$ y que el sexto ($a_6$) es $-640$. Si además se sabe que los primeros dos términos de la progresión tienen diferente signo, ¿cuál es la razón ($r$) de la progresión?</p>
+
+  <input type="radio" name="p25" id="p25a" value="incorrecta"> <label for="p25a">A) $2$</label><br>
+  <input type="radio" name="p25" id="p25b" value="correcta"> <label for="p25b">B) $-2$</label><br>
+  <input type="radio" name="p25" id="p25c" value="incorrecta"> <label for="p25c">C) $4$</label><br>
+  <input type="radio" name="p25" id="p25d" value="incorrecta"> <label for="p25d">D) $-4$</label><br><br>
+
+  <button onclick="verificarRespuesta('p25', 'feedback_p25')" style="background-color: #3f51b5; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer;">Verificar</button>
+  <div id="feedback_p25" style="margin-top: 15px; font-weight: bold;"></div>
+</fieldset>
+
+<details class="info">
+<summary>Ver desarrollo paso a paso</summary>
+<p>Sabemos que <span class="arithmatex">\(a_8 = a_6 \cdot r^2\)</span>.
+Sustituyendo los datos: <span class="arithmatex">\(-2560 = -640 \cdot r^2\)</span>.
+Despejando: <span class="arithmatex">\(r^2 = \dfrac{-2560}{-640} = 4\)</span>.
+Por lo tanto, la razón <span class="arithmatex">\(r\)</span> puede ser <span class="arithmatex">\(2\)</span> o <span class="arithmatex">\(-2\)</span>.
+El problema establece que los dos primeros términos (<span class="arithmatex">\(a_1\)</span> y <span class="arithmatex">\(a_2\)</span>) tienen signos distintos. Esto indica que la progresión es alternada, lo cual solo se logra si la razón es negativa.
+La razón es <span class="arithmatex">\(r = -2\)</span>.</p>
+</details>
+<hr />
+<fieldset style="border: 1px solid #e0e0e0; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+  <legend style="font-weight: bold; color: #3f51b5;">Pregunta 26</legend>
+
+  <p>Con los datos del problema anterior (progresión geométrica de $8$ términos, donde $a_6 = -640$ y $r = -2$), determine la suma total de los términos de dicha progresión.</p>
+
+  <input type="radio" name="p26" id="p26a" value="correcta"> <label for="p26a">A) $-1700$</label><br>
+  <input type="radio" name="p26" id="p26b" value="incorrecta"> <label for="p26b">B) $1700$</label><br>
+  <input type="radio" name="p26" id="p26c" value="incorrecta"> <label for="p26c">C) $-1705$</label><br>
+  <input type="radio" name="p26" id="p26d" value="incorrecta"> <label for="p26d">D) $-5100$</label><br><br>
+
+  <button onclick="verificarRespuesta('p26', 'feedback_p26')" style="background-color: #3f51b5; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer;">Verificar</button>
+  <div id="feedback_p26" style="margin-top: 15px; font-weight: bold;"></div>
+</fieldset>
+
+<details class="info">
+<summary>Ver desarrollo paso a paso</summary>
+<p>Para calcular la suma, necesitamos primero el término <span class="arithmatex">\(a_1\)</span>. Sabemos que <span class="arithmatex">\(a_6 = a_1 \cdot r^5\)</span>.
+$<span class="arithmatex">\(-640 = a_1 \cdot (-2)^5 = a_1 \cdot (-32)\)</span>$
+$<span class="arithmatex">\(a_1 = \dfrac{-640}{-32} = 20\)</span>$
+Aplicamos la fórmula de la suma de una P.G.:
+$<span class="arithmatex">\(S_8 = a_1 \dfrac{1 - r^8}{1 - r} = 20 \dfrac{1 - (-2)^8}{1 - (-2)}\)</span>$
+$<span class="arithmatex">\(S_8 = 20 \dfrac{1 - 256}{1 + 2} = 20 \dfrac{-255}{3}\)</span>$
+$<span class="arithmatex">\(S_8 = 20(-85) = -1700\)</span>$</p>
+</details>
+<hr />
+<fieldset style="border: 1px solid #e0e0e0; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+  <legend style="font-weight: bold; color: #3f51b5;">Pregunta 27</legend>
+
+  <p>Un trabajador negocia un bono mixto a largo plazo: el primer año recibirá un bono inicial base de $\$ 100.000$, con un aumento multiplicativo del $10\%$ cada año respecto al año anterior. Adicionalmente, la empresa le depositará un extra fijo de $\$ 50.000$ por año de servicio. ¿Qué expresión determina el total del bono acumulado luego de $n$ años continuos?</p>
+
+  <input type="radio" name="p27" id="p27a" value="incorrecta"> <label for="p27a">A) $100.000(1,1^n - 1) + 50.000n$</label><br>
+  <input type="radio" name="p27" id="p27b" value="incorrecta"> <label for="p27b">B) $1.100.000(1,1^n - 1) + 50.000$</label><br>
+  <input type="radio" name="p27" id="p27c" value="incorrecta"> <label for="p27c">C) $1.000.000(1,1^n) + 50.000n$</label><br>
+  <input type="radio" name="p27" id="p27d" value="correcta"> <label for="p27d">D) $1.000.000(1,1^n - 1) + 50.000n$</label><br><br>
+
+  <button onclick="verificarRespuesta('p27', 'feedback_p27')" style="background-color: #3f51b5; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer;">Verificar</button>
+  <div id="feedback_p27" style="margin-top: 15px; font-weight: bold;"></div>
+</fieldset>
+
+<details class="info">
+<summary>Ver desarrollo paso a paso</summary>
+<p>El ingreso se compone de la suma de dos modelos independientes:
+1) Una serie geométrica <span class="arithmatex">\(a_n\)</span> de pagos porcentuales donde <span class="arithmatex">\(a_1 = 100.000\)</span> y <span class="arithmatex">\(r = 1,1\)</span>. 
+La suma de este primer paquete en <span class="arithmatex">\(n\)</span> años es:
+$<span class="arithmatex">\(S_{PG} = 100.000 \left[ \dfrac{1,1^n - 1}{1,1 - 1} \right] = 100.000 \left[ \dfrac{1,1^n - 1}{0,1} \right] = 1.000.000(1,1^n - 1)\)</span>$
+2) Un monto fijo anual. Como no aumenta ni se reinvierte en interés compuesto, tras <span class="arithmatex">\(n\)</span> años la suma es una progresión aritmética de diferencia cero (o simplemente una multiplicación iterada):
+$<span class="arithmatex">\(S_{PA} = 50.000 \cdot n\)</span>$
+El monto total es la suma de ambos: <span class="arithmatex">\(1.000.000(1,1^n - 1) + 50.000n\)</span>.</p>
+</details>
+<hr />
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.top"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="../../javascripts/quiz.js"></script>
+      
+    
+  </body>
+</html>

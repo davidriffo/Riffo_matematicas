@@ -1,0 +1,1950 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Material de apoyo, guías y problemas de precálculo.">
+      
+      
+        <meta name="author" content="José David Torres Riffo">
+      
+      
+      
+        <link rel="prev" href="../progresiones/">
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Inecuaciones - MateRiffo</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#ejercicios-de-seleccion-multiple-inecuaciones" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../.." title="MateRiffo" class="md-header__button md-logo" aria-label="MateRiffo" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            MateRiffo
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Inecuaciones
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="MateRiffo" class="md-nav__button md-logo" aria-label="MateRiffo" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    MateRiffo
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Módulo de Inecuaciones
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Módulo de Inecuaciones
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algebra/inecuaciones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Racionales
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algebra/desigualdades/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Desigualdades
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algebra/aplicaciones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aplicaciones
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algebra/absoluto/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Valor absoluto
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algebra/raices/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Raices
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Módulo de Funciones Reales
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Módulo de Funciones Reales
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algebra/funciones_1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gráfico de funciones
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algebra/funciones_2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dominio de funciones
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algebra/funciones_3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Evaluación de funciones
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algebra/multiple_1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Práctica
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Módulo de Función lineal
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Módulo de Función lineal
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algebra/funciones_5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Rectas y funciones
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algebra/funciones_4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aplicaciones de funciones lineales
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algebra/multiple_2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Práctica
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Módulo de función cuadrática
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Módulo de función cuadrática
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../funciones/funciones_6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Funciones cuadráticas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../funciones/funciones_7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Parábola y funciones
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../funciones/multiple_3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Práctica
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Módulo de exponencial y logaritmo
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Módulo de exponencial y logaritmo
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../funciones/funciones_8/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Función exponencial
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modulo de Matemáticas avanzadas
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Modulo de Matemáticas avanzadas
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sumatorias/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sumatorias
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../progresiones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Progresiones
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inecuaciones
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inecuaciones
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#i-inecuaciones-lineales-4-problemas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        I. Inecuaciones Lineales (4 problemas)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ii-inecuaciones-racionales-5-problemas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        II. Inecuaciones Racionales (5 problemas)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#iii-inecuaciones-cuadraticas-5-problemas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        III. Inecuaciones Cuadráticas (5 problemas)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#iv-inecuaciones-con-raices-5-problemas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        IV. Inecuaciones con Raíces (5 problemas)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v-inecuaciones-con-valor-absoluto-5-problemas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        V. Inecuaciones con Valor Absoluto (5 problemas)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vi-problemas-aplicados-6-problemas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        VI. Problemas Aplicados (6 problemas)
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#i-inecuaciones-lineales-4-problemas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        I. Inecuaciones Lineales (4 problemas)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ii-inecuaciones-racionales-5-problemas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        II. Inecuaciones Racionales (5 problemas)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#iii-inecuaciones-cuadraticas-5-problemas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        III. Inecuaciones Cuadráticas (5 problemas)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#iv-inecuaciones-con-raices-5-problemas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        IV. Inecuaciones con Raíces (5 problemas)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v-inecuaciones-con-valor-absoluto-5-problemas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        V. Inecuaciones con Valor Absoluto (5 problemas)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vi-problemas-aplicados-6-problemas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        VI. Problemas Aplicados (6 problemas)
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="ejercicios-de-seleccion-multiple-inecuaciones">Ejercicios de Selección Múltiple: Inecuaciones</h1>
+<p>Resuelve los siguientes ejercicios y luego verifica tu respuesta. Si tienes dudas, puedes desplegar el desarrollo paso a paso.</p>
+<hr />
+<h2 id="i-inecuaciones-lineales-4-problemas">I. Inecuaciones Lineales (4 problemas)</h2>
+<fieldset style="border: 1px solid #e0e0e0; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+  <legend style="font-weight: bold; color: #3f51b5;">Pregunta 1</legend>
+  <p>Determine el conjunto solución de la inecuación: $2x - 5 \leq 3x + 1$</p>
+  <input type="radio" name="p1" id="p1a" value="incorrecta"> <label for="p1a">A) $x \in (-\infty, 6]$</label><br>
+  <input type="radio" name="p1" id="p1b" value="correcta"> <label for="p1b">B) $x \in [-6, \infty)$</label><br>
+  <input type="radio" name="p1" id="p1c" value="incorrecta"> <label for="p1c">C) $x \in [-4, \infty)$</label><br>
+  <input type="radio" name="p1" id="p1d" value="incorrecta"> <label for="p1d">D) $x \in (-\infty, -6]$</label><br><br>
+  <button onclick="verificarRespuesta('p1', 'feedback_p1')" style="background-color: #3f51b5; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer;">Verificar</button>
+  <div id="feedback_p1" style="margin-top: 15px; font-weight: bold;"></div>
+</fieldset>
+
+<details class="info">
+<summary>Ver desarrollo paso a paso</summary>
+<p>Agrupamos las <span class="arithmatex">\(x\)</span> a un lado y las constantes al otro:
+$<span class="arithmatex">\(-5 - 1 \leq 3x - 2x\)</span>$
+$<span class="arithmatex">\(-6 \leq x\)</span>$
+Por lo tanto, <span class="arithmatex">\(x \in [-6, \infty)\)</span>.</p>
+</details>
+<hr />
+<fieldset style="border: 1px solid #e0e0e0; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+  <legend style="font-weight: bold; color: #3f51b5;">Pregunta 2</legend>
+  <p>Determine el conjunto solución de: $\dfrac{x}{2} - 1 > \dfrac{x+1}{3}$</p>
+  <input type="radio" name="p2" id="p2a" value="incorrecta"> <label for="p2a">A) $x \in (-\infty, 8)$</label><br>
+  <input type="radio" name="p2" id="p2b" value="incorrecta"> <label for="p2b">B) $x \in (5, \infty)$</label><br>
+  <input type="radio" name="p2" id="p2c" value="correcta"> <label for="p2c">C) $x \in (8, \infty)$</label><br>
+  <input type="radio" name="p2" id="p2d" value="incorrecta"> <label for="p2d">D) $x \in [8, \infty)$</label><br><br>
+  <button onclick="verificarRespuesta('p2', 'feedback_p2')" style="background-color: #3f51b5; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer;">Verificar</button>
+  <div id="feedback_p2" style="margin-top: 15px; font-weight: bold;"></div>
+</fieldset>
+
+<details class="info">
+<summary>Ver desarrollo paso a paso</summary>
+<p>Multiplicamos toda la inecuación por el MCM que es 6:
+$<span class="arithmatex">\(3x - 6 &gt; 2(x+1)\)</span>$
+$<span class="arithmatex">\(3x - 6 &gt; 2x + 2\)</span>$
+$<span class="arithmatex">\(x &gt; 8\)</span>$
+Conjunto solución: <span class="arithmatex">\((8, \infty)\)</span>.</p>
+</details>
+<hr />
+<fieldset style="border: 1px solid #e0e0e0; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+  <legend style="font-weight: bold; color: #3f51b5;">Pregunta 3</legend>
+  <p>Determine el valor de $k \in \mathbb{R}$ tal que el conjunto solución de $3x - k \geq x + 4$ sea el intervalo $[-1, \infty)$.</p>
+  <input type="radio" name="p3" id="p3a" value="incorrecta"> <label for="p3a">A) $k = 6$</label><br>
+  <input type="radio" name="p3" id="p3b" value="incorrecta"> <label for="p3b">B) $k = -2$</label><br>
+  <input type="radio" name="p3" id="p3c" value="correcta"> <label for="p3c">C) $k = -6$</label><br>
+  <input type="radio" name="p3" id="p3d" value="incorrecta"> <label for="p3d">D) $k = 2$</label><br><br>
+  <button onclick="verificarRespuesta('p3', 'feedback_p3')" style="background-color: #3f51b5; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer;">Verificar</button>
+  <div id="feedback_p3" style="margin-top: 15px; font-weight: bold;"></div>
+</fieldset>
+
+<details class="info">
+<summary>Ver desarrollo paso a paso</summary>
+<p>Despejamos <span class="arithmatex">\(x\)</span>:
+$<span class="arithmatex">\(2x \geq k + 4 \Rightarrow x \geq \dfrac{k+4}{2}\)</span>$
+Como el conjunto solución debe ser <span class="arithmatex">\([-1, \infty)\)</span>, igualamos:
+$<span class="arithmatex">\(\dfrac{k+4}{2} = -1 \Rightarrow k + 4 = -2 \Rightarrow k = -6\)</span>$</p>
+</details>
+<hr />
+<fieldset style="border: 1px solid #e0e0e0; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+  <legend style="font-weight: bold; color: #3f51b5;">Pregunta 4</legend>
+  <p>Resuelva: $4(x-1) - 2(x+2) < 3x$</p>
+  <input type="radio" name="p4" id="p4a" value="correcta"> <label for="p4a">A) $x \in (-8, \infty)$</label><br>
+  <input type="radio" name="p4" id="p4b" value="incorrecta"> <label for="p4b">B) $x \in (-\infty, -8)$</label><br>
+  <input type="radio" name="p4" id="p4c" value="incorrecta"> <label for="p4c">C) $x \in (8, \infty)$</label><br>
+  <input type="radio" name="p4" id="p4d" value="incorrecta"> <label for="p4d">D) $x \in (-\infty, 8)$</label><br><br>
+  <button onclick="verificarRespuesta('p4', 'feedback_p4')" style="background-color: #3f51b5; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer;">Verificar</button>
+  <div id="feedback_p4" style="margin-top: 15px; font-weight: bold;"></div>
+</fieldset>
+
+<details class="info">
+<summary>Ver desarrollo paso a paso</summary>
+<p>Desarrollamos los paréntesis:
+$<span class="arithmatex">\(4x - 4 - 2x - 4 &lt; 3x\)</span>$
+$<span class="arithmatex">\(2x - 8 &lt; 3x\)</span>$
+$<span class="arithmatex">\(-8 &lt; x \Rightarrow x &gt; -8\)</span>$
+Conjunto solución: <span class="arithmatex">\((-8, \infty)\)</span>.</p>
+</details>
+<hr />
+<h2 id="ii-inecuaciones-racionales-5-problemas">II. Inecuaciones Racionales (5 problemas)</h2>
+<fieldset style="border: 1px solid #e0e0e0; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+  <legend style="font-weight: bold; color: #3f51b5;">Pregunta 5</legend>
+  <p>Determine el conjunto solución de: $\dfrac{x-2}{x+3} \geq 0$</p>
+  <input type="radio" name="p5" id="p5a" value="incorrecta"> <label for="p5a">A) $[-3, 2]$</label><br>
+  <input type="radio" name="p5" id="p5b" value="correcta"> <label for="p5b">B) $(-\infty, -3) \cup [2, \infty)$</label><br>
+  <input type="radio" name="p5" id="p5c" value="incorrecta"> <label for="p5c">C) $(-\infty, -3] \cup [2, \infty)$</label><br>
+  <input type="radio" name="p5" id="p5d" value="incorrecta"> <label for="p5d">D) $(-3, 2]$</label><br><br>
+  <button onclick="verificarRespuesta('p5', 'feedback_p5')" style="background-color: #3f51b5; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer;">Verificar</button>
+  <div id="feedback_p5" style="margin-top: 15px; font-weight: bold;"></div>
+</fieldset>
+
+<details class="info">
+<summary>Ver desarrollo paso a paso</summary>
+<p>Puntos críticos: <span class="arithmatex">\(x = 2\)</span> (cerrado) y <span class="arithmatex">\(x = -3\)</span> (abierto por estar en el denominador).
+Analizando los signos en los intervalos <span class="arithmatex">\((-\infty, -3)\)</span>, <span class="arithmatex">\((-3, 2)\)</span>, y <span class="arithmatex">\((2, \infty)\)</span>, la expresión es positiva o cero en los extremos.
+Solución: <span class="arithmatex">\((-\infty, -3) \cup [2, \infty)\)</span>.</p>
+</details>
+<hr />
+<fieldset style="border: 1px solid #e0e0e0; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+  <legend style="font-weight: bold; color: #3f51b5;">Pregunta 6</legend>
+  <p>Resuelva: $\dfrac{2x+1}{x-1} < 1$</p>
+  <input type="radio" name="p6" id="p6a" value="incorrecta"> <label for="p6a">A) $(-\infty, -2) \cup (1, \infty)$</label><br>
+  <input type="radio" name="p6" id="p6b" value="incorrecta"> <label for="p6b">B) $[-2, 1)$</label><br>
+  <input type="radio" name="p6" id="p6c" value="correcta"> <label for="p6c">C) $(-2, 1)$</label><br>
+  <input type="radio" name="p6" id="p6d" value="incorrecta"> <label for="p6d">D) $(1, 2)$</label><br><br>
+  <button onclick="verificarRespuesta('p6', 'feedback_p6')" style="background-color: #3f51b5; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer;">Verificar</button>
+  <div id="feedback_p6" style="margin-top: 15px; font-weight: bold;"></div>
+</fieldset>
+
+<details class="info">
+<summary>Ver desarrollo paso a paso</summary>
+<p>Llevamos el 1 a la izquierda:
+$<span class="arithmatex">\(\dfrac{2x+1}{x-1} - 1 &lt; 0 \Rightarrow \dfrac{2x+1-(x-1)}{x-1} &lt; 0 \Rightarrow \dfrac{x+2}{x-1} &lt; 0\)</span>$
+Puntos críticos: <span class="arithmatex">\(x = -2\)</span> y <span class="arithmatex">\(x = 1\)</span>. Ambos abiertos.
+La fracción es negativa en el intervalo <span class="arithmatex">\((-2, 1)\)</span>.</p>
+</details>
+<hr />
+<fieldset style="border: 1px solid #e0e0e0; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+  <legend style="font-weight: bold; color: #3f51b5;">Pregunta 7</legend>
+  <p>Determine el conjunto solución de: $\dfrac{3}{x} \leq \dfrac{1}{x-2}$</p>
+  <input type="radio" name="p7" id="p7a" value="correcta"> <label for="p7a">A) $(-\infty, 0) \cup (2, 3]$</label><br>
+  <input type="radio" name="p7" id="p7b" value="incorrecta"> <label for="p7b">B) $[3, \infty)$</label><br>
+  <input type="radio" name="p7" id="p7c" value="incorrecta"> <label for="p7c">C) $(0, 2) \cup [3, \infty)$</label><br>
+  <input type="radio" name="p7" id="p7d" value="incorrecta"> <label for="p7d">D) $(-\infty, 0] \cup (2, 3]$</label><br><br>
+  <button onclick="verificarRespuesta('p7', 'feedback_p7')" style="background-color: #3f51b5; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer;">Verificar</button>
+  <div id="feedback_p7" style="margin-top: 15px; font-weight: bold;"></div>
+</fieldset>
+
+<details class="info">
+<summary>Ver desarrollo paso a paso</summary>
+<p>Agrupamos: <span class="arithmatex">\(\dfrac{3}{x} - \dfrac{1}{x-2} \leq 0 \Rightarrow \dfrac{3(x-2) - x}{x(x-2)} \leq 0 \Rightarrow \dfrac{2x - 6}{x(x-2)} \leq 0\)</span>.
+Puntos críticos: <span class="arithmatex">\(x=3\)</span> (cerrado), <span class="arithmatex">\(x=0\)</span>, <span class="arithmatex">\(x=2\)</span> (abiertos).
+Armando la tabla de signos, la expresión es negativa o cero en <span class="arithmatex">\((-\infty, 0) \cup (2, 3]\)</span>.</p>
+</details>
+<hr />
+<fieldset style="border: 1px solid #e0e0e0; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+  <legend style="font-weight: bold; color: #3f51b5;">Pregunta 8</legend>
+  <p>Resuelva: $\dfrac{x^2 - 4}{x+1} \geq 0$</p>
+  <input type="radio" name="p8" id="p8a" value="incorrecta"> <label for="p8a">A) $[-2, \infty)$</label><br>
+  <input type="radio" name="p8" id="p8b" value="correcta"> <label for="p8b">B) $[-2, -1) \cup [2, \infty)$</label><br>
+  <input type="radio" name="p8" id="p8c" value="incorrecta"> <label for="p8c">C) $(-\infty, -2] \cup (-1, 2]$</label><br>
+  <input type="radio" name="p8" id="p8d" value="incorrecta"> <label for="p8d">D) $(-1, 2]$</label><br><br>
+  <button onclick="verificarRespuesta('p8', 'feedback_p8')" style="background-color: #3f51b5; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer;">Verificar</button>
+  <div id="feedback_p8" style="margin-top: 15px; font-weight: bold;"></div>
+</fieldset>
+
+<details class="info">
+<summary>Ver desarrollo paso a paso</summary>
+<p>Factorizamos el numerador: <span class="arithmatex">\(\dfrac{(x-2)(x+2)}{x+1} \geq 0\)</span>.
+Puntos críticos: <span class="arithmatex">\(-2\)</span> (cerrado), <span class="arithmatex">\(2\)</span> (cerrado) y <span class="arithmatex">\(-1\)</span> (abierto).
+Analizando en la recta numérica, la expresión es positiva o cero en <span class="arithmatex">\([-2, -1) \cup [2, \infty)\)</span>.</p>
+</details>
+<hr />
+<fieldset style="border: 1px solid #e0e0e0; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+  <legend style="font-weight: bold; color: #3f51b5;">Pregunta 9</legend>
+  <p>Determine el conjunto solución de: $\dfrac{1}{x-1} > 2$</p>
+  <input type="radio" name="p9" id="p9a" value="correcta"> <label for="p9a">A) $(1, 1.5)$</label><br>
+  <input type="radio" name="p9" id="p9b" value="incorrecta"> <label for="p9b">B) $(-\infty, 1) \cup (1.5, \infty)$</label><br>
+  <input type="radio" name="p9" id="p9c" value="incorrecta"> <label for="p9c">C) $(1.5, \infty)$</label><br>
+  <input type="radio" name="p9" id="p9d" value="incorrecta"> <label for="p9d">D) $(1, 2)$</label><br><br>
+  <button onclick="verificarRespuesta('p9', 'feedback_p9')" style="background-color: #3f51b5; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer;">Verificar</button>
+  <div id="feedback_p9" style="margin-top: 15px; font-weight: bold;"></div>
+</fieldset>
+
+<details class="info">
+<summary>Ver desarrollo paso a paso</summary>
+<p>Restamos 2: <span class="arithmatex">\(\dfrac{1}{x-1} - 2 &gt; 0 \Rightarrow \dfrac{1 - 2(x-1)}{x-1} &gt; 0 \Rightarrow \dfrac{3 - 2x}{x-1} &gt; 0\)</span>.
+Puntos críticos: <span class="arithmatex">\(x = 1.5\)</span> y <span class="arithmatex">\(x = 1\)</span>.
+Analizando los signos, la fracción es positiva en el intervalo <span class="arithmatex">\((1, 1.5)\)</span>.</p>
+</details>
+<hr />
+<h2 id="iii-inecuaciones-cuadraticas-5-problemas">III. Inecuaciones Cuadráticas (5 problemas)</h2>
+<fieldset style="border: 1px solid #e0e0e0; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+  <legend style="font-weight: bold; color: #3f51b5;">Pregunta 10</legend>
+  <p>Resuelva: $x^2 - 7x + 10 \leq 0$</p>
+  <input type="radio" name="p10" id="p10a" value="incorrecta"> <label for="p10a">A) $(-\infty, 2] \cup [5, \infty)$</label><br>
+  <input type="radio" name="p10" id="p10b" value="correcta"> <label for="p10b">B) $[2, 5]$</label><br>
+  <input type="radio" name="p10" id="p10c" value="incorrecta"> <label for="p10c">C) $(-2, 5]$</label><br>
+  <input type="radio" name="p10" id="p10d" value="incorrecta"> <label for="p10d">D) $\emptyset$</label><br><br>
+  <button onclick="verificarRespuesta('p10', 'feedback_p10')" style="background-color: #3f51b5; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer;">Verificar</button>
+  <div id="feedback_p10" style="margin-top: 15px; font-weight: bold;"></div>
+</fieldset>
+
+<details class="info">
+<summary>Ver desarrollo paso a paso</summary>
+<p>Factorizamos el trinomio: <span class="arithmatex">\((x - 2)(x - 5) \leq 0\)</span>.
+Las raíces son 2 y 5. Como <span class="arithmatex">\(a &gt; 0\)</span> y buscamos <span class="arithmatex">\(\leq 0\)</span>, la solución está entre las raíces.
+Conjunto solución: <span class="arithmatex">\([2, 5]\)</span>.</p>
+</details>
+<hr />
+<fieldset style="border: 1px solid #e0e0e0; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+  <legend style="font-weight: bold; color: #3f51b5;">Pregunta 11</legend>
+  <p>Determine el conjunto solución de: $2x^2 + 5x - 3 > 0$</p>
+  <input type="radio" name="p11" id="p11a" value="incorrecta"> <label for="p11a">A) $(-3, 0.5)$</label><br>
+  <input type="radio" name="p11" id="p11b" value="correcta"> <label for="p11b">B) $(-\infty, -3) \cup (0.5, \infty)$</label><br>
+  <input type="radio" name="p11" id="p11c" value="incorrecta"> <label for="p11c">C) $(-\infty, -0.5) \cup (3, \infty)$</label><br>
+  <input type="radio" name="p11" id="p11d" value="incorrecta"> <label for="p11d">D) $[-3, 0.5]$</label><br><br>
+  <button onclick="verificarRespuesta('p11', 'feedback_p11')" style="background-color: #3f51b5; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer;">Verificar</button>
+  <div id="feedback_p11" style="margin-top: 15px; font-weight: bold;"></div>
+</fieldset>
+
+<details class="info">
+<summary>Ver desarrollo paso a paso</summary>
+<p>Factorizamos la expresión: <span class="arithmatex">\((2x - 1)(x + 3) &gt; 0\)</span>.
+Las raíces son <span class="arithmatex">\(-3\)</span> y <span class="arithmatex">\(0.5\)</span>. Como la parábola abre hacia arriba y buscamos donde es mayor a 0, la solución está fuera del intervalo de las raíces.
+Solución: <span class="arithmatex">\((-\infty, -3) \cup (0.5, \infty)\)</span>.</p>
+</details>
+<hr />
+<fieldset style="border: 1px solid #e0e0e0; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+  <legend style="font-weight: bold; color: #3f51b5;">Pregunta 12</legend>
+  <p>Determine los valores de $k \in \mathbb{R}$ tales que la inecuación $x^2 - kx + 4 > 0$ se cumpla $\forall x \in \mathbb{R}$.</p>
+  <input type="radio" name="p12" id="p12a" value="correcta"> <label for="p12a">A) $k \in (-4, 4)$</label><br>
+  <input type="radio" name="p12" id="p12b" value="incorrecta"> <label for="p12b">B) $k \in (-\infty, -4) \cup (4, \infty)$</label><br>
+  <input type="radio" name="p12" id="p12c" value="incorrecta"> <label for="p12c">C) $k \in [-4, 4]$</label><br>
+  <input type="radio" name="p12" id="p12d" value="incorrecta"> <label for="p12d">D) $k > 4$</label><br><br>
+  <button onclick="verificarRespuesta('p12', 'feedback_p12')" style="background-color: #3f51b5; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer;">Verificar</button>
+  <div id="feedback_p12" style="margin-top: 15px; font-weight: bold;"></div>
+</fieldset>
+
+<details class="info">
+<summary>Ver desarrollo paso a paso</summary>
+<p>Para que una cuadrática sea siempre positiva, necesitamos que <span class="arithmatex">\(a &gt; 0\)</span> (cumple, pues <span class="arithmatex">\(a=1\)</span>) y que el discriminante sea estrictamente menor que cero: <span class="arithmatex">\(\Delta &lt; 0\)</span>.
+<span class="arithmatex">\(\Delta = (-k)^2 - 4(1)(4) = k^2 - 16 &lt; 0\)</span>.
+Resolviendo <span class="arithmatex">\(k^2 &lt; 16\)</span>, obtenemos <span class="arithmatex">\(k \in (-4, 4)\)</span>.</p>
+</details>
+<hr />
+<fieldset style="border: 1px solid #e0e0e0; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+  <legend style="font-weight: bold; color: #3f51b5;">Pregunta 13</legend>
+  <p>Resuelva: $-x^2 + 4x - 4 \geq 0$</p>
+  <input type="radio" name="p13" id="p13a" value="incorrecta"> <label for="p13a">A) $(-\infty, 2]$</label><br>
+  <input type="radio" name="p13" id="p13b" value="incorrecta"> <label for="p13b">B) $\mathbb{R}$</label><br>
+  <input type="radio" name="p13" id="p13c" value="correcta"> <label for="p13c">C) $\{2\}$</label><br>
+  <input type="radio" name="p13" id="p13d" value="incorrecta"> <label for="p13d">D) $\emptyset$</label><br><br>
+  <button onclick="verificarRespuesta('p13', 'feedback_p13')" style="background-color: #3f51b5; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer;">Verificar</button>
+  <div id="feedback_p13" style="margin-top: 15px; font-weight: bold;"></div>
+</fieldset>
+
+<details class="info">
+<summary>Ver desarrollo paso a paso</summary>
+<p>Multiplicamos por -1 (se invierte el signo):
+$<span class="arithmatex">\(x^2 - 4x + 4 \leq 0\)</span>$
+Notamos que es un cuadrado de binomio: <span class="arithmatex">\((x - 2)^2 \leq 0\)</span>.
+Un cuadrado nunca es menor a 0, solo puede ser igual a 0. Esto ocurre únicamente cuando <span class="arithmatex">\(x = 2\)</span>.
+Conjunto solución: <span class="arithmatex">\(\{2\}\)</span>.</p>
+</details>
+<hr />
+<fieldset style="border: 1px solid #e0e0e0; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+  <legend style="font-weight: bold; color: #3f51b5;">Pregunta 14</legend>
+  <p>Determine el conjunto solución de: $x^2 > 9$</p>
+  <input type="radio" name="p14" id="p14a" value="incorrecta"> <label for="p14a">A) $(3, \infty)$</label><br>
+  <input type="radio" name="p14" id="p14b" value="incorrecta"> <label for="p14b">B) $(-3, 3)$</label><br>
+  <input type="radio" name="p14" id="p14c" value="correcta"> <label for="p14c">C) $(-\infty, -3) \cup (3, \infty)$</label><br>
+  <input type="radio" name="p14" id="p14d" value="incorrecta"> <label for="p14d">D) $[-3, 3]$</label><br><br>
+  <button onclick="verificarRespuesta('p14', 'feedback_p14')" style="background-color: #3f51b5; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer;">Verificar</button>
+  <div id="feedback_p14" style="margin-top: 15px; font-weight: bold;"></div>
+</fieldset>
+
+<details class="info">
+<summary>Ver desarrollo paso a paso</summary>
+<p>Sacando raíz a ambos lados: <span class="arithmatex">\(\sqrt{x^2} &gt; 3 \Rightarrow |x| &gt; 3\)</span>.
+Por propiedades del valor absoluto, esto es <span class="arithmatex">\(x &lt; -3\)</span> o <span class="arithmatex">\(x &gt; 3\)</span>.
+Conjunto solución: <span class="arithmatex">\((-\infty, -3) \cup (3, \infty)\)</span>.</p>
+</details>
+<hr />
+<h2 id="iv-inecuaciones-con-raices-5-problemas">IV. Inecuaciones con Raíces (5 problemas)</h2>
+<fieldset style="border: 1px solid #e0e0e0; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+  <legend style="font-weight: bold; color: #3f51b5;">Pregunta 15</legend>
+  <p>Determine el conjunto solución de: $\sqrt{x-3} \leq 2$</p>
+  <input type="radio" name="p15" id="p15a" value="incorrecta"> <label for="p15a">A) $(-\infty, 7]$</label><br>
+  <input type="radio" name="p15" id="p15b" value="correcta"> <label for="p15b">B) $[3, 7]$</label><br>
+  <input type="radio" name="p15" id="p15c" value="incorrecta"> <label for="p15c">C) $[0, 7]$</label><br>
+  <input type="radio" name="p15" id="p15d" value="incorrecta"> <label for="p15d">D) $(3, 7)$</label><br><br>
+  <button onclick="verificarRespuesta('p15', 'feedback_p15')" style="background-color: #3f51b5; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer;">Verificar</button>
+  <div id="feedback_p15" style="margin-top: 15px; font-weight: bold;"></div>
+</fieldset>
+
+<details class="info">
+<summary>Ver desarrollo paso a paso</summary>
+<p>Restricción de dominio: <span class="arithmatex">\(x - 3 \geq 0 \Rightarrow x \geq 3\)</span>.
+Elevando al cuadrado (ambos lados son no negativos):
+$<span class="arithmatex">\(x - 3 \leq 4 \Rightarrow x \leq 7\)</span>$
+Interceptando con el dominio: <span class="arithmatex">\(x \in [3, 7]\)</span>.</p>
+</details>
+<hr />
+<fieldset style="border: 1px solid #e0e0e0; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+  <legend style="font-weight: bold; color: #3f51b5;">Pregunta 16</legend>
+  <p>Resuelva: $\sqrt{2x+1} > x-1$</p>
+  <input type="radio" name="p16" id="p16a" value="correcta"> <label for="p16a">A) $[-0.5, 4)$</label><br>
+  <input type="radio" name="p16" id="p16b" value="incorrecta"> <label for="p16b">B) $(1, 4)$</label><br>
+  <input type="radio" name="p16" id="p16c" value="incorrecta"> <label for="p16c">C) $(0, 4)$</label><br>
+  <input type="radio" name="p16" id="p16d" value="incorrecta"> <label for="p16d">D) $[-0.5, \infty)$</label><br><br>
+  <button onclick="verificarRespuesta('p16', 'feedback_p16')" style="background-color: #3f51b5; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer;">Verificar</button>
+  <div id="feedback_p16" style="margin-top: 15px; font-weight: bold;"></div>
+</fieldset>
+
+<details class="info">
+<summary>Ver desarrollo paso a paso</summary>
+<p>Dominio: <span class="arithmatex">\(2x + 1 \geq 0 \Rightarrow x \geq -0.5\)</span>.
+Caso 1: <span class="arithmatex">\(x - 1 &lt; 0 \Rightarrow x &lt; 1\)</span>. Aquí la raíz (positiva) siempre es mayor que un negativo. Solución del caso: <span class="arithmatex">\([-0.5, 1)\)</span>.
+Caso 2: <span class="arithmatex">\(x - 1 \geq 0 \Rightarrow x \geq 1\)</span>. Elevamos al cuadrado:
+$<span class="arithmatex">\(2x + 1 &gt; x^2 - 2x + 1 \Rightarrow x^2 - 4x &lt; 0 \Rightarrow x(x-4) &lt; 0 \Rightarrow x \in (0, 4)\)</span>$
+Interceptando con <span class="arithmatex">\(x \geq 1\)</span>, nos da <span class="arithmatex">\([1, 4)\)</span>.
+Unimos ambos casos: <span class="arithmatex">\([-0.5, 1) \cup [1, 4) = [-0.5, 4)\)</span>.</p>
+</details>
+<hr />
+<fieldset style="border: 1px solid #e0e0e0; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+  <legend style="font-weight: bold; color: #3f51b5;">Pregunta 17</legend>
+  <p>Determine el conjunto solución de: $\sqrt{x+4} \leq \sqrt{2x-1}$</p>
+  <input type="radio" name="p17" id="p17a" value="incorrecta"> <label for="p17a">A) $[-4, \infty)$</label><br>
+  <input type="radio" name="p17" id="p17b" value="incorrecta"> <label for="p17b">B) $[0.5, 5]$</label><br>
+  <input type="radio" name="p17" id="p17c" value="correcta"> <label for="p17c">C) $[5, \infty)$</label><br>
+  <input type="radio" name="p17" id="p17d" value="incorrecta"> <label for="p17d">D) $[0.5, \infty)$</label><br><br>
+  <button onclick="verificarRespuesta('p17', 'feedback_p17')" style="background-color: #3f51b5; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer;">Verificar</button>
+  <div id="feedback_p17" style="margin-top: 15px; font-weight: bold;"></div>
+</fieldset>
+
+<details class="info">
+<summary>Ver desarrollo paso a paso</summary>
+<p>Restricciones de dominio: <span class="arithmatex">\(x + 4 \geq 0 \Rightarrow x \geq -4\)</span> y <span class="arithmatex">\(2x - 1 \geq 0 \Rightarrow x \geq 0.5\)</span>. El dominio total es <span class="arithmatex">\(x \geq 0.5\)</span>.
+Elevamos al cuadrado (ambos lados no negativos):
+$<span class="arithmatex">\(x + 4 \leq 2x - 1 \Rightarrow 5 \leq x \Rightarrow x \geq 5\)</span>$
+Interceptando con el dominio, el conjunto solución es <span class="arithmatex">\([5, \infty)\)</span>.</p>
+</details>
+<hr />
+<fieldset style="border: 1px solid #e0e0e0; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+  <legend style="font-weight: bold; color: #3f51b5;">Pregunta 18</legend>
+  <p>Resuelva: $\sqrt{x^2-9} \geq 4$</p>
+  <input type="radio" name="p18" id="p18a" value="incorrecta"> <label for="p18a">A) $[5, \infty)$</label><br>
+  <input type="radio" name="p18" id="p18b" value="correcta"> <label for="p18b">B) $(-\infty, -5] \cup [5, \infty)$</label><br>
+  <input type="radio" name="p18" id="p18c" value="incorrecta"> <label for="p18c">C) $[-5, 5]$</label><br>
+  <input type="radio" name="p18" id="p18d" value="incorrecta"> <label for="p18d">D) $(-\infty, -3] \cup [3, \infty)$</label><br><br>
+  <button onclick="verificarRespuesta('p18', 'feedback_p18')" style="background-color: #3f51b5; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer;">Verificar</button>
+  <div id="feedback_p18" style="margin-top: 15px; font-weight: bold;"></div>
+</fieldset>
+
+<details class="info">
+<summary>Ver desarrollo paso a paso</summary>
+<p>Dominio: <span class="arithmatex">\(x^2 - 9 \geq 0 \Rightarrow x \in (-\infty, -3] \cup [3, \infty)\)</span>.
+Elevando al cuadrado:
+$<span class="arithmatex">\(x^2 - 9 \geq 16 \Rightarrow x^2 \geq 25\)</span>$
+Resolviendo: <span class="arithmatex">\(x \leq -5\)</span> o <span class="arithmatex">\(x \geq 5\)</span>.
+Esta solución ya está contenida en el dominio. Por ende, la solución es <span class="arithmatex">\((-\infty, -5] \cup [5, \infty)\)</span>.</p>
+</details>
+<hr />
+<fieldset style="border: 1px solid #e0e0e0; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+  <legend style="font-weight: bold; color: #3f51b5;">Pregunta 19</legend>
+  <p>Determine el conjunto solución de: $\sqrt{3x-2} < -1$</p>
+  <input type="radio" name="p19" id="p19a" value="incorrecta"> <label for="p19a">A) $[2/3, 1)$</label><br>
+  <input type="radio" name="p19" id="p19b" value="incorrecta"> <label for="p19b">B) $(1, \infty)$</label><br>
+  <input type="radio" name="p19" id="p19c" value="correcta"> <label for="p19c">C) $\emptyset$ (Conjunto vacío)</label><br>
+  <input type="radio" name="p19" id="p19d" value="incorrecta"> <label for="p19d">D) $(-\infty, 1)$</label><br><br>
+  <button onclick="verificarRespuesta('p19', 'feedback_p19')" style="background-color: #3f51b5; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer;">Verificar</button>
+  <div id="feedback_p19" style="margin-top: 15px; font-weight: bold;"></div>
+</fieldset>
+
+<details class="info">
+<summary>Ver desarrollo paso a paso</summary>
+<p>Por definición en los números reales, el resultado de una raíz cuadrada con índice par siempre es mayor o igual a cero. 
+Es matemáticamente imposible que <span class="arithmatex">\(\sqrt{3x-2}\)</span> sea estrictamente menor que un número negativo. 
+Conjunto solución: <span class="arithmatex">\(\emptyset\)</span>.</p>
+</details>
+<hr />
+<h2 id="v-inecuaciones-con-valor-absoluto-5-problemas">V. Inecuaciones con Valor Absoluto (5 problemas)</h2>
+<fieldset style="border: 1px solid #e0e0e0; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+  <legend style="font-weight: bold; color: #3f51b5;">Pregunta 20</legend>
+  <p>Determine el conjunto solución de: $|x-5| \leq 3$</p>
+  <input type="radio" name="p20" id="p20a" value="correcta"> <label for="p20a">A) $[2, 8]$</label><br>
+  <input type="radio" name="p20" id="p20b" value="incorrecta"> <label for="p20b">B) $(-\infty, 2] \cup [8, \infty)$</label><br>
+  <input type="radio" name="p20" id="p20c" value="incorrecta"> <label for="p20c">C) $[-2, 8]$</label><br>
+  <input type="radio" name="p20" id="p20d" value="incorrecta"> <label for="p20d">D) $[-3, 3]$</label><br><br>
+  <button onclick="verificarRespuesta('p20', 'feedback_p20')" style="background-color: #3f51b5; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer;">Verificar</button>
+  <div id="feedback_p20" style="margin-top: 15px; font-weight: bold;"></div>
+</fieldset>
+
+<details class="info">
+<summary>Ver desarrollo paso a paso</summary>
+<p>Aplicando la propiedad de valor absoluto <span class="arithmatex">\(|A| \leq B \Rightarrow -B \leq A \leq B\)</span>:
+$<span class="arithmatex">\(-3 \leq x - 5 \leq 3\)</span>$
+Sumando 5 en todas las partes:
+$<span class="arithmatex">\(2 \leq x \leq 8\)</span>$
+Conjunto solución: <span class="arithmatex">\([2, 8]\)</span>.</p>
+</details>
+<hr />
+<fieldset style="border: 1px solid #e0e0e0; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+  <legend style="font-weight: bold; color: #3f51b5;">Pregunta 21</legend>
+  <p>Resuelva: $|2x+1| > 7$</p>
+  <input type="radio" name="p21" id="p21a" value="incorrecta"> <label for="p21a">A) $(-4, 3)$</label><br>
+  <input type="radio" name="p21" id="p21b" value="incorrecta"> <label for="p21b">B) $[-4, 3]$</label><br>
+  <input type="radio" name="p21" id="p21c" value="incorrecta"> <label for="p21c">C) $(-\infty, -3) \cup (4, \infty)$</label><br>
+  <input type="radio" name="p21" id="p21d" value="correcta"> <label for="p21d">D) $(-\infty, -4) \cup (3, \infty)$</label><br><br>
+  <button onclick="verificarRespuesta('p21', 'feedback_p21')" style="background-color: #3f51b5; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer;">Verificar</button>
+  <div id="feedback_p21" style="margin-top: 15px; font-weight: bold;"></div>
+</fieldset>
+
+<details class="info">
+<summary>Ver desarrollo paso a paso</summary>
+<p>Por propiedad <span class="arithmatex">\(|A| &gt; B \Rightarrow A &gt; B\)</span> o <span class="arithmatex">\(A &lt; -B\)</span>:
+1) <span class="arithmatex">\(2x + 1 &gt; 7 \Rightarrow 2x &gt; 6 \Rightarrow x &gt; 3\)</span>
+2) <span class="arithmatex">\(2x + 1 &lt; -7 \Rightarrow 2x &lt; -8 \Rightarrow x &lt; -4\)</span>
+Uniendo ambas partes: <span class="arithmatex">\((-\infty, -4) \cup (3, \infty)\)</span>.</p>
+</details>
+<hr />
+<fieldset style="border: 1px solid #e0e0e0; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+  <legend style="font-weight: bold; color: #3f51b5;">Pregunta 22</legend>
+  <p>Determine el conjunto solución de: $|x+2| < x$</p>
+  <input type="radio" name="p22" id="p22a" value="incorrecta"> <label for="p22a">A) $(-1, \infty)$</label><br>
+  <input type="radio" name="p22" id="p22b" value="correcta"> <label for="p22b">B) $\emptyset$ (Conjunto vacío)</label><br>
+  <input type="radio" name="p22" id="p22c" value="incorrecta"> <label for="p22c">C) $(-\infty, -1)$</label><br>
+  <input type="radio" name="p22" id="p22d" value="incorrecta"> <label for="p22d">D) $(0, \infty)$</label><br><br>
+  <button onclick="verificarRespuesta('p22', 'feedback_p22')" style="background-color: #3f51b5; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer;">Verificar</button>
+  <div id="feedback_p22" style="margin-top: 15px; font-weight: bold;"></div>
+</fieldset>
+
+<details class="info">
+<summary>Ver desarrollo paso a paso</summary>
+<p>Para que <span class="arithmatex">\(|A| &lt; B\)</span> tenga solución, es requisito indispensable que <span class="arithmatex">\(B &gt; 0\)</span>, es decir, <span class="arithmatex">\(x &gt; 0\)</span>.
+Aplicamos la propiedad: <span class="arithmatex">\(-x &lt; x + 2 &lt; x\)</span>.
+Del lado derecho: <span class="arithmatex">\(x + 2 &lt; x \Rightarrow 2 &lt; 0\)</span>. ¡Esto es una contradicción (Falso)!
+Al haber una contradicción en el sistema simultáneo, el conjunto solución es <span class="arithmatex">\(\emptyset\)</span>.</p>
+</details>
+<hr />
+<fieldset style="border: 1px solid #e0e0e0; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+  <legend style="font-weight: bold; color: #3f51b5;">Pregunta 23</legend>
+  <p>Resuelva: $|3x-2| \geq |x+1|$</p>
+  <input type="radio" name="p23" id="p23a" value="incorrecta"> <label for="p23a">A) $[0.25, 1.5]$</label><br>
+  <input type="radio" name="p23" id="p23b" value="correcta"> <label for="p23b">B) $(-\infty, 0.25] \cup [1.5, \infty)$</label><br>
+  <input type="radio" name="p23" id="p23c" value="incorrecta"> <label for="p23c">C) $(-\infty, 0.5] \cup [1, \infty)$</label><br>
+  <input type="radio" name="p23" id="p23d" value="incorrecta"> <label for="p23d">D) $[0.5, 1]$</label><br><br>
+  <button onclick="verificarRespuesta('p23', 'feedback_p23')" style="background-color: #3f51b5; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer;">Verificar</button>
+  <div id="feedback_p23" style="margin-top: 15px; font-weight: bold;"></div>
+</fieldset>
+
+<details class="info">
+<summary>Ver desarrollo paso a paso</summary>
+<p>Como ambos lados tienen valor absoluto, podemos elevar al cuadrado:
+$<span class="arithmatex">\((3x-2)^2 \geq (x+1)^2\)</span>$
+$<span class="arithmatex">\(9x^2 - 12x + 4 \geq x^2 + 2x + 1\)</span>$
+$<span class="arithmatex">\(8x^2 - 14x + 3 \geq 0\)</span>$
+Factorizamos buscando las raíces de la cuadrática: <span class="arithmatex">\(x = \dfrac{14 \pm \sqrt{196 - 96}}{16} = \dfrac{14 \pm 10}{16}\)</span>.
+Las raíces son <span class="arithmatex">\(x_1 = 1.5\)</span> (<span class="arithmatex">\(3/2\)</span>) y <span class="arithmatex">\(x_2 = 0.25\)</span> (<span class="arithmatex">\(1/4\)</span>).
+Como buscamos los valores mayores o iguales a cero, la solución está fuera de las raíces: <span class="arithmatex">\((-\infty, 0.25] \cup [1.5, \infty)\)</span>.</p>
+</details>
+<hr />
+<fieldset style="border: 1px solid #e0e0e0; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+  <legend style="font-weight: bold; color: #3f51b5;">Pregunta 24</legend>
+  <p>Determine el conjunto solución de: $|x-3| \leq 0$</p>
+  <input type="radio" name="p24" id="p24a" value="incorrecta"> <label for="p24a">A) $(-\infty, 3]$</label><br>
+  <input type="radio" name="p24" id="p24b" value="incorrecta"> <label for="p24b">B) $\emptyset$</label><br>
+  <input type="radio" name="p24" id="p24c" value="correcta"> <label for="p24c">C) $\{3\}$</label><br>
+  <input type="radio" name="p24" id="p24d" value="incorrecta"> <label for="p24d">D) $\mathbb{R}$</label><br><br>
+  <button onclick="verificarRespuesta('p24', 'feedback_p24')" style="background-color: #3f51b5; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer;">Verificar</button>
+  <div id="feedback_p24" style="margin-top: 15px; font-weight: bold;"></div>
+</fieldset>
+
+<details class="info">
+<summary>Ver desarrollo paso a paso</summary>
+<p>Un valor absoluto nunca puede ser estrictamente menor a cero. La única forma de que se cumpla <span class="arithmatex">\(\leq 0\)</span> es que sea exactamente igual a cero.
+$<span class="arithmatex">\(|x-3| = 0 \Rightarrow x - 3 = 0 \Rightarrow x = 3\)</span>$
+Conjunto solución: <span class="arithmatex">\(\{3\}\)</span>.</p>
+</details>
+<hr />
+<h2 id="vi-problemas-aplicados-6-problemas">VI. Problemas Aplicados (6 problemas)</h2>
+<fieldset style="border: 1px solid #e0e0e0; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+  <legend style="font-weight: bold; color: #3f51b5;">Pregunta 25</legend>
+  <p>Una empresa tiene costos fijos de $\$1000$ y un costo variable de $\$15$ por unidad producida. Si vende cada unidad a $\$50$, ¿cuántas unidades ($x$) debe vender como mínimo para obtener una utilidad de al menos $\$2500$?</p>
+  <input type="radio" name="p25" id="p25a" value="incorrecta"> <label for="p25a">A) $x \geq 50$</label><br>
+  <input type="radio" name="p25" id="p25b" value="correcta"> <label for="p25b">B) $x \geq 100$</label><br>
+  <input type="radio" name="p25" id="p25c" value="incorrecta"> <label for="p25c">C) $x \geq 70$</label><br>
+  <input type="radio" name="p25" id="p25d" value="incorrecta"> <label for="p25d">D) $x \geq 150$</label><br><br>
+  <button onclick="verificarRespuesta('p25', 'feedback_p25')" style="background-color: #3f51b5; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer;">Verificar</button>
+  <div id="feedback_p25" style="margin-top: 15px; font-weight: bold;"></div>
+</fieldset>
+
+<details class="info">
+<summary>Ver desarrollo paso a paso</summary>
+<p>Funciones: Ingreso <span class="arithmatex">\(I(x) = 50x\)</span>; Costo <span class="arithmatex">\(C(x) = 1000 + 15x\)</span>.
+Utilidad <span class="arithmatex">\(U(x) = I(x) - C(x) = 50x - (1000 + 15x) = 35x - 1000\)</span>.
+Condición: <span class="arithmatex">\(U(x) \geq 2500\)</span>.
+$<span class="arithmatex">\(35x - 1000 \geq 2500 \Rightarrow 35x \geq 3500 \Rightarrow x \geq 100\)</span>$
+Debe vender al menos 100 unidades.</p>
+</details>
+<hr />
+<fieldset style="border: 1px solid #e0e0e0; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+  <legend style="font-weight: bold; color: #3f51b5;">Pregunta 26</legend>
+  <p>La relación de demanda de un producto es $P = 120 - x$ dólares. Su costo de producción es $C = 400 + 20x$. ¿Para qué rango de unidades producidas ($x$) la utilidad será de al menos $\$1600$?</p>
+  <input type="radio" name="p26" id="p26a" value="correcta"> <label for="p26a">A) Entre 20 y 80 unidades inclusive</label><br>
+  <input type="radio" name="p26" id="p26b" value="incorrecta"> <label for="p26b">B) Entre 40 y 60 unidades inclusive</label><br>
+  <input type="radio" name="p26" id="p26c" value="incorrecta"> <label for="p26c">C) Más de 80 unidades</label><br>
+  <input type="radio" name="p26" id="p26d" value="incorrecta"> <label for="p26d">D) Entre 20 y 100 unidades inclusive</label><br><br>
+  <button onclick="verificarRespuesta('p26', 'feedback_p26')" style="background-color: #3f51b5; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer;">Verificar</button>
+  <div id="feedback_p26" style="margin-top: 15px; font-weight: bold;"></div>
+</fieldset>
+
+<details class="info">
+<summary>Ver desarrollo paso a paso</summary>
+<p>Ingreso <span class="arithmatex">\(I(x) = x(120 - x) = 120x - x^2\)</span>.
+Utilidad <span class="arithmatex">\(U(x) = (120x - x^2) - (400 + 20x) = -x^2 + 100x - 400\)</span>.
+Condición: <span class="arithmatex">\(-x^2 + 100x - 400 \geq 1600 \Rightarrow -x^2 + 100x - 2000 \geq 0\)</span>.
+Multiplicando por -1: <span class="arithmatex">\(x^2 - 100x + 2000 \leq 0 \Rightarrow (x - 20)(x - 80) \leq 0\)</span>.
+Conjunto solución: <span class="arithmatex">\([20, 80]\)</span>.</p>
+</details>
+<hr />
+<fieldset style="border: 1px solid #e0e0e0; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+  <legend style="font-weight: bold; color: #3f51b5;">Pregunta 27</legend>
+  <p>A un vendedor se le ofrecen dos contratos: Contrato A le paga $\$1500$ base más $3\%$ de las ventas. Contrato B le paga $\$1000$ base más $5\%$ de las ventas. ¿Cuánto debe vender ($x$) para que el Contrato B sea más conveniente que el Contrato A?</p>
+  <input type="radio" name="p27" id="p27a" value="incorrecta"> <label for="p27a">A) $x > \$20.000$</label><br>
+  <input type="radio" name="p27" id="p27b" value="incorrecta"> <label for="p27b">B) $x > \$30.000$</label><br>
+  <input type="radio" name="p27" id="p27c" value="correcta"> <label for="p27c">C) $x > \$25.000$</label><br>
+  <input type="radio" name="p27" id="p27d" value="incorrecta"> <label for="p27d">D) $x > \$15.000$</label><br><br>
+  <button onclick="verificarRespuesta('p27', 'feedback_p27')" style="background-color: #3f51b5; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer;">Verificar</button>
+  <div id="feedback_p27" style="margin-top: 15px; font-weight: bold;"></div>
+</fieldset>
+
+<details class="info">
+<summary>Ver desarrollo paso a paso</summary>
+<p>Inecuación: Sueldo B <span class="arithmatex">\(&gt;\)</span> Sueldo A.
+$<span class="arithmatex">\(1000 + 0.05x &gt; 1500 + 0.03x\)</span>$
+$<span class="arithmatex">\(0.02x &gt; 500 \Rightarrow x &gt; \dfrac{500}{0.02} \Rightarrow x &gt; 25000\)</span>$</p>
+</details>
+<hr />
+<fieldset style="border: 1px solid #e0e0e0; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+  <legend style="font-weight: bold; color: #3f51b5;">Pregunta 28</legend>
+  <p>El costo de alquilar un auto en la Compañía A es de $\$40$ fijos más $\$0.15$ por kilómetro recorrido. En la Compañía B el costo es de $\$30$ fijos más $\$0.20$ por kilómetro. ¿Para cuántos kilómetros ($x$) resulta más económico alquilar en la Compañía A?</p>
+  <input type="radio" name="p28" id="p28a" value="correcta"> <label for="p28a">A) $x > 200$</label><br>
+  <input type="radio" name="p28" id="p28b" value="incorrecta"> <label for="p28b">B) $x < 200$</label><br>
+  <input type="radio" name="p28" id="p28c" value="incorrecta"> <label for="p28c">C) $x > 150$</label><br>
+  <input type="radio" name="p28" id="p28d" value="incorrecta"> <label for="p28d">D) $x < 150$</label><br><br>
+  <button onclick="verificarRespuesta('p28', 'feedback_p28')" style="background-color: #3f51b5; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer;">Verificar</button>
+  <div id="feedback_p28" style="margin-top: 15px; font-weight: bold;"></div>
+</fieldset>
+
+<details class="info">
+<summary>Ver desarrollo paso a paso</summary>
+<p>Inecuación: Costo A <span class="arithmatex">\(&lt;\)</span> Costo B.
+$<span class="arithmatex">\(40 + 0.15x &lt; 30 + 0.20x\)</span>$
+$<span class="arithmatex">\(10 &lt; 0.05x \Rightarrow x &gt; \dfrac{10}{0.05} \Rightarrow x &gt; 200\)</span>$</p>
+</details>
+<hr />
+<fieldset style="border: 1px solid #e0e0e0; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+  <legend style="font-weight: bold; color: #3f51b5;">Pregunta 29</legend>
+  <p>Un estudiante tiene calificaciones de 75, 82 y 90 en sus tres primeros exámenes. ¿Qué calificación ($x$) debe obtener en el cuarto examen para asegurar un promedio final de al menos 85 puntos?</p>
+  <input type="radio" name="p29" id="p29a" value="incorrecta"> <label for="p29a">A) $x \geq 85$</label><br>
+  <input type="radio" name="p29" id="p29b" value="correcta"> <label for="p29b">B) $x \geq 93$</label><br>
+  <input type="radio" name="p29" id="p29c" value="incorrecta"> <label for="p29c">C) $x \geq 90$</label><br>
+  <input type="radio" name="p29" id="p29d" value="incorrecta"> <label for="p29d">D) $x \geq 95$</label><br><br>
+  <button onclick="verificarRespuesta('p29', 'feedback_p29')" style="background-color: #3f51b5; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer;">Verificar</button>
+  <div id="feedback_p29" style="margin-top: 15px; font-weight: bold;"></div>
+</fieldset>
+
+<details class="info">
+<summary>Ver desarrollo paso a paso</summary>
+<p>Promedio: <span class="arithmatex">\(\dfrac{75 + 82 + 90 + x}{4} \geq 85\)</span>.
+$<span class="arithmatex">\(\dfrac{247 + x}{4} \geq 85 \Rightarrow 247 + x \geq 340 \Rightarrow x \geq 93\)</span>$</p>
+</details>
+<hr />
+<fieldset style="border: 1px solid #e0e0e0; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+  <legend style="font-weight: bold; color: #3f51b5;">Pregunta 30</legend>
+  <p>La fórmula para convertir grados Fahrenheit ($F$) a Celsius ($C$) es $C = \dfrac{5}{9}(F - 32)$. ¿En qué rango de grados Fahrenheit se debe mantener un refrigerador si se exige que su temperatura en Celsius esté exactamente entre $20^\circ C$ y $30^\circ C$ (ambos inclusive)?</p>
+  <input type="radio" name="p30" id="p30a" value="correcta"> <label for="p30a">A) $[68^\circ F, 86^\circ F]$</label><br>
+  <input type="radio" name="p30" id="p30b" value="incorrecta"> <label for="p30b">B) $[60^\circ F, 80^\circ F]$</label><br>
+  <input type="radio" name="p30" id="p30c" value="incorrecta"> <label for="p30c">C) $[52^\circ F, 68^\circ F]$</label><br>
+  <input type="radio" name="p30" id="p30d" value="incorrecta"> <label for="p30d">D) $[72^\circ F, 90^\circ F]$</label><br><br>
+  <button onclick="verificarRespuesta('p30', 'feedback_p30')" style="background-color: #3f51b5; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer;">Verificar</button>
+  <div id="feedback_p30" style="margin-top: 15px; font-weight: bold;"></div>
+</fieldset>
+
+<details class="info">
+<summary>Ver desarrollo paso a paso</summary>
+<p>Doble inecuación: <span class="arithmatex">\(20 \leq \dfrac{5}{9}(F - 32) \leq 30\)</span>.
+Multiplicamos por <span class="arithmatex">\(\dfrac{9}{5}\)</span>:
+$<span class="arithmatex">\(20 \cdot \dfrac{9}{5} \leq F - 32 \leq 30 \cdot \dfrac{9}{5}\)</span>$
+$<span class="arithmatex">\(36 \leq F - 32 \leq 54\)</span>$
+Sumamos 32:
+$<span class="arithmatex">\(68 \leq F \leq 86\)</span>$</p>
+</details>
+<hr />
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.top"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="../../javascripts/quiz.js"></script>
+      
+    
+  </body>
+</html>
