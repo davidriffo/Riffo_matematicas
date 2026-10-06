@@ -1,0 +1,2610 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Material de apoyo, guías y problemas de precálculo.">
+      
+      
+        <meta name="author" content="José David Torres Riffo">
+      
+      
+      
+        <link rel="prev" href="../derivada_definicion/">
+      
+      
+        <link rel="next" href="../derivada_aproximacion/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Álgebra de derivación - MateRiffo</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="deep-orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#reglas-de-derivacion" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../.." title="MateRiffo" class="md-header__button md-logo" aria-label="MateRiffo" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            MateRiffo
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Álgebra de derivación
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="deep-orange"  aria-label="Cambiar a modo oscuro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo oscuro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="deep-orange"  aria-label="Cambiar a modo claro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo claro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="MateRiffo" class="md-nav__button md-logo" aria-label="MateRiffo" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    MateRiffo
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Módulo de Números naturales
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Módulo de Números naturales
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../avanzadas/sumatorias/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sumatorias
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../avanzadas/progresiones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Progresiones
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../avanzadas/inecuaciones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inecuaciones
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Módulo de Inecuaciones
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Módulo de Inecuaciones
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../inecuaciones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Racionales
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../desigualdades/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Desigualdades
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../raices/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Raíces
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../absoluto/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Valor absoluto
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../aplicaciones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aplicaciones
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Módulo de Derivadas
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Módulo de Derivadas
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../derivada_definicion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Derivada por definición
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Álgebra de derivación
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Álgebra de derivación
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#potencias-sumas-y-constantes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Potencias, sumas y constantes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Potencias, sumas y constantes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#der-01" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema 1
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#der-02" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema 2
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#der-03" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema 3
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#der-04" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema 4
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#producto-y-cociente" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Producto y cociente
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Producto y cociente">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#der-05" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema 5
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#der-06" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema 6
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#der-07" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema 7
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#der-08" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema 8
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#der-09" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema 9
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#der-10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema 10
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#regla-de-la-cadena" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Regla de la cadena
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Regla de la cadena">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#der-11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema 11
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#der-12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema 12
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#der-13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema 13
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#der-14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema 14
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#der-15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema 15
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#der-16" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema 16
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#der-17" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema 17
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#der-18" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema 18
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reglas-combinadas-y-aplicaciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reglas combinadas y aplicaciones
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Reglas combinadas y aplicaciones">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#der-19" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema 19
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#der-20" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema 20
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#der-21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema 21
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#der-22" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema 22
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#der-23" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema 23
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#der-24" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema 24
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#der-25" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema 25
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../derivada_aproximacion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Recta tangente y aproximación lineal
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../derivada_marginal/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Razón de cambio y análisis marginal
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../derivada_implicita/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Derivada implícita
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#potencias-sumas-y-constantes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Potencias, sumas y constantes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Potencias, sumas y constantes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#der-01" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema 1
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#der-02" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema 2
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#der-03" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema 3
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#der-04" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema 4
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#producto-y-cociente" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Producto y cociente
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Producto y cociente">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#der-05" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema 5
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#der-06" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema 6
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#der-07" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema 7
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#der-08" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema 8
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#der-09" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema 9
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#der-10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema 10
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#regla-de-la-cadena" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Regla de la cadena
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Regla de la cadena">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#der-11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema 11
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#der-12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema 12
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#der-13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema 13
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#der-14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema 14
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#der-15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema 15
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#der-16" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema 16
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#der-17" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema 17
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#der-18" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema 18
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reglas-combinadas-y-aplicaciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reglas combinadas y aplicaciones
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Reglas combinadas y aplicaciones">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#der-19" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema 19
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#der-20" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema 20
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#der-21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema 21
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#der-22" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema 22
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#der-23" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema 23
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#der-24" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema 24
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#der-25" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema 25
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="reglas-de-derivacion">Reglas de derivación</h1>
+<p>Colección de problemas para ejercitar las reglas de derivación: potencias, sumas, producto, cociente y regla de la cadena. El rasgo distintivo de esta sección es que <strong>la elección de la estrategia importa tanto como el cálculo</strong>: muchas derivaciones se vuelven triviales si se simplifica antes, y la regla de la cadena exige identificar con cuidado qué función está "dentro" de cuál.</p>
+<div class="admonition abstract">
+<p class="admonition-title">Reglas fundamentales</p>
+<p>Sean <span class="arithmatex">\(f\)</span> y <span class="arithmatex">\(g\)</span> funciones derivables, y <span class="arithmatex">\(a\)</span>, <span class="arithmatex">\(b\)</span> constantes.</p>
+<table>
+<thead>
+<tr>
+<th>Regla</th>
+<th>Fórmula</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Potencias</td>
+<td><span class="arithmatex">\((x^\alpha)' = \alpha\,x^{\alpha-1}\)</span></td>
+</tr>
+<tr>
+<td>Exponencial y logaritmo</td>
+<td><span class="arithmatex">\((e^x)' = e^x, \quad (a^x)' = \ln(a)\,a^x, \quad (\ln x)' = \dfrac1x, \quad (\log_a x)' = \dfrac{1}{x\ln a}\)</span></td>
+</tr>
+<tr>
+<td>Suma y constantes</td>
+<td><span class="arithmatex">\((af \pm bg)' = af' \pm bg'\)</span></td>
+</tr>
+<tr>
+<td>Producto</td>
+<td><span class="arithmatex">\((fg)' = f'g + fg'\)</span></td>
+</tr>
+<tr>
+<td>Cociente</td>
+<td><span class="arithmatex">\(\left(\dfrac fg\right)' = \dfrac{f'g - fg'}{g^2}\)</span></td>
+</tr>
+<tr>
+<td><strong>Cadena</strong></td>
+<td><span class="arithmatex">\(\big(f(g(x))\big)' = f'\big(g(x)\big)\cdot g'(x)\)</span></td>
+</tr>
+</tbody>
+</table>
+<p><strong>La cadena en una frase.</strong> Se deriva la función <em>exterior</em> evaluada en la <em>interior</em> sin tocarla, y se <strong>multiplica</strong> por la derivada de la interior. Casos que se usan constantemente:</p>
+<div class="arithmatex">\[\big(u^n\big)' = n\,u^{n-1}u', \qquad \big(e^{u}\big)' = u'\,e^{u}, \qquad \big(\ln u\big)' = \frac{u'}{u}, \qquad \big(\sqrt{u}\big)' = \frac{u'}{2\sqrt{u}}.\]</div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Las tres trampas de esta sección</p>
+<ol>
+<li><strong>Olvidar la derivada de la función interior.</strong> Es el error más frecuente con la cadena: <span class="arithmatex">\(\big((x^2+1)^4\big)'\)</span> <strong>no</strong> es <span class="arithmatex">\(4(x^2+1)^3\)</span>; falta multiplicar por <span class="arithmatex">\(2x\)</span>.</li>
+<li><strong>Derivar un producto o un cociente "término a término".</strong> Es falso que <span class="arithmatex">\((fg)' = f'g'\)</span> y que <span class="arithmatex">\(\left(\frac fg\right)' = \frac{f'}{g'}\)</span>. Además, en el cociente el <strong>orden del numerador importa</strong>: es <span class="arithmatex">\(f'g - fg'\)</span>, y no al revés.</li>
+<li><strong>No simplificar antes de derivar.</strong> Reescribir raíces como potencias, dividir término a término o usar propiedades de logaritmos evita reglas pesadas. Y al simplificar hay que <strong>recordar el dominio original</strong>: <span class="arithmatex">\(\frac{x^2-4}{x-2}\)</span> y <span class="arithmatex">\(x+2\)</span> no son la misma función en <span class="arithmatex">\(x=2\)</span>.</li>
+</ol>
+</div>
+<hr />
+<h2 id="potencias-sumas-y-constantes">Potencias, sumas y constantes</h2>
+<h3 id="der-01">Problema 1</h3>
+<p>Derive cada función, reescribiendo primero cada término como potencia de <span class="arithmatex">\(x\)</span> cuando sea necesario.</p>
+<ol>
+<li><span class="arithmatex">\(f(x) = 7x^3 - 4x^2 + x - 9\)</span></li>
+<li><span class="arithmatex">\(g(x) = \dfrac{5}{x^4}\)</span></li>
+<li><span class="arithmatex">\(h(x) = 3\sqrt[3]{x}\)</span></li>
+<li><span class="arithmatex">\(k(x) = x^2\sqrt{x}\)</span></li>
+<li><span class="arithmatex">\(m(x) = \dfrac{4}{3x^2}\)</span></li>
+</ol>
+<details class="note">
+<summary>Ver desarrollo</summary>
+<p><strong>Idea.</strong> Ninguna de estas funciones necesita producto ni cociente: basta reescribir cada una como suma de potencias y aplicar <span class="arithmatex">\((x^\alpha)' = \alpha x^{\alpha-1}\)</span>.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Reescritura</th>
+<th>Derivada</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><span class="arithmatex">\(7x^3 - 4x^2 + x - 9\)</span></td>
+<td><span class="arithmatex">\(21x^2 - 8x + 1\)</span></td>
+</tr>
+<tr>
+<td>2</td>
+<td><span class="arithmatex">\(5x^{-4}\)</span></td>
+<td><span class="arithmatex">\(-20x^{-5} = -\dfrac{20}{x^5}\)</span></td>
+</tr>
+<tr>
+<td>3</td>
+<td><span class="arithmatex">\(3x^{1/3}\)</span></td>
+<td><span class="arithmatex">\(x^{-2/3} = \dfrac{1}{\sqrt[3]{x^2}}\)</span></td>
+</tr>
+<tr>
+<td>4</td>
+<td><span class="arithmatex">\(x^2\cdot x^{1/2} = x^{5/2}\)</span></td>
+<td><span class="arithmatex">\(\dfrac52 x^{3/2} = \dfrac52\,x\sqrt{x}\)</span></td>
+</tr>
+<tr>
+<td>5</td>
+<td><span class="arithmatex">\(\dfrac43\,x^{-2}\)</span></td>
+<td><span class="arithmatex">\(-\dfrac83\,x^{-3} = -\dfrac{8}{3x^3}\)</span></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition success">
+<p class="admonition-title">Solución</p>
+<div class="arithmatex">\[f' = 21x^2 - 8x + 1, \quad g' = -\frac{20}{x^5}, \quad h' = \frac{1}{\sqrt[3]{x^2}}, \quad k' = \frac52\,x\sqrt{x}, \quad m' = -\frac{8}{3x^3}.\]</div>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">En el apartado 4</p>
+<p>Es tentador usar la regla del producto con <span class="arithmatex">\(x^2\)</span> y <span class="arithmatex">\(\sqrt{x}\)</span>. Funciona, pero al sumar exponentes (<span class="arithmatex">\(2 + \tfrac12 = \tfrac52\)</span>) la derivada sale en una sola línea.</p>
+</div>
+</details>
+<hr />
+<h3 id="der-02">Problema 2</h3>
+<p>Derive cada función <strong>sin</strong> usar las reglas del producto ni del cociente: simplifique primero. Indique también el dominio de cada derivada.</p>
+<ol>
+<li><span class="arithmatex">\(f(x) = \dfrac{x^2 - 4}{x - 2}\)</span></li>
+<li><span class="arithmatex">\(g(x) = (x+1)(x^2 - x + 1)\)</span></li>
+<li><span class="arithmatex">\(h(x) = \dfrac{x^2 + 3x}{\sqrt{x}}\)</span></li>
+<li><span class="arithmatex">\(k(x) = \left(\sqrt{x} + 1\right)^2\)</span></li>
+</ol>
+<details class="note">
+<summary>Ver desarrollo</summary>
+<p><strong>1.</strong> Para <span class="arithmatex">\(x \ne 2\)</span>, factorizamos: <span class="arithmatex">\(\dfrac{x^2-4}{x-2} = \dfrac{(x-2)(x+2)}{x-2} = x + 2\)</span>, luego <span class="arithmatex">\(f'(x) = 1\)</span>.</p>
+<p><strong>2.</strong> Expandiendo, <span class="arithmatex">\((x+1)(x^2 - x + 1) = x^3 + 1\)</span>, luego <span class="arithmatex">\(g'(x) = 3x^2\)</span>.</p>
+<p><strong>3.</strong> Dividiendo término a término:</p>
+<div class="arithmatex">\[h(x) = \frac{x^2}{x^{1/2}} + \frac{3x}{x^{1/2}} = x^{3/2} + 3x^{1/2} \implies h'(x) = \frac32 x^{1/2} + \frac32 x^{-1/2} = \frac32\left(\sqrt{x} + \frac{1}{\sqrt{x}}\right).\]</div>
+<p><strong>4.</strong> Expandiendo el cuadrado, <span class="arithmatex">\(k(x) = x + 2\sqrt{x} + 1\)</span>, y entonces</p>
+<div class="arithmatex">\[k'(x) = 1 + \frac{1}{\sqrt{x}}.\]</div>
+<div class="admonition success">
+<p class="admonition-title">Solución</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Derivada</th>
+<th style="text-align: center;">Dominio de la derivada</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><span class="arithmatex">\(f'(x) = 1\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(x \ne 2\)</span></td>
+</tr>
+<tr>
+<td>2</td>
+<td><span class="arithmatex">\(g'(x) = 3x^2\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\mathbb{R}\)</span></td>
+</tr>
+<tr>
+<td>3</td>
+<td><span class="arithmatex">\(h'(x) = \tfrac32\left(\sqrt{x} + \tfrac{1}{\sqrt{x}}\right)\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(x &gt; 0\)</span></td>
+</tr>
+<tr>
+<td>4</td>
+<td><span class="arithmatex">\(k'(x) = 1 + \tfrac{1}{\sqrt{x}}\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(x &gt; 0\)</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="admonition danger">
+<p class="admonition-title">Cuidado con el apartado 1</p>
+<p><span class="arithmatex">\(f(x) = \frac{x^2-4}{x-2}\)</span> <strong>no está definida en <span class="arithmatex">\(x=2\)</span></strong>, aunque la expresión simplificada <span class="arithmatex">\(x+2\)</span> sí lo esté. La derivada es <span class="arithmatex">\(1\)</span> en todo punto <strong>excepto</strong> <span class="arithmatex">\(x=2\)</span>: la simplificación no puede "rellenar" el hueco del dominio.</p>
+</div>
+</details>
+<hr />
+<h3 id="der-03">Problema 3</h3>
+<p>Derive cada función, usando propiedades de exponentes y logaritmos cuando convenga.</p>
+<ol>
+<li><span class="arithmatex">\(f(x) = 4e^x - 3\cdot 5^x\)</span></li>
+<li><span class="arithmatex">\(g(x) = \ln(5x)\)</span></li>
+<li><span class="arithmatex">\(h(x) = \log_2 x + e^{x-1}\)</span></li>
+<li><span class="arithmatex">\(k(x) = \ln\sqrt{x}\)</span></li>
+<li><span class="arithmatex">\(m(x) = 3^{x+1}\)</span></li>
+<li><span class="arithmatex">\(n(x) = \pi^e + x^\pi\)</span></li>
+</ol>
+<details class="note">
+<summary>Ver desarrollo</summary>
+<p><strong>Estrategia.</strong> Salvo en el apartado 1, conviene transformar la expresión antes de derivar, de modo que no aparezca ninguna composición.</p>
+<ol>
+<li>Aplicamos <span class="arithmatex">\((a^x)' = \ln(a)\,a^x\)</span> a cada término: <span class="arithmatex">\(f'(x) = 4e^x - 3\ln 5\cdot 5^x\)</span>.</li>
+<li>Como <span class="arithmatex">\(\ln(5x) = \ln 5 + \ln x\)</span> y <span class="arithmatex">\(\ln 5\)</span> es una constante, <span class="arithmatex">\(g'(x) = \dfrac1x\)</span>.</li>
+<li>Escribimos <span class="arithmatex">\(e^{x-1} = e^{-1}e^x\)</span>, luego <span class="arithmatex">\(h'(x) = \dfrac{1}{x\ln 2} + e^{x-1}\)</span>.</li>
+<li>Como <span class="arithmatex">\(\ln\sqrt{x} = \tfrac12\ln x\)</span>, se tiene <span class="arithmatex">\(k'(x) = \dfrac{1}{2x}\)</span>.</li>
+<li>Como <span class="arithmatex">\(3^{x+1} = 3\cdot 3^x\)</span>, se tiene <span class="arithmatex">\(m'(x) = 3\ln 3\cdot 3^x = \ln 3\cdot 3^{x+1}\)</span>.</li>
+<li><span class="arithmatex">\(\pi^e\)</span> es una <strong>constante</strong> (su derivada es <span class="arithmatex">\(0\)</span>) y <span class="arithmatex">\(x^\pi\)</span> es una <strong>potencia</strong>: <span class="arithmatex">\(n'(x) = \pi\,x^{\pi - 1}\)</span>.</li>
+</ol>
+<div class="admonition success">
+<p class="admonition-title">Solución</p>
+<div class="arithmatex">\[f' = 4e^x - 3\ln 5\cdot 5^x, \quad g' = \frac1x, \quad h' = \frac{1}{x\ln 2} + e^{x-1}, \quad k' = \frac{1}{2x}, \quad m' = \ln 3\cdot 3^{x+1}, \quad n' = \pi\,x^{\pi-1}.\]</div>
+</div>
+<div class="admonition danger">
+<p class="admonition-title">Potencia o exponencial</p>
+<p>Hay que distinguir <span class="arithmatex">\(x^\pi\)</span> (base variable, exponente constante: <strong>regla de potencias</strong>) de <span class="arithmatex">\(\pi^x\)</span> (base constante, exponente variable: <strong>regla exponencial</strong>, con factor <span class="arithmatex">\(\ln\pi\)</span>). Confundirlas es un error clásico.</p>
+</div>
+</details>
+<hr />
+<h3 id="der-04">Problema 4</h3>
+<p>Sea <span class="arithmatex">\(f(x) = x^3 - 6x^2 + 9x + 1\)</span>.</p>
+<ol>
+<li>Calcule <span class="arithmatex">\(f'(x)\)</span> y factorícela.</li>
+<li>Encuentre los puntos de la gráfica donde la recta tangente es horizontal.</li>
+<li>Escriba la ecuación de la recta tangente en <span class="arithmatex">\(x = 0\)</span>.</li>
+</ol>
+<details class="note">
+<summary>Ver desarrollo</summary>
+<p><strong>Parte 1.</strong></p>
+<div class="arithmatex">\[f'(x) = 3x^2 - 12x + 9 = 3\,(x^2 - 4x + 3) = 3(x-1)(x-3).\]</div>
+<p><strong>Parte 2.</strong> La tangente es horizontal donde <span class="arithmatex">\(f'(x) = 0\)</span>, es decir en <span class="arithmatex">\(x = 1\)</span> y <span class="arithmatex">\(x = 3\)</span>:</p>
+<div class="arithmatex">\[f(1) = 1 - 6 + 9 + 1 = 5, \qquad f(3) = 27 - 54 + 27 + 1 = 1.\]</div>
+<p><strong>Parte 3.</strong> En <span class="arithmatex">\(x = 0\)</span>: <span class="arithmatex">\(f(0) = 1\)</span> y <span class="arithmatex">\(f'(0) = 9\)</span>, luego</p>
+<div class="arithmatex">\[y = 1 + 9x.\]</div>
+<div class="admonition success">
+<p class="admonition-title">Solución</p>
+<div class="arithmatex">\[f'(x) = 3(x-1)(x-3), \qquad \text{tangentes horizontales en } (1,5) \text{ y } (3,1), \qquad y = 9x + 1.\]</div>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Qué indican esos puntos</p>
+<p><span class="arithmatex">\(f'\)</span> es positiva en <span class="arithmatex">\(]-\infty,1[\)</span>, negativa en <span class="arithmatex">\(]1,3[\)</span> y positiva en <span class="arithmatex">\(]3,+\infty[\)</span>. Entonces <span class="arithmatex">\((1,5)\)</span> es un máximo local y <span class="arithmatex">\((3,1)\)</span> un mínimo local: la gráfica sube, baja y vuelve a subir.</p>
+</div>
+</details>
+<hr />
+<h2 id="producto-y-cociente">Producto y cociente</h2>
+<h3 id="der-05">Problema 5</h3>
+<p>Derive con la regla del producto y simplifique:</p>
+<ol>
+<li><span class="arithmatex">\(f(x) = x^3\ln x\)</span></li>
+<li><span class="arithmatex">\(g(x) = (x^2 - x)\,e^x\)</span></li>
+<li><span class="arithmatex">\(h(x) = x^3\,2^x\)</span></li>
+</ol>
+<details class="note">
+<summary>Ver desarrollo</summary>
+<p><strong>Receta.</strong> Se identifican los dos factores <span class="arithmatex">\(u\)</span> y <span class="arithmatex">\(v\)</span>, se calculan <span class="arithmatex">\(u'\)</span> y <span class="arithmatex">\(v'\)</span> por separado, y se arma <span class="arithmatex">\(u'v + uv'\)</span>.</p>
+<p><strong>1.</strong> Con <span class="arithmatex">\(u = x^3\)</span> y <span class="arithmatex">\(v = \ln x\)</span>:</p>
+<div class="arithmatex">\[f'(x) = 3x^2\ln x + x^3\cdot\frac1x = 3x^2\ln x + x^2 = x^2\,(3\ln x + 1).\]</div>
+<p><strong>2.</strong> Con <span class="arithmatex">\(u = x^2 - x\)</span> y <span class="arithmatex">\(v = e^x\)</span>:</p>
+<div class="arithmatex">\[g'(x) = (2x - 1)e^x + (x^2 - x)e^x = (x^2 + x - 1)\,e^x.\]</div>
+<p><strong>3.</strong> Con <span class="arithmatex">\(u = x^3\)</span> y <span class="arithmatex">\(v = 2^x\)</span>:</p>
+<div class="arithmatex">\[h'(x) = 3x^2\,2^x + x^3\ln 2\cdot 2^x = x^2\,2^x\,(x\ln 2 + 3).\]</div>
+<div class="admonition success">
+<p class="admonition-title">Solución</p>
+<div class="arithmatex">\[f' = x^2(3\ln x + 1), \qquad g' = (x^2 + x - 1)\,e^x, \qquad h' = x^2\,2^x\,(x\ln 2 + 3).\]</div>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Factorizar siempre</p>
+<p>Dejar el resultado factorizado (<span class="arithmatex">\(e^x\)</span> afuera, o <span class="arithmatex">\(x^2\,2^x\)</span> afuera) no es un adorno: facilita ver dónde se anula la derivada, que es lo primero que se pregunta después.</p>
+</div>
+</details>
+<hr />
+<h3 id="der-06">Problema 6</h3>
+<p>Derive con la regla del cociente y simplifique:</p>
+<ol>
+<li><span class="arithmatex">\(f(x) = \dfrac{x^2 - 1}{x^2 + 1}\)</span></li>
+<li><span class="arithmatex">\(g(x) = \dfrac{x}{e^x}\)</span></li>
+<li><span class="arithmatex">\(h(x) = \dfrac{\ln x}{x^2}\)</span></li>
+<li><span class="arithmatex">\(k(x) = \dfrac{x^2 + 1}{x}\)</span>. Luego verifique el resultado dividiendo primero término a término.</li>
+</ol>
+<details class="note">
+<summary>Ver desarrollo</summary>
+<p><strong>Receta.</strong> <span class="arithmatex">\(\left(\dfrac{u}{v}\right)' = \dfrac{u'v - uv'}{v^2}\)</span>. El numerador conserva el orden: primero <strong>derivada del de arriba</strong>.</p>
+<p><strong>1.</strong></p>
+<div class="arithmatex">\[f'(x) = \frac{2x(x^2+1) - (x^2-1)(2x)}{(x^2+1)^2} = \frac{2x\,[(x^2+1) - (x^2-1)]}{(x^2+1)^2} = \frac{4x}{(x^2+1)^2}.\]</div>
+<p><strong>2.</strong></p>
+<div class="arithmatex">\[g'(x) = \frac{1\cdot e^x - x\,e^x}{(e^x)^2} = \frac{(1 - x)\,e^x}{e^{2x}} = \frac{1 - x}{e^x}.\]</div>
+<p><strong>3.</strong></p>
+<div class="arithmatex">\[h'(x) = \frac{\frac1x\cdot x^2 - \ln x\cdot 2x}{x^4} = \frac{x - 2x\ln x}{x^4} = \frac{1 - 2\ln x}{x^3}.\]</div>
+<p><strong>4.</strong> Por cociente:</p>
+<div class="arithmatex">\[k'(x) = \frac{2x\cdot x - (x^2+1)\cdot 1}{x^2} = \frac{x^2 - 1}{x^2}.\]</div>
+<p>Por simplificación, <span class="arithmatex">\(k(x) = x + \dfrac1x \implies k'(x) = 1 - \dfrac{1}{x^2} = \dfrac{x^2-1}{x^2}\)</span>. Coinciden. <span class="arithmatex">\(\checkmark\)</span></p>
+<div class="admonition success">
+<p class="admonition-title">Solución</p>
+<div class="arithmatex">\[f' = \frac{4x}{(x^2+1)^2}, \qquad g' = \frac{1-x}{e^x}, \qquad h' = \frac{1 - 2\ln x}{x^3}, \qquad k' = \frac{x^2-1}{x^2}.\]</div>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Antes de usar el cociente</p>
+<p>En el apartado 4 la regla del cociente era innecesaria: el denominador es un monomio y basta dividir. Pregúntese siempre si el denominador "divide" a cada término del numerador.</p>
+</div>
+</details>
+<hr />
+<h3 id="der-07">Problema 7</h3>
+<p>Sea <span class="arithmatex">\(f(x) = \dfrac{x}{x^2 + 1}\)</span>.</p>
+<ol>
+<li>Calcule <span class="arithmatex">\(f'(x)\)</span> y factorice el numerador.</li>
+<li>Encuentre los puntos de la gráfica con tangente horizontal.</li>
+<li>Estudie el signo de <span class="arithmatex">\(f'\)</span> y describa cómo se comporta <span class="arithmatex">\(f\)</span>.</li>
+</ol>
+<details class="note">
+<summary>Ver desarrollo</summary>
+<p><strong>Parte 1.</strong> Por la regla del cociente:</p>
+<div class="arithmatex">\[f'(x) = \frac{1\cdot(x^2+1) - x\cdot 2x}{(x^2+1)^2} = \frac{1 - x^2}{(x^2+1)^2} = \frac{(1-x)(1+x)}{(x^2+1)^2}.\]</div>
+<p><strong>Parte 2.</strong> El denominador nunca se anula, así que <span class="arithmatex">\(f'(x) = 0\)</span> solo si <span class="arithmatex">\(1 - x^2 = 0\)</span>, es decir <span class="arithmatex">\(x = \pm 1\)</span>:</p>
+<div class="arithmatex">\[f(1) = \frac12, \qquad f(-1) = -\frac12.\]</div>
+<p><strong>Parte 3.</strong> El denominador es siempre positivo, de modo que el signo lo decide <span class="arithmatex">\(1 - x^2\)</span>:</p>
+<table>
+<thead>
+<tr>
+<th>Intervalo</th>
+<th style="text-align: center;"><span class="arithmatex">\(]-\infty,-1[\)</span></th>
+<th style="text-align: center;"><span class="arithmatex">\(]-1,1[\)</span></th>
+<th style="text-align: center;"><span class="arithmatex">\(]1,+\infty[\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="arithmatex">\(f'(x)\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(-\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\boldsymbol{+}\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(-\)</span></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(f\)</span></td>
+<td style="text-align: center;">decrece</td>
+<td style="text-align: center;">crece</td>
+<td style="text-align: center;">decrece</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition success">
+<p class="admonition-title">Solución</p>
+<div class="arithmatex">\[f'(x) = \frac{1-x^2}{(x^2+1)^2}, \qquad \text{tangentes horizontales en } \left(1,\tfrac12\right) \text{ y } \left(-1,-\tfrac12\right).\]</div>
+<p><span class="arithmatex">\(f\)</span> tiene un mínimo local en <span class="arithmatex">\(x=-1\)</span> y un máximo local en <span class="arithmatex">\(x=1\)</span>.</p>
+</div>
+</details>
+<hr />
+<h3 id="der-08">Problema 8</h3>
+<p>Determine las constantes <span class="arithmatex">\(a\)</span> y <span class="arithmatex">\(b\)</span> para que la gráfica de</p>
+<div class="arithmatex">\[f(x) = \frac{ax + b}{x + 1}\]</div>
+<p>pase por el punto <span class="arithmatex">\((0, 2)\)</span> y tenga allí recta tangente de pendiente <span class="arithmatex">\(-1\)</span>.</p>
+<details class="note">
+<summary>Ver desarrollo</summary>
+<p><strong>Derivada.</strong> Con la regla del cociente:</p>
+<div class="arithmatex">\[f'(x) = \frac{a(x+1) - (ax+b)}{(x+1)^2} = \frac{a - b}{(x+1)^2}.\]</div>
+<p><strong>Dos condiciones, dos incógnitas.</strong></p>
+<ol>
+<li>Pasa por <span class="arithmatex">\((0,2)\)</span>: <span class="arithmatex">\(f(0) = b = 2\)</span>.</li>
+<li>Pendiente <span class="arithmatex">\(-1\)</span> en <span class="arithmatex">\(x=0\)</span>: <span class="arithmatex">\(f'(0) = a - b = -1\)</span>.</li>
+</ol>
+<p>De la primera, <span class="arithmatex">\(b = 2\)</span>, y de la segunda, <span class="arithmatex">\(a = b - 1 = 1\)</span>.</p>
+<div class="admonition success">
+<p class="admonition-title">Solución</p>
+<div class="arithmatex">\[a = 1, \qquad b = 2, \qquad f(x) = \frac{x+2}{x+1}.\]</div>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Verificación</p>
+<p><span class="arithmatex">\(f(0) = 2\)</span>. <span class="arithmatex">\(\checkmark\)</span> Con <span class="arithmatex">\(f'(x) = \dfrac{-1}{(x+1)^2}\)</span> se tiene <span class="arithmatex">\(f'(0) = -1\)</span>. <span class="arithmatex">\(\checkmark\)</span>
+Note que el numerador de <span class="arithmatex">\(f'\)</span> es <span class="arithmatex">\(a-b\)</span>, una constante: si fuera <span class="arithmatex">\(a = b\)</span> la función sería constante y <span class="arithmatex">\(f' \equiv 0\)</span>.</p>
+</div>
+</details>
+<hr />
+<h3 id="der-09">Problema 9</h3>
+<p><strong>FÁRMACO.</strong> La concentración en sangre (en mg/L) de un medicamento, <span class="arithmatex">\(t\)</span> horas después de ser administrado, es</p>
+<div class="arithmatex">\[C(t) = \frac{5t}{t^2 + 4}, \qquad t \ge 0.\]</div>
+<ol>
+<li>Calcule <span class="arithmatex">\(C'(t)\)</span> y simplifique.</li>
+<li>¿En qué instante la concentración deja de crecer? ¿Cuál es entonces la concentración?</li>
+<li>Determine el signo de <span class="arithmatex">\(C'(t)\)</span> antes y después de ese instante e interprételo.</li>
+</ol>
+<details class="note">
+<summary>Ver desarrollo</summary>
+<p><strong>Parte 1.</strong> Regla del cociente:</p>
+<div class="arithmatex">\[C'(t) = \frac{5(t^2+4) - 5t\cdot 2t}{(t^2+4)^2} = \frac{5\,(4 - t^2)}{(t^2+4)^2}.\]</div>
+<p><strong>Parte 2.</strong> El denominador es positivo, así que <span class="arithmatex">\(C'(t) = 0\)</span> exige <span class="arithmatex">\(4 - t^2 = 0\)</span>. Con <span class="arithmatex">\(t \ge 0\)</span> se obtiene <span class="arithmatex">\(t = 2\)</span>:</p>
+<div class="arithmatex">\[C(2) = \frac{10}{8} = \frac54 = 1{,}25 \text{ mg/L}.\]</div>
+<p><strong>Parte 3.</strong></p>
+<table>
+<thead>
+<tr>
+<th>Intervalo</th>
+<th style="text-align: center;"><span class="arithmatex">\([0, 2[\)</span></th>
+<th style="text-align: center;"><span class="arithmatex">\(]2, +\infty[\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="arithmatex">\(4 - t^2\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(+\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(-\)</span></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(C'(t)\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\boldsymbol{+}\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(-\)</span></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition success">
+<p class="admonition-title">Solución</p>
+<div class="arithmatex">\[C'(t) = \frac{5(4-t^2)}{(t^2+4)^2}.\]</div>
+<p>La concentración alcanza su valor máximo, <span class="arithmatex">\(1{,}25\)</span> mg/L, a las <strong>2 horas</strong>: antes de ese instante aumenta (el fármaco se absorbe) y después disminuye (se elimina).</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Comportamiento a largo plazo</p>
+<p>Para <span class="arithmatex">\(t\)</span> grande, <span class="arithmatex">\(C(t) \approx \tfrac{5}{t} \to 0\)</span>, de modo que el fármaco termina por desaparecer. Un máximo seguido de decaimiento es la forma típica de una curva de concentración.</p>
+</div>
+</details>
+<hr />
+<h3 id="der-10">Problema 10</h3>
+<p>Sea <span class="arithmatex">\(f(x) = \dfrac{x^2}{x - 1}\)</span>.</p>
+<ol>
+<li>Derive <span class="arithmatex">\(f\)</span> con la regla del cociente.</li>
+<li>Derive <span class="arithmatex">\(f\)</span> por segunda vez escribiéndola primero como <span class="arithmatex">\(x + 1 + \dfrac{1}{x-1}\)</span>, y verifique que obtiene lo mismo.</li>
+<li>Encuentre los puntos con tangente horizontal y la recta tangente en <span class="arithmatex">\(x = 3\)</span>.</li>
+</ol>
+<details class="note">
+<summary>Ver desarrollo</summary>
+<p><strong>Parte 1.</strong> Por el cociente:</p>
+<div class="arithmatex">\[f'(x) = \frac{2x(x-1) - x^2\cdot 1}{(x-1)^2} = \frac{x^2 - 2x}{(x-1)^2} = \frac{x(x-2)}{(x-1)^2}.\]</div>
+<p><strong>Parte 2.</strong> Para ver la reescritura, dividimos: <span class="arithmatex">\(\dfrac{x^2}{x-1} = x + 1 + \dfrac{1}{x-1}\)</span>. Comprobación: <span class="arithmatex">\((x+1)(x-1) + 1 = x^2\)</span>. <span class="arithmatex">\(\checkmark\)</span> Derivando,</p>
+<div class="arithmatex">\[f'(x) = 1 - \frac{1}{(x-1)^2} = \frac{(x-1)^2 - 1}{(x-1)^2} = \frac{x^2 - 2x}{(x-1)^2}.\]</div>
+<p>Coincide con la Parte 1. <span class="arithmatex">\(\checkmark\)</span></p>
+<p><strong>Parte 3.</strong> <span class="arithmatex">\(f'(x) = 0\)</span> si <span class="arithmatex">\(x = 0\)</span> o <span class="arithmatex">\(x = 2\)</span>:</p>
+<div class="arithmatex">\[f(0) = 0, \qquad f(2) = 4.\]</div>
+<p>En <span class="arithmatex">\(x = 3\)</span>: <span class="arithmatex">\(f(3) = \dfrac92\)</span> y <span class="arithmatex">\(f'(3) = \dfrac{3\cdot 1}{4} = \dfrac34\)</span>, luego</p>
+<div class="arithmatex">\[y = \frac92 + \frac34(x - 3) = \frac34\,x + \frac94.\]</div>
+<div class="admonition success">
+<p class="admonition-title">Solución</p>
+<div class="arithmatex">\[f'(x) = \frac{x(x-2)}{(x-1)^2}, \quad \text{tangentes horizontales en } (0,0) \text{ y } (2,4), \quad y = \frac{3x+9}{4} \text{ en } x=3.\]</div>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Dos caminos</p>
+<p>La reescritura convierte un cociente en una suma y usa solo potencias. Cuando el grado del numerador es mayor o igual que el del denominador, dividir primero suele ser el camino más corto.</p>
+</div>
+</details>
+<hr />
+<h2 id="regla-de-la-cadena">Regla de la cadena</h2>
+<p>Los ocho problemas siguientes se resuelven <strong>solo</strong> con la regla de la cadena (con las reglas básicas de potencias, exponencial y logaritmo como piezas): ni el producto ni el cociente son necesarios.</p>
+<h3 id="der-11">Problema 11</h3>
+<p>Derive cada función identificando primero la función exterior y la interior:</p>
+<ol>
+<li><span class="arithmatex">\(f(x) = (3x - 2)^5\)</span></li>
+<li><span class="arithmatex">\(g(x) = \sqrt{x^2 + 1}\)</span></li>
+<li><span class="arithmatex">\(h(x) = \dfrac{1}{(2x+1)^3}\)</span></li>
+<li><span class="arithmatex">\(k(x) = e^{-x^2}\)</span></li>
+<li><span class="arithmatex">\(m(x) = \ln(3x^2 + 1)\)</span></li>
+</ol>
+<details class="note">
+<summary>Ver desarrollo</summary>
+<p><strong>Método.</strong> En cada caso se escribe <span class="arithmatex">\(u\)</span> como la función interior, se deriva la exterior respecto de <span class="arithmatex">\(u\)</span> y se multiplica por <span class="arithmatex">\(u'\)</span>.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Exterior</th>
+<th>Interior <span class="arithmatex">\(u\)</span></th>
+<th>Derivada</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><span class="arithmatex">\(u^5\)</span></td>
+<td><span class="arithmatex">\(3x-2\)</span></td>
+<td><span class="arithmatex">\(5(3x-2)^4\cdot 3 = 15(3x-2)^4\)</span></td>
+</tr>
+<tr>
+<td>2</td>
+<td><span class="arithmatex">\(\sqrt{u}\)</span></td>
+<td><span class="arithmatex">\(x^2+1\)</span></td>
+<td><span class="arithmatex">\(\dfrac{2x}{2\sqrt{x^2+1}} = \dfrac{x}{\sqrt{x^2+1}}\)</span></td>
+</tr>
+<tr>
+<td>3</td>
+<td><span class="arithmatex">\(u^{-3}\)</span></td>
+<td><span class="arithmatex">\(2x+1\)</span></td>
+<td><span class="arithmatex">\(-3(2x+1)^{-4}\cdot 2 = -\dfrac{6}{(2x+1)^4}\)</span></td>
+</tr>
+<tr>
+<td>4</td>
+<td><span class="arithmatex">\(e^{u}\)</span></td>
+<td><span class="arithmatex">\(-x^2\)</span></td>
+<td><span class="arithmatex">\(e^{-x^2}\cdot(-2x) = -2x\,e^{-x^2}\)</span></td>
+</tr>
+<tr>
+<td>5</td>
+<td><span class="arithmatex">\(\ln u\)</span></td>
+<td><span class="arithmatex">\(3x^2+1\)</span></td>
+<td><span class="arithmatex">\(\dfrac{6x}{3x^2+1}\)</span></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition success">
+<p class="admonition-title">Solución</p>
+<div class="arithmatex">\[f' = 15(3x-2)^4, \quad g' = \frac{x}{\sqrt{x^2+1}}, \quad h' = -\frac{6}{(2x+1)^4}, \quad k' = -2x\,e^{-x^2}, \quad m' = \frac{6x}{3x^2+1}.\]</div>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Un truco para no equivocarse</p>
+<p>Antes de derivar, pregúntese: <em>"si tuviera que calcular esta función con una calculadora, ¿qué operación hago al final?"</em>. Esa es la función exterior. Lo que ya estaba calculado dentro es la interior.</p>
+</div>
+</details>
+<hr />
+<h3 id="der-12">Problema 12</h3>
+<p>Derive estas funciones, que combinan <strong>tres o más niveles</strong> de composición. Indique el dominio de cada derivada.</p>
+<ol>
+<li><span class="arithmatex">\(f(x) = \sqrt{1 + \sqrt{x}}\)</span></li>
+<li><span class="arithmatex">\(g(x) = \ln(\ln x)\)</span></li>
+<li><span class="arithmatex">\(h(x) = e^{\sqrt{x}}\)</span></li>
+<li><span class="arithmatex">\(k(x) = \big(1 + (x^2+1)^3\big)^4\)</span></li>
+</ol>
+<details class="note">
+<summary>Ver desarrollo</summary>
+<p><strong>Método.</strong> Se derivan las capas de <strong>afuera hacia adentro</strong>, multiplicando las derivadas que se van obteniendo.</p>
+<p><strong>1.</strong> Capas: <span class="arithmatex">\(\sqrt{\;\cdot\;}\)</span> de <span class="arithmatex">\(1 + \sqrt{x}\)</span>, y esta última contiene <span class="arithmatex">\(\sqrt{x}\)</span>:</p>
+<div class="arithmatex">\[f'(x) = \frac{1}{2\sqrt{1+\sqrt{x}}}\cdot\frac{1}{2\sqrt{x}} = \frac{1}{4\sqrt{x}\,\sqrt{1+\sqrt{x}}}, \qquad x &gt; 0.\]</div>
+<p><strong>2.</strong> Capas: <span class="arithmatex">\(\ln(\;\cdot\;)\)</span> de <span class="arithmatex">\(\ln x\)</span>:</p>
+<div class="arithmatex">\[g'(x) = \frac{1}{\ln x}\cdot\frac1x = \frac{1}{x\ln x}, \qquad x &gt; 1.\]</div>
+<p><strong>3.</strong> Capas: <span class="arithmatex">\(e^{(\;\cdot\;)}\)</span> de <span class="arithmatex">\(\sqrt{x}\)</span>:</p>
+<div class="arithmatex">\[h'(x) = e^{\sqrt{x}}\cdot\frac{1}{2\sqrt{x}} = \frac{e^{\sqrt{x}}}{2\sqrt{x}}, \qquad x &gt; 0.\]</div>
+<p><strong>4.</strong> Capas: <span class="arithmatex">\((\;\cdot\;)^4\)</span> de <span class="arithmatex">\(1 + (x^2+1)^3\)</span>, que contiene <span class="arithmatex">\((\;\cdot\;)^3\)</span> de <span class="arithmatex">\(x^2 + 1\)</span>:</p>
+<div class="arithmatex">\[k'(x) = 4\big(1 + (x^2+1)^3\big)^3\cdot 3(x^2+1)^2\cdot 2x = 24x\,(x^2+1)^2\,\big(1 + (x^2+1)^3\big)^3.\]</div>
+<div class="admonition success">
+<p class="admonition-title">Solución</p>
+<div class="arithmatex">\[f' = \frac{1}{4\sqrt{x}\sqrt{1+\sqrt{x}}}, \quad g' = \frac{1}{x\ln x}, \quad h' = \frac{e^{\sqrt{x}}}{2\sqrt{x}}, \quad k' = 24x\,(x^2+1)^2\big(1+(x^2+1)^3\big)^3.\]</div>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">El dominio de <span class="arithmatex">\(g'\)</span></p>
+<p><span class="arithmatex">\(\ln(\ln x)\)</span> solo existe si <span class="arithmatex">\(\ln x &gt; 0\)</span>, es decir <span class="arithmatex">\(x &gt; 1\)</span>. En <span class="arithmatex">\(x=1\)</span> el denominador <span class="arithmatex">\(x\ln x\)</span> se anula, y a la izquierda de <span class="arithmatex">\(1\)</span> el <span class="arithmatex">\(\ln x\)</span> interior sería negativo: el dominio se obtiene siguiendo las capas desde adentro.</p>
+</div>
+</details>
+<hr />
+<h3 id="der-13">Problema 13</h3>
+<p>Derive, recordando que <span class="arithmatex">\((a^u)' = \ln(a)\,u'\,a^u\)</span> y <span class="arithmatex">\((\log_a u)' = \dfrac{u'}{u\ln a}\)</span>:</p>
+<ol>
+<li><span class="arithmatex">\(f(x) = 2^{x^2 - x}\)</span></li>
+<li><span class="arithmatex">\(g(x) = \log_3(x^2 + 4)\)</span></li>
+<li><span class="arithmatex">\(h(x) = \ln(e^{2x} + 1)\)</span></li>
+<li><span class="arithmatex">\(k(x) = 5^{\sqrt{x}}\)</span></li>
+</ol>
+<details class="note">
+<summary>Ver desarrollo</summary>
+<p><strong>1.</strong> Interior <span class="arithmatex">\(u = x^2 - x\)</span>, con <span class="arithmatex">\(u' = 2x - 1\)</span>:</p>
+<div class="arithmatex">\[f'(x) = \ln 2\cdot(2x-1)\cdot 2^{x^2-x}.\]</div>
+<p><strong>2.</strong> Interior <span class="arithmatex">\(u = x^2 + 4\)</span>, con <span class="arithmatex">\(u' = 2x\)</span>:</p>
+<div class="arithmatex">\[g'(x) = \frac{2x}{(x^2+4)\ln 3}.\]</div>
+<p><strong>3.</strong> Interior <span class="arithmatex">\(u = e^{2x} + 1\)</span>, y a su vez <span class="arithmatex">\((e^{2x})' = 2e^{2x}\)</span>:</p>
+<div class="arithmatex">\[h'(x) = \frac{2e^{2x}}{e^{2x} + 1}.\]</div>
+<p><strong>4.</strong> Interior <span class="arithmatex">\(u = \sqrt{x}\)</span>, con <span class="arithmatex">\(u' = \dfrac{1}{2\sqrt{x}}\)</span>:</p>
+<div class="arithmatex">\[k'(x) = \ln 5\cdot\frac{1}{2\sqrt{x}}\cdot 5^{\sqrt{x}} = \frac{\ln 5\cdot 5^{\sqrt{x}}}{2\sqrt{x}}, \qquad x &gt; 0.\]</div>
+<div class="admonition success">
+<p class="admonition-title">Solución</p>
+<div class="arithmatex">\[f' = \ln 2\,(2x-1)\,2^{x^2-x}, \quad g' = \frac{2x}{(x^2+4)\ln 3}, \quad h' = \frac{2e^{2x}}{e^{2x}+1}, \quad k' = \frac{\ln 5\cdot 5^{\sqrt{x}}}{2\sqrt{x}}.\]</div>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Consistencia con <span class="arithmatex">\(e\)</span></p>
+<p>Cuando la base es <span class="arithmatex">\(e\)</span>, <span class="arithmatex">\(\ln e = 1\)</span> y el factor logarítmico desaparece: la fórmula general se reduce a <span class="arithmatex">\((e^u)' = u'\,e^u\)</span>. Eso es lo que ocurre en el apartado 3.</p>
+</div>
+</details>
+<hr />
+<h3 id="der-14">Problema 14</h3>
+<p>Se conocen los siguientes valores de dos funciones derivables <span class="arithmatex">\(f\)</span> y <span class="arithmatex">\(g\)</span>:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><span class="arithmatex">\(x\)</span></th>
+<th style="text-align: center;"><span class="arithmatex">\(f(x)\)</span></th>
+<th style="text-align: center;"><span class="arithmatex">\(f'(x)\)</span></th>
+<th style="text-align: center;"><span class="arithmatex">\(g(x)\)</span></th>
+<th style="text-align: center;"><span class="arithmatex">\(g'(x)\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(1\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(2\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(-3\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(2\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(6\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(2\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(4\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(5\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(1\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(-2\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>Calcule, <strong>sin conocer las fórmulas</strong> de <span class="arithmatex">\(f\)</span> y <span class="arithmatex">\(g\)</span>:</p>
+<ol>
+<li><span class="arithmatex">\((f\circ g)'(1)\)</span></li>
+<li><span class="arithmatex">\((g\circ f)'(1)\)</span></li>
+<li><span class="arithmatex">\((f\circ f)'(1)\)</span></li>
+<li><span class="arithmatex">\(\big(f(x)^3\big)'\big|_{x=1}\)</span></li>
+<li><span class="arithmatex">\(\left(\sqrt{f(x) + g(x)}\right)'\Big|_{x=1}\)</span></li>
+</ol>
+<details class="note">
+<summary>Ver desarrollo</summary>
+<p><strong>Receta.</strong> <span class="arithmatex">\((f\circ g)'(a) = f'\big(g(a)\big)\cdot g'(a)\)</span>: hay que evaluar <span class="arithmatex">\(f'\)</span> en <span class="arithmatex">\(g(a)\)</span>, <strong>no</strong> en <span class="arithmatex">\(a\)</span>.</p>
+<p><strong>1.</strong> <span class="arithmatex">\(g(1) = 2\)</span>, luego <span class="arithmatex">\((f\circ g)'(1) = f'(2)\cdot g'(1) = 5\cdot 6 = 30\)</span>.</p>
+<p><strong>2.</strong> <span class="arithmatex">\(f(1) = 2\)</span>, luego <span class="arithmatex">\((g\circ f)'(1) = g'(2)\cdot f'(1) = (-2)(-3) = 6\)</span>.</p>
+<p><strong>3.</strong> <span class="arithmatex">\(f(1) = 2\)</span>, luego <span class="arithmatex">\((f\circ f)'(1) = f'(2)\cdot f'(1) = 5\cdot(-3) = -15\)</span>.</p>
+<p><strong>4.</strong> Con exterior <span class="arithmatex">\(u^3\)</span> e interior <span class="arithmatex">\(f(x)\)</span>:</p>
+<div class="arithmatex">\[\big(f^3\big)'(1) = 3\,f(1)^2\,f'(1) = 3\cdot 4\cdot(-3) = -36.\]</div>
+<p><strong>5.</strong> Aquí <span class="arithmatex">\(f(1) + g(1) = 4\)</span> y <span class="arithmatex">\((f+g)'(1) = -3 + 6 = 3\)</span>:</p>
+<div class="arithmatex">\[\left(\sqrt{f+g}\right)'(1) = \frac{(f+g)'(1)}{2\sqrt{f(1)+g(1)}} = \frac{3}{2\cdot 2} = \frac34.\]</div>
+<div class="admonition success">
+<p class="admonition-title">Solución</p>
+<div class="arithmatex">\[(f\circ g)'(1) = 30, \quad (g\circ f)'(1) = 6, \quad (f\circ f)'(1) = -15, \quad \big(f^3\big)'(1) = -36, \quad \left(\sqrt{f+g}\right)'(1) = \frac34.\]</div>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Los dos primeros no son iguales</p>
+<p><span class="arithmatex">\((f\circ g)'(1) = 30\)</span> y <span class="arithmatex">\((g\circ f)'(1) = 6\)</span>: la composición <strong>no es conmutativa</strong> y tampoco lo son sus derivadas. El orden de las capas decide qué valor de la tabla hay que consultar.</p>
+</div>
+</details>
+<hr />
+<h3 id="der-15">Problema 15</h3>
+<p>Sea <span class="arithmatex">\(f(x) = \sqrt{x^2 + 16}\)</span>.</p>
+<ol>
+<li>Calcule <span class="arithmatex">\(f'(x)\)</span>.</li>
+<li>Encuentre la recta tangente en <span class="arithmatex">\(x = 3\)</span>.</li>
+<li>Encuentre la recta <strong>normal</strong> (la perpendicular a la tangente) en ese mismo punto.</li>
+</ol>
+<details class="note">
+<summary>Ver desarrollo</summary>
+<p><strong>Parte 1.</strong> Exterior <span class="arithmatex">\(\sqrt{u}\)</span>, interior <span class="arithmatex">\(u = x^2 + 16\)</span>:</p>
+<div class="arithmatex">\[f'(x) = \frac{2x}{2\sqrt{x^2+16}} = \frac{x}{\sqrt{x^2+16}}.\]</div>
+<p><strong>Parte 2.</strong> <span class="arithmatex">\(f(3) = \sqrt{25} = 5\)</span> y <span class="arithmatex">\(f'(3) = \dfrac35\)</span>. La tangente es</p>
+<div class="arithmatex">\[y = 5 + \frac35(x - 3) = \frac35\,x + \frac{16}{5}.\]</div>
+<p><strong>Parte 3.</strong> Dos rectas perpendiculares tienen pendientes cuyo producto es <span class="arithmatex">\(-1\)</span>, de modo que la pendiente de la normal es <span class="arithmatex">\(-\dfrac53\)</span>:</p>
+<div class="arithmatex">\[y = 5 - \frac53(x - 3) = -\frac53\,x + 10.\]</div>
+<div class="admonition success">
+<p class="admonition-title">Solución</p>
+<div class="arithmatex">\[f'(x) = \frac{x}{\sqrt{x^2+16}}, \qquad \text{tangente: } y = \frac{3x + 16}{5}, \qquad \text{normal: } y = -\frac{5x}{3} + 10.\]</div>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Verificación</p>
+<p>Ambas rectas pasan por <span class="arithmatex">\((3,5)\)</span>: <span class="arithmatex">\(\tfrac{9+16}{5} = 5\)</span> y <span class="arithmatex">\(-5 + 10 = 5\)</span>. <span class="arithmatex">\(\checkmark\)</span></p>
+</div>
+</details>
+<hr />
+<h3 id="der-16">Problema 16</h3>
+<p>Encuentre el punto de la gráfica donde la recta tangente es horizontal, y determine su ordenada:</p>
+<ol>
+<li><span class="arithmatex">\(g(x) = e^{-x^2 + 4x}\)</span></li>
+<li><span class="arithmatex">\(h(x) = \ln\!\big(x^2 - 4x + 5\big)\)</span></li>
+</ol>
+<p>Justifique en (2) que <span class="arithmatex">\(h\)</span> está definida en todo <span class="arithmatex">\(\mathbb{R}\)</span>.</p>
+<details class="note">
+<summary>Ver desarrollo</summary>
+<p><strong>1.</strong> Interior <span class="arithmatex">\(u = -x^2 + 4x\)</span>, con <span class="arithmatex">\(u' = -2x + 4\)</span>:</p>
+<div class="arithmatex">\[g'(x) = (4 - 2x)\,e^{-x^2+4x}.\]</div>
+<p>La exponencial nunca se anula, así que <span class="arithmatex">\(g'(x) = 0\)</span> solo cuando <span class="arithmatex">\(4 - 2x = 0\)</span>, es decir <span class="arithmatex">\(x = 2\)</span>:</p>
+<div class="arithmatex">\[g(2) = e^{-4+8} = e^4.\]</div>
+<p><strong>2.</strong> Dominio: <span class="arithmatex">\(x^2 - 4x + 5 = (x-2)^2 + 1 \ge 1 &gt; 0\)</span> para todo <span class="arithmatex">\(x\)</span>, de modo que el logaritmo siempre existe. Interior <span class="arithmatex">\(u = x^2 - 4x + 5\)</span>:</p>
+<div class="arithmatex">\[h'(x) = \frac{2x - 4}{x^2 - 4x + 5}.\]</div>
+<p>El denominador es positivo, así que <span class="arithmatex">\(h'(x) = 0\)</span> solo si <span class="arithmatex">\(x = 2\)</span>:</p>
+<div class="arithmatex">\[h(2) = \ln(1) = 0.\]</div>
+<div class="admonition success">
+<p class="admonition-title">Solución</p>
+<p>Para <span class="arithmatex">\(g\)</span>, la tangente es horizontal en <span class="arithmatex">\((2, e^4)\)</span>. Para <span class="arithmatex">\(h\)</span>, en <span class="arithmatex">\((2, 0)\)</span>.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Un solo vértice para ambas</p>
+<p>En los dos casos el interior es una parábola con vértice en <span class="arithmatex">\(x=2\)</span>. Como <span class="arithmatex">\(e^u\)</span> y <span class="arithmatex">\(\ln u\)</span> son funciones <strong>crecientes</strong>, el máximo de <span class="arithmatex">\(g\)</span> y el mínimo de <span class="arithmatex">\(h\)</span> se alcanzan donde el interior alcanza su extremo: <span class="arithmatex">\(g\)</span> tiene un máximo y <span class="arithmatex">\(h\)</span> un mínimo en <span class="arithmatex">\(x=2\)</span>.</p>
+</div>
+</details>
+<hr />
+<h3 id="der-17">Problema 17</h3>
+<p>Un estudiante calculó las siguientes derivadas y cada una contiene un error. Identifique el error, explique qué regla se usó mal y corrija el resultado.</p>
+<ol>
+<li><span class="arithmatex">\(\big(e^{3x}\big)' = 3x\,e^{3x-1}\)</span></li>
+<li><span class="arithmatex">\(\big((x^2+1)^4\big)' = 4(x^2+1)^3\)</span></li>
+<li><span class="arithmatex">\(\big(\sqrt{2x+1}\big)' = \dfrac{1}{2\sqrt{2x+1}}\)</span></li>
+</ol>
+<details class="note">
+<summary>Ver desarrollo</summary>
+<p><strong>1. Confundió exponencial con potencia.</strong> Aplicó <span class="arithmatex">\((x^\alpha)' = \alpha x^{\alpha-1}\)</span> con <span class="arithmatex">\(e^{3x}\)</span> como si fuera una potencia, pero aquí el <strong>exponente</strong> es la variable. La regla correcta es <span class="arithmatex">\((e^u)' = u'\,e^u\)</span> con <span class="arithmatex">\(u = 3x\)</span>:</p>
+<div class="arithmatex">\[\big(e^{3x}\big)' = 3e^{3x}.\]</div>
+<p><strong>2. Olvidó la derivada de la función interior.</strong> Derivó la exterior correctamente, pero no multiplicó por <span class="arithmatex">\((x^2+1)' = 2x\)</span>:</p>
+<div class="arithmatex">\[\big((x^2+1)^4\big)' = 4(x^2+1)^3\cdot 2x = 8x\,(x^2+1)^3.\]</div>
+<p><strong>3. Olvidó el factor de la interior.</strong> Aplicó <span class="arithmatex">\((\sqrt{u})' = \frac{1}{2\sqrt{u}}\)</span> sin multiplicar por <span class="arithmatex">\(u' = 2\)</span>:</p>
+<div class="arithmatex">\[\big(\sqrt{2x+1}\big)' = \frac{2}{2\sqrt{2x+1}} = \frac{1}{\sqrt{2x+1}}.\]</div>
+<div class="admonition success">
+<p class="admonition-title">Solución</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Error</th>
+<th style="text-align: center;">Resultado correcto</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Usó la regla de potencias en una exponencial</td>
+<td style="text-align: center;"><span class="arithmatex">\(3e^{3x}\)</span></td>
+</tr>
+<tr>
+<td>2</td>
+<td>Omitió <span class="arithmatex">\(u' = 2x\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(8x(x^2+1)^3\)</span></td>
+</tr>
+<tr>
+<td>3</td>
+<td>Omitió <span class="arithmatex">\(u' = 2\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\dfrac{1}{\sqrt{2x+1}}\)</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="admonition danger">
+<p class="admonition-title">Los tres comparten una raíz</p>
+<p>Cada error ocurre por <strong>no distinguir exterior de interior</strong>. Una comprobación rápida: si el argumento de la función no es simplemente <span class="arithmatex">\(x\)</span>, casi seguro hay un factor <span class="arithmatex">\(u'\)</span> pendiente. Comparar con un valor numérico ayuda: con <span class="arithmatex">\(x=0\)</span>, el punto 2 daría <span class="arithmatex">\(0\)</span> en la fórmula correcta y <span class="arithmatex">\(4\)</span> en la incorrecta.</p>
+</div>
+</details>
+<hr />
+<h3 id="der-18">Problema 18</h3>
+<p>La regla de la cadena permite demostrar propiedades generales.</p>
+<ol>
+<li>Demuestre que si <span class="arithmatex">\(f\)</span> es una función <strong>par</strong> y derivable (<span class="arithmatex">\(f(-x) = f(x)\)</span> para todo <span class="arithmatex">\(x\)</span>), entonces <span class="arithmatex">\(f'\)</span> es <strong>impar</strong> (<span class="arithmatex">\(f'(-x) = -f'(x)\)</span>).</li>
+<li>Verifique el resultado con <span class="arithmatex">\(f(x) = \ln(x^2+1)\)</span>.</li>
+<li>Demuestre de forma análoga que si <span class="arithmatex">\(f\)</span> es <strong>impar</strong> y derivable, entonces <span class="arithmatex">\(f'\)</span> es <strong>par</strong>, y compruébelo con <span class="arithmatex">\(g(x) = x^3\)</span>.</li>
+</ol>
+<details class="note">
+<summary>Ver desarrollo</summary>
+<p><strong>Parte 1.</strong> Partimos de <span class="arithmatex">\(f(-x) = f(x)\)</span> y derivamos ambos lados respecto de <span class="arithmatex">\(x\)</span>. En el lado izquierdo la función interior es <span class="arithmatex">\(-x\)</span>, cuya derivada es <span class="arithmatex">\(-1\)</span>:</p>
+<div class="arithmatex">\[f'(-x)\cdot(-1) = f'(x) \implies f'(-x) = -f'(x).\]</div>
+<p>Es decir, <span class="arithmatex">\(f'\)</span> es impar.</p>
+<p><strong>Parte 2.</strong> <span class="arithmatex">\(f(x) = \ln(x^2+1)\)</span> es par, porque <span class="arithmatex">\((-x)^2 = x^2\)</span>. Su derivada es</p>
+<div class="arithmatex">\[f'(x) = \frac{2x}{x^2+1}, \qquad f'(-x) = \frac{-2x}{x^2+1} = -f'(x). \quad \checkmark\]</div>
+<p><strong>Parte 3.</strong> Partimos de <span class="arithmatex">\(f(-x) = -f(x)\)</span> y derivamos:</p>
+<div class="arithmatex">\[f'(-x)\cdot(-1) = -f'(x) \implies f'(-x) = f'(x).\]</div>
+<p>Es decir, <span class="arithmatex">\(f'\)</span> es par. Para <span class="arithmatex">\(g(x) = x^3\)</span> (impar), <span class="arithmatex">\(g'(x) = 3x^2\)</span> es par. <span class="arithmatex">\(\checkmark\)</span></p>
+<div class="admonition success">
+<p class="admonition-title">Solución</p>
+<p>Par <span class="arithmatex">\(\implies\)</span> derivada impar, e impar <span class="arithmatex">\(\implies\)</span> derivada par. En la demostración, el único ingrediente nuevo es la cadena aplicada a <span class="arithmatex">\(f(-x)\)</span>, que aporta el factor <span class="arithmatex">\(-1\)</span>.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Interpretación geométrica</p>
+<p>Una gráfica par es simétrica respecto del eje <span class="arithmatex">\(y\)</span>: si la tangente sube hacia la derecha en <span class="arithmatex">\(x=a\)</span>, en <span class="arithmatex">\(x=-a\)</span> baja con la pendiente opuesta. Por eso las pendientes cambian de signo y <span class="arithmatex">\(f'\)</span> resulta impar.</p>
+</div>
+</details>
+<hr />
+<h2 id="reglas-combinadas-y-aplicaciones">Reglas combinadas y aplicaciones</h2>
+<p>Los problemas siguientes mezclan todas las reglas y llevan la derivada a situaciones concretas.</p>
+<h3 id="der-19">Problema 19</h3>
+<p>Derive y simplifique:</p>
+<ol>
+<li><span class="arithmatex">\(f(x) = x^2\sqrt{1 + x^2}\)</span></li>
+<li><span class="arithmatex">\(g(x) = \dfrac{e^{2x}}{1 + e^{2x}}\)</span></li>
+<li><span class="arithmatex">\(h(x) = \ln\!\big(x + \sqrt{x^2+1}\big)\)</span></li>
+<li><span class="arithmatex">\(k(x) = \dfrac{x}{\sqrt{x^2+1}}\)</span></li>
+</ol>
+<details class="note">
+<summary>Ver desarrollo</summary>
+<p><strong>1.</strong> Producto de <span class="arithmatex">\(x^2\)</span> y <span class="arithmatex">\(\sqrt{1+x^2}\)</span>, y esta última requiere la cadena:</p>
+<div class="arithmatex">\[f'(x) = 2x\sqrt{1+x^2} + x^2\cdot\frac{x}{\sqrt{1+x^2}} = \frac{2x(1+x^2) + x^3}{\sqrt{1+x^2}} = \frac{x\,(3x^2 + 2)}{\sqrt{1+x^2}}.\]</div>
+<p><strong>2.</strong> Cociente, con <span class="arithmatex">\((e^{2x})' = 2e^{2x}\)</span>:</p>
+<div class="arithmatex">\[g'(x) = \frac{2e^{2x}(1+e^{2x}) - e^{2x}\cdot 2e^{2x}}{(1+e^{2x})^2} = \frac{2e^{2x}}{(1+e^{2x})^2}.\]</div>
+<p><strong>3.</strong> Cadena sobre el logaritmo. La derivada de la interior es <span class="arithmatex">\(1 + \dfrac{x}{\sqrt{x^2+1}} = \dfrac{\sqrt{x^2+1} + x}{\sqrt{x^2+1}}\)</span>, así que</p>
+<div class="arithmatex">\[h'(x) = \frac{1}{x + \sqrt{x^2+1}}\cdot\frac{\sqrt{x^2+1} + x}{\sqrt{x^2+1}} = \frac{1}{\sqrt{x^2+1}}.\]</div>
+<p><strong>4.</strong> Escribimos <span class="arithmatex">\(k(x) = x\,(x^2+1)^{-1/2}\)</span> y aplicamos producto y cadena:</p>
+<div class="arithmatex">\[k'(x) = (x^2+1)^{-1/2} - x^2\,(x^2+1)^{-3/2} = \frac{(x^2+1) - x^2}{(x^2+1)^{3/2}} = \frac{1}{(x^2+1)^{3/2}}.\]</div>
+<div class="admonition success">
+<p class="admonition-title">Solución</p>
+<div class="arithmatex">\[f' = \frac{x(3x^2+2)}{\sqrt{1+x^2}}, \quad g' = \frac{2e^{2x}}{(1+e^{2x})^2}, \quad h' = \frac{1}{\sqrt{x^2+1}}, \quad k' = \frac{1}{(x^2+1)^{3/2}}.\]</div>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Simplificaciones que sorprenden</p>
+<p>En el apartado 3 una expresión de aspecto complicado colapsa a <span class="arithmatex">\(\frac{1}{\sqrt{x^2+1}}\)</span>: el factor <span class="arithmatex">\(x + \sqrt{x^2+1}\)</span> aparece tanto en el denominador como, "escondido", en el numerador. Conviene desconfiar de un resultado enrevesado y buscar un factor común.</p>
+</div>
+</details>
+<hr />
+<h3 id="der-20">Problema 20</h3>
+<p>Use propiedades de los logaritmos para simplificar <strong>antes</strong> de derivar. Indique el dominio de cada función.</p>
+<ol>
+<li><span class="arithmatex">\(f(x) = \ln\dfrac{(x+1)^2}{x-1}\)</span></li>
+<li><span class="arithmatex">\(g(x) = \ln\sqrt{\dfrac{1+x}{1-x}}\)</span></li>
+<li><span class="arithmatex">\(h(x) = \ln\!\big(x\,e^{x^2}\big)\)</span></li>
+</ol>
+<details class="note">
+<summary>Ver desarrollo</summary>
+<p><strong>1.</strong> Dominio: <span class="arithmatex">\(\dfrac{(x+1)^2}{x-1} &gt; 0 \iff x &gt; 1\)</span>. Con esa restricción,</p>
+<div class="arithmatex">\[f(x) = 2\ln(x+1) - \ln(x-1) \implies f'(x) = \frac{2}{x+1} - \frac{1}{x-1} = \frac{2(x-1) - (x+1)}{x^2-1} = \frac{x-3}{x^2-1}.\]</div>
+<p><strong>2.</strong> Dominio: <span class="arithmatex">\(\dfrac{1+x}{1-x} &gt; 0 \iff -1 &lt; x &lt; 1\)</span>. Con esa restricción,</p>
+<div class="arithmatex">\[g(x) = \tfrac12\big[\ln(1+x) - \ln(1-x)\big] \implies g'(x) = \tfrac12\left[\frac{1}{1+x} + \frac{1}{1-x}\right] = \frac{1}{1-x^2}.\]</div>
+<p><strong>3.</strong> Dominio: <span class="arithmatex">\(x\,e^{x^2} &gt; 0 \iff x &gt; 0\)</span>. Con esa restricción,</p>
+<div class="arithmatex">\[h(x) = \ln x + x^2 \implies h'(x) = \frac1x + 2x.\]</div>
+<div class="admonition success">
+<p class="admonition-title">Solución</p>
+<div class="arithmatex">\[f'(x) = \frac{x-3}{x^2-1}\;\; (x&gt;1), \qquad g'(x) = \frac{1}{1-x^2}\;\; (|x|&lt;1), \qquad h'(x) = \frac1x + 2x\;\; (x&gt;0).\]</div>
+</div>
+<div class="admonition danger">
+<p class="admonition-title">Cuidado con el dominio</p>
+<p>Las propiedades <span class="arithmatex">\(\ln(ab) = \ln a + \ln b\)</span> y <span class="arithmatex">\(\ln\frac ab = \ln a - \ln b\)</span> <strong>solo valen si <span class="arithmatex">\(a\)</span> y <span class="arithmatex">\(b\)</span> son positivos</strong>. En el apartado 1, por ejemplo, la expresión original está definida también para algunos <span class="arithmatex">\(x&lt;-1\)</span>, pero la versión simplificada con <span class="arithmatex">\(\ln(x-1)\)</span> no. Por eso se declara el dominio <em>antes</em> de transformar.</p>
+</div>
+</details>
+<hr />
+<h3 id="der-21">Problema 21</h3>
+<p><strong>DERIVACIÓN LOGARÍTMICA.</strong> Las funciones con base <strong>y</strong> exponente variables no se derivan con las reglas de potencia ni de exponencial. El truco es aplicar <span class="arithmatex">\(\ln\)</span> a ambos lados y derivar de forma implícita.</p>
+<ol>
+<li>Derive <span class="arithmatex">\(f(x) = x^x\)</span>, para <span class="arithmatex">\(x &gt; 0\)</span>.</li>
+<li>Derive <span class="arithmatex">\(g(x) = x^{1/x}\)</span>, para <span class="arithmatex">\(x &gt; 0\)</span>, y encuentre el punto con tangente horizontal.</li>
+</ol>
+<details class="note">
+<summary>Ver desarrollo</summary>
+<p><strong>Parte 1.</strong> Tomamos logaritmo: <span class="arithmatex">\(\ln f(x) = x\ln x\)</span>. Derivamos ambos lados; a la izquierda se usa la cadena, <span class="arithmatex">\(\dfrac{f'(x)}{f(x)}\)</span>:</p>
+<div class="arithmatex">\[\frac{f'(x)}{f(x)} = \ln x + x\cdot\frac1x = \ln x + 1 \implies f'(x) = x^x\,(\ln x + 1).\]</div>
+<p><strong>Parte 2.</strong> Tomamos logaritmo: <span class="arithmatex">\(\ln g(x) = \dfrac{\ln x}{x}\)</span>. Derivando con la regla del cociente:</p>
+<div class="arithmatex">\[\frac{g'(x)}{g(x)} = \frac{\frac1x\cdot x - \ln x\cdot 1}{x^2} = \frac{1 - \ln x}{x^2} \implies g'(x) = x^{1/x}\cdot\frac{1 - \ln x}{x^2}.\]</div>
+<p><strong>Tangente horizontal.</strong> Como <span class="arithmatex">\(x^{1/x} &gt; 0\)</span> y <span class="arithmatex">\(x^2 &gt; 0\)</span>, se anula solo cuando <span class="arithmatex">\(1 - \ln x = 0\)</span>, es decir <span class="arithmatex">\(x = e\)</span>:</p>
+<div class="arithmatex">\[g(e) = e^{1/e} \approx 1{,}44.\]</div>
+<div class="admonition success">
+<p class="admonition-title">Solución</p>
+<div class="arithmatex">\[f'(x) = x^x(\ln x + 1), \qquad g'(x) = x^{1/x}\,\frac{1-\ln x}{x^2},\]</div>
+<p>y <span class="arithmatex">\(g\)</span> tiene tangente horizontal en <span class="arithmatex">\(\left(e,\,e^{1/e}\right)\)</span>.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Un resultado curioso</p>
+<p>Para <span class="arithmatex">\(x&gt;e\)</span> se tiene <span class="arithmatex">\(1 - \ln x &lt; 0\)</span> y <span class="arithmatex">\(g\)</span> decrece; para <span class="arithmatex">\(0&lt;x&lt;e\)</span> crece. Luego <span class="arithmatex">\(e^{1/e}\)</span> es el <strong>máximo</strong> de <span class="arithmatex">\(x^{1/x}\)</span> sobre los reales positivos. Entre los números enteros, el máximo de <span class="arithmatex">\(n^{1/n}\)</span> se alcanza en <span class="arithmatex">\(n=3\)</span>, el entero más cercano a <span class="arithmatex">\(e\)</span>.</p>
+</div>
+</details>
+<hr />
+<h3 id="der-22">Problema 22</h3>
+<p><strong>ENFRIAMIENTO.</strong> Una taza de té se deja enfriar en una habitación a <span class="arithmatex">\(20\,^\circ\text{C}\)</span>. Su temperatura <span class="arithmatex">\(t\)</span> minutos después es</p>
+<div class="arithmatex">\[T(t) = 20 + 60\,e^{-0{,}1\,t} \quad (^\circ\text{C}).\]</div>
+<ol>
+<li>Calcule <span class="arithmatex">\(T'(t)\)</span> y la rapidez de enfriamiento inicial, <span class="arithmatex">\(T'(0)\)</span>, con sus unidades.</li>
+<li>Demuestre que <span class="arithmatex">\(T'(t) = -0{,}1\,\big(T(t) - 20\big)\)</span> y explique qué dice esa relación.</li>
+<li>¿En qué instante la temperatura baja a razón de <span class="arithmatex">\(3\,^\circ\text{C}\)</span> por minuto, y cuál es entonces la temperatura?</li>
+</ol>
+<details class="note">
+<summary>Ver desarrollo</summary>
+<p><strong>Parte 1.</strong> Con la cadena, <span class="arithmatex">\((e^{-0{,}1t})' = -0{,}1\,e^{-0{,}1t}\)</span>:</p>
+<div class="arithmatex">\[T'(t) = 60\cdot(-0{,}1)\,e^{-0{,}1t} = -6\,e^{-0{,}1t}.\]</div>
+<p>En <span class="arithmatex">\(t = 0\)</span>: <span class="arithmatex">\(T'(0) = -6\,^\circ\text{C}/\text{min}\)</span>. El té se enfría inicialmente a <span class="arithmatex">\(6\)</span> grados por minuto.</p>
+<p><strong>Parte 2.</strong> Como <span class="arithmatex">\(T(t) - 20 = 60\,e^{-0{,}1t}\)</span>,</p>
+<div class="arithmatex">\[-0{,}1\,\big(T(t) - 20\big) = -0{,}1\cdot 60\,e^{-0{,}1t} = -6\,e^{-0{,}1t} = T'(t). \quad \checkmark\]</div>
+<p>Esto es la <strong>ley de enfriamiento de Newton</strong>: la rapidez de enfriamiento es proporcional a la diferencia entre la temperatura del objeto y la del ambiente. Cuanto más caliente está el té respecto de la habitación, más rápido se enfría.</p>
+<p><strong>Parte 3.</strong> Resolvemos <span class="arithmatex">\(T'(t) = -3\)</span>:</p>
+<div class="arithmatex">\[-6\,e^{-0{,}1t} = -3 \implies e^{-0{,}1t} = \tfrac12 \implies -0{,}1\,t = -\ln 2 \implies t = 10\ln 2 \approx 6{,}93 \text{ min}.\]</div>
+<p>La temperatura en ese instante es <span class="arithmatex">\(T = 20 + 60\cdot\tfrac12 = 50\,^\circ\text{C}\)</span>.</p>
+<div class="admonition success">
+<p class="admonition-title">Solución</p>
+<div class="arithmatex">\[T'(t) = -6\,e^{-0{,}1t}, \qquad T'(0) = -6\,^\circ\text{C/min}, \qquad t = 10\ln 2 \approx 6{,}93 \text{ min}, \quad T = 50\,^\circ\text{C}.\]</div>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Verificación con la relación de Newton</p>
+<p>A <span class="arithmatex">\(50\,^\circ\text{C}\)</span>: <span class="arithmatex">\(-0{,}1\,(50 - 20) = -3\)</span>. <span class="arithmatex">\(\checkmark\)</span> La rapidez de enfriamiento se reduce a la mitad exactamente cuando el exceso de temperatura se reduce a la mitad (de <span class="arithmatex">\(60\)</span> a <span class="arithmatex">\(30\)</span>).</p>
+</div>
+</details>
+<hr />
+<h3 id="der-23">Problema 23</h3>
+<p><strong>INGRESO.</strong> Cuando se venden <span class="arithmatex">\(q\)</span> unidades de un producto, el precio unitario es <span class="arithmatex">\(p(q) = 200\,e^{-q/50}\)</span> miles de pesos.</p>
+<ol>
+<li>Escriba el ingreso total <span class="arithmatex">\(R(q) = q\,p(q)\)</span> y calcule el ingreso marginal <span class="arithmatex">\(R'(q)\)</span>.</li>
+<li>¿Para qué nivel de ventas el ingreso marginal es cero? ¿Qué signo tiene antes y después?</li>
+<li>Calcule el ingreso máximo.</li>
+</ol>
+<details class="note">
+<summary>Ver desarrollo</summary>
+<p><strong>Parte 1.</strong> El ingreso es <span class="arithmatex">\(R(q) = 200\,q\,e^{-q/50}\)</span>. Producto de <span class="arithmatex">\(q\)</span> y <span class="arithmatex">\(e^{-q/50}\)</span>, con <span class="arithmatex">\((e^{-q/50})' = -\tfrac{1}{50}e^{-q/50}\)</span>:</p>
+<div class="arithmatex">\[R'(q) = 200\,e^{-q/50} + 200\,q\left(-\frac{1}{50}\right)e^{-q/50} = 200\,e^{-q/50}\left(1 - \frac{q}{50}\right) = 4\,(50 - q)\,e^{-q/50}.\]</div>
+<p><strong>Parte 2.</strong> La exponencial es positiva, así que el signo lo decide <span class="arithmatex">\(50 - q\)</span>:</p>
+<table>
+<thead>
+<tr>
+<th>Intervalo</th>
+<th style="text-align: center;"><span class="arithmatex">\([0, 50[\)</span></th>
+<th style="text-align: center;"><span class="arithmatex">\(]50, +\infty[\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="arithmatex">\(R'(q)\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\boldsymbol{+}\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(-\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>Se anula en <span class="arithmatex">\(q = 50\)</span>.</p>
+<p><strong>Parte 3.</strong> El ingreso máximo se alcanza en <span class="arithmatex">\(q = 50\)</span>:</p>
+<div class="arithmatex">\[R(50) = 200\cdot 50\,e^{-1} = \frac{10\,000}{e} \approx 3\,678{,}8 \text{ miles de pesos}.\]</div>
+<div class="admonition success">
+<p class="admonition-title">Solución</p>
+<div class="arithmatex">\[R'(q) = 4(50 - q)\,e^{-q/50}, \qquad \text{máximo en } q = 50, \qquad R(50) = \frac{10\,000}{e} \approx 3\,679 \text{ miles de pesos}.\]</div>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Qué significa</p>
+<p>Hasta <span class="arithmatex">\(50\)</span> unidades, vender una unidad más aumenta el ingreso. Después de <span class="arithmatex">\(50\)</span>, el precio cae tan rápido que el ingreso total <strong>disminuye</strong>, aunque se venda más. El ingreso marginal negativo es una señal de alerta: producir más ya no conviene.</p>
+</div>
+</details>
+<hr />
+<h3 id="der-24">Problema 24</h3>
+<p><strong>GLOBO.</strong> Un globo esférico se infla de modo que su radio, en centímetros, crece con el tiempo según <span class="arithmatex">\(r(t) = 2 + 0{,}5\,t\)</span> (<span class="arithmatex">\(t\)</span> en segundos). El volumen es <span class="arithmatex">\(V = \tfrac43\pi r^3\)</span>.</p>
+<ol>
+<li>Calcule <span class="arithmatex">\(\dfrac{dV}{dr}\)</span> e identifique qué cantidad geométrica es.</li>
+<li>Exprese <span class="arithmatex">\(V\)</span> como función de <span class="arithmatex">\(t\)</span> y calcule <span class="arithmatex">\(V'(t)\)</span> con la regla de la cadena.</li>
+<li>Calcule la rapidez con que crece el volumen en <span class="arithmatex">\(t = 2\)</span> s.</li>
+</ol>
+<details class="note">
+<summary>Ver desarrollo</summary>
+<p><strong>Parte 1.</strong></p>
+<div class="arithmatex">\[\frac{dV}{dr} = 4\pi r^2,\]</div>
+<p>que es el <strong>área de la superficie</strong> de la esfera. Tiene sentido: una capa muy delgada de espesor <span class="arithmatex">\(\Delta r\)</span> agrega un volumen aproximado de <span class="arithmatex">\(4\pi r^2\cdot\Delta r\)</span>.</p>
+<p><strong>Parte 2.</strong> <span class="arithmatex">\(V(t) = \tfrac43\pi\,(2 + 0{,}5t)^3\)</span>. Con la cadena, la derivada de la interior es <span class="arithmatex">\(0{,}5\)</span>:</p>
+<div class="arithmatex">\[V'(t) = \tfrac43\pi\cdot 3\,(2 + 0{,}5t)^2\cdot 0{,}5 = 2\pi\,(2 + 0{,}5\,t)^2.\]</div>
+<p>Es lo mismo que <span class="arithmatex">\(\dfrac{dV}{dr}\cdot\dfrac{dr}{dt} = 4\pi r^2\cdot 0{,}5\)</span>.</p>
+<p><strong>Parte 3.</strong> En <span class="arithmatex">\(t = 2\)</span> se tiene <span class="arithmatex">\(r = 3\)</span>, luego</p>
+<div class="arithmatex">\[V'(2) = 2\pi\cdot 3^2 = 18\pi \approx 56{,}5 \text{ cm}^3/\text{s}.\]</div>
+<div class="admonition success">
+<p class="admonition-title">Solución</p>
+<div class="arithmatex">\[\frac{dV}{dr} = 4\pi r^2, \qquad V'(t) = 2\pi\,(2 + 0{,}5\,t)^2, \qquad V'(2) = 18\pi \approx 56{,}5\ \text{cm}^3/\text{s}.\]</div>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">La cadena como lenguaje de razones de cambio</p>
+<p><span class="arithmatex">\(\dfrac{dV}{dt} = \dfrac{dV}{dr}\cdot\dfrac{dr}{dt}\)</span> dice que la rapidez con que cambia el volumen es la rapidez de cambio del volumen <em>respecto del radio</em> por la rapidez con que cambia el radio. Aunque <span class="arithmatex">\(r'(t)=0{,}5\)</span> es constante, <span class="arithmatex">\(V'(t)\)</span> crece: una misma variación de radio agrega cada vez más volumen.</p>
+</div>
+</details>
+<hr />
+<h3 id="der-25">Problema 25</h3>
+<p>Determine las constantes <span class="arithmatex">\(a\)</span> y <span class="arithmatex">\(b\)</span> para que la parábola <span class="arithmatex">\(f(x) = x^2 + ax + b\)</span> y la hipérbola <span class="arithmatex">\(g(x) = \dfrac{1}{x}\)</span> sean <strong>tangentes</strong> en el punto de abscisa <span class="arithmatex">\(x = 1\)</span>, es decir, que se toquen en ese punto con <strong>la misma recta tangente</strong>. Escriba la ecuación de esa recta.</p>
+<details class="note">
+<summary>Ver desarrollo</summary>
+<p><strong>Qué significa "tangentes en <span class="arithmatex">\(x=1\)</span>".</strong> Dos curvas son tangentes en un punto si ambas condiciones se cumplen a la vez:</p>
+<ol>
+<li><strong>Pasan por el mismo punto:</strong> <span class="arithmatex">\(f(1) = g(1)\)</span>.</li>
+<li><strong>Tienen la misma pendiente:</strong> <span class="arithmatex">\(f'(1) = g'(1)\)</span>.</li>
+</ol>
+<p><strong>Datos de <span class="arithmatex">\(g\)</span>.</strong> <span class="arithmatex">\(g(1) = 1\)</span> y <span class="arithmatex">\(g'(x) = -\dfrac{1}{x^2}\)</span>, luego <span class="arithmatex">\(g'(1) = -1\)</span>.</p>
+<p><strong>Datos de <span class="arithmatex">\(f\)</span>.</strong> <span class="arithmatex">\(f(1) = 1 + a + b\)</span> y <span class="arithmatex">\(f'(x) = 2x + a\)</span>, luego <span class="arithmatex">\(f'(1) = 2 + a\)</span>.</p>
+<p><strong>Sistema.</strong></p>
+<div class="arithmatex">\[\begin{cases} 1 + a + b = 1 \\ 2 + a = -1 \end{cases} \implies a = -3, \quad b = 3.\]</div>
+<p><strong>Recta tangente común.</strong> Pasa por <span class="arithmatex">\((1,1)\)</span> con pendiente <span class="arithmatex">\(-1\)</span>:</p>
+<div class="arithmatex">\[y = 1 - (x - 1) = 2 - x.\]</div>
+<div class="admonition success">
+<p class="admonition-title">Solución</p>
+<div class="arithmatex">\[a = -3, \qquad b = 3, \qquad f(x) = x^2 - 3x + 3, \qquad \text{tangente común: } y = 2 - x.\]</div>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Verificación</p>
+<p><span class="arithmatex">\(f(1) = 1 - 3 + 3 = 1 = g(1)\)</span>. <span class="arithmatex">\(\checkmark\)</span> <span class="arithmatex">\(\;f'(1) = 2 - 3 = -1 = g'(1)\)</span>. <span class="arithmatex">\(\checkmark\)</span>
+La condición de "pasar por el mismo punto" por sí sola no basta: infinitas parábolas cortan a <span class="arithmatex">\(g\)</span> en <span class="arithmatex">\((1,1)\)</span>, pero solo una lo hace con la misma pendiente.</p>
+</div>
+</details>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Pie" >
+        
+          
+          <a href="../derivada_definicion/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: Derivada por definición">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Anterior
+              </span>
+              <div class="md-ellipsis">
+                Derivada por definición
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../derivada_aproximacion/" class="md-footer__link md-footer__link--next" aria-label="Siguiente: Recta tangente y aproximación lineal">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Siguiente
+              </span>
+              <div class="md-ellipsis">
+                Recta tangente y aproximación lineal
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.top", "navigation.footer", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="../../javascripts/quiz.js"></script>
+      
+    
+  </body>
+</html>

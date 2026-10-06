@@ -1,0 +1,2301 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Material de apoyo, guías y problemas de precálculo.">
+      
+      
+        <meta name="author" content="José David Torres Riffo">
+      
+      
+      
+        <link rel="prev" href="../aplicaciones/">
+      
+      
+        <link rel="next" href="../derivadas_reglas/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Derivada por definición - MateRiffo</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="deep-orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#definicion-de-derivada-y-funcion-derivada" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../.." title="MateRiffo" class="md-header__button md-logo" aria-label="MateRiffo" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            MateRiffo
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Derivada por definición
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="deep-orange"  aria-label="Cambiar a modo oscuro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo oscuro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="deep-orange"  aria-label="Cambiar a modo claro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo claro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="MateRiffo" class="md-nav__button md-logo" aria-label="MateRiffo" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    MateRiffo
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Módulo de Números naturales
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Módulo de Números naturales
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../avanzadas/sumatorias/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sumatorias
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../avanzadas/progresiones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Progresiones
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../avanzadas/inecuaciones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inecuaciones
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Módulo de Inecuaciones
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Módulo de Inecuaciones
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../inecuaciones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Racionales
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../desigualdades/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Desigualdades
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../raices/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Raíces
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../absoluto/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Valor absoluto
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../aplicaciones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aplicaciones
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Módulo de Derivadas
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Módulo de Derivadas
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Derivada por definición
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Derivada por definición
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#derivada-en-un-punto-y-recta-tangente" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Derivada en un punto y recta tangente
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Derivada en un punto y recta tangente">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#der-01" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema 1
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#der-02" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema 2
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#der-03" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema 3
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#der-04" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema 4
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#der-05" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema 5
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#der-06" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema 6
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#der-07" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema 7
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#la-funcion-derivada" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        La función derivada
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="La función derivada">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#der-08" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema 8
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#der-09" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema 9
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#der-10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema 10
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#der-11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema 11
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#der-12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema 12
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#der-13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema 13
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#der-14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema 14
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aplicaciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Aplicaciones
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Aplicaciones">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#der-15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema 15
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#der-16" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema 16
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#derivabilidad-y-casos-especiales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Derivabilidad y casos especiales
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Derivabilidad y casos especiales">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#der-17" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema 17
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#der-18" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema 18
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#der-19" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema 19
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#der-20" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema 20
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../derivadas_reglas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Álgebra de derivación
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../derivada_aproximacion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Recta tangente y aproximación lineal
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../derivada_marginal/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Razón de cambio y análisis marginal
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../derivada_implicita/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Derivada implícita
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#derivada-en-un-punto-y-recta-tangente" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Derivada en un punto y recta tangente
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Derivada en un punto y recta tangente">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#der-01" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema 1
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#der-02" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema 2
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#der-03" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema 3
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#der-04" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema 4
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#der-05" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema 5
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#der-06" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema 6
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#der-07" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema 7
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#la-funcion-derivada" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        La función derivada
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="La función derivada">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#der-08" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema 8
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#der-09" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema 9
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#der-10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema 10
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#der-11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema 11
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#der-12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema 12
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#der-13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema 13
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#der-14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema 14
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aplicaciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Aplicaciones
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Aplicaciones">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#der-15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema 15
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#der-16" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema 16
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#derivabilidad-y-casos-especiales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Derivabilidad y casos especiales
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Derivabilidad y casos especiales">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#der-17" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema 17
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#der-18" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema 18
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#der-19" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema 19
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#der-20" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema 20
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="definicion-de-derivada-y-funcion-derivada">Definición de derivada y función derivada</h1>
+<p>Problemas que se resuelven <strong>desde la definición</strong>, sin usar reglas de derivación. El rasgo distintivo de esta sección es que casi todo cálculo parte de una forma <span class="arithmatex">\(\frac{0}{0}\)</span>, y que la herramienta central es el <strong>álgebra previa al límite</strong>: expandir, combinar fracciones o racionalizar hasta poder cancelar <span class="arithmatex">\(h\)</span>.</p>
+<div class="admonition abstract">
+<p class="admonition-title">Definiciones fundamentales</p>
+<p>Sea <span class="arithmatex">\(f\)</span> una función y <span class="arithmatex">\(a\)</span> un punto de su dominio.</p>
+<table>
+<thead>
+<tr>
+<th>Concepto</th>
+<th>Expresión</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Pendiente de la secante entre <span class="arithmatex">\(a\)</span> y <span class="arithmatex">\(x\)</span></td>
+<td><span class="arithmatex">\(m_{\text{sec}} = \dfrac{f(x)-f(a)}{x-a}\)</span></td>
+</tr>
+<tr>
+<td>Derivada en un punto</td>
+<td><span class="arithmatex">\(f'(a) = \displaystyle\lim_{h\to 0}\frac{f(a+h)-f(a)}{h} = \lim_{x\to a}\frac{f(x)-f(a)}{x-a}\)</span></td>
+</tr>
+<tr>
+<td>Función derivada</td>
+<td><span class="arithmatex">\(f'(x) = \displaystyle\lim_{h\to 0}\frac{f(x+h)-f(x)}{h}\)</span></td>
+</tr>
+<tr>
+<td>Recta tangente en <span class="arithmatex">\((a, f(a))\)</span></td>
+<td><span class="arithmatex">\(y = f(a) + f'(a)\,(x-a)\)</span></td>
+</tr>
+<tr>
+<td>Derivabilidad y continuidad</td>
+<td>Derivable en <span class="arithmatex">\(a\)</span> <span class="arithmatex">\(\implies\)</span> continua en <span class="arithmatex">\(a\)</span> (el recíproco es falso)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>La tangente es el límite de las secantes.</strong> Cuando el punto <span class="arithmatex">\(x\)</span> se acerca a <span class="arithmatex">\(a\)</span>, la recta secante gira hasta posarse sobre la tangente, y su pendiente tiende a <span class="arithmatex">\(f'(a)\)</span>. Por eso la derivada es, a la vez, un límite, una pendiente y una <strong>tasa de variación instantánea</strong>.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Las tres trampas de esta sección</p>
+<ol>
+<li><strong>Confundir "derivada de la fórmula" con "derivada en el punto".</strong> En una función por tramos, derivar cada fórmula y comparar valores solo es legítimo si la función es <strong>continua</strong> en el punto de empalme. Sin continuidad no hay derivada, aunque las fórmulas coincidan.</li>
+<li><strong>Cancelar <span class="arithmatex">\(h\)</span> antes de tiempo.</strong> El cociente <span class="arithmatex">\(\frac{f(a+h)-f(a)}{h}\)</span> no puede evaluarse en <span class="arithmatex">\(h=0\)</span>. Hay que simplificar <strong>primero</strong> hasta que <span class="arithmatex">\(h\)</span> desaparezca del denominador, y recién entonces hacer <span class="arithmatex">\(h \to 0\)</span>.</li>
+<li><strong>Olvidar el dominio de <span class="arithmatex">\(f'\)</span>.</strong> La función derivada puede estar definida en menos puntos que <span class="arithmatex">\(f\)</span> (por ejemplo, <span class="arithmatex">\(f(x)=\sqrt{x}\)</span> existe en <span class="arithmatex">\(0\)</span>, pero <span class="arithmatex">\(f'\)</span> no).</li>
+</ol>
+</div>
+<hr />
+<h2 id="derivada-en-un-punto-y-recta-tangente">Derivada en un punto y recta tangente</h2>
+<h3 id="der-01">Problema 1</h3>
+<p>Sea <span class="arithmatex">\(f(x) = x^2 + 1\)</span>.</p>
+<ol>
+<li>Calcule la pendiente de la recta secante que pasa por <span class="arithmatex">\((1, f(1))\)</span> y <span class="arithmatex">\((b, f(b))\)</span> para <span class="arithmatex">\(b = 3\)</span>, <span class="arithmatex">\(b = 1{,}5\)</span> y <span class="arithmatex">\(b = 1{,}1\)</span>.</li>
+<li>Organice los resultados en una tabla. ¿A qué valor parecen acercarse las pendientes cuando <span class="arithmatex">\(b \to 1\)</span>? ¿Qué representa ese valor?</li>
+</ol>
+<details class="note">
+<summary>Ver desarrollo</summary>
+<p><strong>Cálculo de las secantes.</strong> Como <span class="arithmatex">\(f(1) = 2\)</span>, la pendiente es</p>
+<div class="arithmatex">\[m_{\text{sec}} = \frac{b^2 + 1 - 2}{b - 1} = \frac{b^2 - 1}{b - 1} = b + 1 \qquad (b \ne 1).\]</div>
+<table>
+<thead>
+<tr>
+<th><span class="arithmatex">\(b\)</span></th>
+<th style="text-align: center;"><span class="arithmatex">\(3\)</span></th>
+<th style="text-align: center;"><span class="arithmatex">\(1{,}5\)</span></th>
+<th style="text-align: center;"><span class="arithmatex">\(1{,}1\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="arithmatex">\(m_{\text{sec}} = b+1\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(4\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(2{,}5\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(2{,}1\)</span></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Tendencia.</strong> Al acercarse <span class="arithmatex">\(b\)</span> a <span class="arithmatex">\(1\)</span> las pendientes se aproximan a <span class="arithmatex">\(2\)</span>. Ese valor es el límite</p>
+<div class="arithmatex">\[\lim_{b\to 1}\frac{f(b)-f(1)}{b-1} = \lim_{b \to 1}(b+1) = 2,\]</div>
+<p>es decir, <span class="arithmatex">\(f'(1)\)</span>: la <strong>pendiente de la recta tangente</strong> a la parábola en <span class="arithmatex">\((1,2)\)</span>.</p>
+<div class="admonition success">
+<p class="admonition-title">Solución</p>
+<p>Las pendientes son <span class="arithmatex">\(4\)</span>, <span class="arithmatex">\(2{,}5\)</span> y <span class="arithmatex">\(2{,}1\)</span>, y tienden a <span class="arithmatex">\(f'(1) = 2\)</span>, la pendiente de la tangente en <span class="arithmatex">\((1,2)\)</span>.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Observación</p>
+<p>Que la secante tenga pendiente exactamente <span class="arithmatex">\(b+1\)</span> es una simplificación que solo vale para <span class="arithmatex">\(b \neq 1\)</span>. El límite "rellena" justamente el punto donde el cociente original no estaba definido.</p>
+</div>
+</details>
+<hr />
+<h3 id="der-02">Problema 2</h3>
+<p>Use la definición de derivada para calcular <span class="arithmatex">\(f'(2)\)</span> si <span class="arithmatex">\(f(x) = 3x - 5\)</span>. ¿Por qué el resultado era predecible sin calcular ningún límite? ¿Cambiaría la respuesta si se pidiera <span class="arithmatex">\(f'(-7)\)</span>?</p>
+<details class="note">
+<summary>Ver desarrollo</summary>
+<p><strong>Resolución.</strong> Calculamos el numerador del cociente incremental:</p>
+<div class="arithmatex">\[f(2+h) - f(2) = \big[3(2+h) - 5\big] - \big[3\cdot 2 - 5\big] = (1 + 3h) - 1 = 3h.\]</div>
+<p>Por lo tanto</p>
+<div class="arithmatex">\[f'(2) = \lim_{h\to 0}\frac{3h}{h} = \lim_{h \to 0} 3 = 3.\]</div>
+<p><strong>¿Por qué era predecible?</strong> La gráfica de <span class="arithmatex">\(f\)</span> es una recta de pendiente <span class="arithmatex">\(3\)</span>. La recta tangente a una recta es la recta misma, así que su pendiente es <span class="arithmatex">\(3\)</span> en todo punto.</p>
+<p><strong>¿Y en <span class="arithmatex">\(x=-7\)</span>?</strong> No cambia nada: para cualquier <span class="arithmatex">\(a\)</span>,</p>
+<div class="arithmatex">\[f(a+h)-f(a) = 3h \implies f'(a) = 3.\]</div>
+<div class="admonition success">
+<p class="admonition-title">Solución</p>
+<div class="arithmatex">\[f'(2) = 3, \qquad f'(-7) = 3.\]</div>
+<p>La derivada de <span class="arithmatex">\(f(x) = 3x-5\)</span> es la función constante <span class="arithmatex">\(f'(x) = 3\)</span>.</p>
+</div>
+</details>
+<hr />
+<h3 id="der-03">Problema 3</h3>
+<p>Sea <span class="arithmatex">\(f(x) = x^2 - 5x\)</span>.</p>
+<ol>
+<li>Calcule <span class="arithmatex">\(f'(1)\)</span> usando la forma <span class="arithmatex">\(\displaystyle\lim_{h\to0}\frac{f(1+h)-f(1)}{h}\)</span>.</li>
+<li>Encuentre la ecuación de la recta tangente a la gráfica de <span class="arithmatex">\(f\)</span> en el punto <span class="arithmatex">\((1, f(1))\)</span>.</li>
+</ol>
+<details class="note">
+<summary>Ver desarrollo</summary>
+<p><strong>Parte 1.</strong> Calculamos cada término:</p>
+<div class="arithmatex">\[f(1) = 1 - 5 = -4, \qquad f(1+h) = (1+h)^2 - 5(1+h) = h^2 - 3h - 4.\]</div>
+<p>Luego <span class="arithmatex">\(f(1+h) - f(1) = h^2 - 3h\)</span>, y</p>
+<div class="arithmatex">\[f'(1) = \lim_{h\to 0}\frac{h^2 - 3h}{h} = \lim_{h\to 0}(h - 3) = -3.\]</div>
+<p><strong>Parte 2.</strong> El punto de tangencia es <span class="arithmatex">\((1,-4)\)</span> y la pendiente es <span class="arithmatex">\(-3\)</span>:</p>
+<div class="arithmatex">\[y = -4 - 3(x - 1) = -3x - 1.\]</div>
+<div class="admonition success">
+<p class="admonition-title">Solución</p>
+<div class="arithmatex">\[f'(1) = -3, \qquad y = -3x - 1.\]</div>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Verificación</p>
+<p>La recta pasa por <span class="arithmatex">\((1,-4)\)</span>: <span class="arithmatex">\(-3\cdot 1 - 1 = -4\)</span>. <span class="arithmatex">\(\checkmark\)</span></p>
+</div>
+</details>
+<hr />
+<h3 id="der-04">Problema 4</h3>
+<p>Use la definición de derivada para calcular <span class="arithmatex">\(f'(1)\)</span> si <span class="arithmatex">\(f(x) = \dfrac{1}{x+1}\)</span>, y escriba la ecuación de la recta tangente en ese punto.</p>
+<details class="note">
+<summary>Ver desarrollo</summary>
+<p><strong>Valores de partida.</strong> <span class="arithmatex">\(f(1) = \dfrac{1}{2}\)</span> y <span class="arithmatex">\(f(1+h) = \dfrac{1}{2+h}\)</span>.</p>
+<p><strong>Combinar fracciones.</strong> Con una resta de fracciones hay que llevar todo a un denominador común antes de dividir por <span class="arithmatex">\(h\)</span>:</p>
+<div class="arithmatex">\[f(1+h) - f(1) = \frac{1}{2+h} - \frac{1}{2} = \frac{2 - (2+h)}{2(2+h)} = \frac{-h}{2(2+h)}.\]</div>
+<p>Ahora sí se puede cancelar <span class="arithmatex">\(h\)</span>:</p>
+<div class="arithmatex">\[f'(1) = \lim_{h\to 0}\frac{1}{h}\cdot\frac{-h}{2(2+h)} = \lim_{h\to 0}\frac{-1}{2(2+h)} = -\frac{1}{4}.\]</div>
+<p><strong>Recta tangente.</strong> Pasa por <span class="arithmatex">\(\left(1, \tfrac12\right)\)</span> con pendiente <span class="arithmatex">\(-\tfrac14\)</span>:</p>
+<div class="arithmatex">\[y = \frac12 - \frac14(x - 1) = -\frac{x}{4} + \frac{3}{4}.\]</div>
+<div class="admonition success">
+<p class="admonition-title">Solución</p>
+<div class="arithmatex">\[f'(1) = -\frac14, \qquad y = \frac{3 - x}{4}.\]</div>
+</div>
+</details>
+<hr />
+<h3 id="der-05">Problema 5</h3>
+<p>Use la definición de derivada para calcular <span class="arithmatex">\(f'(4)\)</span> si <span class="arithmatex">\(f(x) = \sqrt{2x+1}\)</span>, y escriba la ecuación de la recta tangente en ese punto.</p>
+<details class="note">
+<summary>Ver desarrollo</summary>
+<p><strong>Valores de partida.</strong> <span class="arithmatex">\(f(4) = \sqrt{9} = 3\)</span> y <span class="arithmatex">\(f(4+h) = \sqrt{9 + 2h}\)</span>.</p>
+<p><strong>Racionalizar.</strong> La diferencia de raíces se elimina multiplicando y dividiendo por el conjugado:</p>
+<div class="arithmatex">\[\frac{\sqrt{9+2h} - 3}{h}\cdot\frac{\sqrt{9+2h}+3}{\sqrt{9+2h}+3} = \frac{(9+2h) - 9}{h\left(\sqrt{9+2h}+3\right)} = \frac{2}{\sqrt{9+2h}+3}.\]</div>
+<p>Tomando el límite,</p>
+<div class="arithmatex">\[f'(4) = \lim_{h\to 0}\frac{2}{\sqrt{9+2h}+3} = \frac{2}{3+3} = \frac13.\]</div>
+<p><strong>Recta tangente.</strong> Pasa por <span class="arithmatex">\((4, 3)\)</span> con pendiente <span class="arithmatex">\(\tfrac13\)</span>:</p>
+<div class="arithmatex">\[y = 3 + \frac13(x - 4) = \frac{x}{3} + \frac53.\]</div>
+<div class="admonition success">
+<p class="admonition-title">Solución</p>
+<div class="arithmatex">\[f'(4) = \frac13, \qquad y = \frac{x+5}{3}.\]</div>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Verificación</p>
+<p>La tangente pasa por <span class="arithmatex">\((4,3)\)</span>: <span class="arithmatex">\(\tfrac{4+5}{3} = 3\)</span>. <span class="arithmatex">\(\checkmark\)</span></p>
+</div>
+</details>
+<hr />
+<h3 id="der-06">Problema 6</h3>
+<p>Cada uno de los siguientes límites es, en realidad, una derivada. Identifique la función <span class="arithmatex">\(f\)</span> y el punto <span class="arithmatex">\(a\)</span> en cada caso, y calcule el valor del límite.</p>
+<ol>
+<li><span class="arithmatex">\(\displaystyle\lim_{h\to 0}\frac{(3+h)^4 - 81}{h}\)</span></li>
+<li><span class="arithmatex">\(\displaystyle\lim_{x\to 4}\frac{\frac{1}{x} - \frac{1}{4}}{x - 4}\)</span></li>
+<li><span class="arithmatex">\(\displaystyle\lim_{h\to 0}\frac{\sqrt{9+h} - 3}{h}\)</span></li>
+</ol>
+<details class="note">
+<summary>Ver desarrollo</summary>
+<p><strong>Idea.</strong> Se reconoce la estructura <span class="arithmatex">\(\dfrac{f(a+h)-f(a)}{h}\)</span> o <span class="arithmatex">\(\dfrac{f(x)-f(a)}{x-a}\)</span> y se identifica qué función y qué punto la producen.</p>
+<p><strong>Parte 1.</strong> Con <span class="arithmatex">\(f(x) = x^4\)</span> y <span class="arithmatex">\(a = 3\)</span> (pues <span class="arithmatex">\(f(3) = 81\)</span>) el límite es <span class="arithmatex">\(f'(3)\)</span>. Expandiendo,</p>
+<div class="arithmatex">\[(3+h)^4 = 81 + 108h + 54h^2 + 12h^3 + h^4,\]</div>
+<p>de modo que</p>
+<div class="arithmatex">\[\frac{(3+h)^4 - 81}{h} = 108 + 54h + 12h^2 + h^3 \longrightarrow 108.\]</div>
+<p><strong>Parte 2.</strong> Con <span class="arithmatex">\(f(x) = \dfrac1x\)</span> y <span class="arithmatex">\(a = 4\)</span> (pues <span class="arithmatex">\(f(4) = \tfrac14\)</span>) el límite es <span class="arithmatex">\(f'(4)\)</span>. Combinando fracciones,</p>
+<div class="arithmatex">\[\frac{\frac{1}{x} - \frac{1}{4}}{x - 4} = \frac{4 - x}{4x(x-4)} = \frac{-1}{4x} \longrightarrow -\frac{1}{16}.\]</div>
+<p><strong>Parte 3.</strong> Con <span class="arithmatex">\(f(x) = \sqrt{x}\)</span> y <span class="arithmatex">\(a = 9\)</span> (pues <span class="arithmatex">\(f(9) = 3\)</span>) el límite es <span class="arithmatex">\(f'(9)\)</span>. Racionalizando,</p>
+<div class="arithmatex">\[\frac{\sqrt{9+h} - 3}{h} = \frac{1}{\sqrt{9+h} + 3} \longrightarrow \frac16.\]</div>
+<div class="admonition success">
+<p class="admonition-title">Solución</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th style="text-align: center;"><span class="arithmatex">\(f\)</span></th>
+<th style="text-align: center;"><span class="arithmatex">\(a\)</span></th>
+<th style="text-align: center;">Valor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td style="text-align: center;"><span class="arithmatex">\(x^4\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(3\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(108\)</span></td>
+</tr>
+<tr>
+<td>2</td>
+<td style="text-align: center;"><span class="arithmatex">\(\dfrac1x\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(4\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(-\dfrac{1}{16}\)</span></td>
+</tr>
+<tr>
+<td>3</td>
+<td style="text-align: center;"><span class="arithmatex">\(\sqrt{x}\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(9\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\dfrac16\)</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Para qué sirve</p>
+<p>Reconocer que un límite es una derivada permite calcularlo con la pendiente de una tangente en lugar de manipularlo a mano, y también hace el camino inverso: transformar una derivada difícil en un límite que ya se conoce.</p>
+</div>
+</details>
+<hr />
+<h3 id="der-07">Problema 7</h3>
+<p><strong>VELOCIDAD.</strong> Una piedra se deja caer desde lo alto de un edificio. Tras <span class="arithmatex">\(t\)</span> segundos ha caído <span class="arithmatex">\(s(t) = 4{,}9\,t^2\)</span> metros.</p>
+<ol>
+<li>Calcule la velocidad media de la piedra en los intervalos <span class="arithmatex">\([2,\,2{,}5]\)</span>, <span class="arithmatex">\([2,\,2{,}1]\)</span> y <span class="arithmatex">\([2,\,2{,}01]\)</span>.</li>
+<li>Encuentre una expresión para la velocidad media en <span class="arithmatex">\([2,\,2+h]\)</span> y, con ella, la velocidad instantánea en <span class="arithmatex">\(t = 2\)</span>.</li>
+</ol>
+<details class="note">
+<summary>Ver desarrollo</summary>
+<p><strong>Parte 1.</strong> Como <span class="arithmatex">\(s(2) = 19{,}6\)</span>, la velocidad media en <span class="arithmatex">\([2, 2+h]\)</span> es <span class="arithmatex">\(\dfrac{s(2+h) - 19{,}6}{h}\)</span>:</p>
+<table>
+<thead>
+<tr>
+<th>Intervalo</th>
+<th style="text-align: center;"><span class="arithmatex">\(s(2+h)\)</span></th>
+<th style="text-align: center;">Velocidad media (m/s)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="arithmatex">\([2;\,2{,}5]\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(30{,}625\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\dfrac{11{,}025}{0{,}5} = 22{,}05\)</span></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\([2;\,2{,}1]\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(21{,}609\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\dfrac{2{,}009}{0{,}1} = 20{,}09\)</span></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\([2;\,2{,}01]\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(19{,}79649\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\dfrac{0{,}19649}{0{,}01} = 19{,}649\)</span></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Parte 2.</strong> Para <span class="arithmatex">\(h\)</span> general:</p>
+<div class="arithmatex">\[s(2+h) - s(2) = 4{,}9(4 + 4h + h^2) - 19{,}6 = 19{,}6\,h + 4{,}9\,h^2,\]</div>
+<p>por lo que la velocidad media vale</p>
+<div class="arithmatex">\[\frac{s(2+h)-s(2)}{h} = 19{,}6 + 4{,}9\,h.\]</div>
+<p>Cuando <span class="arithmatex">\(h \to 0\)</span> se obtiene la velocidad instantánea:</p>
+<div class="arithmatex">\[s'(2) = \lim_{h \to 0}(19{,}6 + 4{,}9\,h) = 19{,}6 \text{ m/s}.\]</div>
+<div class="admonition success">
+<p class="admonition-title">Solución</p>
+<p>Las velocidades medias son <span class="arithmatex">\(22{,}05\)</span>, <span class="arithmatex">\(20{,}09\)</span> y <span class="arithmatex">\(19{,}649\)</span> m/s, y la velocidad instantánea en <span class="arithmatex">\(t=2\)</span> es <span class="arithmatex">\(s'(2) = 19{,}6\)</span> m/s.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Consistencia</p>
+<p>La fórmula <span class="arithmatex">\(19{,}6 + 4{,}9\,h\)</span> reproduce la tabla: con <span class="arithmatex">\(h = 0{,}5\)</span> da <span class="arithmatex">\(22{,}05\)</span>, con <span class="arithmatex">\(h=0{,}1\)</span> da <span class="arithmatex">\(20{,}09\)</span> y con <span class="arithmatex">\(h=0{,}01\)</span> da <span class="arithmatex">\(19{,}649\)</span>. <span class="arithmatex">\(\checkmark\)</span></p>
+</div>
+</details>
+<hr />
+<h2 id="la-funcion-derivada">La función derivada</h2>
+<h3 id="der-08">Problema 8</h3>
+<p>Sea <span class="arithmatex">\(f(x) = 2x^2 + x - 1\)</span>.</p>
+<ol>
+<li>Use la definición para obtener la función derivada <span class="arithmatex">\(f'(x)\)</span>.</li>
+<li>Use su resultado para encontrar la recta tangente en <span class="arithmatex">\(x = -1\)</span>, sin volver a calcular un límite.</li>
+<li>¿En qué punto de la gráfica la recta tangente es horizontal?</li>
+</ol>
+<details class="note">
+<summary>Ver desarrollo</summary>
+<p><strong>Parte 1.</strong> Para un <span class="arithmatex">\(x\)</span> genérico:</p>
+<div class="arithmatex">\[f(x+h) - f(x) = 2\big[(x+h)^2 - x^2\big] + h = 2(2xh + h^2) + h = 4xh + 2h^2 + h.\]</div>
+<p>Dividiendo por <span class="arithmatex">\(h\)</span> y tomando el límite,</p>
+<div class="arithmatex">\[f'(x) = \lim_{h\to 0}\,(4x + 2h + 1) = 4x + 1.\]</div>
+<p><strong>Parte 2.</strong> Evaluamos: <span class="arithmatex">\(f(-1) = 2 - 1 - 1 = 0\)</span> y <span class="arithmatex">\(f'(-1) = -4 + 1 = -3\)</span>. La tangente es</p>
+<div class="arithmatex">\[y = 0 - 3(x + 1) = -3x - 3.\]</div>
+<p><strong>Parte 3.</strong> La tangente es horizontal donde su pendiente se anula:</p>
+<div class="arithmatex">\[f'(x) = 0 \implies 4x + 1 = 0 \implies x = -\frac14, \qquad f\!\left(-\tfrac14\right) = \frac18 - \frac14 - 1 = -\frac98.\]</div>
+<div class="admonition success">
+<p class="admonition-title">Solución</p>
+<div class="arithmatex">\[f'(x) = 4x+1, \qquad y = -3x - 3, \qquad \text{tangente horizontal en } \left(-\tfrac14,\, -\tfrac98\right).\]</div>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Lectura geométrica</p>
+<p>El punto <span class="arithmatex">\(\left(-\tfrac14,-\tfrac98\right)\)</span> es el <strong>vértice</strong> de la parábola. En cualquier parábola, la tangente horizontal ocurre en el vértice.</p>
+</div>
+</details>
+<hr />
+<h3 id="der-09">Problema 9</h3>
+<p>Use la definición para obtener la función derivada de <span class="arithmatex">\(f(x) = \dfrac{x}{x-2}\)</span>. Luego responda, <strong>sin calcular más límites</strong>: ¿existe algún punto de la gráfica donde la recta tangente sea horizontal? ¿Qué signo tiene la pendiente en todos los puntos?</p>
+<details class="note">
+<summary>Ver desarrollo</summary>
+<p><strong>Dominio.</strong> <span class="arithmatex">\(f\)</span> está definida para <span class="arithmatex">\(x \ne 2\)</span>.</p>
+<p><strong>Combinar fracciones.</strong> Para <span class="arithmatex">\(x \ne 2\)</span> y <span class="arithmatex">\(h\)</span> pequeño:</p>
+<div class="arithmatex">\[f(x+h) - f(x) = \frac{x+h}{x+h-2} - \frac{x}{x-2} = \frac{(x+h)(x-2) - x(x+h-2)}{(x+h-2)(x-2)}.\]</div>
+<p>El numerador se simplifica:</p>
+<div class="arithmatex">\[(x+h)(x-2) - x(x+h-2) = x^2 - 2x + hx - 2h - x^2 - hx + 2x = -2h.\]</div>
+<p>Por lo tanto</p>
+<div class="arithmatex">\[f'(x) = \lim_{h\to 0}\frac{-2}{(x+h-2)(x-2)} = \frac{-2}{(x-2)^2}.\]</div>
+<p><strong>Preguntas.</strong></p>
+<ul>
+<li><span class="arithmatex">\(f'(x) = 0\)</span> exigiría <span class="arithmatex">\(-2 = 0\)</span>, que es imposible: <strong>no hay tangentes horizontales</strong>.</li>
+<li>El numerador es <span class="arithmatex">\(-2&lt;0\)</span> y el denominador <span class="arithmatex">\((x-2)^2\)</span> es positivo en todo el dominio, así que <span class="arithmatex">\(f'(x) &lt; 0\)</span> siempre.</li>
+</ul>
+<div class="admonition success">
+<p class="admonition-title">Solución</p>
+<div class="arithmatex">\[f'(x) = -\frac{2}{(x-2)^2}, \quad x \neq 2.\]</div>
+<p>No hay tangentes horizontales, y la pendiente es <strong>negativa en todos los puntos</strong> del dominio.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Qué significa</p>
+<p>Una derivada negativa en todo el dominio indica que <span class="arithmatex">\(f\)</span> es decreciente en cada una de las dos ramas de la hipérbola, <span class="arithmatex">\(]-\infty, 2[\)</span> y <span class="arithmatex">\(]2, +\infty[\)</span>. Eso <strong>no</strong> significa que sea decreciente en la unión de ambas: por ejemplo, <span class="arithmatex">\(f(1) = -1\)</span> y <span class="arithmatex">\(f(3) = 3\)</span>.</p>
+</div>
+</details>
+<hr />
+<h3 id="der-10">Problema 10</h3>
+<p>Sea <span class="arithmatex">\(f(x) = x^3\)</span>.</p>
+<ol>
+<li>Use la definición para demostrar que <span class="arithmatex">\(f'(x) = 3x^2\)</span>. (Recuerde que <span class="arithmatex">\((x+h)^3 = x^3 + 3x^2h + 3xh^2 + h^3\)</span>.)</li>
+<li>Encuentre todos los puntos de la gráfica donde la recta tangente es paralela a la recta <span class="arithmatex">\(y = 12x + 1\)</span>, y escriba la ecuación de cada tangente.</li>
+</ol>
+<details class="note">
+<summary>Ver desarrollo</summary>
+<p><strong>Parte 1.</strong> Usando el desarrollo del cubo:</p>
+<div class="arithmatex">\[f(x+h) - f(x) = 3x^2h + 3xh^2 + h^3,\]</div>
+<p>de donde</p>
+<div class="arithmatex">\[f'(x) = \lim_{h\to 0}\,\left(3x^2 + 3xh + h^2\right) = 3x^2.\]</div>
+<p><strong>Parte 2.</strong> Dos rectas son paralelas si tienen la misma pendiente. Buscamos los puntos donde la pendiente de la tangente vale <span class="arithmatex">\(12\)</span>:</p>
+<div class="arithmatex">\[3x^2 = 12 \implies x^2 = 4 \implies x = \pm 2.\]</div>
+<table>
+<thead>
+<tr>
+<th>Punto</th>
+<th style="text-align: center;">Pendiente</th>
+<th>Tangente</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="arithmatex">\((2, 8)\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(12\)</span></td>
+<td><span class="arithmatex">\(y = 8 + 12(x-2) = 12x - 16\)</span></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\((-2, -8)\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(12\)</span></td>
+<td><span class="arithmatex">\(y = -8 + 12(x+2) = 12x + 16\)</span></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition success">
+<p class="admonition-title">Solución</p>
+<p>Hay dos puntos: <span class="arithmatex">\((2,8)\)</span> con tangente <span class="arithmatex">\(y = 12x - 16\)</span>, y <span class="arithmatex">\((-2,-8)\)</span> con tangente <span class="arithmatex">\(y = 12x + 16\)</span>.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Simetría</p>
+<p>Las dos tangentes son simétricas respecto al origen, como corresponde a una función impar. Además, como <span class="arithmatex">\(3x^2 \ge 0\)</span>, <strong>ninguna</strong> tangente a <span class="arithmatex">\(y = x^3\)</span> tiene pendiente negativa.</p>
+</div>
+</details>
+<hr />
+<h3 id="der-11">Problema 11</h3>
+<p>Sea <span class="arithmatex">\(f(x) = \sqrt{x}\)</span>.</p>
+<ol>
+<li>Use la definición para obtener <span class="arithmatex">\(f'(x)\)</span> e indique en qué puntos está definida.</li>
+<li>Escriba la recta tangente en <span class="arithmatex">\(x = 4\)</span>.</li>
+<li>¿En qué punto la tangente tiene pendiente <span class="arithmatex">\(\tfrac12\)</span>? Escriba su ecuación.</li>
+<li>¿Qué ocurre con el cociente incremental en <span class="arithmatex">\(x = 0\)</span>?</li>
+</ol>
+<details class="note">
+<summary>Ver desarrollo</summary>
+<p><strong>Parte 1.</strong> Para <span class="arithmatex">\(x &gt; 0\)</span>, racionalizamos:</p>
+<div class="arithmatex">\[\frac{\sqrt{x+h} - \sqrt{x}}{h}\cdot\frac{\sqrt{x+h}+\sqrt{x}}{\sqrt{x+h}+\sqrt{x}} = \frac{(x+h) - x}{h\left(\sqrt{x+h}+\sqrt{x}\right)} = \frac{1}{\sqrt{x+h}+\sqrt{x}}.\]</div>
+<p>Entonces</p>
+<div class="arithmatex">\[f'(x) = \lim_{h \to 0}\frac{1}{\sqrt{x+h}+\sqrt{x}} = \frac{1}{2\sqrt{x}}, \qquad x &gt; 0.\]</div>
+<p><strong>Parte 2.</strong> <span class="arithmatex">\(f(4) = 2\)</span> y <span class="arithmatex">\(f'(4) = \tfrac14\)</span>, luego <span class="arithmatex">\(y = 2 + \tfrac14(x-4) = \tfrac{x}{4} + 1\)</span>.</p>
+<p><strong>Parte 3.</strong> Resolvemos <span class="arithmatex">\(\dfrac{1}{2\sqrt{x}} = \dfrac12 \implies \sqrt{x} = 1 \implies x = 1\)</span>. Como <span class="arithmatex">\(f(1) = 1\)</span>, la tangente es <span class="arithmatex">\(y = 1 + \tfrac12(x-1) = \tfrac{x}{2} + \tfrac12\)</span>.</p>
+<p><strong>Parte 4.</strong> En <span class="arithmatex">\(x = 0\)</span> solo tiene sentido el límite por la derecha, y</p>
+<div class="arithmatex">\[\frac{f(0+h) - f(0)}{h} = \frac{\sqrt{h}}{h} = \frac{1}{\sqrt{h}} \xrightarrow[h\to 0^+]{} +\infty.\]</div>
+<p>El límite no es finito, de modo que <span class="arithmatex">\(f\)</span> <strong>no es derivable en <span class="arithmatex">\(0\)</span></strong>.</p>
+<div class="admonition success">
+<p class="admonition-title">Solución</p>
+<div class="arithmatex">\[f'(x) = \frac{1}{2\sqrt{x}} \;\; (x&gt;0), \qquad y = \frac{x}{4}+1 \;\text{ en } x=4, \qquad y = \frac{x}{2}+\frac12 \;\text{ en } x=1,\]</div>
+<p>y <span class="arithmatex">\(f\)</span> no es derivable en <span class="arithmatex">\(x=0\)</span>.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tangente vertical</p>
+<p>Aquí <span class="arithmatex">\(f\)</span> <strong>sí</strong> existe y es continua en <span class="arithmatex">\(0\)</span>, pero su derivada no. La pendiente de las secantes crece sin cota, y la gráfica tiene en el origen una <strong>tangente vertical</strong>. Es el ejemplo clásico de que el dominio de <span class="arithmatex">\(f'\)</span> puede ser más pequeño que el de <span class="arithmatex">\(f\)</span>.</p>
+</div>
+</details>
+<hr />
+<h3 id="der-12">Problema 12</h3>
+<p>Sea <span class="arithmatex">\(f(x) = \dfrac{1}{x^2}\)</span>.</p>
+<ol>
+<li>Use la definición para obtener <span class="arithmatex">\(f'(x)\)</span>.</li>
+<li>Encuentre la recta tangente en <span class="arithmatex">\(x = 1\)</span>.</li>
+<li>Esa tangente corta a los ejes coordenados formando un triángulo rectángulo. Calcule su área.</li>
+</ol>
+<details class="note">
+<summary>Ver desarrollo</summary>
+<p><strong>Parte 1.</strong> Para <span class="arithmatex">\(x \ne 0\)</span>, combinamos fracciones:</p>
+<div class="arithmatex">\[f(x+h) - f(x) = \frac{1}{(x+h)^2} - \frac{1}{x^2} = \frac{x^2 - (x+h)^2}{x^2(x+h)^2} = \frac{-(2xh + h^2)}{x^2(x+h)^2}.\]</div>
+<p>Dividiendo por <span class="arithmatex">\(h\)</span> y tomando el límite:</p>
+<div class="arithmatex">\[f'(x) = \lim_{h\to 0}\frac{-(2x + h)}{x^2(x+h)^2} = \frac{-2x}{x^4} = -\frac{2}{x^3}.\]</div>
+<p><strong>Parte 2.</strong> <span class="arithmatex">\(f(1) = 1\)</span> y <span class="arithmatex">\(f'(1) = -2\)</span>, luego</p>
+<div class="arithmatex">\[y = 1 - 2(x - 1) = -2x + 3.\]</div>
+<p><strong>Parte 3.</strong> Los cortes con los ejes son:</p>
+<ul>
+<li>con el eje <span class="arithmatex">\(y\)</span> (<span class="arithmatex">\(x=0\)</span>): <span class="arithmatex">\(y = 3\)</span>, es decir <span class="arithmatex">\((0,3)\)</span>;</li>
+<li>con el eje <span class="arithmatex">\(x\)</span> (<span class="arithmatex">\(y=0\)</span>): <span class="arithmatex">\(x = \tfrac32\)</span>, es decir <span class="arithmatex">\(\left(\tfrac32, 0\right)\)</span>.</li>
+</ul>
+<p>Los catetos miden <span class="arithmatex">\(3\)</span> y <span class="arithmatex">\(\tfrac32\)</span>, de modo que</p>
+<div class="arithmatex">\[\text{Área} = \frac12\cdot 3\cdot\frac32 = \frac94.\]</div>
+<div class="admonition success">
+<p class="admonition-title">Solución</p>
+<div class="arithmatex">\[f'(x) = -\frac{2}{x^3}, \qquad y = -2x + 3, \qquad \text{Área} = \frac94.\]</div>
+</div>
+</details>
+<hr />
+<h3 id="der-13">Problema 13</h3>
+<p>Sea <span class="arithmatex">\(f(x) = x^3 - 3x\)</span>.</p>
+<ol>
+<li>Use la definición para obtener <span class="arithmatex">\(f'(x)\)</span>.</li>
+<li>Encuentre los puntos de la gráfica con tangente horizontal.</li>
+<li>Escriba la recta tangente en <span class="arithmatex">\(x = 2\)</span> y determine en qué otro punto vuelve a cortar a la gráfica.</li>
+</ol>
+<details class="note">
+<summary>Ver desarrollo</summary>
+<p><strong>Parte 1.</strong> Desarrollamos con <span class="arithmatex">\((x+h)^3 = x^3 + 3x^2h + 3xh^2 + h^3\)</span>:</p>
+<div class="arithmatex">\[f(x+h) - f(x) = 3x^2h + 3xh^2 + h^3 - 3h,\]</div>
+<p>y al dividir por <span class="arithmatex">\(h\)</span>:</p>
+<div class="arithmatex">\[f'(x) = \lim_{h\to 0}\left(3x^2 + 3xh + h^2 - 3\right) = 3x^2 - 3.\]</div>
+<p><strong>Parte 2.</strong> Resolvemos <span class="arithmatex">\(3x^2 - 3 = 0 \implies x = \pm 1\)</span>, con <span class="arithmatex">\(f(1) = -2\)</span> y <span class="arithmatex">\(f(-1) = 2\)</span>. Los puntos son <span class="arithmatex">\((1,-2)\)</span> y <span class="arithmatex">\((-1, 2)\)</span>.</p>
+<p><strong>Parte 3.</strong> Con <span class="arithmatex">\(f(2) = 2\)</span> y <span class="arithmatex">\(f'(2) = 9\)</span>, la tangente es <span class="arithmatex">\(y = 2 + 9(x-2) = 9x - 16\)</span>. Para hallar otras intersecciones igualamos:</p>
+<div class="arithmatex">\[x^3 - 3x = 9x - 16 \implies x^3 - 12x + 16 = 0.\]</div>
+<p>Sabemos que <span class="arithmatex">\(x=2\)</span> es raíz, y de hecho <strong>doble</strong>, por tratarse de un punto de tangencia. Factorizando:</p>
+<div class="arithmatex">\[x^3 - 12x + 16 = (x-2)^2(x+4).\]</div>
+<p>La otra raíz es <span class="arithmatex">\(x = -4\)</span>, con <span class="arithmatex">\(f(-4) = -64 + 12 = -52\)</span>.</p>
+<div class="admonition success">
+<p class="admonition-title">Solución</p>
+<div class="arithmatex">\[f'(x) = 3x^2 - 3, \qquad \text{tangentes horizontales en } (1,-2) \text{ y } (-1,2),\]</div>
+<p>y la tangente <span class="arithmatex">\(y = 9x - 16\)</span> en <span class="arithmatex">\(x=2\)</span> corta nuevamente a la curva en <span class="arithmatex">\((-4,-52)\)</span>.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Verificación</p>
+<p>La recta en <span class="arithmatex">\(x=-4\)</span> vale <span class="arithmatex">\(9(-4) - 16 = -52 = f(-4)\)</span>. <span class="arithmatex">\(\checkmark\)</span>
+Una tangente puede cortar a la curva en otros puntos: ser tangente es una propiedad <strong>local</strong>.</p>
+</div>
+</details>
+<hr />
+<h3 id="der-14">Problema 14</h3>
+<p>El punto <span class="arithmatex">\(P(1,-3)\)</span> <strong>no</strong> está sobre la parábola <span class="arithmatex">\(y = x^2\)</span>. Encuentre las ecuaciones de todas las rectas que pasan por <span class="arithmatex">\(P\)</span> y son tangentes a la parábola.</p>
+<details class="note">
+<summary>Ver desarrollo</summary>
+<p><strong>Planteo.</strong> No conocemos el punto de tangencia, así que lo llamamos <span class="arithmatex">\((a, a^2)\)</span>. Como <span class="arithmatex">\(f(x) = x^2\)</span> tiene <span class="arithmatex">\(f'(x) = 2x\)</span>, la tangente en ese punto es</p>
+<div class="arithmatex">\[y = a^2 + 2a(x - a) = 2a\,x - a^2.\]</div>
+<p><strong>Condición.</strong> La recta debe pasar por <span class="arithmatex">\(P(1,-3)\)</span>:</p>
+<div class="arithmatex">\[-3 = 2a - a^2 \implies a^2 - 2a - 3 = 0 \implies (a-3)(a+1) = 0.\]</div>
+<p>Hay dos valores posibles: <span class="arithmatex">\(a = 3\)</span> y <span class="arithmatex">\(a = -1\)</span>.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><span class="arithmatex">\(a\)</span></th>
+<th style="text-align: center;">Punto de tangencia</th>
+<th>Tangente</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(3\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\((3, 9)\)</span></td>
+<td><span class="arithmatex">\(y = 6x - 9\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(-1\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\((-1, 1)\)</span></td>
+<td><span class="arithmatex">\(y = -2x - 1\)</span></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition success">
+<p class="admonition-title">Solución</p>
+<p>Hay exactamente dos tangentes: <span class="arithmatex">\(\;y = 6x - 9\;\)</span> y <span class="arithmatex">\(\;y = -2x - 1\)</span>.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Verificación</p>
+<p><span class="arithmatex">\(6\cdot 1 - 9 = -3\)</span> y <span class="arithmatex">\(-2\cdot 1 - 1 = -3\)</span>: ambas pasan por <span class="arithmatex">\(P\)</span>. <span class="arithmatex">\(\checkmark\)</span>
+Que salgan <strong>dos</strong> soluciones es coherente: desde un punto exterior a una parábola se pueden trazar siempre dos tangentes.</p>
+</div>
+</details>
+<hr />
+<h2 id="aplicaciones">Aplicaciones</h2>
+<h3 id="der-15">Problema 15</h3>
+<p><strong>COSTO.</strong> El costo de producir <span class="arithmatex">\(q\)</span> unidades de un artículo es <span class="arithmatex">\(C(q) = 0{,}02\,q^2 + 5q + 100\)</span> miles de pesos.</p>
+<ol>
+<li>Use la definición de derivada para calcular <span class="arithmatex">\(C'(50)\)</span> e interprete el resultado con unidades.</li>
+<li>Calcule el costo real de producir la unidad número <span class="arithmatex">\(51\)</span>, <span class="arithmatex">\(C(51) - C(50)\)</span>, y compárelo con <span class="arithmatex">\(C'(50)\)</span>.</li>
+</ol>
+<details class="note">
+<summary>Ver desarrollo</summary>
+<p><strong>Parte 1.</strong> Calculamos el incremento:</p>
+<div class="arithmatex">\[C(50+h) - C(50) = 0{,}02\left[(50+h)^2 - 2500\right] + 5h = 0{,}02(100h + h^2) + 5h = 7h + 0{,}02\,h^2.\]</div>
+<p>Entonces</p>
+<div class="arithmatex">\[C'(50) = \lim_{h\to 0}\,(7 + 0{,}02\,h) = 7.\]</div>
+<p><strong>Interpretación.</strong> Cuando se producen <span class="arithmatex">\(50\)</span> unidades, el costo aumenta a razón de <strong><span class="arithmatex">\(7\)</span> miles de pesos por unidad adicional</strong>. A esta cantidad se la llama <em>costo marginal</em>.</p>
+<p><strong>Parte 2.</strong> El costo real de la unidad <span class="arithmatex">\(51\)</span> es</p>
+<div class="arithmatex">\[C(51) - C(50) = 0{,}02\,(2601 - 2500) + 5 = 2{,}02 + 5 = 7{,}02 \text{ miles de pesos}.\]</div>
+<div class="admonition success">
+<p class="admonition-title">Solución</p>
+<div class="arithmatex">\[C'(50) = 7 \text{ miles de pesos por unidad}, \qquad C(51)-C(50) = 7{,}02.\]</div>
+<p>El costo marginal <span class="arithmatex">\(7\)</span> aproxima muy bien el costo real <span class="arithmatex">\(7{,}02\)</span> de la unidad siguiente.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Por qué se parecen</p>
+<p>Con <span class="arithmatex">\(h = 1\)</span> el cociente incremental vale <span class="arithmatex">\(7 + 0{,}02\cdot 1 = 7{,}02\)</span>, y la diferencia con <span class="arithmatex">\(C'(50)\)</span> es precisamente el término <span class="arithmatex">\(0{,}02\,h\)</span>. La derivada aproxima la variación real mientras <span class="arithmatex">\(h\)</span> sea pequeño frente a la escala del problema.</p>
+</div>
+</details>
+<hr />
+<h3 id="der-16">Problema 16</h3>
+<p><strong>ÁREA DEL CÍRCULO.</strong> El área de un círculo de radio <span class="arithmatex">\(r\)</span> es <span class="arithmatex">\(A(r) = \pi r^2\)</span>.</p>
+<ol>
+<li>Use la definición para obtener <span class="arithmatex">\(A'(r)\)</span>.</li>
+<li>¿Qué cantidad geométrica conocida es <span class="arithmatex">\(A'(r)\)</span>? Explique por qué el resultado tiene sentido.</li>
+<li>Si el radio pasa de <span class="arithmatex">\(5\)</span> cm a <span class="arithmatex">\(5{,}1\)</span> cm, compare el aumento real del área con la aproximación <span class="arithmatex">\(A'(5)\cdot 0{,}1\)</span>.</li>
+</ol>
+<details class="note">
+<summary>Ver desarrollo</summary>
+<p><strong>Parte 1.</strong></p>
+<div class="arithmatex">\[A(r+h) - A(r) = \pi\left[(r+h)^2 - r^2\right] = \pi\,(2rh + h^2),\]</div>
+<p>y por lo tanto</p>
+<div class="arithmatex">\[A'(r) = \lim_{h\to 0}\pi\,(2r + h) = 2\pi r.\]</div>
+<p><strong>Parte 2.</strong> <span class="arithmatex">\(2\pi r\)</span> es la <strong>longitud de la circunferencia</strong>. Tiene sentido: si el radio crece en <span class="arithmatex">\(h\)</span>, el círculo gana un anillo delgado de ancho <span class="arithmatex">\(h\)</span> cuya longitud es aproximadamente la de la circunferencia, así que el área añadida es cercana a <span class="arithmatex">\(2\pi r\cdot h\)</span>.</p>
+<p><strong>Parte 3.</strong> Con <span class="arithmatex">\(r = 5\)</span> y <span class="arithmatex">\(h = 0{,}1\)</span>:</p>
+<ul>
+<li>Aumento real: <span class="arithmatex">\(A(5{,}1) - A(5) = \pi(26{,}01 - 25) = 1{,}01\,\pi \approx 3{,}173 \text{ cm}^2\)</span>.</li>
+<li>Aproximación: <span class="arithmatex">\(A'(5)\cdot 0{,}1 = 10\pi\cdot 0{,}1 = \pi \approx 3{,}142 \text{ cm}^2\)</span>.</li>
+</ul>
+<div class="admonition success">
+<p class="admonition-title">Solución</p>
+<div class="arithmatex">\[A'(r) = 2\pi r,\]</div>
+<p>la longitud de la circunferencia. El aumento real es <span class="arithmatex">\(1{,}01\pi \approx 3{,}173\)</span> cm² frente a la estimación <span class="arithmatex">\(\pi \approx 3{,}142\)</span> cm².</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">De dónde sale el error</p>
+<p>La diferencia es exactamente <span class="arithmatex">\(\pi\,h^2 = 0{,}01\,\pi\)</span>, el término <span class="arithmatex">\(h^2\)</span> que el límite descarta. Es el área del pequeño borde cuadrático que la aproximación lineal ignora.</p>
+</div>
+</details>
+<hr />
+<h2 id="derivabilidad-y-casos-especiales">Derivabilidad y casos especiales</h2>
+<p>Los problemas siguientes estudian los puntos donde la derivada <strong>puede no existir</strong>. Los argumentos con límites laterales y la relación entre continuidad y derivabilidad son el centro de esta sección.</p>
+<h3 id="der-17">Problema 17</h3>
+<p>Determine si la función</p>
+<div class="arithmatex">\[f(x) = \begin{cases} x^2 &amp; \text{si } x \le 2 \\[2pt] 4x - 4 &amp; \text{si } x &gt; 2 \end{cases}\]</div>
+<p>es continua y derivable en <span class="arithmatex">\(x = 2\)</span>. Si es derivable, indique el valor de <span class="arithmatex">\(f'(2)\)</span>.</p>
+<details class="note">
+<summary>Ver desarrollo</summary>
+<p><strong>Continuidad.</strong> Comparamos los límites laterales con el valor de la función:</p>
+<div class="arithmatex">\[f(2) = 4, \qquad \lim_{x\to 2^-}x^2 = 4, \qquad \lim_{x\to 2^+}(4x - 4) = 4.\]</div>
+<p>Los tres coinciden, así que <span class="arithmatex">\(f\)</span> es continua en <span class="arithmatex">\(2\)</span>.</p>
+<p><strong>Derivabilidad.</strong> Calculamos los dos límites laterales del cociente <span class="arithmatex">\(\dfrac{f(x)-f(2)}{x-2}\)</span>:</p>
+<table>
+<thead>
+<tr>
+<th>Lado</th>
+<th>Cociente</th>
+<th style="text-align: center;">Límite</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="arithmatex">\(x \to 2^-\)</span></td>
+<td><span class="arithmatex">\(\dfrac{x^2 - 4}{x - 2} = x + 2\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(4\)</span></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(x \to 2^+\)</span></td>
+<td><span class="arithmatex">\(\dfrac{(4x - 4) - 4}{x - 2} = \dfrac{4(x-2)}{x-2} = 4\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(4\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>Ambos límites laterales existen y son iguales.</p>
+<div class="admonition success">
+<p class="admonition-title">Solución</p>
+<p><span class="arithmatex">\(f\)</span> es continua y derivable en <span class="arithmatex">\(x=2\)</span>, con
+$<span class="arithmatex">\(f'(2) = 4.\)</span>$</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Qué se ve en la gráfica</p>
+<p>La recta <span class="arithmatex">\(y = 4x - 4\)</span> es exactamente la tangente a la parábola <span class="arithmatex">\(y = x^2\)</span> en <span class="arithmatex">\((2,4)\)</span>: pasa por ese punto con pendiente <span class="arithmatex">\(4\)</span>. La función "cambia de fórmula" sin ningún quiebre, y por eso no hay esquina.</p>
+</div>
+</details>
+<hr />
+<h3 id="der-18">Problema 18</h3>
+<p>Considere la función</p>
+<div class="arithmatex">\[g(x) = \begin{cases} x^2 &amp; \text{si } x &lt; 1 \\[2pt] x^2 + 1 &amp; \text{si } x \ge 1. \end{cases}\]</div>
+<p>Un estudiante afirma: <em>"Las dos fórmulas tienen la misma derivada, <span class="arithmatex">\(2x\)</span>, que en <span class="arithmatex">\(x = 1\)</span> vale <span class="arithmatex">\(2\)</span> por ambos lados; como coinciden, <span class="arithmatex">\(g\)</span> es derivable en <span class="arithmatex">\(x=1\)</span>"</em>. ¿Es correcta su conclusión? ¿Es correcto su razonamiento? Justifique usando la definición.</p>
+<details class="note">
+<summary>Ver desarrollo</summary>
+<p><strong>Continuidad primero.</strong> Es la condición que el estudiante omitió:</p>
+<div class="arithmatex">\[g(1) = 1^2 + 1 = 2, \qquad \lim_{x\to 1^-}g(x) = 1, \qquad \lim_{x\to 1^+}g(x) = 2.\]</div>
+<p>Los límites laterales difieren, así que <span class="arithmatex">\(g\)</span> tiene un <strong>salto</strong> en <span class="arithmatex">\(x = 1\)</span> y <strong>no es continua</strong> allí. Como derivable implica continua, <span class="arithmatex">\(g\)</span> <strong>no es derivable</strong> en <span class="arithmatex">\(x=1\)</span>.</p>
+<p><strong>Comprobación con la definición.</strong> Con <span class="arithmatex">\(g(1) = 2\)</span>:</p>
+<table>
+<thead>
+<tr>
+<th>Lado</th>
+<th>Cociente</th>
+<th style="text-align: center;">Límite</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="arithmatex">\(h \to 0^-\)</span></td>
+<td><span class="arithmatex">\(\dfrac{(1+h)^2 - 2}{h} = \dfrac{-1 + 2h + h^2}{h}\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(-\infty\)</span></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(h \to 0^+\)</span></td>
+<td><span class="arithmatex">\(\dfrac{(1+h)^2 + 1 - 2}{h} = \dfrac{2h + h^2}{h} = 2 + h\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(2\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>El límite por la izquierda ni siquiera es finito.</p>
+<div class="admonition success">
+<p class="admonition-title">Solución</p>
+<p>La conclusión del estudiante es <strong>incorrecta</strong>: <span class="arithmatex">\(g\)</span> no es derivable en <span class="arithmatex">\(x=1\)</span>. Su razonamiento es <strong>inválido</strong>, porque deriva cada fórmula por separado y compara valores sin haber verificado antes la continuidad.</p>
+</div>
+<div class="admonition danger">
+<p class="admonition-title">La trampa de fondo</p>
+<p>Que las dos fórmulas tengan derivadas iguales no dice nada sobre el empalme: lo que importa es el cociente incremental <strong>en el punto</strong>, que involucra el valor <span class="arithmatex">\(g(1)\)</span> y los de ambos lados. Una función puede tener "pendientes coincidentes" a ambos lados y, aun así, estar partida por un salto. <strong>Primero la continuidad, después la derivada.</strong></p>
+</div>
+</details>
+<hr />
+<h3 id="der-19">Problema 19</h3>
+<p>Encuentre los valores de las constantes <span class="arithmatex">\(a\)</span> y <span class="arithmatex">\(b\)</span> para que la función</p>
+<div class="arithmatex">\[f(x) = \begin{cases} a x^2 + 1 &amp; \text{si } x \le 1 \\[2pt] b x + 3 &amp; \text{si } x &gt; 1 \end{cases}\]</div>
+<p>sea derivable en <span class="arithmatex">\(x = 1\)</span>. Explique por qué se necesitan <em>dos</em> condiciones.</p>
+<details class="note">
+<summary>Ver desarrollo</summary>
+<p><strong>Por qué dos condiciones.</strong> Derivable en <span class="arithmatex">\(1\)</span> exige dos cosas distintas, y cada una fija una relación entre las incógnitas:</p>
+<ol>
+<li><strong>Continuidad</strong> (los valores empalman).</li>
+<li><strong>Igualdad de pendientes</strong> (no hay esquina).</li>
+</ol>
+<p>Con dos parámetros libres, hacen falta exactamente dos ecuaciones.</p>
+<p><strong>Condición 1: continuidad.</strong> Igualamos los límites laterales:</p>
+<div class="arithmatex">\[a\cdot 1^2 + 1 = b\cdot 1 + 3 \implies a - b = 2.\]</div>
+<p><strong>Condición 2: pendientes iguales.</strong> La derivada por la izquierda es la de <span class="arithmatex">\(ax^2 + 1\)</span> en <span class="arithmatex">\(x=1\)</span>, y por la derecha la de <span class="arithmatex">\(bx+3\)</span>:</p>
+<div class="arithmatex">\[f'_-(1) = 2a, \qquad f'_+(1) = b \implies 2a = b.\]</div>
+<p><strong>Resolución del sistema.</strong> Sustituyendo <span class="arithmatex">\(b = 2a\)</span> en la primera:</p>
+<div class="arithmatex">\[a - 2a = 2 \implies a = -2, \qquad b = -4.\]</div>
+<div class="admonition success">
+<p class="admonition-title">Solución</p>
+<div class="arithmatex">\[a = -2, \qquad b = -4.\]</div>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Verificación</p>
+<p>Con estos valores <span class="arithmatex">\(f(x) = -2x^2 + 1\)</span> para <span class="arithmatex">\(x \le 1\)</span> y <span class="arithmatex">\(f(x) = -4x + 3\)</span> para <span class="arithmatex">\(x &gt; 1\)</span>.
+Continuidad: <span class="arithmatex">\(-2 + 1 = -1\)</span> y <span class="arithmatex">\(-4 + 3 = -1\)</span>. <span class="arithmatex">\(\checkmark\)</span>
+Pendientes: <span class="arithmatex">\(2a = -4\)</span> y <span class="arithmatex">\(b = -4\)</span>. <span class="arithmatex">\(\checkmark\)</span></p>
+<p>Observe que aquí <strong>sí</strong> se justifica derivar cada fórmula por separado: la continuidad ya está garantizada por la primera condición. Es la diferencia con el Problema 18.</p>
+</div>
+</details>
+<hr />
+<h3 id="der-20">Problema 20</h3>
+<p>Sea <span class="arithmatex">\(f(x) = |x^2 - 4|\)</span>.</p>
+<ol>
+<li>Estudie la derivabilidad de <span class="arithmatex">\(f\)</span> en <span class="arithmatex">\(x = 2\)</span> calculando los dos límites laterales del cociente de la definición.</li>
+<li>¿Es <span class="arithmatex">\(f\)</span> derivable en <span class="arithmatex">\(x = 0\)</span>? Si lo es, calcule <span class="arithmatex">\(f'(0)\)</span>.</li>
+<li>Describa la forma de la gráfica cerca de <span class="arithmatex">\(x = 2\)</span> y de <span class="arithmatex">\(x = 0\)</span>, y explique la diferencia entre ambos puntos.</li>
+</ol>
+<details class="note">
+<summary>Ver desarrollo</summary>
+<p><strong>Parte 1: <span class="arithmatex">\(x=2\)</span>.</strong> Se tiene <span class="arithmatex">\(f(2) = 0\)</span> y</p>
+<div class="arithmatex">\[\frac{f(x) - f(2)}{x - 2} = \frac{|x-2|\,|x+2|}{x - 2}.\]</div>
+<p>Cerca de <span class="arithmatex">\(2\)</span> se tiene <span class="arithmatex">\(x + 2 &gt; 0\)</span>, de modo que <span class="arithmatex">\(|x+2| = x+2\)</span>. El resto depende del lado:</p>
+<table>
+<thead>
+<tr>
+<th>Lado</th>
+<th style="text-align: center;"><span class="arithmatex">\(\dfrac{\lvert x-2\rvert}{x-2}\)</span></th>
+<th>Cociente</th>
+<th style="text-align: center;">Límite</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="arithmatex">\(x \to 2^+\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(+1\)</span></td>
+<td><span class="arithmatex">\(x + 2\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(4\)</span></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(x \to 2^-\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(-1\)</span></td>
+<td><span class="arithmatex">\(-(x+2)\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(-4\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>Los límites laterales existen pero son <strong>distintos</strong> (<span class="arithmatex">\(4 \ne -4\)</span>), así que <span class="arithmatex">\(f\)</span> <strong>no es derivable</strong> en <span class="arithmatex">\(x = 2\)</span>.</p>
+<p><strong>Parte 2: <span class="arithmatex">\(x=0\)</span>.</strong> Cerca de <span class="arithmatex">\(0\)</span> se tiene <span class="arithmatex">\(x^2 - 4 &lt; 0\)</span>, de modo que <span class="arithmatex">\(f(x) = 4 - x^2\)</span>, con <span class="arithmatex">\(f(0) = 4\)</span>. Entonces</p>
+<div class="arithmatex">\[\frac{f(h) - f(0)}{h} = \frac{4 - h^2 - 4}{h} = -h \xrightarrow[h\to 0]{} 0.\]</div>
+<p>La función <strong>es derivable</strong> en <span class="arithmatex">\(0\)</span>, con <span class="arithmatex">\(f'(0) = 0\)</span>.</p>
+<p><strong>Parte 3: forma de la gráfica.</strong></p>
+<ul>
+<li>En <span class="arithmatex">\(x=2\)</span> hay una <strong>esquina</strong>: la gráfica llega con pendiente <span class="arithmatex">\(-4\)</span> y sale con pendiente <span class="arithmatex">\(+4\)</span>, formando un pico en forma de "V" apoyado en el eje <span class="arithmatex">\(x\)</span>.</li>
+<li>En <span class="arithmatex">\(x=0\)</span> la gráfica es <strong>suave</strong>: es un arco de parábola invertida con máximo local en <span class="arithmatex">\((0,4)\)</span> y tangente horizontal.</li>
+</ul>
+<div class="admonition success">
+<p class="admonition-title">Solución</p>
+<p><span class="arithmatex">\(f\)</span> no es derivable en <span class="arithmatex">\(x=2\)</span> (esquina, con derivadas laterales <span class="arithmatex">\(-4\)</span> y <span class="arithmatex">\(4\)</span>), y es derivable en <span class="arithmatex">\(x=0\)</span> con <span class="arithmatex">\(f'(0) = 0\)</span>.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">La diferencia entre ambos puntos</p>
+<p>El valor absoluto "pliega" la gráfica solo donde el interior <strong>cambia de signo</strong>. En <span class="arithmatex">\(x=\pm 2\)</span>, donde <span class="arithmatex">\(x^2-4\)</span> se anula atravesando el cero con pendiente no nula, el pliegue genera una esquina. En <span class="arithmatex">\(x=0\)</span> el interior es negativo y <span class="arithmatex">\(|x^2-4| = 4 - x^2\)</span> ni siquiera "ve" el valor absoluto: es simplemente un polinomio.</p>
+<p>Además, <span class="arithmatex">\(f\)</span> es continua en <span class="arithmatex">\(x=2\)</span> (vale <span class="arithmatex">\(0\)</span> por ambos lados): <strong>continua pero no derivable</strong>, el recíproco falso de "derivable implica continua".</p>
+</div>
+</details>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Pie" >
+        
+          
+          <a href="../aplicaciones/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: Aplicaciones">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Anterior
+              </span>
+              <div class="md-ellipsis">
+                Aplicaciones
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../derivadas_reglas/" class="md-footer__link md-footer__link--next" aria-label="Siguiente: Álgebra de derivación">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Siguiente
+              </span>
+              <div class="md-ellipsis">
+                Álgebra de derivación
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.top", "navigation.footer", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="../../javascripts/quiz.js"></script>
+      
+    
+  </body>
+</html>

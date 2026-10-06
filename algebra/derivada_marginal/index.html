@@ -1,0 +1,2298 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Material de apoyo, guías y problemas de precálculo.">
+      
+      
+        <meta name="author" content="José David Torres Riffo">
+      
+      
+      
+        <link rel="prev" href="../derivada_aproximacion/">
+      
+      
+        <link rel="next" href="../derivada_implicita/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Razón de cambio y análisis marginal - MateRiffo</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="deep-orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#analisis-marginal-y-razones-de-cambio" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../.." title="MateRiffo" class="md-header__button md-logo" aria-label="MateRiffo" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            MateRiffo
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Razón de cambio y análisis marginal
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="deep-orange"  aria-label="Cambiar a modo oscuro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo oscuro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="deep-orange"  aria-label="Cambiar a modo claro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo claro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="MateRiffo" class="md-nav__button md-logo" aria-label="MateRiffo" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    MateRiffo
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Módulo de Números naturales
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Módulo de Números naturales
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../avanzadas/sumatorias/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sumatorias
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../avanzadas/progresiones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Progresiones
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../avanzadas/inecuaciones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inecuaciones
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Módulo de Inecuaciones
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Módulo de Inecuaciones
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../inecuaciones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Racionales
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../desigualdades/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Desigualdades
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../raices/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Raíces
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../absoluto/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Valor absoluto
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../aplicaciones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aplicaciones
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Módulo de Derivadas
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Módulo de Derivadas
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../derivada_definicion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Derivada por definición
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../derivadas_reglas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Álgebra de derivación
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../derivada_aproximacion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Recta tangente y aproximación lineal
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Razón de cambio y análisis marginal
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Razón de cambio y análisis marginal
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#analisis-marginal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Análisis marginal
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Análisis marginal">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mar-01" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema 1
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mar-02" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema 2
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mar-03" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema 3
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mar-04" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema 4
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mar-05" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema 5
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mar-06" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema 6
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mar-07" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema 7
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mar-08" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema 8
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mar-09" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema 9
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mar-10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema 10
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#razones-de-cambio-en-el-tiempo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Razones de cambio en el tiempo
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Razones de cambio en el tiempo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#raz-01" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema 11
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#raz-02" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema 12
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#raz-03" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema 13
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#raz-04" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema 14
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#raz-05" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema 15
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#raz-06" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema 16
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#raz-07" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema 17
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#razones-relacionadas-en-contextos-geometricos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Razones relacionadas en contextos geométricos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Razones relacionadas en contextos geométricos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#raz-08" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema 18
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#raz-09" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema 19
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#raz-10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema 20
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../derivada_implicita/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Derivada implícita
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#analisis-marginal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Análisis marginal
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Análisis marginal">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mar-01" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema 1
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mar-02" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema 2
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mar-03" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema 3
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mar-04" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema 4
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mar-05" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema 5
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mar-06" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema 6
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mar-07" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema 7
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mar-08" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema 8
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mar-09" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema 9
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mar-10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema 10
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#razones-de-cambio-en-el-tiempo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Razones de cambio en el tiempo
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Razones de cambio en el tiempo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#raz-01" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema 11
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#raz-02" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema 12
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#raz-03" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema 13
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#raz-04" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema 14
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#raz-05" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema 15
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#raz-06" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema 16
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#raz-07" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema 17
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#razones-relacionadas-en-contextos-geometricos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Razones relacionadas en contextos geométricos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Razones relacionadas en contextos geométricos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#raz-08" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema 18
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#raz-09" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema 19
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#raz-10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema 20
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="analisis-marginal-y-razones-de-cambio">Análisis marginal y razones de cambio</h1>
+<p>Problemas que interpretan la derivada como <strong>tasa de variación</strong>: en economía, como el efecto de producir o vender <em>una unidad más</em>, y en otros contextos, como la rapidez con que cambia una cantidad respecto del tiempo. El rasgo distintivo de esta sección es que <strong>el cálculo es solo la mitad del problema</strong>: la otra mitad es decir qué significa el número, con qué unidades se mide y qué decisión se toma a partir de él.</p>
+<div class="admonition abstract">
+<p class="admonition-title">Ideas fundamentales</p>
+<table>
+<thead>
+<tr>
+<th>Concepto</th>
+<th>Expresión</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ingreso, utilidad, costo promedio</td>
+<td><span class="arithmatex">\(R(q) = q\,p(q), \qquad P(q) = R(q) - C(q), \qquad A(q) = \dfrac{C(q)}{q}\)</span></td>
+</tr>
+<tr>
+<td>Funciones marginales</td>
+<td><span class="arithmatex">\(C'(q), \quad R'(q), \quad P'(q) = R'(q) - C'(q)\)</span></td>
+</tr>
+<tr>
+<td>Aproximación marginal</td>
+<td><span class="arithmatex">\(C'(q_0) \approx C(q_0 + 1) - C(q_0)\)</span> (costo de la unidad número <span class="arithmatex">\(q_0+1\)</span>)</td>
+</tr>
+<tr>
+<td>Utilidad máxima (interior)</td>
+<td><span class="arithmatex">\(P'(q) = 0 \iff R'(q) = C'(q)\)</span>, con <span class="arithmatex">\(P'\)</span> pasando de <span class="arithmatex">\(+\)</span> a <span class="arithmatex">\(-\)</span></td>
+</tr>
+<tr>
+<td>Costo promedio mínimo</td>
+<td><span class="arithmatex">\(A'(q) = \dfrac{C'(q) - A(q)}{q} = 0 \iff C'(q) = A(q)\)</span></td>
+</tr>
+<tr>
+<td>Razones relacionadas (cadena)</td>
+<td><span class="arithmatex">\(\dfrac{dy}{dt} = \dfrac{dy}{dx}\cdot\dfrac{dx}{dt}\)</span></td>
+</tr>
+<tr>
+<td>Tasa de crecimiento relativa</td>
+<td><span class="arithmatex">\(\dfrac{y'}{y}\)</span>, y para un producto: <span class="arithmatex">\(\dfrac{(uv)'}{uv} = \dfrac{u'}{u} + \dfrac{v'}{v}\)</span></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Una derivada siempre lleva unidades.</strong> Si <span class="arithmatex">\(C\)</span> se mide en miles de pesos y <span class="arithmatex">\(q\)</span> en unidades, entonces <span class="arithmatex">\(C'\)</span> se mide en <strong>miles de pesos por unidad</strong>. Si <span class="arithmatex">\(q\)</span> se mide en unidades y <span class="arithmatex">\(t\)</span> en días, <span class="arithmatex">\(\frac{dq}{dt}\)</span> se mide en <strong>unidades por día</strong>. Escribirlas permite interpretar el resultado y detectar errores.</p>
+<p><strong>Estrategia para razones relacionadas.</strong> (1) Identificar qué cantidades cambian y cuál es el tiempo. (2) Escribir la relación entre ellas. (3) <strong>Derivar respecto del tiempo</strong> con la regla de la cadena. (4) Recién entonces sustituir los valores numéricos.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Las tres trampas de esta sección</p>
+<ol>
+<li><strong>Evaluar el marginal en el punto equivocado.</strong> Para estimar el costo de la unidad número <span class="arithmatex">\(q_0 + 1\)</span> se evalúa <span class="arithmatex">\(C'\)</span> en <span class="arithmatex">\(q_0\)</span>, no en <span class="arithmatex">\(q_0+1\)</span>. Y el marginal es una <strong>aproximación</strong>: el costo real de la unidad siguiente es <span class="arithmatex">\(C(q_0+1) - C(q_0)\)</span>, que puede diferir.</li>
+<li><strong>Sustituir antes de derivar.</strong> En razones relacionadas, si se reemplaza un valor numérico en una cantidad que <strong>cambia con el tiempo</strong> antes de derivar, esa cantidad queda como constante y su derivada desaparece. Primero se deriva, luego se evalúa.</li>
+<li><strong>Ignorar el signo de la tasa.</strong> Una cantidad que <strong>disminuye</strong> tiene tasa de cambio negativa. Escribir "el precio baja 2 por mes" como <span class="arithmatex">\(p' = +2\)</span> invierte la conclusión.</li>
+</ol>
+</div>
+<hr />
+<h2 id="analisis-marginal">Análisis marginal</h2>
+<h3 id="mar-01">Problema 1</h3>
+<p><strong>ECONOMÍAS DE ESCALA.</strong> El costo de producir <span class="arithmatex">\(q\)</span> unidades es <span class="arithmatex">\(C(q) = 300 + 40\sqrt{q}\)</span> miles de pesos.</p>
+<ol>
+<li>Calcule el costo marginal <span class="arithmatex">\(C'(q)\)</span>.</li>
+<li>Calcule <span class="arithmatex">\(C'(100)\)</span> y <span class="arithmatex">\(C'(400)\)</span> e interprete ambos valores con unidades.</li>
+<li>Use el costo marginal para estimar el costo de la unidad número <span class="arithmatex">\(101\)</span> y compárelo con el costo real.</li>
+<li>¿Qué ocurre con el costo marginal a medida que <span class="arithmatex">\(q\)</span> crece? ¿Puede llegar a ser cero?</li>
+</ol>
+<details class="note">
+<summary>Ver desarrollo</summary>
+<p><strong>Parte 1.</strong> Con <span class="arithmatex">\(C(q) = 300 + 40\,q^{1/2}\)</span>:</p>
+<div class="arithmatex">\[C'(q) = 20\,q^{-1/2} = \frac{20}{\sqrt{q}}.\]</div>
+<p><strong>Parte 2.</strong></p>
+<div class="arithmatex">\[C'(100) = \frac{20}{10} = 2, \qquad C'(400) = \frac{20}{20} = 1.\]</div>
+<p>Con <span class="arithmatex">\(100\)</span> unidades, producir una unidad más cuesta aproximadamente <strong><span class="arithmatex">\(2\)</span> mil pesos</strong>. Con <span class="arithmatex">\(400\)</span> unidades, cuesta aproximadamente <strong><span class="arithmatex">\(1\)</span> mil pesos</strong>.</p>
+<p><strong>Parte 3.</strong> La estimación es <span class="arithmatex">\(C'(100) = 2\)</span>. El costo real de la unidad <span class="arithmatex">\(101\)</span> es</p>
+<div class="arithmatex">\[C(101) - C(100) = 40\left(\sqrt{101} - 10\right) \approx 40\cdot 0{,}0498756 \approx 1{,}995.\]</div>
+<p>La estimación <span class="arithmatex">\(2\)</span> y el valor real <span class="arithmatex">\(1{,}995\)</span> difieren en menos de un <span class="arithmatex">\(0{,}3\%\)</span>.</p>
+<p><strong>Parte 4.</strong> <span class="arithmatex">\(C'(q) = \dfrac{20}{\sqrt{q}}\)</span> <strong>disminuye</strong> al aumentar <span class="arithmatex">\(q\)</span> y se acerca a <span class="arithmatex">\(0\)</span> sin alcanzarlo jamás: nunca es cero, porque <span class="arithmatex">\(\frac{20}{\sqrt{q}} &gt; 0\)</span> para todo <span class="arithmatex">\(q&gt;0\)</span>.</p>
+<div class="admonition success">
+<p class="admonition-title">Solución</p>
+<div class="arithmatex">\[C'(q) = \frac{20}{\sqrt{q}}, \qquad C'(100) = 2, \quad C'(400) = 1 \text{ (miles de pesos por unidad)}, \qquad \text{unidad 101: } \approx 2 \text{ (real } 1{,}995).\]</div>
+<p>El costo marginal es siempre positivo pero decreciente.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Qué muestra esta función</p>
+<p>Un costo marginal que <strong>baja</strong> al producir más es lo que los economistas llaman <em>economías de escala</em>: cada unidad adicional es más barata que la anterior. Es el comportamiento opuesto al de los costos cuadráticos, donde el marginal sube.</p>
+</div>
+</details>
+<hr />
+<h3 id="mar-02">Problema 2</h3>
+<p><strong>INGRESO MARGINAL.</strong> Para vender <span class="arithmatex">\(q\)</span> unidades, una empresa fija el precio en <span class="arithmatex">\(p(q) = 90 - \sqrt{q}\)</span> miles de pesos, con <span class="arithmatex">\(0 \le q \le 8100\)</span>.</p>
+<ol>
+<li>Escriba el ingreso <span class="arithmatex">\(R(q)\)</span> y calcule el ingreso marginal <span class="arithmatex">\(R'(q)\)</span>.</li>
+<li>Calcule <span class="arithmatex">\(R'(400)\)</span> y <span class="arithmatex">\(R'(2500)\)</span> e interprete.</li>
+<li>¿Para qué nivel de ventas el ingreso marginal es cero? Calcule el ingreso máximo y el precio asociado.</li>
+<li>¿Qué significa que <span class="arithmatex">\(R'(q) &lt; 0\)</span> para <span class="arithmatex">\(q\)</span> mayor que ese nivel?</li>
+</ol>
+<details class="note">
+<summary>Ver desarrollo</summary>
+<p><strong>Parte 1.</strong></p>
+<div class="arithmatex">\[R(q) = q\,\big(90 - \sqrt{q}\big) = 90q - q^{3/2}, \qquad R'(q) = 90 - \frac32\,\sqrt{q}.\]</div>
+<p><strong>Parte 2.</strong></p>
+<div class="arithmatex">\[R'(400) = 90 - \frac32\cdot 20 = 60, \qquad R'(2500) = 90 - \frac32\cdot 50 = 15.\]</div>
+<p>Con <span class="arithmatex">\(400\)</span> unidades vendidas, vender una más aporta unos <strong><span class="arithmatex">\(60\)</span> mil pesos</strong> de ingreso. Con <span class="arithmatex">\(2500\)</span>, solo unos <strong><span class="arithmatex">\(15\)</span> mil pesos</strong>: a mayor volumen, cada unidad adicional rinde menos.</p>
+<p><strong>Parte 3.</strong></p>
+<div class="arithmatex">\[R'(q) = 0 \implies \sqrt{q} = 60 \implies q = 3600.\]</div>
+<p>El precio en ese punto es <span class="arithmatex">\(p = 90 - 60 = 30\)</span> mil pesos, y el ingreso máximo es</p>
+<div class="arithmatex">\[R(3600) = 3600\cdot 30 = 108\,000 \text{ miles de pesos}.\]</div>
+<p><strong>Parte 4.</strong> Para <span class="arithmatex">\(q &gt; 3600\)</span> el ingreso marginal es negativo: <strong>vender más reduce el ingreso total</strong>, porque la baja del precio necesaria para colocar más unidades no se compensa con las unidades extra.</p>
+<div class="admonition success">
+<p class="admonition-title">Solución</p>
+<div class="arithmatex">\[R'(q) = 90 - \tfrac32\sqrt{q}, \qquad R'(400) = 60, \quad R'(2500) = 15, \qquad \text{máximo en } q = 3600, \quad p = 30, \quad R = 108\,000.\]</div>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Un ingreso máximo no es una utilidad máxima</p>
+<p>Este es el nivel que maximiza el <em>ingreso</em>. Para maximizar la <em>utilidad</em> hay que restar el costo (Problema 3): ese óptimo estará siempre a la izquierda, en un nivel con ingreso marginal <strong>positivo</strong>, igual al costo marginal.</p>
+</div>
+</details>
+<hr />
+<h3 id="mar-03">Problema 3</h3>
+<p><strong>UTILIDAD MÁXIMA.</strong> Una empresa enfrenta la demanda <span class="arithmatex">\(p(q) = 140 - 0{,}4q\)</span> y tiene un costo total <span class="arithmatex">\(C(q) = 0{,}1q^2 + 20q + 1000\)</span> (ambos en miles de pesos).</p>
+<ol>
+<li>Calcule el ingreso marginal y el costo marginal.</li>
+<li>Encuentre el nivel de producción donde se cumple <span class="arithmatex">\(R'(q) = C'(q)\)</span>.</li>
+<li>Demuestre que ese nivel maximiza la utilidad estudiando el signo de <span class="arithmatex">\(P'(q)\)</span>, y calcule el precio y la utilidad máxima.</li>
+</ol>
+<details class="note">
+<summary>Ver desarrollo</summary>
+<p><strong>Parte 1.</strong> El ingreso es <span class="arithmatex">\(R(q) = q(140 - 0{,}4q) = 140q - 0{,}4q^2\)</span>. Entonces</p>
+<div class="arithmatex">\[R'(q) = 140 - 0{,}8q, \qquad C'(q) = 0{,}2q + 20.\]</div>
+<p><strong>Parte 2.</strong></p>
+<div class="arithmatex">\[140 - 0{,}8q = 0{,}2q + 20 \implies 120 = q \implies q = 120.\]</div>
+<p><strong>Parte 3.</strong> La utilidad marginal es</p>
+<div class="arithmatex">\[P'(q) = R'(q) - C'(q) = 120 - q.\]</div>
+<table>
+<thead>
+<tr>
+<th>Intervalo</th>
+<th style="text-align: center;"><span class="arithmatex">\([0, 120[\)</span></th>
+<th style="text-align: center;"><span class="arithmatex">\(]120, +\infty[\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="arithmatex">\(P'(q)\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\boldsymbol{+}\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(-\)</span></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(P\)</span></td>
+<td style="text-align: center;">crece</td>
+<td style="text-align: center;">decrece</td>
+</tr>
+</tbody>
+</table>
+<p>El signo cambia de <span class="arithmatex">\(+\)</span> a <span class="arithmatex">\(-\)</span> en <span class="arithmatex">\(q = 120\)</span>: la utilidad alcanza allí su <strong>máximo</strong>. El precio es <span class="arithmatex">\(p(120) = 140 - 48 = 92\)</span> mil pesos, y</p>
+<div class="arithmatex">\[R(120) = 11\,040, \qquad C(120) = 4\,840, \qquad P(120) = 6\,200 \text{ miles de pesos}.\]</div>
+<div class="admonition success">
+<p class="admonition-title">Solución</p>
+<div class="arithmatex">\[R'(q) = 140 - 0{,}8q, \quad C'(q) = 0{,}2q + 20, \qquad q^* = 120, \quad p^* = 92, \quad P_{\max} = 6\,200.\]</div>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">La regla <span class="arithmatex">\(R' = C'\)</span></p>
+<p>En <span class="arithmatex">\(q = 120\)</span> ambos marginales valen <span class="arithmatex">\(44\)</span>: la última unidad producida aporta exactamente lo que cuesta. Antes, cada unidad aporta más de lo que cuesta (<span class="arithmatex">\(P' &gt; 0\)</span>) y conviene producirla; después, aporta menos (<span class="arithmatex">\(P' &lt; 0\)</span>) y conviene no producirla. Esa es la lógica económica detrás de igualar los marginales.</p>
+</div>
+</details>
+<hr />
+<h3 id="mar-04">Problema 4</h3>
+<p><strong>COSTO PROMEDIO MÍNIMO.</strong> El costo total de producir <span class="arithmatex">\(q\)</span> unidades es <span class="arithmatex">\(C(q) = 0{,}02q^2 + 6q + 1800\)</span> miles de pesos.</p>
+<ol>
+<li>Escriba el costo promedio <span class="arithmatex">\(A(q) = \dfrac{C(q)}{q}\)</span> y calcule <span class="arithmatex">\(A'(q)\)</span>.</li>
+<li>Encuentre el nivel de producción que minimiza el costo promedio y calcule ese costo.</li>
+<li>Verifique que en ese nivel el costo marginal es igual al costo promedio.</li>
+<li>Compare <span class="arithmatex">\(C'(q)\)</span> y <span class="arithmatex">\(A(q)\)</span> en <span class="arithmatex">\(q = 200\)</span> y en <span class="arithmatex">\(q = 400\)</span> y explique si el costo promedio sube o baja en cada caso.</li>
+</ol>
+<details class="note">
+<summary>Ver desarrollo</summary>
+<p><strong>Parte 1.</strong> Dividiendo término a término:</p>
+<div class="arithmatex">\[A(q) = 0{,}02q + 6 + \frac{1800}{q}, \qquad A'(q) = 0{,}02 - \frac{1800}{q^2}.\]</div>
+<p><strong>Parte 2.</strong> <span class="arithmatex">\(A'(q) = 0\)</span> cuando <span class="arithmatex">\(q^2 = \dfrac{1800}{0{,}02} = 90\,000\)</span>, es decir <span class="arithmatex">\(q = 300\)</span>:</p>
+<div class="arithmatex">\[A(300) = 6 + 6 + 6 = 18 \text{ miles de pesos por unidad}.\]</div>
+<p><span class="arithmatex">\(A'(q) &lt; 0\)</span> si <span class="arithmatex">\(q &lt; 300\)</span> y <span class="arithmatex">\(A'(q) &gt; 0\)</span> si <span class="arithmatex">\(q &gt; 300\)</span>, así que se trata de un <strong>mínimo</strong>.</p>
+<p><strong>Parte 3.</strong> <span class="arithmatex">\(C'(q) = 0{,}04q + 6\)</span>, luego <span class="arithmatex">\(C'(300) = 12 + 6 = 18 = A(300)\)</span>. <span class="arithmatex">\(\checkmark\)</span></p>
+<p><strong>Parte 4.</strong> Como <span class="arithmatex">\(A'(q) = \dfrac{C'(q) - A(q)}{q}\)</span>, el signo de <span class="arithmatex">\(A'\)</span> lo decide la comparación entre el costo marginal y el promedio:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><span class="arithmatex">\(q\)</span></th>
+<th style="text-align: center;"><span class="arithmatex">\(C'(q)\)</span></th>
+<th style="text-align: center;"><span class="arithmatex">\(A(q)\)</span></th>
+<th style="text-align: center;">Comparación</th>
+<th style="text-align: center;"><span class="arithmatex">\(A\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(200\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(14\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(19\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(C' &lt; A\)</span></td>
+<td style="text-align: center;">baja</td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(400\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(22\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(18{,}5\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(C' &gt; A\)</span></td>
+<td style="text-align: center;">sube</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition success">
+<p class="admonition-title">Solución</p>
+<div class="arithmatex">\[A'(q) = 0{,}02 - \frac{1800}{q^2}, \qquad q^* = 300, \quad A_{\min} = 18 \text{ miles de pesos por unidad}, \qquad C'(300) = A(300) = 18.\]</div>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Un principio general</p>
+<p>Si la unidad que se agrega cuesta <strong>menos</strong> que el promedio actual, el promedio baja; si cuesta <strong>más</strong>, el promedio sube. Es la misma lógica de un promedio de notas: una nota por debajo del promedio lo baja. El mínimo se alcanza justo cuando la unidad marginal "empata" con el promedio.</p>
+</div>
+</details>
+<hr />
+<h3 id="mar-05">Problema 5</h3>
+<p><strong>PRODUCTIVIDAD MARGINAL.</strong> Una fábrica produce <span class="arithmatex">\(Q(L) = -0{,}01L^3 + 1{,}2L^2\)</span> unidades al mes cuando emplea <span class="arithmatex">\(L\)</span> trabajadores, con <span class="arithmatex">\(0 \le L \le 120\)</span>.</p>
+<ol>
+<li>Calcule la productividad marginal <span class="arithmatex">\(Q'(L)\)</span> y factorícela.</li>
+<li>Calcule <span class="arithmatex">\(Q'(20)\)</span>, <span class="arithmatex">\(Q'(40)\)</span> y <span class="arithmatex">\(Q'(60)\)</span> e interprételos.</li>
+<li>¿Con cuántos trabajadores es máxima la productividad marginal?</li>
+<li>¿Con cuántos trabajadores es máxima la producción? ¿Qué ocurre si se contrata más personal?</li>
+</ol>
+<details class="note">
+<summary>Ver desarrollo</summary>
+<p><strong>Parte 1.</strong></p>
+<div class="arithmatex">\[Q'(L) = -0{,}03L^2 + 2{,}4L = 0{,}03\,L\,(80 - L).\]</div>
+<p><strong>Parte 2.</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><span class="arithmatex">\(L\)</span></th>
+<th style="text-align: center;"><span class="arithmatex">\(Q'(L)\)</span></th>
+<th>Interpretación</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(20\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(36\)</span></td>
+<td>Un trabajador más aporta unas <span class="arithmatex">\(36\)</span> unidades al mes</td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(40\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(48\)</span></td>
+<td>Un trabajador más aporta unas <span class="arithmatex">\(48\)</span> unidades al mes</td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(60\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(36\)</span></td>
+<td>Un trabajador más aporta unas <span class="arithmatex">\(36\)</span> unidades al mes</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Parte 3.</strong> La productividad marginal <span class="arithmatex">\(Q'\)</span> es máxima donde su propia derivada se anula:</p>
+<div class="arithmatex">\[Q''(L) = -0{,}06L + 2{,}4 = 0 \implies L = 40.\]</div>
+<p>Allí <span class="arithmatex">\(Q'(40) = 48\)</span>, el mayor valor posible de <span class="arithmatex">\(Q'\)</span> (es un máximo, porque <span class="arithmatex">\(Q'\)</span> es una parábola que abre hacia abajo).</p>
+<p><strong>Parte 4.</strong> <span class="arithmatex">\(Q'(L) = 0\)</span> si <span class="arithmatex">\(L = 0\)</span> o <span class="arithmatex">\(L = 80\)</span>. Para <span class="arithmatex">\(0 &lt; L &lt; 80\)</span> se tiene <span class="arithmatex">\(Q' &gt; 0\)</span>, y para <span class="arithmatex">\(L &gt; 80\)</span> se tiene <span class="arithmatex">\(Q' &lt; 0\)</span>, de modo que la producción máxima ocurre en <span class="arithmatex">\(L = 80\)</span>:</p>
+<div class="arithmatex">\[Q(80) = -0{,}01\cdot 512\,000 + 1{,}2\cdot 6400 = -5120 + 7680 = 2560 \text{ unidades al mes}.\]</div>
+<p>Contratar más de <span class="arithmatex">\(80\)</span> trabajadores <strong>reduce</strong> la producción (por ejemplo, <span class="arithmatex">\(Q'(90) = -27\)</span>): demasiado personal se estorba mutuamente.</p>
+<div class="admonition success">
+<p class="admonition-title">Solución</p>
+<div class="arithmatex">\[Q'(L) = 0{,}03L(80 - L), \qquad Q'(20) = 36, \;\; Q'(40) = 48, \;\; Q'(60) = 36,\]</div>
+<p>productividad marginal máxima con <span class="arithmatex">\(L = 40\)</span> y producción máxima con <span class="arithmatex">\(L = 80\)</span> (<span class="arithmatex">\(2560\)</span> unidades).</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Rendimientos decrecientes</p>
+<p>Hasta <span class="arithmatex">\(L=40\)</span> la productividad marginal <strong>crece</strong> (la división del trabajo ayuda). Entre <span class="arithmatex">\(40\)</span> y <span class="arithmatex">\(80\)</span> sigue siendo positiva pero <strong>decrece</strong>: es la <em>ley de los rendimientos decrecientes</em>. Después de <span class="arithmatex">\(80\)</span> se vuelve negativa. Las tres etapas son típicas de cualquier proceso productivo con un factor fijo.</p>
+</div>
+</details>
+<hr />
+<h3 id="mar-06">Problema 6</h3>
+<p><strong>UTILIDAD DEL CONSUMIDOR.</strong> La satisfacción (utilidad) que obtiene una persona al consumir <span class="arithmatex">\(x\)</span> kilogramos de un producto al mes es <span class="arithmatex">\(U(x) = 40\ln(x+1)\)</span>.</p>
+<ol>
+<li>Calcule la utilidad marginal <span class="arithmatex">\(U'(x)\)</span> y evalúela en <span class="arithmatex">\(x = 3\)</span> y en <span class="arithmatex">\(x = 9\)</span>.</li>
+<li>Estime con <span class="arithmatex">\(U'(3)\)</span> la satisfacción que aporta el cuarto kilogramo y compárela con el valor real <span class="arithmatex">\(U(4) - U(3)\)</span>.</li>
+<li>Repita el cálculo evaluando la derivada en el punto medio, <span class="arithmatex">\(x = 3{,}5\)</span>. ¿Qué observa?</li>
+</ol>
+<details class="note">
+<summary>Ver desarrollo</summary>
+<p><strong>Parte 1.</strong></p>
+<div class="arithmatex">\[U'(x) = \frac{40}{x+1}, \qquad U'(3) = 10, \qquad U'(9) = 4.\]</div>
+<p>La utilidad marginal <strong>decrece</strong> al consumir más: el décimo kilo satisface mucho menos que el cuarto.</p>
+<p><strong>Parte 2.</strong> La estimación con <span class="arithmatex">\(U'(3)\)</span> es <span class="arithmatex">\(10\)</span>. El valor real es</p>
+<div class="arithmatex">\[U(4) - U(3) = 40\ln\frac54 \approx 40\cdot 0{,}22314 \approx 8{,}93.\]</div>
+<p>La estimación <strong>sobreestima</strong> en un <span class="arithmatex">\(12\%\)</span>.</p>
+<p><strong>Parte 3.</strong> Con la derivada en el punto medio:</p>
+<div class="arithmatex">\[U'(3{,}5) = \frac{40}{4{,}5} \approx 8{,}89,\]</div>
+<p>que difiere del valor real <span class="arithmatex">\(8{,}93\)</span> en menos de un <span class="arithmatex">\(0{,}5\%\)</span>.</p>
+<div class="admonition success">
+<p class="admonition-title">Solución</p>
+<div class="arithmatex">\[U'(x) = \frac{40}{x+1}, \quad U'(3) = 10, \quad U'(9) = 4, \qquad \text{estimación: } 10 \text{ (real } 8{,}93), \qquad \text{con el punto medio: } 8{,}89.\]</div>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Por qué el punto medio funciona mejor</p>
+<p><span class="arithmatex">\(U'\)</span> cambia mucho entre <span class="arithmatex">\(x=3\)</span> y <span class="arithmatex">\(x=4\)</span> (pasa de <span class="arithmatex">\(10\)</span> a <span class="arithmatex">\(8\)</span>), y evaluar en el extremo izquierdo toma el valor <strong>más alto</strong> de ese tramo. El valor en el punto medio es un promedio razonable de lo que ocurre a lo largo de la unidad completa. Es una técnica útil cuando el marginal varía con rapidez, y por eso el error de la regla "evalúe en <span class="arithmatex">\(q_0\)</span>" es mayor donde la curva se dobla más.</p>
+</div>
+</details>
+<hr />
+<h3 id="mar-07">Problema 7</h3>
+<p><strong>ELASTICIDAD CONSTANTE.</strong> Para una demanda <span class="arithmatex">\(q(p)\)</span>, la <em>elasticidad-precio</em> es <span class="arithmatex">\(E(p) = -\dfrac{p}{q}\cdot\dfrac{dq}{dp}\)</span>. Considere la demanda <span class="arithmatex">\(q(p) = \dfrac{1000}{p^2}\)</span>, con <span class="arithmatex">\(p \ge 1\)</span>.</p>
+<ol>
+<li>Calcule <span class="arithmatex">\(E(p)\)</span> e interprete el resultado.</li>
+<li>Escriba el ingreso <span class="arithmatex">\(R(p) = p\,q(p)\)</span> y calcule <span class="arithmatex">\(R'(p)\)</span>. ¿Qué signo tiene?</li>
+<li>Verifique que <span class="arithmatex">\(R'(p) = q(p)\,\big[1 - E(p)\big]\)</span>.</li>
+<li>Si el precio sube de <span class="arithmatex">\(10\)</span> a <span class="arithmatex">\(10{,}5\)</span>, estime el cambio porcentual en la demanda y en el ingreso, y compárelo con los valores reales.</li>
+</ol>
+<details class="note">
+<summary>Ver desarrollo</summary>
+<p><strong>Parte 1.</strong> Con <span class="arithmatex">\(q'(p) = -2000\,p^{-3}\)</span>:</p>
+<div class="arithmatex">\[E(p) = -\frac{p}{1000/p^2}\cdot\left(-\frac{2000}{p^3}\right) = \frac{p^3}{1000}\cdot\frac{2000}{p^3} = 2.\]</div>
+<p>La elasticidad vale <span class="arithmatex">\(2\)</span> <strong>para todo precio</strong>: por cada <span class="arithmatex">\(1\%\)</span> que sube el precio, la demanda cae un <span class="arithmatex">\(2\%\)</span>.</p>
+<p><strong>Parte 2.</strong> <span class="arithmatex">\(R(p) = p\cdot\dfrac{1000}{p^2} = \dfrac{1000}{p}\)</span>, luego</p>
+<div class="arithmatex">\[R'(p) = -\frac{1000}{p^2} &lt; 0 \quad \text{para todo } p \ge 1.\]</div>
+<p><strong>Parte 3.</strong> Como <span class="arithmatex">\(q(1 - E) = q\cdot(1 - 2) = -q = -\dfrac{1000}{p^2}\)</span>, coincide con <span class="arithmatex">\(R'(p)\)</span>. <span class="arithmatex">\(\checkmark\)</span></p>
+<p><strong>Parte 4.</strong> En <span class="arithmatex">\(p = 10\)</span>: <span class="arithmatex">\(q = 10\)</span> y <span class="arithmatex">\(R = 100\)</span>.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th style="text-align: center;">Estimación</th>
+<th style="text-align: center;">Valor real</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Alza de precio</td>
+<td style="text-align: center;"><span class="arithmatex">\(+5\%\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(+5\%\)</span></td>
+</tr>
+<tr>
+<td>Cambio en la demanda</td>
+<td style="text-align: center;"><span class="arithmatex">\(-2\cdot 5\% = -10\%\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\dfrac{1000}{110{,}25} \approx 9{,}07 \;\Rightarrow\; -9{,}3\%\)</span></td>
+</tr>
+<tr>
+<td>Cambio en el ingreso</td>
+<td style="text-align: center;"><span class="arithmatex">\(-1\cdot 5\% = -5\%\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\dfrac{1000}{10{,}5} \approx 95{,}24 \;\Rightarrow\; -4{,}8\%\)</span></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition success">
+<p class="admonition-title">Solución</p>
+<div class="arithmatex">\[E(p) = 2, \qquad R(p) = \frac{1000}{p}, \quad R'(p) = -\frac{1000}{p^2} &lt; 0, \qquad R'(p) = q(p)\,[1 - E(p)].\]</div>
+<p>Subir el precio un <span class="arithmatex">\(5\%\)</span> reduce la demanda en casi <span class="arithmatex">\(10\%\)</span> y el ingreso en casi <span class="arithmatex">\(5\%\)</span>.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Demanda elástica</p>
+<p>Cuando <span class="arithmatex">\(E &gt; 1\)</span> la demanda es <em>elástica</em>: los clientes reaccionan más que proporcionalmente, y <strong>subir el precio reduce el ingreso</strong>. Con <span class="arithmatex">\(E &lt; 1\)</span> ocurriría lo contrario. Con elasticidad constante <span class="arithmatex">\(E = 2\)</span> la mejor política de ingresos es siempre <strong>bajar</strong> el precio, no existe un óptimo interior.</p>
+</div>
+</details>
+<hr />
+<h3 id="mar-08">Problema 8</h3>
+<p><strong>PUBLICIDAD.</strong> Un producto vende <span class="arithmatex">\(S(a) = 50 + \dfrac{200\,a}{a + 10}\)</span> miles de unidades al año cuando se invierten <span class="arithmatex">\(a\)</span> millones de pesos en publicidad.</p>
+<ol>
+<li>Calcule <span class="arithmatex">\(S'(a)\)</span> e interprete <span class="arithmatex">\(S'(10)\)</span> y <span class="arithmatex">\(S'(30)\)</span>.</li>
+<li>Compare <span class="arithmatex">\(S'(10)\)</span> con el aumento real <span class="arithmatex">\(S(11) - S(10)\)</span>.</li>
+<li>¿Qué inversión hace que cada millón adicional aporte solo <span class="arithmatex">\(1\)</span> mil unidades adicionales de ventas?</li>
+<li>¿Hacia qué valor tienden las ventas cuando <span class="arithmatex">\(a\)</span> crece sin límite?</li>
+</ol>
+<details class="note">
+<summary>Ver desarrollo</summary>
+<p><strong>Parte 1.</strong> Con la regla del cociente,</p>
+<div class="arithmatex">\[S'(a) = 200\cdot\frac{(a+10) - a}{(a+10)^2} = \frac{2000}{(a+10)^2}.\]</div>
+<div class="arithmatex">\[S'(10) = \frac{2000}{400} = 5, \qquad S'(30) = \frac{2000}{1600} = 1{,}25 \quad \text{(miles de unidades por millón invertido)}.\]</div>
+<p>Con <span class="arithmatex">\(10\)</span> millones invertidos, un millón más aporta unas <span class="arithmatex">\(5\)</span> mil unidades. Con <span class="arithmatex">\(30\)</span> millones, solo <span class="arithmatex">\(1{,}25\)</span> mil.</p>
+<p><strong>Parte 2.</strong> <span class="arithmatex">\(S(10) = 50 + 100 = 150\)</span> y <span class="arithmatex">\(S(11) = 50 + \dfrac{2200}{21} \approx 154{,}76\)</span>, luego</p>
+<div class="arithmatex">\[S(11) - S(10) \approx 4{,}76,\]</div>
+<p>muy cerca de <span class="arithmatex">\(S'(10) = 5\)</span>.</p>
+<p><strong>Parte 3.</strong> Resolvemos <span class="arithmatex">\(S'(a) = 1\)</span>:</p>
+<div class="arithmatex">\[\frac{2000}{(a+10)^2} = 1 \implies a + 10 = \sqrt{2000} \approx 44{,}72 \implies a \approx 34{,}7 \text{ millones}.\]</div>
+<p><strong>Parte 4.</strong> Como <span class="arithmatex">\(\dfrac{200a}{a+10} \to 200\)</span> cuando <span class="arithmatex">\(a \to \infty\)</span>, las ventas tienden a <span class="arithmatex">\(250\)</span> mil unidades.</p>
+<div class="admonition success">
+<p class="admonition-title">Solución</p>
+<div class="arithmatex">\[S'(a) = \frac{2000}{(a+10)^2}, \quad S'(10) = 5, \;\; S'(30) = 1{,}25, \qquad a \approx 34{,}7 \text{ millones}, \qquad S \to 250 \text{ mil unidades}.\]</div>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Saturación</p>
+<p>La publicidad tiene <strong>rendimientos decrecientes</strong>: los primeros millones mueven mucho las ventas y los últimos casi nada, porque el mercado se satura en <span class="arithmatex">\(250\)</span> mil unidades. Decidir cuánto invertir exige comparar este marginal con el beneficio que deja cada unidad vendida.</p>
+</div>
+</details>
+<hr />
+<h3 id="mar-09">Problema 9</h3>
+<p><strong>IMPUESTO POR UNIDAD.</strong> Un monopolista enfrenta la demanda <span class="arithmatex">\(p(q) = 100 - 0{,}5q\)</span> y tiene un costo total <span class="arithmatex">\(C(q) = 10q + 200\)</span> (en miles de pesos). El Estado le cobra un impuesto de <span class="arithmatex">\(t\)</span> mil pesos por cada unidad vendida.</p>
+<ol>
+<li>Escriba la utilidad <span class="arithmatex">\(P(q)\)</span> en términos de <span class="arithmatex">\(q\)</span> y <span class="arithmatex">\(t\)</span>.</li>
+<li>Encuentre la cantidad <span class="arithmatex">\(q^*\)</span> que maximiza la utilidad, como función de <span class="arithmatex">\(t\)</span>.</li>
+<li>Calcule <span class="arithmatex">\(q^*\)</span>, el precio y la utilidad máxima para <span class="arithmatex">\(t = 0\)</span> y para <span class="arithmatex">\(t = 10\)</span>.</li>
+<li>¿Qué parte del impuesto se traspasa al precio que pagan los consumidores?</li>
+</ol>
+<details class="note">
+<summary>Ver desarrollo</summary>
+<p><strong>Parte 1.</strong> Ingreso menos costo menos impuesto:</p>
+<div class="arithmatex">\[P(q) = (100 - 0{,}5q)\,q - (10q + 200) - tq = (90 - t)\,q - 0{,}5q^2 - 200.\]</div>
+<p><strong>Parte 2.</strong> Derivando respecto de <span class="arithmatex">\(q\)</span> (con <span class="arithmatex">\(t\)</span> fijo):</p>
+<div class="arithmatex">\[P'(q) = 90 - t - q = 0 \implies q^* = 90 - t.\]</div>
+<p><span class="arithmatex">\(P'\)</span> pasa de positiva a negativa en <span class="arithmatex">\(q^*\)</span>, de modo que es un máximo.</p>
+<p><strong>Parte 3.</strong> El precio óptimo es <span class="arithmatex">\(p^* = 100 - 0{,}5\,(90 - t) = 55 + 0{,}5\,t\)</span>. Evaluando la utilidad, <span class="arithmatex">\(P(q^*) = 0{,}5\,(90 - t)^2 - 200\)</span>:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><span class="arithmatex">\(t\)</span></th>
+<th style="text-align: center;"><span class="arithmatex">\(q^*\)</span></th>
+<th style="text-align: center;"><span class="arithmatex">\(p^*\)</span></th>
+<th style="text-align: center;">Utilidad máxima</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(0\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(90\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(55\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(3850\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(10\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(80\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(60\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(3000\)</span></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Parte 4.</strong> Un impuesto de <span class="arithmatex">\(10\)</span> eleva el precio de <span class="arithmatex">\(55\)</span> a <span class="arithmatex">\(60\)</span>, es decir en <span class="arithmatex">\(5\)</span>: se traspasa el <strong><span class="arithmatex">\(50\%\)</span></strong> a los consumidores. El otro <span class="arithmatex">\(50\%\)</span> lo absorbe la empresa a costa de su utilidad.</p>
+<div class="admonition success">
+<p class="admonition-title">Solución</p>
+<div class="arithmatex">\[P(q) = (90 - t)q - 0{,}5q^2 - 200, \qquad q^* = 90 - t, \qquad p^* = 55 + 0{,}5t.\]</div>
+<p>Con <span class="arithmatex">\(t = 10\)</span>, la cantidad baja de <span class="arithmatex">\(90\)</span> a <span class="arithmatex">\(80\)</span>, el precio sube de <span class="arithmatex">\(55\)</span> a <span class="arithmatex">\(60\)</span>, y la utilidad cae de <span class="arithmatex">\(3850\)</span> a <span class="arithmatex">\(3000\)</span>. El Estado recauda <span class="arithmatex">\(10\cdot 80 = 800\)</span>.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">El impuesto como costo marginal</p>
+<p>El impuesto por unidad actúa exactamente como un aumento del costo marginal en <span class="arithmatex">\(t\)</span>: la condición <span class="arithmatex">\(R' = C' + t\)</span> da <span class="arithmatex">\(100 - q = 10 + t\)</span>, es decir, <span class="arithmatex">\(q = 90 - t\)</span>. Por eso el análisis marginal es la herramienta natural para estudiar el efecto de tributos y subsidios.</p>
+</div>
+</details>
+<hr />
+<h3 id="mar-10">Problema 10</h3>
+<p><strong>PRECIO DE ENTRADA.</strong> Un teatro llena <span class="arithmatex">\(400\)</span> butacas con una entrada de <span class="arithmatex">\(12\)</span> mil pesos. Una encuesta indica que por cada mil pesos que sube el precio, se pierden <span class="arithmatex">\(50\)</span> espectadores. Se modela la asistencia por función como <span class="arithmatex">\(q(p) = 1000 - 50p\)</span> para un precio <span class="arithmatex">\(p\)</span> (en miles de pesos), y cada espectador le cuesta al teatro <span class="arithmatex">\(2\)</span> mil pesos (aseo, servicios).</p>
+<ol>
+<li>Calcule el precio que maximiza el <strong>ingreso</strong> <span class="arithmatex">\(R(p) = p\,q(p)\)</span> y ese ingreso.</li>
+<li>Calcule el precio que maximiza la <strong>utilidad</strong> <span class="arithmatex">\(P(p) = (p - 2)\,q(p)\)</span> y esa utilidad.</li>
+<li>Compare ambos precios y explique la diferencia.</li>
+</ol>
+<details class="note">
+<summary>Ver desarrollo</summary>
+<p><strong>Comprobación del modelo.</strong> Con <span class="arithmatex">\(p = 12\)</span> se tiene <span class="arithmatex">\(q = 1000 - 600 = 400\)</span>, que coincide con los datos del enunciado.</p>
+<p><strong>Parte 1.</strong></p>
+<div class="arithmatex">\[R(p) = p\,(1000 - 50p) = 1000p - 50p^2, \qquad R'(p) = 1000 - 100p = 0 \implies p = 10.\]</div>
+<p>La asistencia es <span class="arithmatex">\(q(10) = 500\)</span> y el ingreso <span class="arithmatex">\(R(10) = 5000\)</span> miles de pesos.</p>
+<p><strong>Parte 2.</strong></p>
+<div class="arithmatex">\[P(p) = (p - 2)(1000 - 50p) = -50p^2 + 1100p - 2000, \qquad P'(p) = 1100 - 100p = 0 \implies p = 11.\]</div>
+<p>La asistencia es <span class="arithmatex">\(q(11) = 450\)</span> y la utilidad <span class="arithmatex">\(P(11) = 9\cdot 450 = 4050\)</span> miles de pesos.</p>
+<p><strong>Parte 3.</strong> Si el teatro cobrara <span class="arithmatex">\(10\)</span> mil pesos, ganaría <span class="arithmatex">\(P(10) = 8\cdot 500 = 4000 &lt; 4050\)</span>. El precio que maximiza la utilidad (<span class="arithmatex">\(11\)</span>) es <strong>mayor</strong> que el que maximiza el ingreso (<span class="arithmatex">\(10\)</span>).</p>
+<div class="admonition success">
+<p class="admonition-title">Solución</p>
+<div class="arithmatex">\[\text{Máximo ingreso: } p = 10, \;\; R = 5000. \qquad \text{Máxima utilidad: } p = 11, \;\; P = 4050.\]</div>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Por qué la utilidad pide cobrar más</p>
+<p>Cada espectador cuesta <span class="arithmatex">\(2\)</span> mil pesos. Subir el precio reduce la asistencia, y con ella el gasto. Hay un punto en que perder un espectador <strong>ahorra</strong> <span class="arithmatex">\(2\)</span> mil pesos y cuesta menos ingreso del que parecía: por eso conviene cobrar un poco más que el precio que maximiza el ingreso. Es el mismo principio de la regla <span class="arithmatex">\(R' = C'\)</span> del Problema 3, aplicado esta vez respecto del precio.</p>
+</div>
+</details>
+<hr />
+<h2 id="razones-de-cambio-en-el-tiempo">Razones de cambio en el tiempo</h2>
+<h3 id="raz-01">Problema 11</h3>
+<p><strong>CRECIMIENTO DE UN DEPÓSITO.</strong> Un depósito de <span class="arithmatex">\(5000\)</span> miles de pesos crece con interés compuesto continuo, de modo que su saldo <span class="arithmatex">\(t\)</span> años después es <span class="arithmatex">\(A(t) = 5000\,e^{0{,}04\,t}\)</span> miles de pesos.</p>
+<ol>
+<li>Calcule <span class="arithmatex">\(\dfrac{dA}{dt}\)</span> y demuestre que es proporcional a <span class="arithmatex">\(A\)</span>.</li>
+<li>¿A qué razón crece el saldo en <span class="arithmatex">\(t = 0\)</span> y en <span class="arithmatex">\(t = 10\)</span>? Indique las unidades.</li>
+<li>¿En qué instante el saldo crece a razón de <span class="arithmatex">\(400\)</span> miles de pesos por año?</li>
+<li>Calcule la tasa de crecimiento relativa <span class="arithmatex">\(\dfrac{A'}{A}\)</span> y explique qué indica.</li>
+</ol>
+<details class="note">
+<summary>Ver desarrollo</summary>
+<p><strong>Parte 1.</strong> Con la regla de la cadena,</p>
+<div class="arithmatex">\[A'(t) = 5000\cdot 0{,}04\,e^{0{,}04t} = 0{,}04\cdot A(t).\]</div>
+<p>Es decir, la razón de crecimiento es el <span class="arithmatex">\(4\%\)</span> del saldo vigente.</p>
+<p><strong>Parte 2.</strong></p>
+<ul>
+<li><span class="arithmatex">\(t = 0\)</span>: <span class="arithmatex">\(A = 5000\)</span>, luego <span class="arithmatex">\(A'(0) = 200\)</span> miles de pesos por año.</li>
+<li><span class="arithmatex">\(t = 10\)</span>: <span class="arithmatex">\(A = 5000\,e^{0{,}4} \approx 7459{,}12\)</span>, luego <span class="arithmatex">\(A'(10) \approx 298{,}4\)</span> miles de pesos por año.</li>
+</ul>
+<p><strong>Parte 3.</strong> Buscamos <span class="arithmatex">\(A'(t) = 400\)</span>, es decir <span class="arithmatex">\(A(t) = \dfrac{400}{0{,}04} = 10\,000\)</span>:</p>
+<div class="arithmatex">\[5000\,e^{0{,}04t} = 10\,000 \implies e^{0{,}04t} = 2 \implies t = \frac{\ln 2}{0{,}04} \approx 17{,}3 \text{ años}.\]</div>
+<p><strong>Parte 4.</strong> <span class="arithmatex">\(\dfrac{A'(t)}{A(t)} = 0{,}04\)</span> <strong>constante</strong>: el saldo crece siempre a una tasa de <span class="arithmatex">\(4\%\)</span> por año respecto de su valor del momento.</p>
+<div class="admonition success">
+<p class="admonition-title">Solución</p>
+<div class="arithmatex">\[A'(t) = 0{,}04\,A(t), \qquad A'(0) = 200, \quad A'(10) \approx 298{,}4 \text{ (miles de pesos por año)}, \qquad t \approx 17{,}3 \text{ años}, \qquad \frac{A'}{A} = 4\%.\]</div>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Crecimiento exponencial</p>
+<p>La relación <span class="arithmatex">\(A' = 0{,}04\,A\)</span> caracteriza al crecimiento exponencial: cuanto más grande es la cantidad, más rápido crece. La razón absoluta <span class="arithmatex">\(A'\)</span> aumenta con el tiempo, pero la <strong>relativa</strong> <span class="arithmatex">\(A'/A\)</span> permanece fija.</p>
+</div>
+</details>
+<hr />
+<h3 id="raz-02">Problema 12</h3>
+<p><strong>EMPLEO Y PRODUCCIÓN.</strong> Una fábrica produce <span class="arithmatex">\(Q(L) = 40\sqrt{L}\)</span> unidades al mes cuando emplea <span class="arithmatex">\(L\)</span> trabajadores. Actualmente emplea <span class="arithmatex">\(100\)</span> y está contratando <span class="arithmatex">\(10\)</span> trabajadores por mes, de modo que <span class="arithmatex">\(L(t) = 100 + 10t\)</span>.</p>
+<ol>
+<li>Calcule <span class="arithmatex">\(\dfrac{dQ}{dt}\)</span> en <span class="arithmatex">\(t = 0\)</span> y en <span class="arithmatex">\(t = 5\)</span>.</li>
+<li>¿En qué instante la producción llega a <span class="arithmatex">\(500\)</span> unidades al mes, y a qué razón crece entonces?</li>
+<li>Explique por qué <span class="arithmatex">\(\dfrac{dQ}{dt}\)</span> disminuye aunque el ritmo de contratación sea constante.</li>
+</ol>
+<details class="note">
+<summary>Ver desarrollo</summary>
+<p><strong>Planteo.</strong> <span class="arithmatex">\(Q\)</span> depende de <span class="arithmatex">\(L\)</span> y <span class="arithmatex">\(L\)</span> depende de <span class="arithmatex">\(t\)</span>, así que</p>
+<div class="arithmatex">\[\frac{dQ}{dt} = \frac{dQ}{dL}\cdot\frac{dL}{dt} = \frac{20}{\sqrt{L}}\cdot 10 = \frac{200}{\sqrt{L}}.\]</div>
+<p><strong>Parte 1.</strong></p>
+<ul>
+<li><span class="arithmatex">\(t = 0\)</span>: <span class="arithmatex">\(L = 100\)</span>, luego <span class="arithmatex">\(\dfrac{dQ}{dt} = \dfrac{200}{10} = 20\)</span>.</li>
+<li><span class="arithmatex">\(t = 5\)</span>: <span class="arithmatex">\(L = 150\)</span>, luego <span class="arithmatex">\(\dfrac{dQ}{dt} = \dfrac{200}{\sqrt{150}} \approx 16{,}3\)</span>.</li>
+</ul>
+<p>Las unidades son (unidades por mes) por cada mes que pasa.</p>
+<p><strong>Parte 2.</strong> <span class="arithmatex">\(Q = 500 \implies \sqrt{L} = 12{,}5 \implies L = 156{,}25\)</span>. Con <span class="arithmatex">\(L = 100 + 10t\)</span> se obtiene <span class="arithmatex">\(t = 5{,}625\)</span> meses. En ese instante</p>
+<div class="arithmatex">\[\frac{dQ}{dt} = \frac{200}{12{,}5} = 16 \text{ unidades por mes, cada mes}.\]</div>
+<p><strong>Parte 3.</strong> El ritmo de contratación <span class="arithmatex">\(\frac{dL}{dt} = 10\)</span> es constante, pero la productividad marginal <span class="arithmatex">\(\frac{dQ}{dL} = \frac{20}{\sqrt{L}}\)</span> <strong>disminuye</strong> al crecer <span class="arithmatex">\(L\)</span>. Cada trabajador adicional aporta menos que el anterior (rendimientos decrecientes), y por eso el crecimiento de la producción se desacelera.</p>
+<div class="admonition success">
+<p class="admonition-title">Solución</p>
+<div class="arithmatex">\[\frac{dQ}{dt} = \frac{200}{\sqrt{L}}, \qquad 20 \text{ en } t=0, \quad \approx 16{,}3 \text{ en } t = 5, \qquad t = 5{,}625 \text{ meses} \;\text{ con } \;16 \text{ unidades/mes por mes}.\]</div>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Dos factores, un producto</p>
+<p>La regla de la cadena separa claramente la <em>economía</em> (rendimiento por trabajador, <span class="arithmatex">\(\frac{dQ}{dL}\)</span>) de la <em>gestión</em> (ritmo de contratación, <span class="arithmatex">\(\frac{dL}{dt}\)</span>). Un ritmo de contratación constante no garantiza un crecimiento constante de la producción.</p>
+</div>
+</details>
+<hr />
+<h3 id="raz-03">Problema 13</h3>
+<p><strong>COSTO PROMEDIO EN EL TIEMPO.</strong> El costo total de producir <span class="arithmatex">\(q\)</span> unidades al día es <span class="arithmatex">\(C(q) = 0{,}1q^2 + 30q + 2000\)</span> miles de pesos. La producción es hoy de <span class="arithmatex">\(100\)</span> unidades y crece a razón de <span class="arithmatex">\(5\)</span> unidades por día, es decir <span class="arithmatex">\(q(t) = 100 + 5t\)</span>.</p>
+<ol>
+<li>Escriba el costo promedio <span class="arithmatex">\(A(q) = \dfrac{C(q)}{q}\)</span> y calcule <span class="arithmatex">\(A'(q)\)</span>.</li>
+<li>Calcule <span class="arithmatex">\(\dfrac{dA}{dt}\)</span> hoy. ¿El costo promedio sube o baja?</li>
+<li>¿En qué momento deja de disminuir el costo promedio?</li>
+</ol>
+<details class="note">
+<summary>Ver desarrollo</summary>
+<p><strong>Parte 1.</strong></p>
+<div class="arithmatex">\[A(q) = 0{,}1q + 30 + \frac{2000}{q}, \qquad A'(q) = 0{,}1 - \frac{2000}{q^2}.\]</div>
+<p><strong>Parte 2.</strong> En <span class="arithmatex">\(q = 100\)</span> se tiene <span class="arithmatex">\(A(100) = 10 + 30 + 20 = 60\)</span> y</p>
+<div class="arithmatex">\[A'(100) = 0{,}1 - 0{,}2 = -0{,}1.\]</div>
+<p>Con la regla de la cadena,</p>
+<div class="arithmatex">\[\frac{dA}{dt} = A'(q)\cdot\frac{dq}{dt} = (-0{,}1)(5) = -0{,}5 \text{ miles de pesos por unidad, por día}.\]</div>
+<p>El costo promedio <strong>baja</strong> medio mil pesos por unidad cada día.</p>
+<p><strong>Parte 3.</strong> El costo promedio deja de bajar cuando <span class="arithmatex">\(A'(q) = 0\)</span>:</p>
+<div class="arithmatex">\[q^2 = \frac{2000}{0{,}1} = 20\,000 \implies q \approx 141{,}4.\]</div>
+<p>Con <span class="arithmatex">\(q(t) = 100 + 5t\)</span>, eso ocurre en <span class="arithmatex">\(t = \dfrac{141{,}4 - 100}{5} \approx 8{,}3\)</span> días. Pasado ese instante, <span class="arithmatex">\(A' &gt; 0\)</span> y el costo promedio empieza a subir.</p>
+<div class="admonition success">
+<p class="admonition-title">Solución</p>
+<div class="arithmatex">\[A'(q) = 0{,}1 - \frac{2000}{q^2}, \qquad \frac{dA}{dt}\bigg|_{t=0} = -0{,}5, \qquad t \approx 8{,}3 \text{ días}.\]</div>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Verificación con el costo marginal</p>
+<p><span class="arithmatex">\(A'(q) = \dfrac{C'(q) - A(q)}{q}\)</span>. En <span class="arithmatex">\(q = 100\)</span>: <span class="arithmatex">\(C'(100) = 20 + 30 = 50 &lt; A(100) = 60\)</span>, de modo que el marginal está por debajo del promedio y <span class="arithmatex">\(A'(100) = \dfrac{50 - 60}{100} = -0{,}1\)</span>. <span class="arithmatex">\(\checkmark\)</span></p>
+</div>
+</details>
+<hr />
+<h3 id="raz-04">Problema 14</h3>
+<p><strong>LIQUIDACIÓN.</strong> La demanda mensual de un producto es <span class="arithmatex">\(q(p) = 1200 - 10p\)</span> unidades cuando el precio es <span class="arithmatex">\(p\)</span> mil pesos. Hoy el precio es de <span class="arithmatex">\(60\)</span> mil pesos, y la tienda lo rebaja <span class="arithmatex">\(2\)</span> mil pesos cada mes: <span class="arithmatex">\(p(t) = 60 - 2t\)</span>.</p>
+<ol>
+<li>Escriba el ingreso <span class="arithmatex">\(R(p) = p\,q(p)\)</span> y calcule <span class="arithmatex">\(\dfrac{dR}{dp}\)</span>.</li>
+<li>Calcule <span class="arithmatex">\(\dfrac{dR}{dt}\)</span> hoy y en <span class="arithmatex">\(t = 5\)</span>.</li>
+<li>Explique por qué el ingreso empieza a caer desde el primer mes.</li>
+</ol>
+<details class="note">
+<summary>Ver desarrollo</summary>
+<p><strong>Parte 1.</strong></p>
+<div class="arithmatex">\[R(p) = p\,(1200 - 10p) = 1200p - 10p^2, \qquad \frac{dR}{dp} = 1200 - 20p.\]</div>
+<p><strong>Parte 2.</strong> El precio <strong>baja</strong>, luego <span class="arithmatex">\(\dfrac{dp}{dt} = -2\)</span>. Con la cadena,</p>
+<div class="arithmatex">\[\frac{dR}{dt} = \frac{dR}{dp}\cdot\frac{dp}{dt} = (1200 - 20p)(-2).\]</div>
+<ul>
+<li><span class="arithmatex">\(t = 0\)</span>: <span class="arithmatex">\(p = 60\)</span>, luego <span class="arithmatex">\(\frac{dR}{dp} = 0\)</span> y <span class="arithmatex">\(\frac{dR}{dt} = 0\)</span>.</li>
+<li><span class="arithmatex">\(t = 5\)</span>: <span class="arithmatex">\(p = 50\)</span>, luego <span class="arithmatex">\(\frac{dR}{dp} = 200\)</span> y <span class="arithmatex">\(\frac{dR}{dt} = 200\cdot(-2) = -400\)</span> (miles de pesos por mes, cada mes).</li>
+</ul>
+<p><strong>Parte 3.</strong> Para <span class="arithmatex">\(p &lt; 60\)</span> se tiene <span class="arithmatex">\(\frac{dR}{dp} = 1200 - 20p &gt; 0\)</span>, y como el precio está bajando (<span class="arithmatex">\(\frac{dp}{dt} &lt; 0\)</span>), el producto es <strong>negativo</strong>. El ingreso mensual pasa de <span class="arithmatex">\(R(60) = 36\,000\)</span> a <span class="arithmatex">\(R(50) = 50\cdot 700 = 35\,000\)</span> miles de pesos en cinco meses.</p>
+<div class="admonition success">
+<p class="admonition-title">Solución</p>
+<div class="arithmatex">\[\frac{dR}{dp} = 1200 - 20p, \qquad \frac{dR}{dt}\bigg|_{t=0} = 0, \quad \frac{dR}{dt}\bigg|_{t=5} = -400.\]</div>
+<p>Rebajar el precio por debajo de <span class="arithmatex">\(60\)</span> reduce el ingreso.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">El precio de <span class="arithmatex">\(60\)</span> ya era el óptimo</p>
+<p><span class="arithmatex">\(R'(p) = 0\)</span> en <span class="arithmatex">\(p = 60\)</span>: ese precio ya maximiza el ingreso. Cualquier rebaja, aunque atraiga más compradores (<span class="arithmatex">\(q\)</span> sube), reduce más el precio de lo que aumenta las ventas. Una rebaja solo se justifica si hay otros objetivos, como liquidar inventario.</p>
+</div>
+</details>
+<hr />
+<h3 id="raz-05">Problema 15</h3>
+<p><strong>COSTO MARGINAL EN EL TIEMPO.</strong> El costo diario de producir <span class="arithmatex">\(q\)</span> unidades es <span class="arithmatex">\(C(q) = 0{,}03q^2 + 12q + 900\)</span> miles de pesos. La producción crece a ritmo constante: dentro de <span class="arithmatex">\(t\)</span> días será <span class="arithmatex">\(q(t) = 100 + 8t\)</span> unidades diarias.</p>
+<ol>
+<li>Calcule <span class="arithmatex">\(\dfrac{dC}{dt}\)</span> en <span class="arithmatex">\(t = 5\)</span> con sus unidades.</li>
+<li>Calcule la razón con que cambia el <strong>costo marginal</strong> respecto del tiempo, <span class="arithmatex">\(\dfrac{d}{dt}\big[C'(q(t))\big]\)</span>.</li>
+<li>Verifique su resultado comparando el costo marginal en <span class="arithmatex">\(t = 0\)</span> y en <span class="arithmatex">\(t = 5\)</span>.</li>
+</ol>
+<details class="note">
+<summary>Ver desarrollo</summary>
+<p><strong>Parte 1.</strong> En <span class="arithmatex">\(t = 5\)</span>, la producción es <span class="arithmatex">\(q = 140\)</span>. Como <span class="arithmatex">\(C'(q) = 0{,}06q + 12\)</span>:</p>
+<div class="arithmatex">\[C'(140) = 8{,}4 + 12 = 20{,}4 \text{ miles de pesos por unidad}.\]</div>
+<p>Con la cadena, <span class="arithmatex">\(\dfrac{dC}{dt} = C'(q)\cdot\dfrac{dq}{dt} = 20{,}4\cdot 8 = 163{,}2\)</span> miles de pesos por día, cada día.</p>
+<p><strong>Parte 2.</strong> El costo marginal como función del tiempo es <span class="arithmatex">\(C'(q(t)) = 0{,}06\,(100 + 8t) + 12 = 18 + 0{,}48t\)</span>. Su derivada, por la regla de la cadena aplicada a <span class="arithmatex">\(C'\)</span>, es</p>
+<div class="arithmatex">\[\frac{d}{dt}\big[C'(q(t))\big] = C''(q)\cdot q'(t) = 0{,}06\cdot 8 = 0{,}48 \text{ (miles de pesos por unidad) por día}.\]</div>
+<p><strong>Parte 3.</strong> <span class="arithmatex">\(C'(100) = 6 + 12 = 18\)</span> en <span class="arithmatex">\(t = 0\)</span>, y <span class="arithmatex">\(C'(140) = 20{,}4\)</span> en <span class="arithmatex">\(t = 5\)</span>. El aumento es <span class="arithmatex">\(20{,}4 - 18 = 2{,}4 = 5\cdot 0{,}48\)</span>. <span class="arithmatex">\(\checkmark\)</span></p>
+<div class="admonition success">
+<p class="admonition-title">Solución</p>
+<div class="arithmatex">\[\frac{dC}{dt}\bigg|_{t=5} = 163{,}2, \qquad \frac{d}{dt}\big[C'\big] = 0{,}48 \text{ miles de pesos por unidad, cada día}.\]</div>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Derivada de la derivada</p>
+<p><span class="arithmatex">\(C''(q) = 0{,}06 &gt; 0\)</span> indica que el costo marginal <strong>sube</strong> al aumentar la producción. Multiplicado por el ritmo <span class="arithmatex">\(\frac{dq}{dt} = 8\)</span>, da la rapidez con que el costo marginal sube en el calendario. Así, la segunda derivada de <span class="arithmatex">\(C\)</span> respecto de <span class="arithmatex">\(q\)</span> y la rapidez de producción se combinan en una sola cantidad medible.</p>
+</div>
+</details>
+<hr />
+<h3 id="raz-06">Problema 16</h3>
+<p><strong>CRECIMIENTO ECONÓMICO.</strong> El producto de un país es <span class="arithmatex">\(Y = L\cdot P\)</span>, donde <span class="arithmatex">\(L\)</span> es el número de trabajadores (en millones) y <span class="arithmatex">\(P\)</span> es la productividad por trabajador (en miles de dólares al año), de modo que <span class="arithmatex">\(Y\)</span> está en miles de millones de dólares. Hoy <span class="arithmatex">\(L = 8\)</span> y <span class="arithmatex">\(P = 30\)</span>. El empleo crece a <span class="arithmatex">\(1{,}5\%\)</span> anual y la productividad a <span class="arithmatex">\(2{,}2\%\)</span> anual.</p>
+<ol>
+<li>Calcule <span class="arithmatex">\(Y\)</span>, <span class="arithmatex">\(L'\)</span> y <span class="arithmatex">\(P'\)</span>.</li>
+<li>Use la regla del producto para calcular <span class="arithmatex">\(Y'\)</span> e indique sus unidades.</li>
+<li>Demuestre en general que <span class="arithmatex">\(\dfrac{Y'}{Y} = \dfrac{L'}{L} + \dfrac{P'}{P}\)</span> y úselo para obtener la tasa de crecimiento de <span class="arithmatex">\(Y\)</span>.</li>
+</ol>
+<details class="note">
+<summary>Ver desarrollo</summary>
+<p><strong>Parte 1.</strong> <span class="arithmatex">\(Y = 8\cdot 30 = 240\)</span> miles de millones de dólares. Las tasas dadas son relativas:</p>
+<div class="arithmatex">\[L' = 0{,}015\cdot 8 = 0{,}12 \text{ millones por año}, \qquad P' = 0{,}022\cdot 30 = 0{,}66 \text{ miles de dólares por año}.\]</div>
+<p><strong>Parte 2.</strong></p>
+<div class="arithmatex">\[Y' = L'P + LP' = 0{,}12\cdot 30 + 8\cdot 0{,}66 = 3{,}6 + 5{,}28 = 8{,}88 \text{ miles de millones de dólares por año}.\]</div>
+<p><strong>Parte 3.</strong> Dividiendo la regla del producto por <span class="arithmatex">\(Y = LP\)</span>:</p>
+<div class="arithmatex">\[\frac{Y'}{Y} = \frac{L'P + LP'}{LP} = \frac{L'}{L} + \frac{P'}{P}.\]</div>
+<p>Entonces la tasa de crecimiento del producto es <span class="arithmatex">\(1{,}5\% + 2{,}2\% = 3{,}7\%\)</span> anual. Se comprueba: <span class="arithmatex">\(\dfrac{8{,}88}{240} = 0{,}037\)</span>. <span class="arithmatex">\(\checkmark\)</span></p>
+<div class="admonition success">
+<p class="admonition-title">Solución</p>
+<div class="arithmatex">\[Y = 240, \quad Y' = 8{,}88 \text{ mil millones de dólares por año}, \quad \frac{Y'}{Y} = 3{,}7\% \text{ anual}.\]</div>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Las tasas se suman</p>
+<p>Para un <strong>producto</strong> las tasas relativas de crecimiento se <strong>suman</strong>; para un <strong>cociente</strong>, se restan (como en el ingreso per cápita, <span class="arithmatex">\(\frac{I'}{I} = \frac{G'}{G} - \frac{N'}{N}\)</span>). Es la razón por la que los economistas descomponen el crecimiento en "más trabajadores" y "más productividad".</p>
+</div>
+</details>
+<hr />
+<h3 id="raz-07">Problema 17</h3>
+<p><strong>ADOPCIÓN DE UNA APLICACIÓN.</strong> Una aplicación móvil tiene <span class="arithmatex">\(N(t) = \dfrac{10\,000}{1 + 9\,e^{-0{,}5\,t}}\)</span> usuarios, con <span class="arithmatex">\(t\)</span> en meses desde el lanzamiento.</p>
+<ol>
+<li>Calcule <span class="arithmatex">\(N(0)\)</span> y <span class="arithmatex">\(N'(0)\)</span>.</li>
+<li>Demuestre que <span class="arithmatex">\(N'(t) = 0{,}5\,N(t)\left(1 - \dfrac{N(t)}{10\,000}\right)\)</span>.</li>
+<li>Use esa relación para encontrar cuántos usuarios hay cuando el crecimiento es más rápido, en qué instante ocurre y cuál es esa razón máxima.</li>
+</ol>
+<details class="note">
+<summary>Ver desarrollo</summary>
+<p><strong>Parte 1.</strong> <span class="arithmatex">\(N(0) = \dfrac{10\,000}{1 + 9} = 1000\)</span> usuarios. Con la regla de la cadena aplicada a <span class="arithmatex">\((1 + 9e^{-0{,}5t})^{-1}\)</span>:</p>
+<div class="arithmatex">\[N'(t) = \frac{10\,000\cdot 9\cdot 0{,}5\,e^{-0{,}5t}}{\left(1 + 9e^{-0{,}5t}\right)^2} = \frac{45\,000\,e^{-0{,}5t}}{\left(1 + 9e^{-0{,}5t}\right)^2}.\]</div>
+<p>En <span class="arithmatex">\(t = 0\)</span>: <span class="arithmatex">\(N'(0) = \dfrac{45\,000}{100} = 450\)</span> usuarios por mes.</p>
+<p><strong>Parte 2.</strong> Escribimos <span class="arithmatex">\(u = 9e^{-0{,}5t}\)</span>, de modo que <span class="arithmatex">\(N = \dfrac{10\,000}{1 + u}\)</span> y <span class="arithmatex">\(10\,000 - N = \dfrac{10\,000\,u}{1 + u}\)</span>. Entonces</p>
+<div class="arithmatex">\[0{,}5\,N\left(1 - \frac{N}{10\,000}\right) = 0{,}5\cdot\frac{N\,(10\,000 - N)}{10\,000} = 0{,}5\cdot\frac{10\,000\,u}{(1+u)^2} = \frac{5000\cdot 9\,e^{-0{,}5t}}{(1+u)^2} = N'(t). \quad \checkmark\]</div>
+<p><strong>Parte 3.</strong> Como función de <span class="arithmatex">\(N\)</span>, la razón <span class="arithmatex">\(N' = 0{,}5\,N\,(1 - N/10\,000)\)</span> es una parábola que abre hacia abajo con ceros en <span class="arithmatex">\(N = 0\)</span> y <span class="arithmatex">\(N = 10\,000\)</span>. Su máximo está en el punto medio:</p>
+<div class="arithmatex">\[N = 5000, \qquad N'_{\max} = 0{,}5\cdot 5000\cdot\frac12 = 1250 \text{ usuarios por mes}.\]</div>
+<p>Ese nivel se alcanza cuando <span class="arithmatex">\(\dfrac{10\,000}{1 + u} = 5000\)</span>, es decir <span class="arithmatex">\(u = 1\)</span>:</p>
+<div class="arithmatex">\[9e^{-0{,}5t} = 1 \implies t = 2\ln 9 \approx 4{,}39 \text{ meses}.\]</div>
+<div class="admonition success">
+<p class="admonition-title">Solución</p>
+<div class="arithmatex">\[N(0) = 1000, \quad N'(0) = 450 \text{ usuarios/mes}, \qquad N' = 0{,}5\,N\left(1 - \tfrac{N}{10\,000}\right), \qquad N = 5000 \text{ en } t \approx 4{,}39 \text{ meses, con } N'_{\max} = 1250.\]</div>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">La forma de una difusión</p>
+<p>El crecimiento es lento al comienzo (pocos usuarios que lo difundan), más rápido cuando hay muchos usuarios y aún quedan clientes por captar, y lento otra vez al saturarse el mercado en <span class="arithmatex">\(10\,000\)</span>. La razón máxima ocurre exactamente cuando se ha conquistado la <strong>mitad</strong> del mercado potencial. Es el modelo <em>logístico</em>, típico de adopción de productos.</p>
+</div>
+</details>
+<hr />
+<h2 id="razones-relacionadas-en-contextos-geometricos">Razones relacionadas en contextos geométricos</h2>
+<h3 id="raz-08">Problema 18</h3>
+<p><strong>MANCHA DE PETRÓLEO.</strong> Un derrame forma una mancha circular cuyo radio aumenta a razón de <span class="arithmatex">\(2\)</span> metros por minuto.</p>
+<ol>
+<li>¿A qué razón crece el área de la mancha cuando el radio mide <span class="arithmatex">\(30\)</span> m?</li>
+<li>¿A qué razón crece el perímetro de la mancha? ¿Depende del radio?</li>
+<li>Si en cambio el <strong>área</strong> crece a un ritmo constante de <span class="arithmatex">\(100\)</span> m<span class="arithmatex">\(^2\)</span>/min, ¿a qué razón crece el radio cuando mide <span class="arithmatex">\(50\)</span> m?</li>
+</ol>
+<details class="note">
+<summary>Ver desarrollo</summary>
+<p><strong>Relación.</strong> <span class="arithmatex">\(A = \pi r^2\)</span> y <span class="arithmatex">\(P = 2\pi r\)</span>, con <span class="arithmatex">\(r\)</span> función del tiempo.</p>
+<p><strong>Parte 1.</strong> Derivando respecto de <span class="arithmatex">\(t\)</span>,</p>
+<div class="arithmatex">\[\frac{dA}{dt} = 2\pi r\,\frac{dr}{dt}.\]</div>
+<p>Con <span class="arithmatex">\(r = 30\)</span> y <span class="arithmatex">\(\frac{dr}{dt} = 2\)</span>:</p>
+<div class="arithmatex">\[\frac{dA}{dt} = 2\pi\cdot 30\cdot 2 = 120\pi \approx 377 \text{ m}^2/\text{min}.\]</div>
+<p><strong>Parte 2.</strong></p>
+<div class="arithmatex">\[\frac{dP}{dt} = 2\pi\,\frac{dr}{dt} = 4\pi \approx 12{,}6 \text{ m/min},\]</div>
+<p><strong>independiente</strong> del radio.</p>
+<p><strong>Parte 3.</strong> Ahora <span class="arithmatex">\(\frac{dA}{dt} = 100\)</span> y se despeja <span class="arithmatex">\(\frac{dr}{dt}\)</span>:</p>
+<div class="arithmatex">\[\frac{dr}{dt} = \frac{100}{2\pi r} = \frac{100}{2\pi\cdot 50} = \frac{1}{\pi} \approx 0{,}32 \text{ m/min}.\]</div>
+<div class="admonition success">
+<p class="admonition-title">Solución</p>
+<div class="arithmatex">\[\frac{dA}{dt} = 120\pi \approx 377 \text{ m}^2/\text{min}, \qquad \frac{dP}{dt} = 4\pi \approx 12{,}6 \text{ m/min}, \qquad \frac{dr}{dt} = \frac1\pi \approx 0{,}32 \text{ m/min}.\]</div>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Dos situaciones distintas</p>
+<p>Si el <strong>radio</strong> crece a ritmo constante, el área se acelera (crece más rápido cuanto más grande es la mancha). Si el <strong>área</strong> crece a ritmo constante, el radio <strong>se desacelera</strong>. Qué cantidad se mantiene constante cambia por completo el comportamiento del resto.</p>
+</div>
+</details>
+<hr />
+<h3 id="raz-09">Problema 19</h3>
+<p><strong>MONTÍCULO DE GRANO.</strong> Un silo deja caer grano a razón de <span class="arithmatex">\(3\)</span> m<span class="arithmatex">\(^3\)</span>/min formando un montículo cónico cuya altura es siempre igual al diámetro de su base (<span class="arithmatex">\(h = 2r\)</span>).</p>
+<ol>
+<li>Exprese el volumen <span class="arithmatex">\(V = \tfrac13\pi r^2 h\)</span> solo en términos de <span class="arithmatex">\(h\)</span>.</li>
+<li>¿A qué razón sube la altura cuando <span class="arithmatex">\(h = 4\)</span> m?</li>
+<li>¿A qué razón crece el radio en ese instante?</li>
+<li>¿Cómo se compara la rapidez de subida cuando <span class="arithmatex">\(h = 4\)</span> m con la de cuando <span class="arithmatex">\(h = 6\)</span> m?</li>
+</ol>
+<details class="note">
+<summary>Ver desarrollo</summary>
+<p><strong>Parte 1.</strong> Como <span class="arithmatex">\(r = \dfrac h2\)</span>:</p>
+<div class="arithmatex">\[V = \frac13\pi\left(\frac h2\right)^2 h = \frac{\pi}{12}\,h^3.\]</div>
+<p><strong>Parte 2.</strong> Derivando respecto de <span class="arithmatex">\(t\)</span> con la regla de la cadena:</p>
+<div class="arithmatex">\[\frac{dV}{dt} = \frac{\pi}{4}\,h^2\,\frac{dh}{dt}.\]</div>
+<p>Con <span class="arithmatex">\(\frac{dV}{dt} = 3\)</span> y <span class="arithmatex">\(h = 4\)</span>:</p>
+<div class="arithmatex">\[3 = \frac{\pi}{4}\cdot 16\cdot\frac{dh}{dt} = 4\pi\,\frac{dh}{dt} \implies \frac{dh}{dt} = \frac{3}{4\pi} \approx 0{,}239 \text{ m/min}.\]</div>
+<p><strong>Parte 3.</strong> Como <span class="arithmatex">\(r = \dfrac h2\)</span>, se tiene <span class="arithmatex">\(\dfrac{dr}{dt} = \dfrac12\,\dfrac{dh}{dt} = \dfrac{3}{8\pi} \approx 0{,}119\)</span> m/min.</p>
+<p><strong>Parte 4.</strong> Con <span class="arithmatex">\(h = 6\)</span>: <span class="arithmatex">\(\dfrac{dh}{dt} = \dfrac{3}{9\pi} = \dfrac{1}{3\pi} \approx 0{,}106\)</span> m/min. La altura sube <strong>más lentamente</strong> a medida que el montículo crece.</p>
+<div class="admonition success">
+<p class="admonition-title">Solución</p>
+<div class="arithmatex">\[V = \frac{\pi}{12}h^3, \qquad \frac{dh}{dt}\bigg|_{h=4} = \frac{3}{4\pi} \approx 0{,}24 \text{ m/min}, \qquad \frac{dr}{dt} = \frac{3}{8\pi} \approx 0{,}12 \text{ m/min}.\]</div>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Antes de derivar, reducir variables</p>
+<p>En el paso 1 se eliminó <span class="arithmatex">\(r\)</span> usando la relación geométrica <span class="arithmatex">\(r = h/2\)</span>. Es la estrategia estándar: dejar la relación en <strong>una</strong> sola variable que cambia con el tiempo y derivar después. Si se sustituye <span class="arithmatex">\(h = 4\)</span> antes de derivar, se pierde <span class="arithmatex">\(\frac{dh}{dt}\)</span> y el problema deja de tener solución.</p>
+</div>
+</details>
+<hr />
+<h3 id="raz-10">Problema 20</h3>
+<p><strong>ESCALERA.</strong> Una escalera de <span class="arithmatex">\(5\)</span> m está apoyada contra una pared vertical. La base se aleja de la pared a razón constante de <span class="arithmatex">\(0{,}5\)</span> m/s.</p>
+<ol>
+<li>Escriba la altura <span class="arithmatex">\(y\)</span> del extremo superior en función de la distancia <span class="arithmatex">\(x\)</span> de la base a la pared, y derive respecto del tiempo.</li>
+<li>¿A qué razón baja el extremo superior cuando <span class="arithmatex">\(x = 3\)</span> m? ¿Y cuando <span class="arithmatex">\(x = 4\)</span> m?</li>
+<li>¿En qué instante el extremo superior baja con la misma rapidez con que se aleja la base?</li>
+<li>¿Qué ocurre con la rapidez de caída cuando <span class="arithmatex">\(x\)</span> se acerca a <span class="arithmatex">\(5\)</span> m?</li>
+</ol>
+<details class="note">
+<summary>Ver desarrollo</summary>
+<p><strong>Parte 1.</strong> Por el teorema de Pitágoras, <span class="arithmatex">\(x^2 + y^2 = 25\)</span>, luego <span class="arithmatex">\(y = \sqrt{25 - x^2}\)</span>. Derivando con la regla de la cadena:</p>
+<div class="arithmatex">\[\frac{dy}{dt} = \frac{-x}{\sqrt{25 - x^2}}\cdot\frac{dx}{dt} = -\frac{x}{y}\cdot\frac{dx}{dt}.\]</div>
+<p><strong>Parte 2.</strong> Con <span class="arithmatex">\(\frac{dx}{dt} = 0{,}5\)</span>:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><span class="arithmatex">\(x\)</span></th>
+<th style="text-align: center;"><span class="arithmatex">\(y\)</span></th>
+<th style="text-align: center;"><span class="arithmatex">\(\dfrac{dy}{dt}\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(3\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(4\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(-\dfrac34\cdot 0{,}5 = -0{,}375\)</span> m/s</td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(4\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(3\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(-\dfrac43\cdot 0{,}5 \approx -0{,}667\)</span> m/s</td>
+</tr>
+</tbody>
+</table>
+<p>El signo negativo indica que <span class="arithmatex">\(y\)</span> <strong>disminuye</strong>.</p>
+<p><strong>Parte 3.</strong> La rapidez de caída coincide con la de la base cuando <span class="arithmatex">\(\dfrac xy = 1\)</span>, es decir <span class="arithmatex">\(x = y\)</span>. Con <span class="arithmatex">\(x^2 + y^2 = 25\)</span> resulta <span class="arithmatex">\(x = y = \dfrac{5}{\sqrt{2}} \approx 3{,}54\)</span> m.</p>
+<p><strong>Parte 4.</strong> Cuando <span class="arithmatex">\(x \to 5\)</span> se tiene <span class="arithmatex">\(y \to 0\)</span> y <span class="arithmatex">\(\left|\dfrac{dy}{dt}\right| = \dfrac xy\cdot 0{,}5 \to \infty\)</span>.</p>
+<div class="admonition success">
+<p class="admonition-title">Solución</p>
+<div class="arithmatex">\[\frac{dy}{dt} = -\frac{x}{y}\cdot\frac{dx}{dt}, \qquad -0{,}375 \text{ m/s en } x = 3, \quad -0{,}667 \text{ m/s en } x = 4, \qquad x = y = \tfrac{5}{\sqrt2} \approx 3{,}54 \text{ m}.\]</div>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">El modelo tiene un límite</p>
+<p>Que la rapidez crezca sin cota cuando <span class="arithmatex">\(x \to 5\)</span> no es físicamente posible: significaría que el extremo superior desciende más rápido que cualquier velocidad. En la realidad, la escalera perdería contacto con la pared antes de ese punto. Un resultado matemático que se vuelve absurdo es una señal de que el <strong>modelo</strong> (una escalera rígida pegada a la pared, con base arrastrada a velocidad fija) deja de ser válido allí.</p>
+</div>
+</details>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Pie" >
+        
+          
+          <a href="../derivada_aproximacion/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: Recta tangente y aproximación lineal">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Anterior
+              </span>
+              <div class="md-ellipsis">
+                Recta tangente y aproximación lineal
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../derivada_implicita/" class="md-footer__link md-footer__link--next" aria-label="Siguiente: Derivada implícita">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Siguiente
+              </span>
+              <div class="md-ellipsis">
+                Derivada implícita
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.top", "navigation.footer", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="../../javascripts/quiz.js"></script>
+      
+    
+  </body>
+</html>
