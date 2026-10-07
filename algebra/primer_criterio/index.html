@@ -1,0 +1,2846 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Material de apoyo, guías y problemas de precálculo.">
+      
+      
+        <meta name="author" content="José David Torres Riffo">
+      
+      
+      
+        <link rel="prev" href="../derivada_implicita/">
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Máximos y mínimos locales - MateRiffo</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="deep-orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#criterio-de-la-primera-derivada-monotonia-y-puntos-criticos" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../.." title="MateRiffo" class="md-header__button md-logo" aria-label="MateRiffo" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            MateRiffo
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Máximos y mínimos locales
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="deep-orange"  aria-label="Cambiar a modo oscuro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo oscuro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="deep-orange"  aria-label="Cambiar a modo claro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo claro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="MateRiffo" class="md-nav__button md-logo" aria-label="MateRiffo" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    MateRiffo
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Módulo de Números naturales
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Módulo de Números naturales
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../avanzadas/sumatorias/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sumatorias
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../avanzadas/progresiones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Progresiones
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../avanzadas/inecuaciones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inecuaciones
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Módulo de Inecuaciones
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Módulo de Inecuaciones
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../inecuaciones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Racionales
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../desigualdades/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Desigualdades
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../raices/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Raíces
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../absoluto/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Valor absoluto
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../aplicaciones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aplicaciones
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Módulo de funciones
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Módulo de funciones
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../continuidad/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Continuidad de funciones
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Módulo de Derivadas
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Módulo de Derivadas
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../derivada_definicion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Derivada por definición
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../derivadas_reglas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Álgebra de derivación
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../derivada_aproximacion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Recta tangente y aproximación lineal
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../derivada_marginal/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Razón de cambio y análisis marginal
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../derivada_implicita/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Derivada implícita
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Máximos y mínimos locales
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Máximos y mínimos locales
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#intervalos-de-monotonia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Intervalos de monotonía
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Intervalos de monotonía">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mon-01" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema 1
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mon-02" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema 2
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mon-03" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema 3
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mon-04" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema 4
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mon-05" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema 5
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mon-06" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema 6
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mon-07" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema 7
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mon-08" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema 8
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#clasificacion-de-puntos-criticos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Clasificación de puntos críticos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Clasificación de puntos críticos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cri-01" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema 9
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cri-02" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema 10
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cri-03" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema 11
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cri-04" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema 12
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cri-05" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema 13
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cri-06" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema 14
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cri-07" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema 15
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cri-08" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema 16
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cri-09" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema 17
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aplicaciones-economicas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Aplicaciones económicas
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Aplicaciones económicas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#eco-01" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema 18
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eco-02" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema 19
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eco-03" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema 20
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#intervalos-de-monotonia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Intervalos de monotonía
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Intervalos de monotonía">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mon-01" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema 1
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mon-02" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema 2
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mon-03" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema 3
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mon-04" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema 4
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mon-05" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema 5
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mon-06" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema 6
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mon-07" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema 7
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mon-08" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema 8
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#clasificacion-de-puntos-criticos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Clasificación de puntos críticos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Clasificación de puntos críticos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cri-01" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema 9
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cri-02" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema 10
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cri-03" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema 11
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cri-04" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema 12
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cri-05" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema 13
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cri-06" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema 14
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cri-07" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema 15
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cri-08" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema 16
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cri-09" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema 17
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aplicaciones-economicas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Aplicaciones económicas
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Aplicaciones económicas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#eco-01" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema 18
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eco-02" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema 19
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eco-03" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema 20
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="criterio-de-la-primera-derivada-monotonia-y-puntos-criticos">Criterio de la primera derivada: monotonía y puntos críticos</h1>
+<p>Problemas que usan el <strong>signo de la derivada</strong> para describir cómo se comporta una función: dónde crece, dónde decrece y qué ocurre en los puntos donde <span class="arithmatex">\(f'\)</span> se anula o no existe. El rasgo distintivo de esta sección es que <strong>casi todo el trabajo es una tabla de signos bien hecha</strong>: el resultado depende de factorizar <span class="arithmatex">\(f'\)</span> completamente, de respetar el dominio y de leer con cuidado qué pasa con el signo en cada número crítico.</p>
+<div class="admonition abstract">
+<p class="admonition-title">Resultados fundamentales</p>
+<p>Sea <span class="arithmatex">\(f\)</span> continua en un intervalo y derivable salvo, quizás, en puntos aislados.</p>
+<table>
+<thead>
+<tr>
+<th>Concepto</th>
+<th>Enunciado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Número crítico</td>
+<td>Un <span class="arithmatex">\(c\)</span> del <strong>dominio de <span class="arithmatex">\(f\)</span></strong> tal que <span class="arithmatex">\(f'(c) = 0\)</span> o <span class="arithmatex">\(f'(c)\)</span> no existe</td>
+</tr>
+<tr>
+<td>Crecimiento</td>
+<td><span class="arithmatex">\(f'(x) &gt; 0\)</span> en un intervalo <span class="arithmatex">\(\implies\)</span> <span class="arithmatex">\(f\)</span> es creciente en ese intervalo</td>
+</tr>
+<tr>
+<td>Decrecimiento</td>
+<td><span class="arithmatex">\(f'(x) &lt; 0\)</span> en un intervalo <span class="arithmatex">\(\implies\)</span> <span class="arithmatex">\(f\)</span> es decreciente en ese intervalo</td>
+</tr>
+<tr>
+<td>Máximo relativo en <span class="arithmatex">\(c\)</span></td>
+<td><span class="arithmatex">\(f'\)</span> cambia de <strong><span class="arithmatex">\(+\)</span> a <span class="arithmatex">\(-\)</span></strong> al pasar por <span class="arithmatex">\(c\)</span></td>
+</tr>
+<tr>
+<td>Mínimo relativo en <span class="arithmatex">\(c\)</span></td>
+<td><span class="arithmatex">\(f'\)</span> cambia de <strong><span class="arithmatex">\(-\)</span> a <span class="arithmatex">\(+\)</span></strong> al pasar por <span class="arithmatex">\(c\)</span></td>
+</tr>
+<tr>
+<td>Ni máximo ni mínimo en <span class="arithmatex">\(c\)</span></td>
+<td><span class="arithmatex">\(f'\)</span> <strong>no cambia de signo</strong> al pasar por <span class="arithmatex">\(c\)</span></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Cómo leer los cambios de signo.</strong> Si en <span class="arithmatex">\(f'(x)\)</span> aparece un factor <span class="arithmatex">\((x - c)^n\)</span>, el signo de <span class="arithmatex">\(f'\)</span> cambia en <span class="arithmatex">\(c\)</span> cuando <span class="arithmatex">\(n\)</span> es <strong>impar</strong> y <strong>no cambia</strong> cuando <span class="arithmatex">\(n\)</span> es <strong>par</strong>. Este hecho permite construir la tabla sin evaluar en muchos puntos.</p>
+<p><strong>Procedimiento.</strong> (1) Determinar el dominio. (2) Calcular <span class="arithmatex">\(f'\)</span> y factorizarla. (3) Hallar los números críticos. (4) Dividir el dominio con ellos y estudiar el signo de <span class="arithmatex">\(f'\)</span> en cada tramo. (5) Concluir y, si se pide, calcular el valor de <span class="arithmatex">\(f\)</span> en cada extremo.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Las tres trampas de esta sección</p>
+<ol>
+<li><strong>Creer que todo número crítico es un extremo.</strong> Que <span class="arithmatex">\(f'(c) = 0\)</span> no basta: si <span class="arithmatex">\(f'\)</span> no cambia de signo en <span class="arithmatex">\(c\)</span>, ahí no hay ni máximo ni mínimo. Por ejemplo, <span class="arithmatex">\(f'(x) = 3(x-1)^2 \ge 0\)</span> se anula en <span class="arithmatex">\(x = 1\)</span> y sin embargo <span class="arithmatex">\(f\)</span> crece a ambos lados.</li>
+<li><strong>Incluir puntos que no están en el dominio.</strong> Un valor donde <span class="arithmatex">\(f\)</span> no está definida (como una asíntota vertical) <strong>no es</strong> un número crítico, aunque <span class="arithmatex">\(f'\)</span> tampoco exista allí. Hay que marcarlo en la tabla, pero no se clasifica.</li>
+<li><strong>Confundir la ubicación con el valor.</strong> Clasificar un punto crítico exige dar el punto completo <span class="arithmatex">\((c, f(c))\)</span>. Además, un máximo <em>relativo</em> no es necesariamente el mayor valor de la función, y un mínimo relativo puede estar por encima de un máximo relativo.</li>
+</ol>
+</div>
+<hr />
+<h2 id="intervalos-de-monotonia">Intervalos de monotonía</h2>
+<h3 id="mon-01">Problema 1</h3>
+<p>Encuentre los intervalos de crecimiento y decrecimiento de <span class="arithmatex">\(f(x) = 2x^3 - 9x^2 + 12x - 5\)</span>.</p>
+<details class="note">
+<summary>Ver desarrollo</summary>
+<p><strong>Derivada.</strong> Como <span class="arithmatex">\(f\)</span> es un polinomio, su dominio es <span class="arithmatex">\(\mathbb{R}\)</span> y no hay puntos donde <span class="arithmatex">\(f'\)</span> no exista:</p>
+<div class="arithmatex">\[f'(x) = 6x^2 - 18x + 12 = 6\,(x^2 - 3x + 2) = 6\,(x - 1)(x - 2).\]</div>
+<p><strong>Números críticos.</strong> <span class="arithmatex">\(f'(x) = 0\)</span> en <span class="arithmatex">\(x = 1\)</span> y <span class="arithmatex">\(x = 2\)</span>.</p>
+<p><strong>Tabla de signos.</strong></p>
+<table>
+<thead>
+<tr>
+<th>Intervalo</th>
+<th style="text-align: center;"><span class="arithmatex">\(]-\infty, 1[\)</span></th>
+<th style="text-align: center;"><span class="arithmatex">\(]1, 2[\)</span></th>
+<th style="text-align: center;"><span class="arithmatex">\(]2, +\infty[\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="arithmatex">\(x - 1\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(-\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(+\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(+\)</span></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(x - 2\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(-\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(-\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(+\)</span></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(f'(x)\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\boldsymbol{+}\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(-\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\boldsymbol{+}\)</span></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(f\)</span></td>
+<td style="text-align: center;">crece</td>
+<td style="text-align: center;">decrece</td>
+<td style="text-align: center;">crece</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition success">
+<p class="admonition-title">Solución</p>
+<p><span class="arithmatex">\(f\)</span> es creciente en <span class="arithmatex">\(]-\infty, 1]\)</span> y en <span class="arithmatex">\([2, +\infty[\)</span>, y decreciente en <span class="arithmatex">\([1, 2]\)</span>.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Observación</p>
+<p>Los valores en los números críticos son <span class="arithmatex">\(f(1) = 0\)</span> y <span class="arithmatex">\(f(2) = -1\)</span>. Entre <span class="arithmatex">\(x=1\)</span> y <span class="arithmatex">\(x=2\)</span> la función baja exactamente una unidad antes de retomar el crecimiento.</p>
+</div>
+</details>
+<hr />
+<h3 id="mon-02">Problema 2</h3>
+<p>Encuentre los intervalos de crecimiento y decrecimiento de <span class="arithmatex">\(f(x) = x^4 - 8x^2 + 3\)</span>.</p>
+<details class="note">
+<summary>Ver desarrollo</summary>
+<p><strong>Derivada.</strong> El dominio es <span class="arithmatex">\(\mathbb{R}\)</span>:</p>
+<div class="arithmatex">\[f'(x) = 4x^3 - 16x = 4x\,(x^2 - 4) = 4x\,(x - 2)(x + 2).\]</div>
+<p><strong>Números críticos.</strong> <span class="arithmatex">\(x = -2\)</span>, <span class="arithmatex">\(x = 0\)</span> y <span class="arithmatex">\(x = 2\)</span>.</p>
+<p><strong>Tabla de signos.</strong> Los tres factores aparecen con exponente <span class="arithmatex">\(1\)</span>, de modo que el signo cambia en cada uno de ellos.</p>
+<table>
+<thead>
+<tr>
+<th>Intervalo</th>
+<th style="text-align: center;"><span class="arithmatex">\(]-\infty,-2[\)</span></th>
+<th style="text-align: center;"><span class="arithmatex">\(]-2, 0[\)</span></th>
+<th style="text-align: center;"><span class="arithmatex">\(]0, 2[\)</span></th>
+<th style="text-align: center;"><span class="arithmatex">\(]2, +\infty[\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="arithmatex">\(x + 2\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(-\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(+\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(+\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(+\)</span></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(x\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(-\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(-\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(+\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(+\)</span></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(x - 2\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(-\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(-\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(-\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(+\)</span></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(f'(x)\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(-\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\boldsymbol{+}\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(-\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\boldsymbol{+}\)</span></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(f\)</span></td>
+<td style="text-align: center;">decrece</td>
+<td style="text-align: center;">crece</td>
+<td style="text-align: center;">decrece</td>
+<td style="text-align: center;">crece</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition success">
+<p class="admonition-title">Solución</p>
+<p><span class="arithmatex">\(f\)</span> es decreciente en <span class="arithmatex">\(]-\infty, -2]\)</span> y en <span class="arithmatex">\([0, 2]\)</span>, y creciente en <span class="arithmatex">\([-2, 0]\)</span> y en <span class="arithmatex">\([2, +\infty[\)</span>.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Simetría</p>
+<p><span class="arithmatex">\(f\)</span> es una función par (<span class="arithmatex">\(f(-x) = f(x)\)</span>), así que <span class="arithmatex">\(f'\)</span> es impar y los intervalos de crecimiento y decrecimiento se reflejan respecto del eje <span class="arithmatex">\(y\)</span>: lo que decrece a la izquierda del origen crece a la derecha, y recíprocamente. Los valores son <span class="arithmatex">\(f(\pm 2) = -13\)</span> y <span class="arithmatex">\(f(0) = 3\)</span>.</p>
+</div>
+</details>
+<hr />
+<h3 id="mon-03">Problema 3</h3>
+<p>Encuentre los intervalos de crecimiento y decrecimiento de <span class="arithmatex">\(f(x) = x^3 - 3x^2 + 3x + 1\)</span>. Determine su número crítico y explique qué ocurre allí.</p>
+<details class="note">
+<summary>Ver desarrollo</summary>
+<p><strong>Derivada.</strong> El dominio es <span class="arithmatex">\(\mathbb{R}\)</span>:</p>
+<div class="arithmatex">\[f'(x) = 3x^2 - 6x + 3 = 3\,(x^2 - 2x + 1) = 3\,(x - 1)^2.\]</div>
+<p><strong>Número crítico.</strong> Solo <span class="arithmatex">\(x = 1\)</span>.</p>
+<p><strong>Tabla de signos.</strong> El factor <span class="arithmatex">\((x-1)^2\)</span> es no negativo, y se anula solo en <span class="arithmatex">\(x=1\)</span>:</p>
+<table>
+<thead>
+<tr>
+<th>Intervalo</th>
+<th style="text-align: center;"><span class="arithmatex">\(]-\infty, 1[\)</span></th>
+<th style="text-align: center;"><span class="arithmatex">\(]1, +\infty[\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="arithmatex">\(f'(x)\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\boldsymbol{+}\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\boldsymbol{+}\)</span></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(f\)</span></td>
+<td style="text-align: center;">crece</td>
+<td style="text-align: center;">crece</td>
+</tr>
+</tbody>
+</table>
+<p>El signo de <span class="arithmatex">\(f'\)</span> <strong>no cambia</strong> al pasar por <span class="arithmatex">\(x = 1\)</span>.</p>
+<div class="admonition success">
+<p class="admonition-title">Solución</p>
+<p><span class="arithmatex">\(f\)</span> es <strong>creciente en todo <span class="arithmatex">\(\mathbb{R}\)</span></strong>. El número crítico <span class="arithmatex">\(x = 1\)</span> (con <span class="arithmatex">\(f(1) = 2\)</span>) no es máximo ni mínimo: la gráfica tiene allí tangente horizontal y sigue subiendo.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Por qué ocurre</p>
+<p><span class="arithmatex">\(f(x) = (x-1)^3 + 2\)</span>: es la curva cúbica básica trasladada. La tangente horizontal en <span class="arithmatex">\(x=1\)</span> es un "aplanamiento momentáneo" de una función que nunca deja de crecer. Es el ejemplo más claro de que <span class="arithmatex">\(f'(c) = 0\)</span> no garantiza un extremo.</p>
+</div>
+</details>
+<hr />
+<h3 id="mon-04">Problema 4</h3>
+<p>Encuentre los intervalos de crecimiento y decrecimiento de <span class="arithmatex">\(f(x) = (x^2 - 3)\,e^{x}\)</span>.</p>
+<details class="note">
+<summary>Ver desarrollo</summary>
+<p><strong>Derivada.</strong> Por la regla del producto:</p>
+<div class="arithmatex">\[f'(x) = 2x\,e^{x} + (x^2 - 3)\,e^{x} = e^{x}\,(x^2 + 2x - 3) = e^{x}\,(x + 3)(x - 1).\]</div>
+<p><strong>Números críticos.</strong> Como <span class="arithmatex">\(e^x &gt; 0\)</span> para todo <span class="arithmatex">\(x\)</span>, el signo de <span class="arithmatex">\(f'\)</span> lo deciden los otros factores. Los números críticos son <span class="arithmatex">\(x = -3\)</span> y <span class="arithmatex">\(x = 1\)</span>.</p>
+<p><strong>Tabla de signos.</strong></p>
+<table>
+<thead>
+<tr>
+<th>Intervalo</th>
+<th style="text-align: center;"><span class="arithmatex">\(]-\infty, -3[\)</span></th>
+<th style="text-align: center;"><span class="arithmatex">\(]-3, 1[\)</span></th>
+<th style="text-align: center;"><span class="arithmatex">\(]1, +\infty[\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="arithmatex">\(x + 3\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(-\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(+\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(+\)</span></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(x - 1\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(-\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(-\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(+\)</span></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(f'(x)\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\boldsymbol{+}\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(-\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\boldsymbol{+}\)</span></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(f\)</span></td>
+<td style="text-align: center;">crece</td>
+<td style="text-align: center;">decrece</td>
+<td style="text-align: center;">crece</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition success">
+<p class="admonition-title">Solución</p>
+<p><span class="arithmatex">\(f\)</span> es creciente en <span class="arithmatex">\(]-\infty, -3]\)</span> y en <span class="arithmatex">\([1, +\infty[\)</span>, y decreciente en <span class="arithmatex">\([-3, 1]\)</span>.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Valores</p>
+<p><span class="arithmatex">\(f(-3) = 6e^{-3} \approx 0{,}30\)</span> y <span class="arithmatex">\(f(1) = -2e \approx -5{,}44\)</span>. Un factor exponencial positivo no cambia el signo de <span class="arithmatex">\(f'\)</span>: se "factoriza y se olvida" al estudiar los cambios de signo.</p>
+</div>
+</details>
+<hr />
+<h3 id="mon-05">Problema 5</h3>
+<p>Determine el dominio de <span class="arithmatex">\(f(x) = x^2\ln x\)</span> y encuentre sus intervalos de crecimiento y decrecimiento. Explique por qué <span class="arithmatex">\(x = 0\)</span> no es un número crítico.</p>
+<details class="note">
+<summary>Ver desarrollo</summary>
+<p><strong>Dominio.</strong> <span class="arithmatex">\(f\)</span> está definida solo para <span class="arithmatex">\(x &gt; 0\)</span>, por el logaritmo.</p>
+<p><strong>Derivada.</strong> Por la regla del producto, para <span class="arithmatex">\(x &gt; 0\)</span>:</p>
+<div class="arithmatex">\[f'(x) = 2x\ln x + x^2\cdot\frac1x = 2x\ln x + x = x\,(2\ln x + 1).\]</div>
+<p><strong>Números críticos.</strong> Aunque <span class="arithmatex">\(f'\)</span> también se anula en <span class="arithmatex">\(x = 0\)</span> en la expresión factorizada, <span class="arithmatex">\(0\)</span> <strong>no pertenece al dominio</strong> de <span class="arithmatex">\(f\)</span> y no puede ser número crítico. El otro factor da</p>
+<div class="arithmatex">\[2\ln x + 1 = 0 \implies \ln x = -\frac12 \implies x = e^{-1/2} \approx 0{,}607.\]</div>
+<p><strong>Tabla de signos.</strong> En el dominio <span class="arithmatex">\(x &gt; 0\)</span>, el factor <span class="arithmatex">\(x\)</span> es positivo, y el signo lo decide <span class="arithmatex">\(2\ln x + 1\)</span>, que es creciente en <span class="arithmatex">\(x\)</span>:</p>
+<table>
+<thead>
+<tr>
+<th>Intervalo</th>
+<th style="text-align: center;"><span class="arithmatex">\(\left]0,\, e^{-1/2}\right[\)</span></th>
+<th style="text-align: center;"><span class="arithmatex">\(\left]e^{-1/2},\, +\infty\right[\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="arithmatex">\(2\ln x + 1\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(-\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(+\)</span></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(f'(x)\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(-\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\boldsymbol{+}\)</span></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(f\)</span></td>
+<td style="text-align: center;">decrece</td>
+<td style="text-align: center;">crece</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition success">
+<p class="admonition-title">Solución</p>
+<p><span class="arithmatex">\(f\)</span> es decreciente en <span class="arithmatex">\(]0, e^{-1/2}]\)</span> y creciente en <span class="arithmatex">\([e^{-1/2}, +\infty[\)</span>, con <span class="arithmatex">\(f\!\left(e^{-1/2}\right) = -\dfrac{1}{2e} \approx -0{,}184\)</span>.</p>
+</div>
+<div class="admonition danger">
+<p class="admonition-title">Cuidado con el dominio</p>
+<p>Al factorizar <span class="arithmatex">\(f'(x) = x\,(2\ln x + 1)\)</span> aparece el factor <span class="arithmatex">\(x\)</span>, que "se anula" en <span class="arithmatex">\(0\)</span>. Pero <span class="arithmatex">\(f(0)\)</span> no existe, y por eso <span class="arithmatex">\(x=0\)</span> queda fuera. Los números críticos se buscan <strong>dentro del dominio</strong> de la función original, no de su derivada ya simplificada.</p>
+</div>
+</details>
+<hr />
+<h3 id="mon-06">Problema 6</h3>
+<p>Encuentre los intervalos de crecimiento y decrecimiento de <span class="arithmatex">\(f(x) = \dfrac{x}{x^2 + 4}\)</span>.</p>
+<details class="note">
+<summary>Ver desarrollo</summary>
+<p><strong>Dominio.</strong> El denominador <span class="arithmatex">\(x^2 + 4\)</span> nunca se anula: el dominio es <span class="arithmatex">\(\mathbb{R}\)</span>.</p>
+<p><strong>Derivada.</strong> Por la regla del cociente:</p>
+<div class="arithmatex">\[f'(x) = \frac{1\cdot(x^2 + 4) - x\cdot 2x}{(x^2 + 4)^2} = \frac{4 - x^2}{(x^2 + 4)^2} = \frac{(2 - x)(2 + x)}{(x^2+4)^2}.\]</div>
+<p><strong>Números críticos.</strong> El denominador es siempre positivo, así que <span class="arithmatex">\(f'\)</span> se anula solo si <span class="arithmatex">\(4 - x^2 = 0\)</span>, es decir en <span class="arithmatex">\(x = \pm 2\)</span>.</p>
+<p><strong>Tabla de signos.</strong> El signo lo decide el numerador <span class="arithmatex">\(4 - x^2\)</span>:</p>
+<table>
+<thead>
+<tr>
+<th>Intervalo</th>
+<th style="text-align: center;"><span class="arithmatex">\(]-\infty,-2[\)</span></th>
+<th style="text-align: center;"><span class="arithmatex">\(]-2, 2[\)</span></th>
+<th style="text-align: center;"><span class="arithmatex">\(]2, +\infty[\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="arithmatex">\(4 - x^2\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(-\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(+\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(-\)</span></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(f'(x)\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(-\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\boldsymbol{+}\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(-\)</span></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(f\)</span></td>
+<td style="text-align: center;">decrece</td>
+<td style="text-align: center;">crece</td>
+<td style="text-align: center;">decrece</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition success">
+<p class="admonition-title">Solución</p>
+<p><span class="arithmatex">\(f\)</span> es decreciente en <span class="arithmatex">\(]-\infty, -2]\)</span> y en <span class="arithmatex">\([2, +\infty[\)</span>, y creciente en <span class="arithmatex">\([-2, 2]\)</span>.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Valores</p>
+<p><span class="arithmatex">\(f(-2) = -\tfrac14\)</span> y <span class="arithmatex">\(f(2) = \tfrac14\)</span>. La función parte cerca de <span class="arithmatex">\(0\)</span> por la izquierda (porque <span class="arithmatex">\(f(x) \to 0\)</span> cuando <span class="arithmatex">\(x \to -\infty\)</span>), baja hasta <span class="arithmatex">\(-\tfrac14\)</span>, sube hasta <span class="arithmatex">\(\tfrac14\)</span> y vuelve a acercarse a <span class="arithmatex">\(0\)</span>.</p>
+</div>
+</details>
+<hr />
+<h3 id="mon-07">Problema 7</h3>
+<p>Determine el dominio de <span class="arithmatex">\(f(x) = (x - 3)\sqrt{x}\)</span>, sus números críticos y sus intervalos de crecimiento y decrecimiento. ¿Qué ocurre en <span class="arithmatex">\(x = 0\)</span>?</p>
+<details class="note">
+<summary>Ver desarrollo</summary>
+<p><strong>Dominio.</strong> <span class="arithmatex">\(f\)</span> está definida para <span class="arithmatex">\(x \ge 0\)</span>.</p>
+<p><strong>Derivada.</strong> Reescribiendo <span class="arithmatex">\(f(x) = x^{3/2} - 3x^{1/2}\)</span>, para <span class="arithmatex">\(x &gt; 0\)</span>:</p>
+<div class="arithmatex">\[f'(x) = \frac32\,x^{1/2} - \frac32\,x^{-1/2} = \frac{3}{2\sqrt{x}}\,(x - 1) = \frac{3\,(x - 1)}{2\sqrt{x}}.\]</div>
+<p><strong>Números críticos.</strong></p>
+<ul>
+<li><span class="arithmatex">\(f'(x) = 0\)</span> en <span class="arithmatex">\(x = 1\)</span>, que pertenece al interior del dominio.</li>
+<li><span class="arithmatex">\(f'\)</span> no existe en <span class="arithmatex">\(x = 0\)</span>, pero es un <strong>extremo del dominio</strong>: <span class="arithmatex">\(x = 0\)</span> no es un punto interior.</li>
+</ul>
+<p><strong>Tabla de signos.</strong> En <span class="arithmatex">\(x &gt; 0\)</span>, el denominador <span class="arithmatex">\(2\sqrt{x}\)</span> es positivo:</p>
+<table>
+<thead>
+<tr>
+<th>Intervalo</th>
+<th style="text-align: center;"><span class="arithmatex">\(]0, 1[\)</span></th>
+<th style="text-align: center;"><span class="arithmatex">\(]1, +\infty[\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="arithmatex">\(x - 1\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(-\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(+\)</span></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(f'(x)\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(-\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\boldsymbol{+}\)</span></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(f\)</span></td>
+<td style="text-align: center;">decrece</td>
+<td style="text-align: center;">crece</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition success">
+<p class="admonition-title">Solución</p>
+<p><span class="arithmatex">\(f\)</span> es decreciente en <span class="arithmatex">\([0, 1]\)</span> y creciente en <span class="arithmatex">\([1, +\infty[\)</span>. El único número crítico interior es <span class="arithmatex">\(x = 1\)</span>, con <span class="arithmatex">\(f(1) = -2\)</span>.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Qué pasa en <span class="arithmatex">\(x=0\)</span></p>
+<p><span class="arithmatex">\(f(0) = 0\)</span> y, cuando <span class="arithmatex">\(x \to 0^+\)</span>, la pendiente <span class="arithmatex">\(f'(x) \to -\infty\)</span>: la gráfica sale del origen con <strong>tangente vertical</strong> apuntando hacia abajo. Como <span class="arithmatex">\(0\)</span> es un extremo del dominio, se incluye en el intervalo de decrecimiento <span class="arithmatex">\([0,1]\)</span> pero no se clasifica como extremo interior.</p>
+</div>
+</details>
+<hr />
+<h3 id="mon-08">Problema 8</h3>
+<p>Sea <span class="arithmatex">\(f(x) = x + \dfrac{k}{x}\)</span>, con <span class="arithmatex">\(k\)</span> una constante y <span class="arithmatex">\(x \neq 0\)</span>. Analice, según el valor de <span class="arithmatex">\(k\)</span>, los intervalos de monotonía de <span class="arithmatex">\(f\)</span>:</p>
+<ol>
+<li>si <span class="arithmatex">\(k &gt; 0\)</span>;</li>
+<li>si <span class="arithmatex">\(k = 0\)</span>;</li>
+<li>si <span class="arithmatex">\(k &lt; 0\)</span>.</li>
+</ol>
+<details class="note">
+<summary>Ver desarrollo</summary>
+<p><strong>Derivada.</strong> Para todo <span class="arithmatex">\(k\)</span> y <span class="arithmatex">\(x \neq 0\)</span>:</p>
+<div class="arithmatex">\[f'(x) = 1 - \frac{k}{x^2} = \frac{x^2 - k}{x^2}.\]</div>
+<p>El denominador <span class="arithmatex">\(x^2\)</span> es positivo en todo el dominio, así que el signo lo decide <span class="arithmatex">\(x^2 - k\)</span>.</p>
+<p><strong>Parte 1: <span class="arithmatex">\(k &gt; 0\)</span>.</strong> Los números críticos son <span class="arithmatex">\(x = \pm\sqrt{k}\)</span> (ambos pertenecen al dominio). Además, <span class="arithmatex">\(x = 0\)</span> <strong>no</strong> es crítico, porque no está en el dominio.</p>
+<table>
+<thead>
+<tr>
+<th>Intervalo</th>
+<th style="text-align: center;"><span class="arithmatex">\(]-\infty, -\sqrt{k}[\)</span></th>
+<th style="text-align: center;"><span class="arithmatex">\(]-\sqrt{k}, 0[\)</span></th>
+<th style="text-align: center;"><span class="arithmatex">\(]0, \sqrt{k}[\)</span></th>
+<th style="text-align: center;"><span class="arithmatex">\(]\sqrt{k}, +\infty[\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="arithmatex">\(x^2 - k\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(+\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(-\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(-\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(+\)</span></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(f\)</span></td>
+<td style="text-align: center;">crece</td>
+<td style="text-align: center;">decrece</td>
+<td style="text-align: center;">decrece</td>
+<td style="text-align: center;">crece</td>
+</tr>
+</tbody>
+</table>
+<p>Es creciente en <span class="arithmatex">\(]-\infty, -\sqrt{k}]\)</span> y en <span class="arithmatex">\([\sqrt{k}, +\infty[\)</span>, y decreciente en <span class="arithmatex">\([-\sqrt{k}, 0[\)</span> y en <span class="arithmatex">\(]0, \sqrt{k}]\)</span>.</p>
+<p><strong>Parte 2: <span class="arithmatex">\(k = 0\)</span>.</strong> La función es <span class="arithmatex">\(f(x) = x\)</span> (con <span class="arithmatex">\(x \ne 0\)</span>), y <span class="arithmatex">\(f'(x) = 1 &gt; 0\)</span>. Es creciente en cada uno de los intervalos <span class="arithmatex">\(]-\infty, 0[\)</span> y <span class="arithmatex">\(]0, +\infty[\)</span>.</p>
+<p><strong>Parte 3: <span class="arithmatex">\(k &lt; 0\)</span>.</strong> Entonces <span class="arithmatex">\(x^2 - k = x^2 + |k| &gt; 0\)</span> para todo <span class="arithmatex">\(x\)</span>, y <span class="arithmatex">\(f'(x) &gt; 0\)</span> en todo el dominio. No hay números críticos y <span class="arithmatex">\(f\)</span> es creciente en <span class="arithmatex">\(]-\infty, 0[\)</span> y en <span class="arithmatex">\(]0, +\infty[\)</span>.</p>
+<div class="admonition success">
+<p class="admonition-title">Solución</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Caso</th>
+<th style="text-align: center;">Números críticos</th>
+<th>Comportamiento</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(k &gt; 0\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(x = \pm\sqrt{k}\)</span></td>
+<td>Crece, decrece (con salto en <span class="arithmatex">\(x=0\)</span>), decrece y crece</td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(k = 0\)</span></td>
+<td style="text-align: center;">ninguno</td>
+<td>Crece en cada rama</td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(k &lt; 0\)</span></td>
+<td style="text-align: center;">ninguno</td>
+<td>Crece en cada rama</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="admonition danger">
+<p class="admonition-title">Cuidado con los dos tramos que se juntan</p>
+<p>En el caso <span class="arithmatex">\(k &gt; 0\)</span> <strong>no</strong> se puede decir que <span class="arithmatex">\(f\)</span> decrece "en <span class="arithmatex">\([-\sqrt{k}, \sqrt{k}]\)</span>": la función no está definida en <span class="arithmatex">\(x=0\)</span> y en ese punto hay una asíntota vertical. Los dos tramos de decrecimiento deben escribirse por separado. Lo mismo vale en los casos <span class="arithmatex">\(k \le 0\)</span>: crece en cada rama, pero no es creciente en la unión.</p>
+</div>
+</details>
+<hr />
+<h2 id="clasificacion-de-puntos-criticos">Clasificación de puntos críticos</h2>
+<h3 id="cri-01">Problema 9</h3>
+<p>Encuentre y clasifique los puntos críticos de <span class="arithmatex">\(f(x) = 2x^3 + 3x^2 - 12x + 4\)</span>.</p>
+<details class="note">
+<summary>Ver desarrollo</summary>
+<p><strong>Derivada.</strong> El dominio es <span class="arithmatex">\(\mathbb{R}\)</span>:</p>
+<div class="arithmatex">\[f'(x) = 6x^2 + 6x - 12 = 6\,(x^2 + x - 2) = 6\,(x + 2)(x - 1).\]</div>
+<p><strong>Números críticos.</strong> <span class="arithmatex">\(x = -2\)</span> y <span class="arithmatex">\(x = 1\)</span>.</p>
+<p><strong>Tabla de signos.</strong></p>
+<table>
+<thead>
+<tr>
+<th>Intervalo</th>
+<th style="text-align: center;"><span class="arithmatex">\(]-\infty, -2[\)</span></th>
+<th style="text-align: center;"><span class="arithmatex">\(]-2, 1[\)</span></th>
+<th style="text-align: center;"><span class="arithmatex">\(]1, +\infty[\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="arithmatex">\(f'(x)\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\boldsymbol{+}\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(-\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\boldsymbol{+}\)</span></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(f\)</span></td>
+<td style="text-align: center;">crece</td>
+<td style="text-align: center;">decrece</td>
+<td style="text-align: center;">crece</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Clasificación.</strong></p>
+<ul>
+<li>En <span class="arithmatex">\(x = -2\)</span>, <span class="arithmatex">\(f'\)</span> pasa de <span class="arithmatex">\(+\)</span> a <span class="arithmatex">\(-\)</span>: <strong>máximo relativo</strong>, con <span class="arithmatex">\(f(-2) = -16 + 12 + 24 + 4 = 24\)</span>.</li>
+<li>En <span class="arithmatex">\(x = 1\)</span>, <span class="arithmatex">\(f'\)</span> pasa de <span class="arithmatex">\(-\)</span> a <span class="arithmatex">\(+\)</span>: <strong>mínimo relativo</strong>, con <span class="arithmatex">\(f(1) = 2 + 3 - 12 + 4 = -3\)</span>.</li>
+</ul>
+<div class="admonition success">
+<p class="admonition-title">Solución</p>
+<p>Máximo relativo en <span class="arithmatex">\((-2, 24)\)</span> y mínimo relativo en <span class="arithmatex">\((1, -3)\)</span>.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Qué indican estos extremos</p>
+<p>Son solo extremos <strong>relativos</strong>: como <span class="arithmatex">\(f\)</span> es una cúbica, crece sin cota a la derecha y decrece sin cota a la izquierda. No existe ni máximo ni mínimo absoluto.</p>
+</div>
+</details>
+<hr />
+<h3 id="cri-02">Problema 10</h3>
+<p>Encuentre y clasifique los puntos críticos de <span class="arithmatex">\(f(x) = 3x^4 - 4x^3 - 12x^2 + 5\)</span>.</p>
+<details class="note">
+<summary>Ver desarrollo</summary>
+<p><strong>Derivada.</strong> El dominio es <span class="arithmatex">\(\mathbb{R}\)</span>:</p>
+<div class="arithmatex">\[f'(x) = 12x^3 - 12x^2 - 24x = 12x\,(x^2 - x - 2) = 12x\,(x - 2)(x + 1).\]</div>
+<p><strong>Números críticos.</strong> <span class="arithmatex">\(x = -1\)</span>, <span class="arithmatex">\(x = 0\)</span> y <span class="arithmatex">\(x = 2\)</span>.</p>
+<p><strong>Tabla de signos.</strong></p>
+<table>
+<thead>
+<tr>
+<th>Intervalo</th>
+<th style="text-align: center;"><span class="arithmatex">\(]-\infty, -1[\)</span></th>
+<th style="text-align: center;"><span class="arithmatex">\(]-1, 0[\)</span></th>
+<th style="text-align: center;"><span class="arithmatex">\(]0, 2[\)</span></th>
+<th style="text-align: center;"><span class="arithmatex">\(]2, +\infty[\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="arithmatex">\(x + 1\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(-\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(+\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(+\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(+\)</span></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(x\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(-\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(-\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(+\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(+\)</span></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(x - 2\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(-\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(-\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(-\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(+\)</span></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(f'(x)\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(-\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\boldsymbol{+}\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(-\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\boldsymbol{+}\)</span></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Clasificación.</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><span class="arithmatex">\(x\)</span></th>
+<th style="text-align: center;">Cambio de <span class="arithmatex">\(f'\)</span></th>
+<th style="text-align: center;">Tipo</th>
+<th style="text-align: center;"><span class="arithmatex">\(f(x)\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(-1\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(-\)</span> a <span class="arithmatex">\(+\)</span></td>
+<td style="text-align: center;">mínimo relativo</td>
+<td style="text-align: center;"><span class="arithmatex">\(3 + 4 - 12 + 5 = 0\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(0\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(+\)</span> a <span class="arithmatex">\(-\)</span></td>
+<td style="text-align: center;">máximo relativo</td>
+<td style="text-align: center;"><span class="arithmatex">\(5\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(2\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(-\)</span> a <span class="arithmatex">\(+\)</span></td>
+<td style="text-align: center;">mínimo relativo</td>
+<td style="text-align: center;"><span class="arithmatex">\(48 - 32 - 48 + 5 = -27\)</span></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition success">
+<p class="admonition-title">Solución</p>
+<p>Mínimos relativos en <span class="arithmatex">\((-1, 0)\)</span> y <span class="arithmatex">\((2, -27)\)</span>, y máximo relativo en <span class="arithmatex">\((0, 5)\)</span>.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Mínimo absoluto</p>
+<p>Como <span class="arithmatex">\(f(x) \to +\infty\)</span> cuando <span class="arithmatex">\(x \to \pm\infty\)</span>, el menor valor de la función se alcanza en uno de los mínimos relativos. Comparando <span class="arithmatex">\(f(-1) = 0\)</span> con <span class="arithmatex">\(f(2) = -27\)</span>, el <strong>mínimo absoluto</strong> es <span class="arithmatex">\(-27\)</span> en <span class="arithmatex">\(x = 2\)</span>. La función no tiene máximo absoluto.</p>
+</div>
+</details>
+<hr />
+<h3 id="cri-03">Problema 11</h3>
+<p>Encuentre y clasifique los puntos críticos de <span class="arithmatex">\(f(x) = x^5 - 5x^4\)</span>.</p>
+<details class="note">
+<summary>Ver desarrollo</summary>
+<p><strong>Derivada.</strong> El dominio es <span class="arithmatex">\(\mathbb{R}\)</span>:</p>
+<div class="arithmatex">\[f'(x) = 5x^4 - 20x^3 = 5x^3\,(x - 4).\]</div>
+<p><strong>Números críticos.</strong> <span class="arithmatex">\(x = 0\)</span> y <span class="arithmatex">\(x = 4\)</span>.</p>
+<p><strong>Tabla de signos.</strong> Atención a las multiplicidades: el factor <span class="arithmatex">\(x^3\)</span> tiene exponente <strong>impar</strong> y por lo tanto el signo <strong>cambia</strong> en <span class="arithmatex">\(x = 0\)</span>.</p>
+<table>
+<thead>
+<tr>
+<th>Intervalo</th>
+<th style="text-align: center;"><span class="arithmatex">\(]-\infty, 0[\)</span></th>
+<th style="text-align: center;"><span class="arithmatex">\(]0, 4[\)</span></th>
+<th style="text-align: center;"><span class="arithmatex">\(]4, +\infty[\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="arithmatex">\(x^3\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(-\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(+\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(+\)</span></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(x - 4\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(-\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(-\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(+\)</span></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(f'(x)\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\boldsymbol{+}\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(-\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\boldsymbol{+}\)</span></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Clasificación.</strong></p>
+<ul>
+<li>En <span class="arithmatex">\(x = 0\)</span>, <span class="arithmatex">\(f'\)</span> pasa de <span class="arithmatex">\(+\)</span> a <span class="arithmatex">\(-\)</span>: <strong>máximo relativo</strong>, con <span class="arithmatex">\(f(0) = 0\)</span>.</li>
+<li>En <span class="arithmatex">\(x = 4\)</span>, <span class="arithmatex">\(f'\)</span> pasa de <span class="arithmatex">\(-\)</span> a <span class="arithmatex">\(+\)</span>: <strong>mínimo relativo</strong>, con <span class="arithmatex">\(f(4) = 1024 - 1280 = -256\)</span>.</li>
+</ul>
+<div class="admonition success">
+<p class="admonition-title">Solución</p>
+<p>Máximo relativo en <span class="arithmatex">\((0, 0)\)</span> y mínimo relativo en <span class="arithmatex">\((4, -256)\)</span>.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Un caso en que el otro criterio falla</p>
+<p>La segunda derivada es <span class="arithmatex">\(f''(x) = 20x^3 - 60x^2\)</span>, y vale <span class="arithmatex">\(f''(0) = 0\)</span>. Con ese criterio no se podría decidir qué ocurre en <span class="arithmatex">\(x=0\)</span>. El criterio de la primera derivada resuelve el caso sin dificultad: basta mirar el signo de <span class="arithmatex">\(f'\)</span> a ambos lados. Esta es una de las razones por las que conviene dominarlo.</p>
+</div>
+</details>
+<hr />
+<h3 id="cri-04">Problema 12</h3>
+<p>Encuentre y clasifique los puntos críticos de <span class="arithmatex">\(f(x) = \dfrac{x^2 - 3}{x - 2}\)</span>. Explique por qué <span class="arithmatex">\(x = 2\)</span> no es un número crítico.</p>
+<details class="note">
+<summary>Ver desarrollo</summary>
+<p><strong>Dominio.</strong> <span class="arithmatex">\(x \ne 2\)</span>.</p>
+<p><strong>Derivada.</strong> Por la regla del cociente:</p>
+<div class="arithmatex">\[f'(x) = \frac{2x\,(x - 2) - (x^2 - 3)}{(x - 2)^2} = \frac{x^2 - 4x + 3}{(x-2)^2} = \frac{(x - 1)(x - 3)}{(x - 2)^2}.\]</div>
+<p><strong>Números críticos.</strong> <span class="arithmatex">\(f'(x) = 0\)</span> en <span class="arithmatex">\(x = 1\)</span> y <span class="arithmatex">\(x = 3\)</span>. En <span class="arithmatex">\(x = 2\)</span>, <span class="arithmatex">\(f'\)</span> no existe, pero tampoco existe <span class="arithmatex">\(f\)</span>: no es número crítico.</p>
+<p><strong>Tabla de signos.</strong> El denominador <span class="arithmatex">\((x-2)^2\)</span> es positivo salvo en <span class="arithmatex">\(x=2\)</span>, donde no está definido, de modo que no influye en los cambios de signo.</p>
+<table>
+<thead>
+<tr>
+<th>Intervalo</th>
+<th style="text-align: center;"><span class="arithmatex">\(]-\infty, 1[\)</span></th>
+<th style="text-align: center;"><span class="arithmatex">\(]1, 2[\)</span></th>
+<th style="text-align: center;"><span class="arithmatex">\(]2, 3[\)</span></th>
+<th style="text-align: center;"><span class="arithmatex">\(]3, +\infty[\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="arithmatex">\(x - 1\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(-\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(+\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(+\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(+\)</span></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(x - 3\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(-\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(-\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(-\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(+\)</span></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(f'(x)\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\boldsymbol{+}\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(-\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(-\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\boldsymbol{+}\)</span></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Clasificación.</strong></p>
+<ul>
+<li>En <span class="arithmatex">\(x = 1\)</span>, <span class="arithmatex">\(f'\)</span> pasa de <span class="arithmatex">\(+\)</span> a <span class="arithmatex">\(-\)</span>: <strong>máximo relativo</strong>, con <span class="arithmatex">\(f(1) = \dfrac{-2}{-1} = 2\)</span>.</li>
+<li>En <span class="arithmatex">\(x = 3\)</span>, <span class="arithmatex">\(f'\)</span> pasa de <span class="arithmatex">\(-\)</span> a <span class="arithmatex">\(+\)</span>: <strong>mínimo relativo</strong>, con <span class="arithmatex">\(f(3) = \dfrac{6}{1} = 6\)</span>.</li>
+</ul>
+<div class="admonition success">
+<p class="admonition-title">Solución</p>
+<p>Máximo relativo en <span class="arithmatex">\((1, 2)\)</span> y mínimo relativo en <span class="arithmatex">\((3, 6)\)</span>.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Un máximo menor que un mínimo</p>
+<p>El máximo relativo vale <span class="arithmatex">\(2\)</span> y el mínimo relativo vale <span class="arithmatex">\(6\)</span>: el mínimo está <strong>por encima</strong> del máximo. No es una contradicción; ocurre porque entre ambos hay una asíntota vertical en <span class="arithmatex">\(x=2\)</span>. A la izquierda de <span class="arithmatex">\(2\)</span> la función cae hacia <span class="arithmatex">\(-\infty\)</span> y a la derecha parte desde <span class="arithmatex">\(+\infty\)</span>. La clasificación "máximo/mínimo relativo" solo compara valores <strong>cercanos</strong>.</p>
+</div>
+</details>
+<hr />
+<h3 id="cri-05">Problema 13</h3>
+<p>Determine el dominio de <span class="arithmatex">\(f(x) = x\sqrt{8 - x^2}\)</span>, encuentre sus números críticos interiores y clasifíquelos. ¿Qué ocurre en los extremos del dominio?</p>
+<details class="note">
+<summary>Ver desarrollo</summary>
+<p><strong>Dominio.</strong> <span class="arithmatex">\(8 - x^2 \ge 0 \implies |x| \le 2\sqrt{2}\)</span>, es decir <span class="arithmatex">\(x \in [-2\sqrt2,\, 2\sqrt2]\)</span>.</p>
+<p><strong>Derivada.</strong> Por el producto y la cadena, para <span class="arithmatex">\(|x| &lt; 2\sqrt{2}\)</span>:</p>
+<div class="arithmatex">\[f'(x) = \sqrt{8 - x^2} + x\cdot\frac{-2x}{2\sqrt{8 - x^2}} = \frac{(8 - x^2) - x^2}{\sqrt{8 - x^2}} = \frac{2\,(4 - x^2)}{\sqrt{8 - x^2}}.\]</div>
+<p><strong>Números críticos interiores.</strong> <span class="arithmatex">\(f'(x) = 0\)</span> si <span class="arithmatex">\(x = \pm 2\)</span>. La derivada no existe en <span class="arithmatex">\(x = \pm 2\sqrt{2}\)</span>, pero esos puntos son <strong>extremos</strong> del dominio, no puntos interiores.</p>
+<p><strong>Tabla de signos.</strong> El denominador es positivo en el interior del dominio, y el signo lo decide <span class="arithmatex">\(4 - x^2\)</span>:</p>
+<table>
+<thead>
+<tr>
+<th>Intervalo</th>
+<th style="text-align: center;"><span class="arithmatex">\(]-2\sqrt2, -2[\)</span></th>
+<th style="text-align: center;"><span class="arithmatex">\(]-2, 2[\)</span></th>
+<th style="text-align: center;"><span class="arithmatex">\(]2, 2\sqrt2[\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="arithmatex">\(4 - x^2\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(-\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(+\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(-\)</span></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(f'(x)\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(-\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\boldsymbol{+}\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(-\)</span></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Clasificación.</strong></p>
+<ul>
+<li>En <span class="arithmatex">\(x = -2\)</span>, <span class="arithmatex">\(f'\)</span> pasa de <span class="arithmatex">\(-\)</span> a <span class="arithmatex">\(+\)</span>: <strong>mínimo relativo</strong>, con <span class="arithmatex">\(f(-2) = -2\sqrt{4} = -4\)</span>.</li>
+<li>En <span class="arithmatex">\(x = 2\)</span>, <span class="arithmatex">\(f'\)</span> pasa de <span class="arithmatex">\(+\)</span> a <span class="arithmatex">\(-\)</span>: <strong>máximo relativo</strong>, con <span class="arithmatex">\(f(2) = 2\sqrt{4} = 4\)</span>.</li>
+</ul>
+<p><strong>Extremos del dominio.</strong> <span class="arithmatex">\(f(\pm 2\sqrt{2}) = 0\)</span>.</p>
+<div class="admonition success">
+<p class="admonition-title">Solución</p>
+<p>Mínimo relativo en <span class="arithmatex">\((-2, -4)\)</span> y máximo relativo en <span class="arithmatex">\((2, 4)\)</span>. Además son extremos absolutos: el máximo de <span class="arithmatex">\(f\)</span> es <span class="arithmatex">\(4\)</span> y su mínimo es <span class="arithmatex">\(-4\)</span>, porque en los extremos del dominio <span class="arithmatex">\(f\)</span> vale <span class="arithmatex">\(0\)</span>.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Interpretación geométrica</p>
+<p><span class="arithmatex">\(x\sqrt{8-x^2}\)</span> es el área de un rectángulo inscrito en una semicircunferencia, con signo. La mayor área se alcanza en <span class="arithmatex">\(x=2\)</span>, donde el rectángulo mide <span class="arithmatex">\(2\)</span> de alto y <span class="arithmatex">\(4\)</span> de ancho (el doble de <span class="arithmatex">\(x\)</span>). Es un problema clásico de optimización resuelto con el criterio de la primera derivada.</p>
+</div>
+</details>
+<hr />
+<h3 id="cri-06">Problema 14</h3>
+<p>Encuentre y clasifique los puntos críticos de <span class="arithmatex">\(f(x) = x^2\,e^{-x}\)</span>.</p>
+<details class="note">
+<summary>Ver desarrollo</summary>
+<p><strong>Derivada.</strong> El dominio es <span class="arithmatex">\(\mathbb{R}\)</span>. Por el producto y la cadena:</p>
+<div class="arithmatex">\[f'(x) = 2x\,e^{-x} - x^2\,e^{-x} = x\,(2 - x)\,e^{-x}.\]</div>
+<p><strong>Números críticos.</strong> <span class="arithmatex">\(e^{-x} &gt; 0\)</span> nunca se anula, de modo que los críticos son <span class="arithmatex">\(x = 0\)</span> y <span class="arithmatex">\(x = 2\)</span>.</p>
+<p><strong>Tabla de signos.</strong></p>
+<table>
+<thead>
+<tr>
+<th>Intervalo</th>
+<th style="text-align: center;"><span class="arithmatex">\(]-\infty, 0[\)</span></th>
+<th style="text-align: center;"><span class="arithmatex">\(]0, 2[\)</span></th>
+<th style="text-align: center;"><span class="arithmatex">\(]2, +\infty[\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="arithmatex">\(x\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(-\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(+\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(+\)</span></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(2 - x\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(+\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(+\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(-\)</span></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(f'(x)\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(-\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\boldsymbol{+}\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(-\)</span></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Clasificación.</strong></p>
+<ul>
+<li>En <span class="arithmatex">\(x = 0\)</span>, <span class="arithmatex">\(f'\)</span> pasa de <span class="arithmatex">\(-\)</span> a <span class="arithmatex">\(+\)</span>: <strong>mínimo relativo</strong>, con <span class="arithmatex">\(f(0) = 0\)</span>.</li>
+<li>En <span class="arithmatex">\(x = 2\)</span>, <span class="arithmatex">\(f'\)</span> pasa de <span class="arithmatex">\(+\)</span> a <span class="arithmatex">\(-\)</span>: <strong>máximo relativo</strong>, con <span class="arithmatex">\(f(2) = 4e^{-2} \approx 0{,}54\)</span>.</li>
+</ul>
+<div class="admonition success">
+<p class="admonition-title">Solución</p>
+<p>Mínimo relativo en <span class="arithmatex">\((0, 0)\)</span> y máximo relativo en <span class="arithmatex">\(\left(2,\, 4e^{-2}\right)\)</span>.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Extremos absolutos</p>
+<p>Como <span class="arithmatex">\(x^2 \ge 0\)</span> y <span class="arithmatex">\(e^{-x} &gt; 0\)</span>, se tiene <span class="arithmatex">\(f(x) \ge 0\)</span> para todo <span class="arithmatex">\(x\)</span>: el mínimo relativo en <span class="arithmatex">\(x=0\)</span> es también el <strong>mínimo absoluto</strong>. Por otro lado, <span class="arithmatex">\(f(x) \to 0^+\)</span> cuando <span class="arithmatex">\(x \to +\infty\)</span> (la exponencial decreciente "gana" a la potencia) y <span class="arithmatex">\(f(x) \to +\infty\)</span> cuando <span class="arithmatex">\(x \to -\infty\)</span>. En consecuencia, el máximo relativo <strong>no</strong> es máximo absoluto.</p>
+</div>
+</details>
+<hr />
+<h3 id="cri-07">Problema 15</h3>
+<p>Encuentre y clasifique los puntos críticos de <span class="arithmatex">\(f(x) = x^{5/3} - 5x^{2/3}\)</span>. ¿Es <span class="arithmatex">\(f'\)</span> continua en todos ellos?</p>
+<details class="note">
+<summary>Ver desarrollo</summary>
+<p><strong>Dominio.</strong> <span class="arithmatex">\(\mathbb{R}\)</span> (las raíces cúbicas están definidas para todos los reales).</p>
+<p><strong>Derivada.</strong> Para <span class="arithmatex">\(x \neq 0\)</span>:</p>
+<div class="arithmatex">\[f'(x) = \frac53\,x^{2/3} - \frac{10}{3}\,x^{-1/3} = \frac{5}{3}\,x^{-1/3}\,(x - 2) = \frac{5\,(x - 2)}{3\sqrt[3]{x}}.\]</div>
+<p><strong>Números críticos.</strong></p>
+<ul>
+<li><span class="arithmatex">\(f'(x) = 0\)</span> en <span class="arithmatex">\(x = 2\)</span>.</li>
+<li><span class="arithmatex">\(f'\)</span> <strong>no existe</strong> en <span class="arithmatex">\(x = 0\)</span> (denominador nulo), pero <span class="arithmatex">\(f(0) = 0\)</span> está definida, de modo que <span class="arithmatex">\(x = 0\)</span> <strong>sí es un número crítico</strong>.</li>
+</ul>
+<p><strong>Tabla de signos.</strong></p>
+<table>
+<thead>
+<tr>
+<th>Intervalo</th>
+<th style="text-align: center;"><span class="arithmatex">\(]-\infty, 0[\)</span></th>
+<th style="text-align: center;"><span class="arithmatex">\(]0, 2[\)</span></th>
+<th style="text-align: center;"><span class="arithmatex">\(]2, +\infty[\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="arithmatex">\(x - 2\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(-\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(-\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(+\)</span></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(\sqrt[3]{x}\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(-\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(+\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(+\)</span></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(f'(x)\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\boldsymbol{+}\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(-\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\boldsymbol{+}\)</span></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Clasificación.</strong></p>
+<ul>
+<li>En <span class="arithmatex">\(x = 0\)</span>, <span class="arithmatex">\(f'\)</span> pasa de <span class="arithmatex">\(+\)</span> a <span class="arithmatex">\(-\)</span>: <strong>máximo relativo</strong>, con <span class="arithmatex">\(f(0) = 0\)</span>.</li>
+<li>En <span class="arithmatex">\(x = 2\)</span>, <span class="arithmatex">\(f'\)</span> pasa de <span class="arithmatex">\(-\)</span> a <span class="arithmatex">\(+\)</span>: <strong>mínimo relativo</strong>, con <span class="arithmatex">\(f(2) = 2^{5/3} - 5\cdot 2^{2/3} = -3\cdot 2^{2/3} \approx -4{,}76\)</span>.</li>
+</ul>
+<div class="admonition success">
+<p class="admonition-title">Solución</p>
+<p>Máximo relativo en <span class="arithmatex">\((0, 0)\)</span> y mínimo relativo en <span class="arithmatex">\(\left(2,\, -3\cdot 2^{2/3}\right)\)</span>. La derivada <strong>no existe</strong> en <span class="arithmatex">\(x = 0\)</span>.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Una cúspide</p>
+<p>Cuando <span class="arithmatex">\(x \to 0\)</span>, <span class="arithmatex">\(|f'(x)| \to \infty\)</span>, con <span class="arithmatex">\(f'\)</span> cambiando de <span class="arithmatex">\(+\infty\)</span> (a la izquierda) a <span class="arithmatex">\(-\infty\)</span> (a la derecha). La gráfica forma una <strong>cúspide</strong> apuntando hacia arriba en el origen, es decir un máximo "en punta" donde no hay tangente. El criterio de la primera derivada lo clasifica sin problema, mientras que el de la segunda derivada no puede aplicarse allí.</p>
+</div>
+</details>
+<hr />
+<h3 id="cri-08">Problema 16</h3>
+<p>Se da la derivada de una función continua <span class="arithmatex">\(f\)</span>:</p>
+<div class="arithmatex">\[f'(x) = (x + 2)^2\,(x - 1)\,(x - 3)^3.\]</div>
+<p>Encuentre los números críticos de <span class="arithmatex">\(f\)</span> y clasifíquelos. (No es necesario hallar <span class="arithmatex">\(f\)</span>.) Explique qué factor no produce cambio de signo.</p>
+<details class="note">
+<summary>Ver desarrollo</summary>
+<p><strong>Números críticos.</strong> <span class="arithmatex">\(f'(x) = 0\)</span> en <span class="arithmatex">\(x = -2\)</span>, <span class="arithmatex">\(x = 1\)</span> y <span class="arithmatex">\(x = 3\)</span>.</p>
+<p><strong>Multiplicidades.</strong> El signo de <span class="arithmatex">\(f'\)</span> cambia en un número crítico solo si el exponente del factor correspondiente es impar:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Factor</th>
+<th style="text-align: center;">Exponente</th>
+<th style="text-align: center;">¿Cambia el signo?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\((x + 2)^2\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(2\)</span> (par)</td>
+<td style="text-align: center;"><strong>No</strong></td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\((x - 1)\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(1\)</span> (impar)</td>
+<td style="text-align: center;">Sí</td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\((x - 3)^3\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(3\)</span> (impar)</td>
+<td style="text-align: center;">Sí</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Tabla de signos.</strong></p>
+<table>
+<thead>
+<tr>
+<th>Intervalo</th>
+<th style="text-align: center;"><span class="arithmatex">\(]-\infty, -2[\)</span></th>
+<th style="text-align: center;"><span class="arithmatex">\(]-2, 1[\)</span></th>
+<th style="text-align: center;"><span class="arithmatex">\(]1, 3[\)</span></th>
+<th style="text-align: center;"><span class="arithmatex">\(]3, +\infty[\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="arithmatex">\((x+2)^2\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(+\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(+\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(+\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(+\)</span></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(x - 1\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(-\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(-\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(+\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(+\)</span></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\((x - 3)^3\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(-\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(-\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(-\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(+\)</span></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(f'(x)\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\boldsymbol{+}\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\boldsymbol{+}\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(-\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\boldsymbol{+}\)</span></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Clasificación.</strong></p>
+<ul>
+<li><span class="arithmatex">\(x = -2\)</span>: <span class="arithmatex">\(f'\)</span> es positiva a ambos lados. <strong>Ni máximo ni mínimo.</strong></li>
+<li><span class="arithmatex">\(x = 1\)</span>: <span class="arithmatex">\(f'\)</span> pasa de <span class="arithmatex">\(+\)</span> a <span class="arithmatex">\(-\)</span>. <strong>Máximo relativo.</strong></li>
+<li><span class="arithmatex">\(x = 3\)</span>: <span class="arithmatex">\(f'\)</span> pasa de <span class="arithmatex">\(-\)</span> a <span class="arithmatex">\(+\)</span>. <strong>Mínimo relativo.</strong></li>
+</ul>
+<div class="admonition success">
+<p class="admonition-title">Solución</p>
+<p><span class="arithmatex">\(x = 1\)</span> es un máximo relativo y <span class="arithmatex">\(x = 3\)</span> es un mínimo relativo. El número crítico <span class="arithmatex">\(x = -2\)</span> no es extremo, porque el factor <span class="arithmatex">\((x+2)^2\)</span> <strong>no cambia de signo</strong>. La función es creciente en <span class="arithmatex">\(]-\infty, 1]\)</span>, decreciente en <span class="arithmatex">\([1, 3]\)</span> y creciente en <span class="arithmatex">\([3, +\infty[\)</span>.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Un factor 'invisible'</p>
+<p>El factor con exponente par es siempre no negativo, de modo que <strong>no decide</strong> el signo de <span class="arithmatex">\(f'\)</span> salvo en el propio punto donde se anula. Puede ignorarse en la tabla de signos, siempre que se recuerde que su raíz sigue siendo un número crítico.</p>
+</div>
+</details>
+<hr />
+<h3 id="cri-09">Problema 17</h3>
+<p>Encuentre las constantes <span class="arithmatex">\(a\)</span>, <span class="arithmatex">\(b\)</span> y <span class="arithmatex">\(c\)</span> para que la gráfica de <span class="arithmatex">\(f(x) = x^3 + a x^2 + b x + c\)</span> tenga un máximo relativo en el punto <span class="arithmatex">\((-1, 7)\)</span> y un mínimo relativo en <span class="arithmatex">\(x = 3\)</span>. Verifique la clasificación con el criterio de la primera derivada y calcule el valor del mínimo.</p>
+<details class="note">
+<summary>Ver desarrollo</summary>
+<p><strong>Condiciones sobre <span class="arithmatex">\(f'\)</span>.</strong> En un extremo relativo de una función derivable, <span class="arithmatex">\(f'\)</span> se anula. Como <span class="arithmatex">\(f'(x) = 3x^2 + 2a\,x + b\)</span>:</p>
+<div class="arithmatex">\[f'(-1) = 3 - 2a + b = 0, \qquad f'(3) = 27 + 6a + b = 0.\]</div>
+<p>Restando la primera ecuación de la segunda, <span class="arithmatex">\(24 + 8a = 0\)</span>, de donde <span class="arithmatex">\(a = -3\)</span>. Reemplazando en la primera, <span class="arithmatex">\(b = 2a - 3 = -9\)</span>.</p>
+<p><strong>Condición sobre <span class="arithmatex">\(f\)</span>.</strong> El punto <span class="arithmatex">\((-1, 7)\)</span> está en la gráfica:</p>
+<div class="arithmatex">\[f(-1) = -1 + a - b + c = -1 - 3 + 9 + c = 5 + c = 7 \implies c = 2.\]</div>
+<p><strong>Función resultante.</strong> <span class="arithmatex">\(f(x) = x^3 - 3x^2 - 9x + 2\)</span>.</p>
+<p><strong>Verificación con el criterio de la primera derivada.</strong></p>
+<div class="arithmatex">\[f'(x) = 3x^2 - 6x - 9 = 3\,(x + 1)(x - 3).\]</div>
+<table>
+<thead>
+<tr>
+<th>Intervalo</th>
+<th style="text-align: center;"><span class="arithmatex">\(]-\infty, -1[\)</span></th>
+<th style="text-align: center;"><span class="arithmatex">\(]-1, 3[\)</span></th>
+<th style="text-align: center;"><span class="arithmatex">\(]3, +\infty[\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="arithmatex">\(f'(x)\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\boldsymbol{+}\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(-\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\boldsymbol{+}\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>En <span class="arithmatex">\(x = -1\)</span>, <span class="arithmatex">\(f'\)</span> pasa de <span class="arithmatex">\(+\)</span> a <span class="arithmatex">\(-\)</span> (máximo relativo, como se pedía), y en <span class="arithmatex">\(x = 3\)</span> pasa de <span class="arithmatex">\(-\)</span> a <span class="arithmatex">\(+\)</span> (mínimo relativo). Su valor es</p>
+<div class="arithmatex">\[f(3) = 27 - 27 - 27 + 2 = -25.\]</div>
+<div class="admonition success">
+<p class="admonition-title">Solución</p>
+<div class="arithmatex">\[a = -3, \qquad b = -9, \qquad c = 2, \qquad \text{máximo en } (-1, 7), \quad \text{mínimo en } (3, -25).\]</div>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Por qué verificar</p>
+<p>Imponer <span class="arithmatex">\(f'(c) = 0\)</span> solo asegura un número crítico, no el tipo de extremo. Que el punto en <span class="arithmatex">\(x=-1\)</span> resulte ser máximo y el de <span class="arithmatex">\(x=3\)</span> mínimo no estaba garantizado: había que <strong>comprobarlo</strong> con el signo de <span class="arithmatex">\(f'\)</span>. Con otros datos (por ejemplo, un máximo en <span class="arithmatex">\(x=3\)</span> y un mínimo en <span class="arithmatex">\(x=-1\)</span>) el sistema tendría solución, pero la verificación fallaría.</p>
+</div>
+</details>
+<hr />
+<h2 id="aplicaciones-economicas">Aplicaciones económicas</h2>
+<p>Los tres problemas siguientes trasladan el análisis de monotonía y extremos a decisiones de producción. En cada uno hay que <strong>interpretar</strong> los intervalos de crecimiento y decrecimiento, y no solo calcularlos.</p>
+<h3 id="eco-01">Problema 18</h3>
+<p><strong>UTILIDAD Y NIVEL DE PRODUCCIÓN.</strong> La utilidad de una empresa, en miles de pesos, al producir y vender <span class="arithmatex">\(q\)</span> unidades al mes es</p>
+<div class="arithmatex">\[P(q) = -0{,}01\,q^3 + 0{,}9\,q^2 - 15\,q - 200, \qquad 0 \le q \le 80.\]</div>
+<ol>
+<li>Calcule <span class="arithmatex">\(P'(q)\)</span> y factorícela.</li>
+<li>Determine los intervalos en que la utilidad crece y en que decrece.</li>
+<li>Clasifique los números críticos e indique la utilidad en cada uno.</li>
+<li>¿Qué nivel de producción maximiza la utilidad en <span class="arithmatex">\([0, 80]\)</span>? ¿Conviene producir <span class="arithmatex">\(10\)</span> unidades?</li>
+</ol>
+<details class="note">
+<summary>Ver desarrollo</summary>
+<p><strong>Parte 1.</strong></p>
+<div class="arithmatex">\[P'(q) = -0{,}03\,q^2 + 1{,}8\,q - 15 = -0{,}03\,(q^2 - 60q + 500) = -0{,}03\,(q - 10)(q - 50).\]</div>
+<p><strong>Parte 2.</strong> Los números críticos son <span class="arithmatex">\(q = 10\)</span> y <span class="arithmatex">\(q = 50\)</span>. El factor <span class="arithmatex">\(-0{,}03\)</span> es negativo, y eso invierte los signos del producto <span class="arithmatex">\((q-10)(q-50)\)</span>:</p>
+<table>
+<thead>
+<tr>
+<th>Intervalo</th>
+<th style="text-align: center;"><span class="arithmatex">\([0, 10[\)</span></th>
+<th style="text-align: center;"><span class="arithmatex">\(]10, 50[\)</span></th>
+<th style="text-align: center;"><span class="arithmatex">\(]50, 80]\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="arithmatex">\((q - 10)(q - 50)\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(+\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(-\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(+\)</span></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(P'(q)\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(-\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\boldsymbol{+}\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(-\)</span></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(P\)</span></td>
+<td style="text-align: center;">decrece</td>
+<td style="text-align: center;">crece</td>
+<td style="text-align: center;">decrece</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Parte 3.</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><span class="arithmatex">\(q\)</span></th>
+<th style="text-align: center;">Cambio de <span class="arithmatex">\(P'\)</span></th>
+<th style="text-align: center;">Tipo</th>
+<th style="text-align: center;"><span class="arithmatex">\(P(q)\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(10\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(-\)</span> a <span class="arithmatex">\(+\)</span></td>
+<td style="text-align: center;">mínimo relativo</td>
+<td style="text-align: center;"><span class="arithmatex">\(-10 + 90 - 150 - 200 = -270\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(50\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(+\)</span> a <span class="arithmatex">\(-\)</span></td>
+<td style="text-align: center;">máximo relativo</td>
+<td style="text-align: center;"><span class="arithmatex">\(-1250 + 2250 - 750 - 200 = 50\)</span></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Parte 4.</strong> Comparamos con los valores en los extremos del intervalo: <span class="arithmatex">\(P(0) = -200\)</span> y <span class="arithmatex">\(P(80) = -760\)</span>. El mayor valor es <span class="arithmatex">\(P(50) = 50\)</span>, de modo que la utilidad máxima se alcanza en <span class="arithmatex">\(q = 50\)</span> unidades. Producir <span class="arithmatex">\(10\)</span> unidades <strong>no conviene</strong>: con <span class="arithmatex">\(P(10) = -270\)</span> se pierde más que sin producir nada (<span class="arithmatex">\(P(0) = -200\)</span>).</p>
+<div class="admonition success">
+<p class="admonition-title">Solución</p>
+<div class="arithmatex">\[P'(q) = -0{,}03\,(q - 10)(q - 50).\]</div>
+<p>La utilidad decrece en <span class="arithmatex">\([0, 10]\)</span>, crece en <span class="arithmatex">\([10, 50]\)</span> y decrece en <span class="arithmatex">\([50, 80]\)</span>. El <strong>máximo</strong> se alcanza con <span class="arithmatex">\(q = 50\)</span> unidades, con una utilidad de <span class="arithmatex">\(50\)</span> mil pesos.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Qué cuenta la forma de la curva</p>
+<p>Al principio la utilidad empeora porque hay que cubrir costos que crecen más rápido que los ingresos (puesta en marcha); luego se vuelve rentable aumentar la producción hasta <span class="arithmatex">\(50\)</span> unidades; y después los costos crecientes vuelven a ganar. Un mínimo relativo en <span class="arithmatex">\(q = 10\)</span> no es un lugar donde detenerse: es el punto desde el cual <strong>conviene seguir</strong> aumentando la producción.</p>
+</div>
+</details>
+<hr />
+<h3 id="eco-02">Problema 19</h3>
+<p><strong>COSTO PROMEDIO CON LÍMITE DE CAPACIDAD.</strong> El costo total de producir <span class="arithmatex">\(q\)</span> unidades diarias es <span class="arithmatex">\(C(q) = 0{,}25\,q^2 + 6q + 400\)</span> miles de pesos, y el costo promedio es <span class="arithmatex">\(A(q) = \dfrac{C(q)}{q}\)</span>, con <span class="arithmatex">\(q &gt; 0\)</span>.</p>
+<ol>
+<li>Escriba <span class="arithmatex">\(A(q)\)</span> y calcule <span class="arithmatex">\(A'(q)\)</span>. Determine el dominio y los intervalos de crecimiento y decrecimiento.</li>
+<li>Encuentre la producción que minimiza el costo promedio y calcule ese costo. Compárelo con el costo marginal en ese nivel.</li>
+<li>Si la planta solo puede producir hasta <span class="arithmatex">\(30\)</span> unidades diarias, ¿cuál es el mínimo costo promedio posible y en qué nivel se alcanza?</li>
+</ol>
+<details class="note">
+<summary>Ver desarrollo</summary>
+<p><strong>Parte 1.</strong> Dividiendo término a término:</p>
+<div class="arithmatex">\[A(q) = 0{,}25\,q + 6 + \frac{400}{q}, \qquad A'(q) = 0{,}25 - \frac{400}{q^2} = \frac{q^2 - 1600}{4q^2}.\]</div>
+<p>El dominio es <span class="arithmatex">\(q &gt; 0\)</span>. El único número crítico es <span class="arithmatex">\(q = 40\)</span> (la raíz <span class="arithmatex">\(q = -40\)</span> queda fuera del dominio, y en <span class="arithmatex">\(q=0\)</span> la función no está definida).</p>
+<table>
+<thead>
+<tr>
+<th>Intervalo</th>
+<th style="text-align: center;"><span class="arithmatex">\(]0, 40[\)</span></th>
+<th style="text-align: center;"><span class="arithmatex">\(]40, +\infty[\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="arithmatex">\(q^2 - 1600\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(-\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(+\)</span></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(A'(q)\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(-\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\boldsymbol{+}\)</span></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(A\)</span></td>
+<td style="text-align: center;">decrece</td>
+<td style="text-align: center;">crece</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Parte 2.</strong> <span class="arithmatex">\(A'\)</span> pasa de <span class="arithmatex">\(-\)</span> a <span class="arithmatex">\(+\)</span> en <span class="arithmatex">\(q = 40\)</span>: <strong>mínimo relativo</strong>, y también absoluto, porque <span class="arithmatex">\(A\)</span> decrece antes y crece después. El costo promedio mínimo es</p>
+<div class="arithmatex">\[A(40) = 10 + 6 + 10 = 26 \text{ miles de pesos por unidad}.\]</div>
+<p>El costo marginal es <span class="arithmatex">\(C'(q) = 0{,}5\,q + 6\)</span>, de modo que <span class="arithmatex">\(C'(40) = 26\)</span>: <strong>coincide</strong> con el costo promedio mínimo.</p>
+<p><strong>Parte 3.</strong> Con capacidad máxima de <span class="arithmatex">\(30\)</span> unidades, el dominio efectivo es <span class="arithmatex">\(]0, 30]\)</span>. En ese tramo <span class="arithmatex">\(A\)</span> es decreciente (porque <span class="arithmatex">\(30 &lt; 40\)</span>), así que el menor costo promedio se alcanza en el extremo derecho:</p>
+<div class="arithmatex">\[A(30) = 7{,}5 + 6 + \frac{400}{30} \approx 26{,}83 \text{ miles de pesos por unidad}.\]</div>
+<div class="admonition success">
+<p class="admonition-title">Solución</p>
+<div class="arithmatex">\[A'(q) = 0{,}25 - \frac{400}{q^2}, \qquad A \text{ decrece en } ]0, 40] \text{ y crece en } [40, +\infty[, \qquad A_{\min} = A(40) = 26.\]</div>
+<p>Con el límite de <span class="arithmatex">\(30\)</span> unidades, el mínimo es <span class="arithmatex">\(A(30) \approx 26{,}83\)</span>, en <span class="arithmatex">\(q = 30\)</span>.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Interpretaciones</p>
+<p>Una función decreciente en todo el dominio disponible alcanza su mínimo en el <strong>extremo derecho</strong>: aquí la capacidad limita la empresa y le impide llegar al mínimo ideal, con un costo adicional de unos <span class="arithmatex">\(0{,}83\)</span> mil pesos por unidad. Que el costo marginal valga <span class="arithmatex">\(26\)</span> en <span class="arithmatex">\(q=40\)</span> no es casualidad: el promedio es mínimo justo donde el costo de la última unidad iguala al promedio.</p>
+</div>
+</details>
+<hr />
+<h3 id="eco-03">Problema 20</h3>
+<p><strong>CICLO DE VIDA DE UN PRODUCTO.</strong> Las ventas mensuales de un producto, en miles de unidades, <span class="arithmatex">\(t\)</span> meses después de su lanzamiento, siguen el modelo</p>
+<div class="arithmatex">\[S(t) = 100\,t\,e^{-t/4}, \qquad t \ge 0.\]</div>
+<ol>
+<li>Calcule <span class="arithmatex">\(S'(t)\)</span> y factorícela.</li>
+<li>Determine en qué períodos las ventas crecen y en cuáles decrecen.</li>
+<li>¿En qué mes se alcanza el máximo de ventas y cuál es su valor?</li>
+<li>Calcule las ventas al cabo de <span class="arithmatex">\(12\)</span> meses y explique qué ocurre a largo plazo.</li>
+</ol>
+<details class="note">
+<summary>Ver desarrollo</summary>
+<p><strong>Parte 1.</strong> Por el producto y la cadena, con <span class="arithmatex">\((e^{-t/4})' = -\tfrac14 e^{-t/4}\)</span>:</p>
+<div class="arithmatex">\[S'(t) = 100\,e^{-t/4} + 100\,t\left(-\frac14\right)e^{-t/4} = 100\,e^{-t/4}\left(1 - \frac t4\right).\]</div>
+<p><strong>Parte 2.</strong> La exponencial es siempre positiva, así que el signo lo decide <span class="arithmatex">\(1 - \tfrac t4\)</span>. El único número crítico es <span class="arithmatex">\(t = 4\)</span>.</p>
+<table>
+<thead>
+<tr>
+<th>Intervalo</th>
+<th style="text-align: center;"><span class="arithmatex">\([0, 4[\)</span></th>
+<th style="text-align: center;"><span class="arithmatex">\(]4, +\infty[\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="arithmatex">\(1 - \frac t4\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(+\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(-\)</span></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(S'(t)\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\boldsymbol{+}\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(-\)</span></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(S\)</span></td>
+<td style="text-align: center;">crece</td>
+<td style="text-align: center;">decrece</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Parte 3.</strong> <span class="arithmatex">\(S'\)</span> pasa de <span class="arithmatex">\(+\)</span> a <span class="arithmatex">\(-\)</span> en <span class="arithmatex">\(t = 4\)</span>: <strong>máximo</strong>. Como las ventas crecen hasta <span class="arithmatex">\(t=4\)</span> y decrecen después, es el máximo absoluto:</p>
+<div class="arithmatex">\[S(4) = 400\,e^{-1} \approx 147{,}2 \text{ miles de unidades}.\]</div>
+<p><strong>Parte 4.</strong> Al cabo de <span class="arithmatex">\(12\)</span> meses,</p>
+<div class="arithmatex">\[S(12) = 1200\,e^{-3} \approx 59{,}7 \text{ miles de unidades}.\]</div>
+<p>A largo plazo, <span class="arithmatex">\(S(t) \to 0\)</span> cuando <span class="arithmatex">\(t \to +\infty\)</span>, porque la exponencial decreciente domina al factor lineal <span class="arithmatex">\(t\)</span>.</p>
+<div class="admonition success">
+<p class="admonition-title">Solución</p>
+<div class="arithmatex">\[S'(t) = 100\,e^{-t/4}\left(1 - \frac t4\right), \qquad S \text{ crece en } [0, 4] \text{ y decrece en } [4, +\infty[,\]</div>
+<p>con un máximo de <span class="arithmatex">\(\approx 147{,}2\)</span> miles de unidades en el <strong>mes 4</strong>. A los <span class="arithmatex">\(12\)</span> meses las ventas son <span class="arithmatex">\(\approx 59{,}7\)</span> mil, y tienden a <span class="arithmatex">\(0\)</span> con el tiempo.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Un patrón de ciclo de vida</p>
+<p>Un lanzamiento comienza con ventas nulas (<span class="arithmatex">\(S(0) = 0\)</span>), crece mientras el producto se difunde, alcanza un máximo y luego decae a medida que el mercado se satura o aparecen sustitutos. El momento del máximo, <span class="arithmatex">\(t = 4\)</span>, es el instante en que conviene preparar el relevo del producto: a partir de ahí, cada mes que pasa trae ventas menores que el anterior.</p>
+</div>
+</details>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Pie" >
+        
+          
+          <a href="../derivada_implicita/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: Derivada implícita">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Anterior
+              </span>
+              <div class="md-ellipsis">
+                Derivada implícita
+              </div>
+            </div>
+          </a>
+        
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.top", "navigation.footer", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="../../javascripts/quiz.js"></script>
+      
+    
+  </body>
+</html>
